@@ -9,18 +9,18 @@ export default function Hero() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(wordmarkRef.current, {
-        y: 40,
+        y: 60,
         opacity: 0,
         duration: 1.4,
         ease: "power4.out",
-        delay: 0.6,
+        delay: 0.5,
       });
 
       gsap.from(metaRef.current?.children ?? [], {
         opacity: 0,
-        y: 12,
+        y: 16,
         duration: 1,
-        stagger: 0.12,
+        stagger: 0.1,
         ease: "power3.out",
         delay: 1.2,
       });
@@ -32,39 +32,44 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full min-h-screen flex flex-col justify-between pt-20 pb-8 overflow-hidden"
+      className="relative w-full min-h-screen flex flex-col justify-between bg-[#0A0A0A] text-white overflow-hidden"
+      data-testid="hero-section"
     >
-      {/* Edge-to-edge wordmark — no horizontal padding */}
-      <h1
-        ref={wordmarkRef}
-        className="font-display font-bold lowercase leading-[0.85] select-none w-full"
-        style={{
-          fontSize: "clamp(60px, 19.2vw, 320px)",
-          letterSpacing: "-0.03em",
-          lineHeight: 0.85,
-        }}
-        data-testid="hero-wordmark"
-      >
-        beyond
-      </h1>
+      {/* Wordmark — fills the upper portion, edge-to-edge, no padding */}
+      <div className="flex-1 flex flex-col justify-center">
+        <h1
+          ref={wordmarkRef}
+          className="font-display font-bold lowercase text-white select-none w-full leading-none"
+          style={{
+            fontSize: "clamp(72px, 24.5vw, 420px)",
+            letterSpacing: "-0.03em",
+            lineHeight: 0.85,
+          }}
+          data-testid="hero-wordmark"
+        >
+          beyond
+        </h1>
+      </div>
 
-      {/* Meta row — padded */}
+      {/* Bottom row */}
       <div
         ref={metaRef}
-        className="flex flex-col md:flex-row justify-between items-start gap-6 mt-8 px-6 md:px-8"
+        className="flex items-end justify-between px-6 md:px-8 pb-8"
       >
-        <div className="flex flex-col gap-1">
-          <span className="font-sans text-xs text-foreground/50 uppercase tracking-[0.1em]">
-            Tomorrow's brands, today
-          </span>
-          <span className="font-sans text-xs text-foreground/50 uppercase tracking-[0.1em]">
-            The Growth Accelerator™
-          </span>
+        {/* Left: two-column descriptor */}
+        <div className="flex gap-10 md:gap-16 items-start">
+          <p className="font-sans text-xs md:text-sm text-white/60 leading-snug max-w-[120px]">
+            Strategy, Design,<br />Performance.
+          </p>
+          <p className="font-sans text-xs md:text-sm text-white/60 leading-snug max-w-[140px] hidden md:block">
+            Global Creative<br />&amp; Technology Agency.
+          </p>
         </div>
 
-        <p className="font-sans text-sm md:text-base font-light text-foreground/70 max-w-xs text-right hidden md:block">
-          Strategy · Design · Growth
-        </p>
+        {/* Right: scroll arrow */}
+        <span className="font-sans text-white/50 text-lg select-none" aria-hidden="true">
+          ↓
+        </span>
       </div>
     </section>
   );
