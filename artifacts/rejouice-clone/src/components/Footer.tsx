@@ -136,13 +136,13 @@ export default function Footer() {
       </div>
 
       {/* Giant edge-to-edge wordmark */}
-      <div className="overflow-hidden leading-none select-none w-full">
+      <div className="w-full overflow-hidden leading-none select-none">
         <span
-          className="font-display font-bold lowercase text-white block w-full"
+          className="font-display font-bold lowercase text-white block whitespace-nowrap"
           style={{
-            fontSize: "clamp(80px, 20.8vw, 380px)",
-            lineHeight: 0.82,
-            letterSpacing: "-0.03em",
+            fontSize: "24.5vw",
+            lineHeight: 0.85,
+            letterSpacing: "-0.02em",
           }}
           aria-hidden="true"
           data-testid="footer-wordmark-large"
