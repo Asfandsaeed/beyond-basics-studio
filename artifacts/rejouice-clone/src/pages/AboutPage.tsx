@@ -93,6 +93,22 @@ export default function AboutPage() {
         opacity: 0, y: 32, duration: 1, stagger: 0.2, ease: "power3.out",
         scrollTrigger: { trigger: ".philosophy-section", start: "top 78%" },
       });
+
+      // "Designed to transform" — scrub from top of panel to bottom as section scrolls
+      const philoSection = document.querySelector(".philosophy-section") as HTMLElement;
+      const philoTitle   = document.querySelector(".philosophy-title")   as HTMLElement;
+      if (philoSection && philoTitle) {
+        gsap.to(philoTitle, {
+          y: () => philoSection.offsetHeight - philoTitle.offsetHeight - 80,
+          ease: "none",
+          scrollTrigger: {
+            trigger: philoSection,
+            start: "top top",
+            end:   "bottom bottom",
+            scrub: true,
+          },
+        });
+      }
       revealFrom(".office-text", ".office-section");
       revealFrom(".office-img", ".office-section", { delay: 0.2 });
       gsap.from(".mask-img", {
@@ -281,24 +297,24 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ══ 8. PHILOSOPHY — dark full-screen, sticky label bottom-left ════ */}
-      <section className="philosophy-section relative bg-[#0A0A0A] text-white flex min-h-screen px-6 md:px-10 py-10 gap-10">
+      {/* ══ 8. PHILOSOPHY — dark, section is tall so title has room to travel ═ */}
+      <section className="philosophy-section relative bg-[#0A0A0A] text-white flex px-6 md:px-10 gap-10" style={{ minHeight: "220vh" }}>
 
-        {/* Left: sticky full-viewport panel — title always sits at the bottom */}
+        {/* Left: sticky panel — title starts at top, GSAP moves it to bottom */}
         <div
-          className="hidden md:flex w-[40%] shrink-0 flex-col justify-end pb-10"
+          className="hidden md:block w-[40%] shrink-0"
           style={{ position: "sticky", top: 0, height: "100vh", alignSelf: "flex-start" }}
         >
           <h2
-            className="philosophy-title font-sans font-light text-white leading-[1.05] tracking-[-0.02em]"
+            className="philosophy-title font-sans font-light text-white leading-[1.05] tracking-[-0.02em] pt-10"
             style={{ fontSize: "clamp(2rem, 4.5vw, 5rem)" }}
           >
             Designed to<br />transform
           </h2>
         </div>
 
-        {/* Right: scrollable content blocks */}
-        <div className="flex-1 flex flex-col justify-center gap-16 py-24">
+        {/* Right: scrollable content blocks spread over the tall section */}
+        <div className="flex-1 flex flex-col justify-around py-32 gap-24">
           <div className="philosophy-block max-w-md">
             <h3 className="font-sans font-light text-white text-xl md:text-2xl mb-4">
               One Team, Global Talent
