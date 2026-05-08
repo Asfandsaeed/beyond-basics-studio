@@ -208,24 +208,28 @@ export default function WorkPage() {
 
           {/* Centered title */}
           <div className="relative z-10 flex flex-col items-center gap-3 text-center px-6">
-            <span className="font-sans text-white/40 text-[10px] uppercase tracking-[0.2em]">
-              {project.category}
-            </span>
             <h2
               className="work-title font-display font-bold text-white text-[8vw] md:text-[5.5vw] leading-none tracking-tight"
               style={{ textDecoration: "underline", textUnderlineOffset: "0.12em" }}
             >
               {project.title}
             </h2>
-            <span className="font-sans text-white/30 text-xs tracking-widest">
-              {project.year}
-            </span>
           </div>
 
           {/* Bottom left: view project cta */}
           <div className="absolute bottom-6 left-6 md:bottom-8 md:left-10 z-10">
-            <span className="font-sans text-white/30 text-xs uppercase tracking-widest">
+            <span className="font-sans text-white text-xs uppercase tracking-widest border-b border-white/60 pb-px">
               View project ↗
+            </span>
+          </div>
+
+          {/* Bottom right: category + year */}
+          <div className="absolute bottom-6 right-6 md:bottom-8 md:right-10 z-10 flex flex-col items-end gap-1">
+            <span className="font-sans text-white text-xs uppercase tracking-widest">
+              {project.category}
+            </span>
+            <span className="font-sans text-white/60 text-xs tracking-widest">
+              {project.year}
             </span>
           </div>
         </section>
