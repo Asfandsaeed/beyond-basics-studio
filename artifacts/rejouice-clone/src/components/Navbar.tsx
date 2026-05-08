@@ -52,13 +52,18 @@ export default function Navbar() {
         style={{ opacity: 0 }}
         className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-5 md:px-10 transition-all duration-400 ${bgClass}`}
       >
-        {/* Left: tagline */}
+        {/* Left: switches from tagline → brand name on scroll */}
         <Link
           href="/"
-          className={`font-sans text-xs font-medium tracking-tight transition-colors duration-300 ${textColor}`}
+          className={`font-sans text-xs font-medium tracking-tight transition-colors duration-300 ${textColor} overflow-hidden`}
           data-testid="link-home"
         >
-          The Growth Accelerator
+          <span className={`block transition-all duration-400 ease-in-out ${scrolled ? "opacity-0 -translate-y-3 absolute" : "opacity-100 translate-y-0"}`}>
+            The Growth Accelerator
+          </span>
+          <span className={`block transition-all duration-400 ease-in-out ${scrolled ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3 absolute"}`}>
+            beyond
+          </span>
         </Link>
 
         {/* Center: nav links */}
