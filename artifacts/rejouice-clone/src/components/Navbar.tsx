@@ -1,6 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -16,9 +19,9 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Hero is black on home page; other pages are white
   const isHomePage = location === "/";
 
+  // Entrance animation
   useEffect(() => {
     gsap.fromTo(
       navRef.current,
@@ -27,15 +30,39 @@ export default function Navbar() {
     );
   }, []);
 
+  // On the home page: flip when showreel top hits the navbar (top of viewport).
+  // On other pages: always treat as "scrolled" so the backdrop + dark text apply.
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    if (!isHomePage) {
+      setScrolled(true);
+      return;
+    }
 
-  // On home page: start white (on black hero), turn dark on scroll
-  // On other pages: always dark text (white bg)
+    setScrolled(false);
+
+    // Wait a tick for the DOM to be ready (Lenis / page render)
+    const raf = requestAnimationFrame(() => {
+      const showreel = document.querySelector('[data-testid="showreel-section"]');
+      if (!showreel) {
+        // Fallback: plain scroll threshold
+        const onScroll = () => setScrolled(window.scrollY > 50);
+        window.addEventListener("scroll", onScroll, { passive: true });
+        return () => window.removeEventListener("scroll", onScroll);
+      }
+
+      const st = ScrollTrigger.create({
+        trigger: showreel,
+        start: "top top",   // showreel's top edge hits the very top of viewport (navbar)
+        onEnter: () => setScrolled(true),
+        onLeaveBack: () => setScrolled(false),
+      });
+
+      return () => st.kill();
+    });
+
+    return () => cancelAnimationFrame(raf);
+  }, [isHomePage]);
+
   const isLight = isHomePage && !scrolled;
 
   const textColor = isLight ? "text-white" : "text-foreground";
@@ -50,9 +77,9 @@ export default function Navbar() {
       <header
         ref={navRef}
         style={{ opacity: 0 }}
-        className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-5 md:px-10 transition-all duration-400 ${bgClass}`}
+        className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-5 md:px-10 transition-all duration-300 ${bgClass}`}
       >
-        {/* Left: only the text flips on scroll */}
+        {/* Left: text flips exactly when showreel enters */}
         <Link
           href="/"
           className={`font-sans text-xs font-medium tracking-tight transition-colors duration-300 ${textColor}`}
@@ -61,13 +88,19 @@ export default function Navbar() {
           <span className="relative inline-flex h-[1.1em] overflow-hidden align-bottom">
             <span
               className="block transition-all duration-300 ease-in-out whitespace-nowrap"
-              style={{ transform: scrolled ? "translateY(-110%)" : "translateY(0)", opacity: scrolled ? 0 : 1 }}
+              style={{
+                transform: scrolled ? "translateY(-110%)" : "translateY(0)",
+                opacity: scrolled ? 0 : 1,
+              }}
             >
               The Growth Accelerator
             </span>
             <span
               className="block absolute inset-0 transition-all duration-300 ease-in-out whitespace-nowrap"
-              style={{ transform: scrolled ? "translateY(0)" : "translateY(110%)", opacity: scrolled ? 1 : 0 }}
+              style={{
+                transform: scrolled ? "translateY(0)" : "translateY(110%)",
+                opacity: scrolled ? 1 : 0,
+              }}
             >
               beyond
             </span>
