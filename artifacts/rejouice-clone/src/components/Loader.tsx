@@ -24,7 +24,7 @@ export default function Loader({ onComplete }: LoaderProps) {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="fixed inset-0 z-[1000] flex items-center justify-center bg-[#FAFAFA] text-[#0A0A0A]"
+          className="fixed inset-0 z-[1000] flex items-center justify-center bg-white text-[#0A0A0A]"
         >
           <motion.div
             initial={{ opacity: 0, y: 10 }}

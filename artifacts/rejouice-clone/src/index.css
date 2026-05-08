@@ -14,9 +14,9 @@
 }
 
 :root {
-  --background: 0 0% 98%;
-  --foreground: 0 0% 4%;
-  --border: 0 0% 90%;
+  --background: 0 0% 100%;
+  --foreground: 0 0% 5%;
+  --border: 0 0% 88%;
   --app-font-sans: 'Inter', sans-serif;
   --app-font-display: 'Syne', sans-serif;
 }
