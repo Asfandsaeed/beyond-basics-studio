@@ -281,40 +281,52 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ══ 8. PHILOSOPHY ════════════════════════════════════════════════ */}
-      <section className="philosophy-section px-6 md:px-10 py-24 bg-[#F5F4F0] text-[#0A0A0A]">
-        <div className="max-w-[1400px] mx-auto">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40 mb-16">
-            Designed to transform
-          </p>
+      {/* ══ 8. PHILOSOPHY — dark full-screen, sticky label bottom-left ════ */}
+      <section className="philosophy-section relative bg-[#0A0A0A] text-white flex min-h-screen px-6 md:px-10 py-10 gap-10">
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-20">
-            <div className="philosophy-block">
-              <h3 className="font-display font-bold text-2xl md:text-3xl tracking-tight mb-4">
-                One Team, Global Talent
-              </h3>
-              <p className="font-sans text-sm text-[#0A0A0A]/60 leading-relaxed max-w-md">
-                We curate the best talent from all corners of the world. This enables us to leverage diverse perspectives, knowledge, and expertise to deliver fresh and tailored solutions for our clients.
-              </p>
-            </div>
-            <div className="philosophy-block">
-              <h3 className="font-display font-bold text-2xl md:text-3xl tracking-tight mb-4">
-                Strategic Simplicity
-              </h3>
-              <p className="font-sans text-sm text-[#0A0A0A]/60 leading-relaxed max-w-md">
-                For us, simplicity is the ultimate sophistication. Our best work emerges from tackling complexity head-on and distilling it collaboratively with partners who value the time needed to build a high-performing brand.
-              </p>
-            </div>
+        {/* Left: sticky "Designed to transform" label at bottom */}
+        <div className="hidden md:flex w-[40%] shrink-0 flex-col justify-end pb-4">
+          <h2
+            className="font-sans font-light text-white leading-[1.05] tracking-[-0.02em]"
+            style={{ fontSize: "clamp(2rem, 4.5vw, 5rem)" }}
+          >
+            Designed to<br />transform
+          </h2>
+        </div>
+
+        {/* Right: scrollable content blocks */}
+        <div className="flex-1 flex flex-col justify-center gap-16 py-24">
+          <div className="philosophy-block max-w-md">
+            <h3 className="font-sans font-light text-white text-xl md:text-2xl mb-4">
+              One Team, Global Talent
+            </h3>
+            <p className="font-sans text-sm text-white/50 leading-relaxed">
+              We curate the best talent from all corners of the world. This enables us to leverage diverse perspectives, knowledge, and expertise to deliver fresh and tailored solutions for our clients.
+            </p>
           </div>
 
-          <div className="philosophy-block border-t border-[#0A0A0A]/10 pt-12">
+          <div className="philosophy-block max-w-md">
+            <h3 className="font-sans font-light text-white text-xl md:text-2xl mb-4">
+              Strategic Simplicity
+            </h3>
+            <p className="font-sans text-sm text-white/50 leading-relaxed">
+              For us, simplicity is the ultimate sophistication. Our best work emerges from tackling complexity head-on and distilling it collaboratively with partners who value the time needed to build a high-performing brand.
+            </p>
+          </div>
+
+          <div className="philosophy-block max-w-md">
             <p
-              className="font-sans font-light text-[#0A0A0A]/70 leading-[1.35] tracking-[-0.01em]"
-              style={{ fontSize: "clamp(1.4rem, 2.8vw, 2.8rem)", maxWidth: "820px" }}
+              className="font-sans font-light text-white/80 leading-[1.35] tracking-[-0.01em]"
+              style={{ fontSize: "clamp(1rem, 1.8vw, 1.5rem)" }}
             >
               We partner like co-founders. Straight talk, no sugarcoating. This is how we exceed expectations, and deliver memorable brands.
             </p>
           </div>
+
+          {/* Mobile-only title */}
+          <h2 className="md:hidden font-sans font-light text-white leading-[1.05] tracking-[-0.02em] text-4xl">
+            Designed to transform
+          </h2>
         </div>
       </section>
 
