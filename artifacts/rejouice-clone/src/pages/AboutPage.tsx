@@ -208,14 +208,12 @@ export default function AboutPage() {
         </p>
       </section>
 
-      <div className="w-full h-px bg-[#0A0A0A]/10" />
-
       {/* ══ 6. FOUNDER ════════════════════════════════════════════════════
             Layout: photo fills left ~55%, quote top-right, "One Founder" bottom-left
       ══════════════════════════════════════════════════════════════════ */}
-      <section className="founder-section relative min-h-screen flex">
+      <section className="founder-section relative min-h-screen flex px-6 md:px-10 py-10 gap-10">
         {/* Left: full-height portrait */}
-        <div className="relative w-[55%] shrink-0 overflow-hidden bg-[#111]">
+        <div className="relative w-[55%] shrink-0 overflow-hidden rounded-sm bg-[#111]">
           <img
             src={ASSETS.guillaume}
             alt="Guillaume Hamon — Founding Partner"
@@ -224,7 +222,7 @@ export default function AboutPage() {
         </div>
 
         {/* Right: quote + bio, anchored top */}
-        <div className="flex-1 flex flex-col justify-between px-10 py-16">
+        <div className="flex-1 flex flex-col justify-between py-4">
           {/* Quote top-right */}
           <div className="max-w-sm">
             <blockquote
@@ -255,16 +253,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ══ 7. PARTNERS ═══════════════════════════════════════════════════
-            Layout: large photos 2-per-row, "+6 partners" bottom-left label
-      ══════════════════════════════════════════════════════════════════ */}
-      <section className="partners-section relative">
-        {/* Photos grid — edge-to-edge, 2 cols on desktop */}
-        <div className="grid grid-cols-2 md:grid-cols-3">
+      {/* ══ 7. PARTNERS ═══════════════════════════════════════════════════ */}
+      <section className="partners-section px-6 md:px-10 pt-6 pb-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {partners.map((p) => (
-            <div key={p.name} className="partner-card relative">
-              {/* Tall portrait */}
-              <div className="overflow-hidden aspect-[3/4] bg-[#e8e8e8]">
+            <div key={p.name} className="partner-card">
+              <div className="overflow-hidden rounded-sm aspect-[3/4] bg-[#e8e8e8]">
                 <img
                   src={p.img}
                   alt={p.name}
@@ -272,8 +266,7 @@ export default function AboutPage() {
                   loading="lazy"
                 />
               </div>
-              {/* Name below */}
-              <div className="px-4 py-4">
+              <div className="pt-3">
                 <p className="font-sans font-medium text-[#0A0A0A] text-sm">{p.name}</p>
                 <p className="font-sans text-xs text-[#0A0A0A]/40 mt-1">{p.role}</p>
               </div>
@@ -281,8 +274,7 @@ export default function AboutPage() {
           ))}
         </div>
 
-        {/* "+6 partners" label — bottom-left, outside grid */}
-        <div className="px-6 md:px-10 pb-10 pt-4 border-t border-[#0A0A0A]/10">
+        <div className="mt-8">
           <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40">
             +6 partners
           </p>
