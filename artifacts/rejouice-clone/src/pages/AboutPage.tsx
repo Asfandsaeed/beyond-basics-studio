@@ -53,18 +53,14 @@ export default function AboutPage() {
     window.scrollTo(0, 0);
     const ctx = gsap.context(() => {
 
-      // Hero headline split
+      // Hero headline — fade + lift (no DOM restructuring so natural wrapping is preserved)
       if (heroRef.current) {
-        const split = new SplitType(heroRef.current, { types: "lines" });
-        split.lines?.forEach(line => {
-          const wrapper = document.createElement("div");
-          wrapper.style.overflow = "hidden";
-          line.parentNode?.insertBefore(wrapper, line);
-          wrapper.appendChild(line);
-        });
-        gsap.from(split.lines, {
-          y: "110%", opacity: 0, duration: 1.3, stagger: 0.1,
-          ease: "power4.out", delay: 0.15,
+        gsap.from(heroRef.current, {
+          opacity: 0,
+          y: 40,
+          duration: 1.2,
+          ease: "power4.out",
+          delay: 0.1,
         });
       }
 
@@ -112,12 +108,12 @@ export default function AboutPage() {
     <div ref={pageRef} className="bg-white text-[#0A0A0A]">
 
       {/* ══ 1. HERO TAGLINE ═══════════════════════════════════════════════ */}
-      <section className="min-h-screen flex flex-col justify-center px-6 md:px-16 pt-28 pb-20">
-        <div className="max-w-[1200px] mx-auto w-full">
+      <section className="min-h-screen flex flex-col justify-center px-6 md:px-10 pt-28 pb-16">
+        <div className="w-full">
           <h1
             ref={heroRef}
-            className="font-sans font-light leading-[1.1] tracking-[-0.02em] text-[#0A0A0A] text-center"
-            style={{ fontSize: "clamp(2.2rem, 5.5vw, 6rem)" }}
+            className="font-sans font-light leading-[1.12] tracking-[-0.025em] text-[#0A0A0A]"
+            style={{ fontSize: "clamp(1.5rem, 3.4vw, 3.8rem)" }}
           >
             We are a collective of seasoned creatives, strategists, growth marketers, and technologists, dedicated to transforming ambitious visions into category leaders.
           </h1>
