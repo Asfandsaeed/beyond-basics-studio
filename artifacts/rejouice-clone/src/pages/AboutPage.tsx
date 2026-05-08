@@ -284,14 +284,16 @@ export default function AboutPage() {
       {/* ══ 8. PHILOSOPHY — dark full-screen, sticky label bottom-left ════ */}
       <section className="philosophy-section relative bg-[#0A0A0A] text-white flex min-h-screen px-6 md:px-10 py-10 gap-10">
 
-        {/* Left: sticky "Designed to transform" label at bottom */}
-        <div className="hidden md:flex w-[40%] shrink-0 flex-col justify-end pb-4">
-          <h2
-            className="font-sans font-light text-white leading-[1.05] tracking-[-0.02em]"
-            style={{ fontSize: "clamp(2rem, 4.5vw, 5rem)" }}
-          >
-            Designed to<br />transform
-          </h2>
+        {/* Left: sticky "Designed to transform" label pinned near bottom of viewport */}
+        <div className="hidden md:block w-[40%] shrink-0 self-start">
+          <div className="sticky" style={{ top: "calc(100vh - 14rem)" }}>
+            <h2
+              className="font-sans font-light text-white leading-[1.05] tracking-[-0.02em]"
+              style={{ fontSize: "clamp(2rem, 4.5vw, 5rem)" }}
+            >
+              Designed to<br />transform
+            </h2>
+          </div>
         </div>
 
         {/* Right: scrollable content blocks */}
