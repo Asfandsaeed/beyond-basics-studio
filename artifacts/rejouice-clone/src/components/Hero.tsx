@@ -45,7 +45,7 @@ export default function Hero() {
         }}
         data-testid="hero-wordmark"
       >
-        rejouice
+        beyond
       </h1>
 
       {/* Meta row — padded */}

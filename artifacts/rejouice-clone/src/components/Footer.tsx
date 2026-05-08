@@ -36,11 +36,11 @@ export default function Footer() {
                 New Business
               </p>
               <a
-                href="mailto:hello@rejouice.com"
+                href="mailto:hello@beyond.com"
                 className="font-sans text-base text-white hover:text-white/60 transition-colors duration-200"
                 data-testid="footer-email"
               >
-                hello@rejouice.com
+                hello@beyond.com
               </a>
             </div>
 
@@ -99,7 +99,7 @@ export default function Footer() {
             <span className="text-xs">↗</span>
           </Link>
           <a
-            href="https://instagram.com/rejouice"
+            href="https://instagram.com/beyondagency"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 font-sans text-base text-white/40 hover:text-white transition-colors duration-200"
@@ -109,7 +109,7 @@ export default function Footer() {
             <span className="text-xs">↗</span>
           </a>
           <a
-            href="https://linkedin.com/company/rejouice"
+            href="https://linkedin.com/company/beyondagency"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 font-sans text-base text-white/40 hover:text-white transition-colors duration-200"
@@ -147,7 +147,7 @@ export default function Footer() {
           aria-hidden="true"
           data-testid="footer-wordmark-large"
         >
-          rejouice
+          beyond
         </span>
       </div>
 

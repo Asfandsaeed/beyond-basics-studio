@@ -57,11 +57,11 @@ export default function ContactPage() {
                 Get in touch
               </p>
               <a
-                href="mailto:hello@rejouice.com"
+                href="mailto:hello@beyond.com"
                 className="font-sans text-lg font-light text-white/80 hover:text-white transition-colors duration-200"
                 data-testid="link-email-general"
               >
-                hello@rejouice.com
+                hello@beyond.com
               </a>
             </div>
 
@@ -70,11 +70,11 @@ export default function ContactPage() {
                 New Business.
               </p>
               <a
-                href="mailto:hello@rejouice.com"
+                href="mailto:hello@beyond.com"
                 className="font-sans text-lg font-light text-white/80 hover:text-white transition-colors duration-200"
                 data-testid="link-email-business"
               >
-                hello@rejouice.com
+                hello@beyond.com
               </a>
             </div>
 
@@ -83,11 +83,11 @@ export default function ContactPage() {
                 Join the Team.
               </p>
               <a
-                href="mailto:jobs@rejouice.com"
+                href="mailto:jobs@beyond.com"
                 className="font-sans text-lg font-light text-white/80 hover:text-white transition-colors duration-200"
                 data-testid="link-email-jobs"
               >
-                jobs@rejouice.com
+                jobs@beyond.com
               </a>
             </div>
           </div>

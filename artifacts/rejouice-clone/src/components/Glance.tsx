@@ -50,12 +50,12 @@ export default function Glance() {
     <section
       ref={sectionRef}
       className="py-20 md:py-28 px-6 md:px-8 border-t border-border/40 bg-background text-foreground"
-      data-testid="rejouice-glance"
+      data-testid="beyond-glance"
     >
       <div className="max-w-[1400px] mx-auto">
         <div className="flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between md:items-baseline mb-16">
           <h2 className="font-sans text-xs uppercase tracking-[0.15em] text-foreground/40">
-            Rejouice at a glance
+            Beyond at a glance
           </h2>
           <span className="font-sans text-xs text-foreground/30">Est. 2019</span>
         </div>

@@ -46,7 +46,7 @@ export default function Navbar() {
           className="font-sans text-sm font-medium tracking-tight lowercase"
           data-testid="link-home"
         >
-          rejouice
+          beyond
         </Link>
 
         <nav className="hidden md:flex items-center gap-8" data-testid="nav-links">
