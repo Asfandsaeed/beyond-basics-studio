@@ -19,61 +19,25 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#0A0A0A] text-white overflow-hidden">
+    <footer className="bg-[#0A0A0A] text-white overflow-hidden min-h-screen flex flex-col justify-between">
 
-      {/* Top nav bar — mirrors header */}
-      <div className="flex items-center justify-between px-6 md:px-8 py-5 border-b border-white/10">
-        <Link
-          href="/"
-          className="font-sans text-xs font-medium lowercase text-white/80 hover:text-white transition-colors duration-200"
-          data-testid="footer-wordmark"
-        >
-          rejouice
-        </Link>
-
-        <nav className="hidden md:flex items-center gap-7">
-          {navLinks.map((link) => {
-            const isActive = location === link.href;
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                data-testid={`footer-nav-${link.label.toLowerCase()}`}
-                className={`font-sans text-xs transition-opacity duration-200 ${
-                  isActive ? "text-white" : "text-white/40 hover:text-white"
-                }`}
-              >
-                {link.label}
-              </Link>
-            );
-          })}
-        </nav>
-
-        <Link
-          href="/contact"
-          className="hidden md:flex items-center gap-1 font-sans text-xs text-white/80 hover:text-white transition-colors duration-200"
-          data-testid="footer-cta"
-        >
-          <span>Let's talk</span>
-          <span>↗</span>
-        </Link>
-      </div>
-
-      {/* Main content grid */}
-      <div className="px-6 md:px-8 pt-10 pb-8 grid grid-cols-1 md:grid-cols-[1fr_auto_auto] gap-12 md:gap-0">
+      {/* Main content — fills screen height, pushes wordmark to bottom */}
+      <div className="flex-1 px-6 md:px-10 pt-16 pb-12 grid grid-cols-1 md:grid-cols-[1fr_auto_auto] gap-16 md:gap-0">
 
         {/* Left column: tagline + contact + newsletter */}
-        <div className="flex flex-col justify-between gap-10">
-          <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-white leading-tight">
-            Do it once. Do it right.
+        <div className="flex flex-col justify-between gap-16">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight max-w-sm">
+            Do it once.<br />Do it right.
           </h2>
 
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-10">
             <div>
-              <p className="font-sans text-xs text-white/40 mb-1">New Business:</p>
+              <p className="font-sans text-xs text-white/40 mb-2 uppercase tracking-widest">
+                New Business
+              </p>
               <a
                 href="mailto:hello@rejouice.com"
-                className="font-sans text-sm text-white hover:text-white/60 transition-colors duration-200"
+                className="font-sans text-base text-white hover:text-white/60 transition-colors duration-200"
                 data-testid="footer-email"
               >
                 hello@rejouice.com
@@ -84,7 +48,7 @@ export default function Footer() {
               <label className="font-sans text-xs text-white/40">
                 Sign up for our newsletter (No spam)
               </label>
-              <div className="flex items-center gap-4 border-b border-white/20 pb-2 w-64">
+              <div className="flex items-center gap-4 border-b border-white/20 pb-3 w-72">
                 <input
                   type="email"
                   value={email}
@@ -95,7 +59,7 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="text-white/50 hover:text-white transition-colors duration-200 shrink-0"
+                  className="text-white/50 hover:text-white transition-colors duration-200 shrink-0 text-base"
                   data-testid="footer-newsletter-submit"
                 >
                   →
@@ -106,7 +70,7 @@ export default function Footer() {
         </div>
 
         {/* Center column: nav links */}
-        <div className="hidden md:flex flex-col gap-3 md:px-24">
+        <div className="hidden md:flex flex-col gap-4 md:px-28 pt-2">
           {navLinks.map((link) => {
             const isActive = location === link.href;
             return (
@@ -114,7 +78,7 @@ export default function Footer() {
                 key={link.href}
                 href={link.href}
                 data-testid={`footer-link-${link.label.toLowerCase()}`}
-                className={`font-sans text-sm transition-opacity duration-200 ${
+                className={`font-sans text-base transition-opacity duration-200 ${
                   isActive ? "text-white" : "text-white/40 hover:text-white"
                 }`}
               >
@@ -125,10 +89,10 @@ export default function Footer() {
         </div>
 
         {/* Right column: socials */}
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-4 pt-2">
           <Link
             href="/contact"
-            className="flex items-center gap-1 font-sans text-sm text-white hover:text-white/60 transition-colors duration-200"
+            className="flex items-center gap-1 font-sans text-base text-white hover:text-white/60 transition-colors duration-200"
             data-testid="footer-link-lets-talk"
           >
             <span>Let's talk</span>
@@ -138,7 +102,7 @@ export default function Footer() {
             href="https://instagram.com/rejouice"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 font-sans text-sm text-white/40 hover:text-white transition-colors duration-200"
+            className="flex items-center gap-1 font-sans text-base text-white/40 hover:text-white transition-colors duration-200"
             data-testid="footer-link-instagram"
           >
             <span>Instagram</span>
@@ -148,7 +112,7 @@ export default function Footer() {
             href="https://linkedin.com/company/rejouice"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 font-sans text-sm text-white/40 hover:text-white transition-colors duration-200"
+            className="flex items-center gap-1 font-sans text-base text-white/40 hover:text-white transition-colors duration-200"
             data-testid="footer-link-linkedin"
           >
             <span>LinkedIn</span>
@@ -158,29 +122,30 @@ export default function Footer() {
       </div>
 
       {/* Bottom info bar */}
-      <div className="px-6 md:px-8 py-5 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-t border-white/10">
-        <div className="hidden md:block" />
-
-        <div className="md:text-right md:ml-auto md:mr-0 flex flex-col md:flex-row gap-6 md:gap-16 items-start md:items-center">
-          <div className="flex flex-col gap-0.5">
-            <span className="font-sans text-xs text-white/30">San Diego—USA</span>
-            <span className="font-sans text-xs text-white/30">Paris—France</span>
-          </div>
-          <div className="flex flex-col gap-0.5">
-            <a href="#" className="font-sans text-xs text-white/30 hover:text-white/60 transition-colors">
-              Terms of use
-            </a>
-            <span className="font-sans text-xs text-white/30">©13–26</span>
-          </div>
+      <div className="px-6 md:px-10 py-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-t border-white/10">
+        <div className="flex flex-col gap-0.5">
+          <span className="font-sans text-xs text-white/30">San Diego—USA</span>
+          <span className="font-sans text-xs text-white/30">Paris—France</span>
+        </div>
+        <div className="flex gap-8 items-center">
+          <a href="#" className="font-sans text-xs text-white/30 hover:text-white/60 transition-colors">
+            Terms of use
+          </a>
+          <span className="font-sans text-xs text-white/30">©13–26</span>
         </div>
       </div>
 
-      {/* Giant wordmark */}
-      <div className="px-0 overflow-hidden leading-none select-none">
+      {/* Giant edge-to-edge wordmark */}
+      <div className="overflow-hidden leading-none select-none w-full">
         <span
-          className="font-display font-bold lowercase text-white block"
-          style={{ fontSize: "clamp(80px, 19.5vw, 280px)", lineHeight: 0.82, letterSpacing: "-0.03em" }}
+          className="font-display font-bold lowercase text-white block w-full"
+          style={{
+            fontSize: "clamp(80px, 20.8vw, 380px)",
+            lineHeight: 0.82,
+            letterSpacing: "-0.03em",
+          }}
           aria-hidden="true"
+          data-testid="footer-wordmark-large"
         >
           rejouice
         </span>

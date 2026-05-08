@@ -14,6 +14,7 @@ export default function Navbar() {
   const navRef = useRef<HTMLElement>(null);
   const [location] = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     gsap.fromTo(
@@ -23,12 +24,22 @@ export default function Navbar() {
     );
   }, []);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <>
       <header
         ref={navRef}
         style={{ opacity: 0 }}
-        className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-5 md:px-10"
+        className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-5 md:px-10 transition-all duration-300 ${
+          scrolled
+            ? "bg-background/90 backdrop-blur-md border-b border-border/30"
+            : "bg-transparent"
+        }`}
       >
         <Link
           href="/"
