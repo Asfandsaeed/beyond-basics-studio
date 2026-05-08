@@ -49,23 +49,22 @@ function MediaItem({ item, className = "" }: { item: GalleryItem; className?: st
 // ─── Gallery renderer ──────────────────────────────────────────────────────────
 function Gallery({ items }: { items: GalleryItem[] }) {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-3 px-3 md:px-4 py-3 md:py-4">
       {items.map((item, i) => {
         if (item.layout === "pair" && item.pair) {
           return (
-            <div key={i} className="grid grid-cols-2 gap-1">
-              <div className="aspect-[4/3] overflow-hidden bg-[#111]">
+            <div key={i} className="grid grid-cols-2 gap-3 md:gap-4">
+              <div className="aspect-[4/3] overflow-hidden rounded-sm bg-[#111]">
                 <MediaItem item={item} />
               </div>
-              <div className="aspect-[4/3] overflow-hidden bg-[#111]">
+              <div className="aspect-[4/3] overflow-hidden rounded-sm bg-[#111]">
                 <MediaItem item={item.pair} />
               </div>
             </div>
           );
         }
-        // full width
         return (
-          <div key={i} className="w-full aspect-video overflow-hidden bg-[#111]">
+          <div key={i} className="w-full aspect-video overflow-hidden rounded-sm bg-[#111]">
             <MediaItem item={item} />
           </div>
         );
@@ -209,7 +208,7 @@ export default function ProjectPage() {
       </section>
 
       {/* ── Gallery ── */}
-      <div className="mt-1">
+      <div>
         <Gallery items={project.gallery} />
       </div>
 
