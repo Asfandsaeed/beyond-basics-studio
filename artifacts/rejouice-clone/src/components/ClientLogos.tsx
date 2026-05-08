@@ -1,49 +1,51 @@
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import React from "react";
 
 const clients = [
-  "Tula", "mobile", "beti", "Foot Locker", "Brightside",
-  "Prudf", "Grove", "Highline", "Nexus", "Vertex",
+  { name: "Stripe", domain: "stripe.com" },
+  { name: "Notion", domain: "notion.so" },
+  { name: "Linear", domain: "linear.app" },
+  { name: "Vercel", domain: "vercel.com" },
+  { name: "Figma", domain: "figma.com" },
+  { name: "Shopify", domain: "shopify.com" },
+  { name: "Airbnb", domain: "airbnb.com" },
+  { name: "Spotify", domain: "spotify.com" },
+  { name: "HubSpot", domain: "hubspot.com" },
+  { name: "Slack", domain: "slack.com" },
+  { name: "Loom", domain: "loom.com" },
+  { name: "Intercom", domain: "intercom.com" },
 ];
 
 export default function ClientLogos() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(sectionRef.current, {
-        opacity: 0,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 85%",
-        },
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
-
   return (
     <section
-      ref={sectionRef}
-      className="py-6 px-6 md:px-8 border-t border-b border-border/40 bg-background overflow-hidden"
+      className="py-5 border-t border-b border-border/40 bg-background overflow-hidden"
       data-testid="client-logos"
     >
-      <div className="flex items-center gap-12 md:gap-16 overflow-x-auto scrollbar-hide">
-        {clients.map((client, idx) => (
-          <span
-            key={idx}
-            className="font-sans text-sm whitespace-nowrap text-foreground/40 hover:text-foreground/80 transition-colors duration-200 shrink-0"
-            data-testid={`logo-${client.toLowerCase().replace(/\s/g, "-")}`}
-          >
-            {client}
-          </span>
-        ))}
+      <div className="relative flex overflow-x-hidden">
+        <div className="flex items-center gap-12 md:gap-16 animate-marquee whitespace-nowrap">
+          {[...clients, ...clients].map((client, idx) => (
+            <div
+              key={idx}
+              className="flex items-center justify-center shrink-0 h-7"
+              data-testid={`logo-${client.domain.replace(".", "-")}`}
+              title={client.name}
+            >
+              <img
+                src={`https://logo.clearbit.com/${client.domain}`}
+                alt={client.name}
+                className="h-5 w-auto object-contain grayscale opacity-50 hover:opacity-80 hover:grayscale-0 transition-all duration-300"
+                onError={(e) => {
+                  const target = e.currentTarget as HTMLImageElement;
+                  target.style.display = "none";
+                  const span = document.createElement("span");
+                  span.textContent = client.name;
+                  span.className = "font-sans text-sm text-foreground/40";
+                  target.parentElement?.appendChild(span);
+                }}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
