@@ -1,6 +1,5 @@
 import React from "react";
 import Loader from "@/components/Loader";
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
 import Projects from "@/components/Projects";
@@ -8,7 +7,6 @@ import Services from "@/components/Services";
 import About from "@/components/About";
 import ClientLogos from "@/components/ClientLogos";
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   const [loaded, setLoaded] = React.useState(false);
@@ -16,9 +14,8 @@ export default function Home() {
   return (
     <div className="bg-background text-foreground min-h-screen selection:bg-foreground selection:text-background">
       {!loaded && <Loader onComplete={() => setLoaded(true)} />}
-      
+
       <div className={`transition-opacity duration-1000 ${loaded ? "opacity-100" : "opacity-0"}`}>
-        <Navbar />
         <main>
           <Hero />
           <Marquee />
@@ -28,7 +25,6 @@ export default function Home() {
           <ClientLogos />
           <Contact />
         </main>
-        <Footer />
       </div>
     </div>
   );

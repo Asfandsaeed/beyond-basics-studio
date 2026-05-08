@@ -5,7 +5,13 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
+import WorkPage from "@/pages/WorkPage";
+import AboutPage from "@/pages/AboutPage";
+import ServicesPage from "@/pages/ServicesPage";
+import ContactPage from "@/pages/ContactPage";
 import CustomCursor from "@/components/CustomCursor";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import Lenis from "lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -18,8 +24,22 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/work" component={WorkPage} />
+      <Route path="/about" component={AboutPage} />
+      <Route path="/services" component={ServicesPage} />
+      <Route path="/contact" component={ContactPage} />
       <Route component={NotFound} />
     </Switch>
+  );
+}
+
+function AppLayout() {
+  return (
+    <>
+      <Navbar />
+      <Router />
+      <Footer />
+    </>
   );
 }
 
@@ -35,7 +55,7 @@ function App() {
       touchMultiplier: 2,
     });
 
-    lenis.on('scroll', ScrollTrigger.update);
+    lenis.on("scroll", ScrollTrigger.update);
 
     gsap.ticker.add((time) => {
       lenis.raf(time * 1000);
@@ -45,7 +65,6 @@ function App() {
 
     return () => {
       lenis.destroy();
-      gsap.ticker.remove((time) => lenis.raf(time * 1000));
     };
   }, []);
 
@@ -54,7 +73,7 @@ function App() {
       <TooltipProvider>
         <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
           <CustomCursor />
-          <Router />
+          <AppLayout />
         </WouterRouter>
         <Toaster />
       </TooltipProvider>
