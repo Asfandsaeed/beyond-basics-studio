@@ -154,30 +154,32 @@ export default function AboutPage() {
       </section>
 
       {/* ══ 3. AWARDS ════════════════════════════════════════════════════ */}
-      <section className="awards-section px-6 md:px-10 pb-24 border-t border-[#0A0A0A]/10">
-        <div className="max-w-[1400px] mx-auto">
-          <div className="flex items-baseline justify-between py-10 mb-12 border-b border-[#0A0A0A]/10">
-            <h2
-              ref={awardsNumRef}
-              className="font-display font-bold text-[#0A0A0A] leading-none tracking-tight"
-              style={{ fontSize: "clamp(5rem, 14vw, 14rem)" }}
-            >
-              Awards
-            </h2>
-            <span className="font-sans text-[#0A0A0A]/30 text-sm tracking-widest">(×90)</span>
-          </div>
+      <section className="awards-section border-t border-[#0A0A0A]/10">
+        {/* Giant "Awards" word with (x90) top-right */}
+        <div className="relative px-6 md:px-10 pt-8 pb-4 border-b border-[#0A0A0A]/10">
+          <span className="absolute top-6 right-6 md:top-8 md:right-10 font-sans text-xs text-[#0A0A0A]/40 tracking-widest">
+            (x90)
+          </span>
+          <h2
+            ref={awardsNumRef}
+            className="font-sans font-light text-[#0A0A0A] leading-none tracking-[-0.03em]"
+            style={{ fontSize: "clamp(5rem, 16vw, 16rem)" }}
+          >
+            Awards
+          </h2>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_1.6fr] gap-12 md:gap-24">
-            <p className="awards-left font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40">
-              Awards for digital innovation
-            </p>
-            <div className="awards-right font-sans text-lg md:text-xl font-light text-[#0A0A0A]/80 leading-relaxed">
-              <p>29 × Awwwards</p>
-              <p>19 × FWA</p>
-              <p>34 × CSS Design</p>
-              <p>02 × Webby</p>
-              <p className="text-[#0A0A0A]/30 mt-2">...and more.</p>
-            </div>
+        {/* Award counts grid */}
+        <div className="px-6 md:px-10 py-12 grid grid-cols-1 md:grid-cols-[1fr_1.6fr] gap-8 md:gap-24">
+          <p className="awards-left font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40">
+            Awards for digital innovation
+          </p>
+          <div className="awards-right font-sans text-base md:text-lg font-light text-[#0A0A0A]/70 leading-relaxed">
+            <p>29 × Awwwards</p>
+            <p>19 × FWA</p>
+            <p>34 × CSS Design</p>
+            <p>02 × Webby</p>
+            <p className="text-[#0A0A0A]/30 mt-2">...and more.</p>
           </div>
         </div>
       </section>
@@ -192,87 +194,98 @@ export default function AboutPage() {
       </section>
 
       {/* ══ 5. ATTENTION TAGLINE ══════════════════════════════════════════ */}
-      <section className="tagline-section px-6 md:px-10 py-28 md:py-36">
-        <div className="max-w-[1400px] mx-auto">
-          <p
-            className="tagline-quote font-sans font-light leading-[1.2] tracking-[-0.01em] text-[#0A0A0A]/80"
-            style={{ fontSize: "clamp(1.5rem, 3.5vw, 3.5rem)", maxWidth: "900px" }}
-          >
-            Attention is earned, not given. Great work only matters when it drives action. We build brands that turn attention into growth. It starts with the story you choose to tell.
-          </p>
-        </div>
+      <section className="tagline-section px-6 md:px-10 py-28 md:py-36 overflow-hidden">
+        {/* Float spacer creates the indented first-line effect */}
+        <div
+          className="float-left h-[1.25em]"
+          style={{ width: "clamp(8rem, 33%, 28rem)" }}
+        />
+        <p
+          className="tagline-quote font-sans font-light leading-[1.2] tracking-[-0.01em] text-[#0A0A0A]"
+          style={{ fontSize: "clamp(1.4rem, 3.2vw, 3.2rem)" }}
+        >
+          Attention is earned, not given. Great work only matters when it drives action. We build brands that turn attention into growth. It starts with the story you choose to tell.
+        </p>
       </section>
 
       <div className="w-full h-px bg-[#0A0A0A]/10" />
 
-      {/* ══ 6. FOUNDER ════════════════════════════════════════════════════ */}
-      <section className="founder-section px-6 md:px-10 py-24">
-        <div className="max-w-[1400px] mx-auto">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40 mb-12">
-            One Founder
-          </p>
+      {/* ══ 6. FOUNDER ════════════════════════════════════════════════════
+            Layout: photo fills left ~55%, quote top-right, "One Founder" bottom-left
+      ══════════════════════════════════════════════════════════════════ */}
+      <section className="founder-section relative min-h-screen flex">
+        {/* Left: full-height portrait */}
+        <div className="relative w-[55%] shrink-0 overflow-hidden bg-[#111]">
+          <img
+            src={ASSETS.guillaume}
+            alt="Guillaume Hamon — Founding Partner"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-12 md:gap-16 items-start">
-            {/* Portrait */}
-            <div className="overflow-hidden rounded-sm aspect-[4/5] bg-[#e8e8e8]">
-              <img
-                src={ASSETS.guillaume}
-                alt="Guillaume Hamon — Founding Partner"
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
+        {/* Right: quote + bio, anchored top */}
+        <div className="flex-1 flex flex-col justify-between px-10 py-16">
+          {/* Quote top-right */}
+          <div className="max-w-sm">
+            <blockquote
+              className="founder-quote font-sans font-light leading-[1.35] text-[#0A0A0A] tracking-[-0.01em]"
+              style={{ fontSize: "clamp(1rem, 1.6vw, 1.4rem)" }}
+            >
+              "We've streamlined the outdated and layered agency model to give you direct access to the best global talent. No wasted time, no empty promises. Just impactful results."
+            </blockquote>
 
-            {/* Quote + bio */}
-            <div className="flex flex-col justify-between h-full gap-16 md:pt-6">
-              <blockquote
-                className="founder-quote font-sans font-light leading-[1.35] text-[#0A0A0A]/75 tracking-[-0.01em]"
-                style={{ fontSize: "clamp(1.2rem, 2.2vw, 2rem)" }}
+            <div className="mt-8">
+              <p className="font-sans font-medium text-[#0A0A0A] text-sm">Guillaume Hamon</p>
+              <p className="font-sans text-xs text-[#0A0A0A]/50 mt-1">Founding Partner</p>
+              <a
+                href="https://www.linkedin.com/in/guillaumehamon/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-6 font-sans text-xs text-[#0A0A0A]/60 underline underline-offset-4 hover:text-[#0A0A0A] transition-colors"
               >
-                "We've streamlined the outdated and layered agency model to give you direct access to the best global talent. No wasted time, no empty promises. Just impactful results."
-              </blockquote>
-
-              <div>
-                <p className="font-sans font-medium text-[#0A0A0A] text-base">Guillaume Hamon</p>
-                <p className="font-sans text-sm text-[#0A0A0A]/40 mt-1">Founding Partner</p>
-                <a
-                  href="https://www.linkedin.com/in/guillaumehamon/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 mt-5 font-sans text-xs uppercase tracking-widest text-[#0A0A0A]/50 border-b border-[#0A0A0A]/20 pb-px hover:text-[#0A0A0A] hover:border-[#0A0A0A]/60 transition-colors"
-                >
-                  ↗ LinkedIn
-                </a>
-              </div>
+                LinkedIn ↗
+              </a>
             </div>
           </div>
+
+          {/* "One Founder" label bottom-left of right panel */}
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40">
+            One Founder
+          </p>
         </div>
       </section>
 
-      <div className="w-full h-px bg-[#0A0A0A]/10" />
-
-      {/* ══ 7. PARTNERS ═══════════════════════════════════════════════════ */}
-      <section className="partners-section px-6 md:px-10 py-24">
-        <div className="max-w-[1400px] mx-auto">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40 mb-14">
-            +6 partners
-          </p>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-14">
-            {partners.map((p) => (
-              <div key={p.name} className="partner-card">
-                <div className="overflow-hidden rounded-sm aspect-[4/5] bg-[#e8e8e8] mb-4">
-                  <img
-                    src={p.img}
-                    alt={p.name}
-                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
-                    loading="lazy"
-                  />
-                </div>
+      {/* ══ 7. PARTNERS ═══════════════════════════════════════════════════
+            Layout: large photos 2-per-row, "+6 partners" bottom-left label
+      ══════════════════════════════════════════════════════════════════ */}
+      <section className="partners-section relative">
+        {/* Photos grid — edge-to-edge, 2 cols on desktop */}
+        <div className="grid grid-cols-2 md:grid-cols-3">
+          {partners.map((p) => (
+            <div key={p.name} className="partner-card relative">
+              {/* Tall portrait */}
+              <div className="overflow-hidden aspect-[3/4] bg-[#e8e8e8]">
+                <img
+                  src={p.img}
+                  alt={p.name}
+                  className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                />
+              </div>
+              {/* Name below */}
+              <div className="px-4 py-4">
                 <p className="font-sans font-medium text-[#0A0A0A] text-sm">{p.name}</p>
                 <p className="font-sans text-xs text-[#0A0A0A]/40 mt-1">{p.role}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
+        </div>
+
+        {/* "+6 partners" label — bottom-left, outside grid */}
+        <div className="px-6 md:px-10 pb-10 pt-4 border-t border-[#0A0A0A]/10">
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40">
+            +6 partners
+          </p>
         </div>
       </section>
 
