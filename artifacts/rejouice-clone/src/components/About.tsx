@@ -1,46 +1,93 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
+import { Link } from "wouter";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
   const containerRef = useRef<HTMLElement>(null);
-  const textRef = useRef<HTMLHeadingElement>(null);
+  const textRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       if (textRef.current) {
-        const split = new SplitType(textRef.current, { types: "lines,words" });
-        
-        gsap.from(split.words, {
+        const split = new SplitType(textRef.current, { types: "lines" });
+        gsap.from(split.lines, {
           opacity: 0,
-          y: 20,
+          y: 24,
           duration: 1,
-          stagger: 0.05,
-          ease: "power2.out",
+          stagger: 0.07,
+          ease: "power3.out",
           scrollTrigger: {
             trigger: containerRef.current,
             start: "top 75%",
-          }
+          },
         });
       }
+
+      gsap.from(".about-meta > *", {
+        opacity: 0,
+        y: 16,
+        duration: 0.9,
+        stagger: 0.1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 75%",
+        },
+      });
     }, containerRef);
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <section ref={containerRef} className="py-32 px-6 md:px-10 bg-background text-foreground">
-      <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row gap-12 md:gap-24">
-        <div className="w-full md:w-1/4">
-          <span className="font-sans text-xs tracking-[0.1em] uppercase font-semibold">Our Philosophy</span>
+    <section
+      ref={containerRef}
+      className="py-20 md:py-28 px-6 md:px-8 bg-background text-foreground border-t border-border/40"
+    >
+      <div className="max-w-[1400px] mx-auto grid md:grid-cols-[1fr_2fr_1fr] gap-12 md:gap-16 items-start">
+        <div className="about-meta flex flex-col gap-3">
+          <span className="font-sans text-xs uppercase tracking-[0.1em] text-foreground/40">
+            Tomorrow's brands, today
+          </span>
+          <span className="font-sans text-xs uppercase tracking-[0.1em] text-foreground/40">
+            San Francisco
+          </span>
         </div>
-        <div className="w-full md:w-3/4">
-          <h2 
-            ref={textRef}
-            className="font-display text-4xl md:text-6xl lg:text-7xl font-bold uppercase tracking-[-0.02em] leading-[1.1]"
+
+        <p
+          ref={textRef}
+          className="font-sans text-xl md:text-2xl lg:text-3xl font-light leading-[1.45] tracking-[-0.01em]"
+        >
+          We turn founders' visions into remarkable brands by combining strategy, design, and performance marketing, all under one roof.{" "}
+          <Link
+            href="/services"
+            className="underline underline-offset-4 opacity-50 hover:opacity-100 transition-opacity duration-200"
+            data-testid="link-explore-services"
           >
-            We believe the best brands are built at the intersection of strategy, craft, and velocity. We don't just design — we accelerate.
-          </h2>
+            Explore our services.
+          </Link>
+        </p>
+
+        <div className="about-meta flex flex-col gap-4 md:items-end">
+          <div className="flex flex-col gap-1 md:items-end">
+            <span className="font-sans text-xs uppercase tracking-[0.1em] text-foreground/40">
+              Est. 2019
+            </span>
+            <span className="font-sans text-xs uppercase tracking-[0.1em] text-foreground/40">
+              31 Employees
+            </span>
+          </div>
+          <Link
+            href="/about"
+            className="font-sans text-sm underline underline-offset-4 opacity-50 hover:opacity-100 transition-opacity duration-200 mt-4"
+            data-testid="link-get-to-know"
+          >
+            Get to know us
+          </Link>
         </div>
       </div>
     </section>

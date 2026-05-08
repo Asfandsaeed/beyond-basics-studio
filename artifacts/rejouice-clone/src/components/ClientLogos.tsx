@@ -1,9 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const clients = [
-  "NEXUS INC.", "VERTEX LABS", "AURORA SYS",
-  "LUMIS CO.", "QUANTUM NET", "AETHER GROUP"
+  "Tula", "mobile", "beti", "Foot Locker", "Brightside",
+  "Prudf", "Grove", "Highline", "Nexus", "Vertex",
 ];
 
 export default function ClientLogos() {
@@ -11,42 +14,36 @@ export default function ClientLogos() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.fromTo(".client-logo",
-        { opacity: 0, y: 20 },
-        {
-          opacity: 0.5, // They are placeholders, keep opacity low
-          y: 0,
-          duration: 0.8,
-          stagger: 0.1,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 80%",
-          }
-        }
-      );
+      gsap.from(sectionRef.current, {
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 85%",
+        },
+      });
     }, sectionRef);
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-6 md:px-10 bg-background text-foreground border-t border-border/50">
-      <div className="max-w-[1400px] mx-auto">
-        <h2 className="font-sans text-xs tracking-[0.1em] uppercase font-semibold text-center mb-16 opacity-70">
-          Trusted by ambitious companies
-        </h2>
-        
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-12 md:gap-24 items-center justify-items-center">
-          {clients.map((client, idx) => (
-            <div 
-              key={idx} 
-              className="client-logo font-display text-2xl md:text-4xl font-bold uppercase tracking-tighter opacity-0 hover:opacity-100 transition-opacity duration-300"
-            >
-              {client}
-            </div>
-          ))}
-        </div>
+    <section
+      ref={sectionRef}
+      className="py-6 px-6 md:px-8 border-t border-b border-border/40 bg-background overflow-hidden"
+      data-testid="client-logos"
+    >
+      <div className="flex items-center gap-12 md:gap-16 overflow-x-auto scrollbar-hide">
+        {clients.map((client, idx) => (
+          <span
+            key={idx}
+            className="font-sans text-sm whitespace-nowrap text-foreground/40 hover:text-foreground/80 transition-colors duration-200 shrink-0"
+            data-testid={`logo-${client.toLowerCase().replace(/\s/g, "-")}`}
+          >
+            {client}
+          </span>
+        ))}
       </div>
     </section>
   );

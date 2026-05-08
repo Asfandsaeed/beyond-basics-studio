@@ -1,11 +1,11 @@
 import React from "react";
 import Loader from "@/components/Loader";
 import Hero from "@/components/Hero";
-import Marquee from "@/components/Marquee";
-import Projects from "@/components/Projects";
-import Services from "@/components/Services";
+import Showreel from "@/components/Showreel";
 import About from "@/components/About";
 import ClientLogos from "@/components/ClientLogos";
+import Projects from "@/components/Projects";
+import Services from "@/components/Services";
 import Contact from "@/components/Contact";
 
 export default function Home() {
@@ -18,11 +18,11 @@ export default function Home() {
       <div className={`transition-opacity duration-1000 ${loaded ? "opacity-100" : "opacity-0"}`}>
         <main>
           <Hero />
-          <Marquee />
-          <Projects />
-          <Services />
+          <Showreel />
           <About />
           <ClientLogos />
+          <Projects />
+          <Services />
           <Contact />
         </main>
       </div>
