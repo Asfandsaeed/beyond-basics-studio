@@ -109,16 +109,16 @@ export default function AboutPage() {
     <div ref={pageRef} className="bg-white text-[#0A0A0A]">
 
       {/* ══ 1. HERO TAGLINE ═══════════════════════════════════════════════ */}
-      <section className="min-h-screen flex flex-col justify-center px-6 md:px-10 pt-28 pb-16">
-        <div className="w-full">
-          <h1
-            ref={heroRef}
-            className="font-sans font-light leading-[1.12] tracking-[-0.025em] text-[#0A0A0A]"
-            style={{ fontSize: "clamp(1.5rem, 3.4vw, 3.8rem)" }}
-          >
-            We are a collective of seasoned creatives, strategists, growth marketers, and technologists, dedicated to transforming ambitious visions into category leaders.
-          </h1>
-        </div>
+      <section className="min-h-screen flex flex-col justify-center px-6 md:px-10 pt-28 pb-16 overflow-hidden">
+        {/* Float spacer creates first-line indent */}
+        <div className="float-left h-[1.25em]" style={{ width: "clamp(6rem, 25%, 20rem)" }} />
+        <h1
+          ref={heroRef}
+          className="font-sans font-light leading-[1.12] tracking-[-0.025em] text-[#0A0A0A]"
+          style={{ fontSize: "clamp(1.5rem, 3.4vw, 3.8rem)" }}
+        >
+          We are a collective of seasoned creatives, strategists, growth marketers, and technologists, dedicated to transforming ambitious visions into category leaders.
+        </h1>
       </section>
 
       <div className="w-full h-px bg-[#0A0A0A]/10" />
@@ -295,37 +295,40 @@ export default function AboutPage() {
           </h2>
         </div>
 
-        {/* Right: content blocks, last one sits at the bottom */}
-        <div className="flex-1 flex flex-col justify-between py-4 gap-16">
-          <div className="philosophy-block max-w-md">
-            <h3 className="font-sans font-light text-white text-xl md:text-2xl mb-4">
-              One Team, Global Talent
-            </h3>
-            <p className="font-sans text-sm text-white/50 leading-relaxed">
-              We curate the best talent from all corners of the world. This enables us to leverage diverse perspectives, knowledge, and expertise to deliver fresh and tailored solutions for our clients.
-            </p>
+        {/* Right: two blocks up top, quote pinned to bottom */}
+        <div className="flex-1 flex flex-col py-10">
+          <div className="flex flex-col gap-10">
+            <div className="philosophy-block max-w-xs">
+              <h3 className="font-sans font-light text-white text-base mb-3 tracking-[-0.01em]">
+                One Team, Global Talent
+              </h3>
+              <p className="font-sans text-[13px] text-white/45 leading-relaxed">
+                We curate the best talent from all corners of the world. This enables us to leverage diverse perspectives, knowledge, and expertise to deliver fresh and tailored solutions for our clients.
+              </p>
+            </div>
+
+            <div className="philosophy-block max-w-xs">
+              <h3 className="font-sans font-light text-white text-base mb-3 tracking-[-0.01em]">
+                Strategic Simplicity
+              </h3>
+              <p className="font-sans text-[13px] text-white/45 leading-relaxed">
+                For us, simplicity is the ultimate sophistication. Our best work emerges from tackling complexity head-on and distilling it collaboratively with partners who value the time needed to build a high-performing brand.
+              </p>
+            </div>
           </div>
 
-          <div className="philosophy-block max-w-md">
-            <h3 className="font-sans font-light text-white text-xl md:text-2xl mb-4">
-              Strategic Simplicity
-            </h3>
-            <p className="font-sans text-sm text-white/50 leading-relaxed">
-              For us, simplicity is the ultimate sophistication. Our best work emerges from tackling complexity head-on and distilling it collaboratively with partners who value the time needed to build a high-performing brand.
-            </p>
-          </div>
-
-          <div className="philosophy-block max-w-md">
+          {/* Quote pushed to bottom */}
+          <div className="philosophy-block mt-auto max-w-xs">
             <p
               className="font-sans font-light text-white/80 leading-[1.35] tracking-[-0.01em]"
-              style={{ fontSize: "clamp(1rem, 1.8vw, 1.5rem)" }}
+              style={{ fontSize: "clamp(0.95rem, 1.4vw, 1.25rem)" }}
             >
               We partner like co-founders. Straight talk, no sugarcoating. This is how we exceed expectations, and deliver memorable brands.
             </p>
           </div>
 
           {/* Mobile-only title */}
-          <h2 className="md:hidden font-sans font-light text-white leading-[1.05] tracking-[-0.02em] text-4xl">
+          <h2 className="md:hidden font-sans font-light text-white leading-[1.05] tracking-[-0.02em] text-4xl mt-12">
             Designed to transform
           </h2>
         </div>
