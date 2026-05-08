@@ -132,7 +132,7 @@ function ProjectCard({
           <span className="font-sans text-[10px] uppercase tracking-[0.15em] text-white/50">
             {project.category}
           </span>
-          <h3 className="font-sans text-sm font-medium text-white">
+          <h3 className="font-display text-sm font-bold text-white">
             {project.title}
           </h3>
         </div>
@@ -181,7 +181,7 @@ export default function Projects() {
   return (
     <section ref={sectionRef} className="bg-background">
       {/* Row 1 — full-width Rivian */}
-      <ProjectCard project={wide[0]} heightClass="w-full h-[56vw] md:h-[52vh] min-h-[340px]" />
+      <ProjectCard project={wide[0]} heightClass="w-full h-[60vh] md:h-[70vh] min-h-[420px]" />
 
       {/* Row 2 — two portrait cards */}
       <div className="grid grid-cols-2">
@@ -192,7 +192,7 @@ export default function Projects() {
 
       {/* Row 3 — second full-width */}
       {wide[1] && (
-        <ProjectCard project={wide[1]} heightClass="w-full h-[56vw] md:h-[52vh] min-h-[340px]" />
+        <ProjectCard project={wide[1]} heightClass="w-full h-[60vh] md:h-[70vh] min-h-[420px]" />
       )}
     </section>
   );
