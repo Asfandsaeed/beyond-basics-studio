@@ -109,31 +109,28 @@ export default function AboutPage() {
   }, []);
 
   return (
-    <div ref={pageRef} className="bg-[#0D0D0D] text-white">
+    <div ref={pageRef} className="bg-white text-[#0A0A0A]">
 
       {/* ══ 1. HERO TAGLINE ═══════════════════════════════════════════════ */}
-      <section className="min-h-screen flex flex-col justify-end px-6 md:px-10 pt-36 pb-20">
-        <div className="max-w-[1400px] mx-auto w-full">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/40 mb-10">
-            About
-          </p>
+      <section className="min-h-screen flex flex-col justify-center px-6 md:px-16 pt-28 pb-20">
+        <div className="max-w-[1200px] mx-auto w-full">
           <h1
             ref={heroRef}
-            className="font-sans font-light leading-[1.12] tracking-[-0.02em] text-white"
-            style={{ fontSize: "clamp(1.8rem, 4vw, 4.4rem)", maxWidth: "1100px" }}
+            className="font-sans font-light leading-[1.1] tracking-[-0.02em] text-[#0A0A0A] text-center"
+            style={{ fontSize: "clamp(2.2rem, 5.5vw, 6rem)" }}
           >
             We are a collective of seasoned creatives, strategists, growth marketers, and technologists, dedicated to transforming ambitious visions into category leaders.
           </h1>
         </div>
       </section>
 
-      <div className="w-full h-px bg-white/10" />
+      <div className="w-full h-px bg-[#0A0A0A]/10" />
 
       {/* ══ 2. PRINCIPLES ════════════════════════════════════════════════ */}
       <section className="principles-section px-6 md:px-10 py-24">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-[1fr_1.6fr] gap-12 md:gap-24">
           <div>
-            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/40 leading-relaxed max-w-[220px]">
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40 leading-relaxed max-w-[220px]">
               We operate on simple principles
             </p>
           </div>
@@ -146,14 +143,14 @@ export default function AboutPage() {
               ].map((p) => (
                 <li
                   key={p.num}
-                  className="principle-item flex items-baseline gap-6 py-5 border-b border-white/10 first:border-t"
+                  className="principle-item flex items-baseline gap-6 py-5 border-b border-[#0A0A0A]/10 first:border-t"
                 >
-                  <span className="font-sans text-[11px] text-white/30 w-10 shrink-0">{p.num}</span>
+                  <span className="font-sans text-[11px] text-[#0A0A0A]/30 w-10 shrink-0">{p.num}</span>
                   <span className="font-sans text-2xl md:text-3xl font-light tracking-[-0.01em]">{p.label}</span>
                 </li>
               ))}
             </ul>
-            <p className="font-sans text-sm text-white/40 leading-relaxed mt-8 max-w-xl">
+            <p className="font-sans text-sm text-[#0A0A0A]/40 leading-relaxed mt-8 max-w-xl">
               These three principles have earned us numerous awards. While we don't chase accolades, they are proof of our dedication to impact, quality, and innovation.
             </p>
           </div>
@@ -161,36 +158,36 @@ export default function AboutPage() {
       </section>
 
       {/* ══ 3. AWARDS ════════════════════════════════════════════════════ */}
-      <section className="awards-section px-6 md:px-10 pb-24 border-t border-white/10">
+      <section className="awards-section px-6 md:px-10 pb-24 border-t border-[#0A0A0A]/10">
         <div className="max-w-[1400px] mx-auto">
-          <div className="flex items-baseline justify-between py-10 mb-12 border-b border-white/10">
+          <div className="flex items-baseline justify-between py-10 mb-12 border-b border-[#0A0A0A]/10">
             <h2
               ref={awardsNumRef}
-              className="font-display font-bold text-white leading-none tracking-tight"
+              className="font-display font-bold text-[#0A0A0A] leading-none tracking-tight"
               style={{ fontSize: "clamp(5rem, 14vw, 14rem)" }}
             >
               Awards
             </h2>
-            <span className="font-sans text-white/30 text-sm tracking-widest">(×90)</span>
+            <span className="font-sans text-[#0A0A0A]/30 text-sm tracking-widest">(×90)</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-[1fr_1.6fr] gap-12 md:gap-24">
-            <p className="awards-left font-sans text-[11px] uppercase tracking-[0.18em] text-white/40">
+            <p className="awards-left font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40">
               Awards for digital innovation
             </p>
-            <div className="awards-right font-sans text-lg md:text-xl font-light text-white/80 leading-relaxed">
+            <div className="awards-right font-sans text-lg md:text-xl font-light text-[#0A0A0A]/80 leading-relaxed">
               <p>29 × Awwwards</p>
               <p>19 × FWA</p>
               <p>34 × CSS Design</p>
               <p>02 × Webby</p>
-              <p className="text-white/30 mt-2">...and more.</p>
+              <p className="text-[#0A0A0A]/30 mt-2">...and more.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* ══ 4. PORTFOLIO VIDEO ════════════════════════════════════════════ */}
-      <section className="w-full aspect-video overflow-hidden bg-black">
+      <section className="w-full aspect-video overflow-hidden bg-[#e8e8e8]">
         <video
           src={ASSETS.portfolioVideo}
           autoPlay muted loop playsInline preload="auto"
@@ -202,7 +199,7 @@ export default function AboutPage() {
       <section className="tagline-section px-6 md:px-10 py-28 md:py-36">
         <div className="max-w-[1400px] mx-auto">
           <p
-            className="tagline-quote font-sans font-light leading-[1.2] tracking-[-0.01em] text-white/90"
+            className="tagline-quote font-sans font-light leading-[1.2] tracking-[-0.01em] text-[#0A0A0A]/80"
             style={{ fontSize: "clamp(1.5rem, 3.5vw, 3.5rem)", maxWidth: "900px" }}
           >
             Attention is earned, not given. Great work only matters when it drives action. We build brands that turn attention into growth. It starts with the story you choose to tell.
@@ -210,18 +207,18 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <div className="w-full h-px bg-white/10" />
+      <div className="w-full h-px bg-[#0A0A0A]/10" />
 
       {/* ══ 6. FOUNDER ════════════════════════════════════════════════════ */}
       <section className="founder-section px-6 md:px-10 py-24">
         <div className="max-w-[1400px] mx-auto">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/40 mb-12">
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40 mb-12">
             One Founder
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-12 md:gap-16 items-start">
             {/* Portrait */}
-            <div className="overflow-hidden rounded-sm aspect-[4/5] bg-white/5">
+            <div className="overflow-hidden rounded-sm aspect-[4/5] bg-[#e8e8e8]">
               <img
                 src={ASSETS.guillaume}
                 alt="Guillaume Hamon — Founding Partner"
@@ -232,20 +229,20 @@ export default function AboutPage() {
             {/* Quote + bio */}
             <div className="flex flex-col justify-between h-full gap-16 md:pt-6">
               <blockquote
-                className="founder-quote font-sans font-light leading-[1.35] text-white/80 tracking-[-0.01em]"
+                className="founder-quote font-sans font-light leading-[1.35] text-[#0A0A0A]/75 tracking-[-0.01em]"
                 style={{ fontSize: "clamp(1.2rem, 2.2vw, 2rem)" }}
               >
                 "We've streamlined the outdated and layered agency model to give you direct access to the best global talent. No wasted time, no empty promises. Just impactful results."
               </blockquote>
 
               <div>
-                <p className="font-sans font-medium text-white text-base">Guillaume Hamon</p>
-                <p className="font-sans text-sm text-white/40 mt-1">Founding Partner</p>
+                <p className="font-sans font-medium text-[#0A0A0A] text-base">Guillaume Hamon</p>
+                <p className="font-sans text-sm text-[#0A0A0A]/40 mt-1">Founding Partner</p>
                 <a
                   href="https://www.linkedin.com/in/guillaumehamon/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 mt-5 font-sans text-xs uppercase tracking-widest text-white/50 border-b border-white/20 pb-px hover:text-white hover:border-white/60 transition-colors"
+                  className="inline-flex items-center gap-2 mt-5 font-sans text-xs uppercase tracking-widest text-[#0A0A0A]/50 border-b border-[#0A0A0A]/20 pb-px hover:text-[#0A0A0A] hover:border-[#0A0A0A]/60 transition-colors"
                 >
                   ↗ LinkedIn
                 </a>
@@ -255,19 +252,19 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <div className="w-full h-px bg-white/10" />
+      <div className="w-full h-px bg-[#0A0A0A]/10" />
 
       {/* ══ 7. PARTNERS ═══════════════════════════════════════════════════ */}
       <section className="partners-section px-6 md:px-10 py-24">
         <div className="max-w-[1400px] mx-auto">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/40 mb-14">
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40 mb-14">
             +6 partners
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-14">
             {partners.map((p) => (
               <div key={p.name} className="partner-card">
-                <div className="overflow-hidden rounded-sm aspect-[4/5] bg-white/5 mb-4">
+                <div className="overflow-hidden rounded-sm aspect-[4/5] bg-[#e8e8e8] mb-4">
                   <img
                     src={p.img}
                     alt={p.name}
@@ -275,8 +272,8 @@ export default function AboutPage() {
                     loading="lazy"
                   />
                 </div>
-                <p className="font-sans font-medium text-white text-sm">{p.name}</p>
-                <p className="font-sans text-xs text-white/40 mt-1">{p.role}</p>
+                <p className="font-sans font-medium text-[#0A0A0A] text-sm">{p.name}</p>
+                <p className="font-sans text-xs text-[#0A0A0A]/40 mt-1">{p.role}</p>
               </div>
             ))}
           </div>
@@ -325,19 +322,19 @@ export default function AboutPage() {
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div>
             <p
-              className="office-text font-sans font-light leading-[1.2] text-white tracking-[-0.01em]"
+              className="office-text font-sans font-light leading-[1.2] text-[#0A0A0A] tracking-[-0.01em]"
               style={{ fontSize: "clamp(1.6rem, 3vw, 3rem)", maxWidth: "480px" }}
             >
               We match your project with the right experts
             </p>
             <a
               href="mailto:jobs@rejouice.com"
-              className="inline-flex items-center gap-2 mt-10 font-sans text-xs uppercase tracking-widest text-white/50 border-b border-white/20 pb-px hover:text-white hover:border-white/60 transition-colors"
+              className="inline-flex items-center gap-2 mt-10 font-sans text-xs uppercase tracking-widest text-[#0A0A0A]/50 border-b border-[#0A0A0A]/20 pb-px hover:text-[#0A0A0A] hover:border-[#0A0A0A]/60 transition-colors"
             >
               jobs@rejouice.com — Join our team ↗
             </a>
           </div>
-          <div className="office-img overflow-hidden rounded-sm aspect-[4/3] bg-white/5">
+          <div className="office-img overflow-hidden rounded-sm aspect-[4/3] bg-[#e8e8e8]">
             <img
               src={ASSETS.office}
               alt="San Diego office"
@@ -370,17 +367,17 @@ export default function AboutPage() {
       </section>
 
       {/* ══ 11. JOBS CTA ══════════════════════════════════════════════════ */}
-      <section className="px-6 md:px-10 py-24 border-t border-white/10">
+      <section className="px-6 md:px-10 py-24 border-t border-[#0A0A0A]/10">
         <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <p
-            className="font-sans font-light text-white leading-tight tracking-[-0.01em]"
+            className="font-sans font-light text-[#0A0A0A] leading-tight tracking-[-0.01em]"
             style={{ fontSize: "clamp(1.8rem, 4vw, 4rem)" }}
           >
             We're always looking for<br />exceptional people.
           </p>
           <a
             href="mailto:jobs@rejouice.com"
-            className="shrink-0 inline-flex items-center gap-3 font-sans text-sm uppercase tracking-widest text-white border border-white/20 rounded-full px-8 py-4 hover:bg-white hover:text-[#0A0A0A] transition-all duration-300"
+            className="shrink-0 inline-flex items-center gap-3 font-sans text-sm uppercase tracking-widest text-[#0A0A0A] border border-[#0A0A0A]/20 rounded-full px-8 py-4 hover:bg-[#0A0A0A] hover:text-white transition-all duration-300"
           >
             ↗ Join our Team
           </a>
