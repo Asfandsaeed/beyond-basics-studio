@@ -54,17 +54,17 @@ function Gallery({ items }: { items: GalleryItem[] }) {
         if (item.layout === "pair" && item.pair) {
           return (
             <div key={i} className="grid grid-cols-2 gap-3 md:gap-4">
-              <div className="aspect-[4/3] overflow-hidden rounded-sm bg-[#111]">
+              <div className="aspect-[4/3] overflow-hidden rounded-sm bg-[#e8e8e8]">
                 <MediaItem item={item} />
               </div>
-              <div className="aspect-[4/3] overflow-hidden rounded-sm bg-[#111]">
+              <div className="aspect-[4/3] overflow-hidden rounded-sm bg-[#e8e8e8]">
                 <MediaItem item={item.pair} />
               </div>
             </div>
           );
         }
         return (
-          <div key={i} className="w-full aspect-video overflow-hidden rounded-sm bg-[#111]">
+          <div key={i} className="w-full aspect-video overflow-hidden rounded-sm bg-[#e8e8e8]">
             <MediaItem item={item} />
           </div>
         );
@@ -126,7 +126,7 @@ export default function ProjectPage() {
   }
 
   return (
-    <div ref={pageRef} className="bg-[#0A0A0A] text-white">
+    <div ref={pageRef} className="bg-white text-[#0A0A0A]">
 
       {/* ── Hero ── */}
       <section className="relative w-full h-screen overflow-hidden flex items-end">
@@ -239,16 +239,16 @@ export default function ProjectPage() {
 
       {/* ── Awards ── */}
       {project.awards && project.awards.length > 0 && (
-        <section className="reveal-up px-6 md:px-10 py-16 border-t border-white/10">
+        <section className="reveal-up px-6 md:px-10 py-16 border-t border-[#0A0A0A]/10">
           <div className="max-w-[1400px] mx-auto">
-            <p className="font-sans text-xs text-white/40 uppercase tracking-[0.18em] mb-10">
+            <p className="font-sans text-xs text-[#0A0A0A]/40 uppercase tracking-[0.18em] mb-10">
               Awards & Recognitions
             </p>
             <div className="flex flex-wrap gap-3">
               {project.awards.map((award) => (
                 <span
                   key={award}
-                  className="font-sans text-xs text-white/70 border border-white/20 rounded-full px-4 py-2"
+                  className="font-sans text-xs text-[#0A0A0A]/70 border border-[#0A0A0A]/20 rounded-full px-4 py-2"
                 >
                   {award}
                 </span>
