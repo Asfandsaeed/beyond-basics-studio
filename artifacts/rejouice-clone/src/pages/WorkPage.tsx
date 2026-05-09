@@ -58,12 +58,12 @@ export default function WorkPage() {
     <div ref={containerRef} className="bg-[#0A0A0A]">
 
       {/* ── Hero ── */}
-      <section className="relative w-full h-screen flex flex-col justify-end px-6 md:px-10 pb-16 overflow-hidden">
+      <section className="relative w-full h-[60vh] md:h-screen flex flex-col justify-end px-6 md:px-10 pb-16 overflow-hidden">
         <div className="absolute inset-0 -z-0">
           <img
             src={projects[0].coverImage}
             alt="Work hero"
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover object-top md:object-center opacity-40"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/60 to-transparent" />
         </div>
@@ -88,7 +88,7 @@ export default function WorkPage() {
       {projects.map((project, i) => (
         <section
           key={project.id}
-          className="work-parallax-section relative w-full h-screen overflow-hidden flex items-center justify-center cursor-pointer"
+          className="work-parallax-section relative w-full h-[70vw] min-h-[320px] md:h-screen overflow-hidden flex items-center justify-center cursor-pointer"
           data-testid={`work-project-${project.id}`}
           onClick={() => navigate(`/work/${project.id}`)}
           data-cursor-hover

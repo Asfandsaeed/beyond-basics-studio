@@ -53,7 +53,7 @@ function Gallery({ items }: { items: GalleryItem[] }) {
       {items.map((item, i) => {
         if (item.layout === "pair" && item.pair) {
           return (
-            <div key={i} className="grid grid-cols-2 gap-3 md:gap-4">
+            <div key={i} className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
               <div className="aspect-[4/3] overflow-hidden rounded-sm bg-[#e8e8e8]">
                 <MediaItem item={item} />
               </div>
@@ -64,7 +64,7 @@ function Gallery({ items }: { items: GalleryItem[] }) {
           );
         }
         return (
-          <div key={i} className="w-full aspect-video overflow-hidden rounded-sm bg-[#e8e8e8]">
+          <div key={i} className="w-full aspect-[4/3] md:aspect-video overflow-hidden rounded-sm bg-[#e8e8e8]">
             <MediaItem item={item} />
           </div>
         );
@@ -129,7 +129,7 @@ export default function ProjectPage() {
     <div ref={pageRef} className="bg-white text-[#0A0A0A]">
 
       {/* ── Hero ── */}
-      <section className="relative w-full h-screen overflow-hidden flex items-end">
+      <section className="relative w-full h-[58vh] md:h-screen overflow-hidden flex items-end">
         {/* Background media */}
         {project.heroVideo ? (
           <video
@@ -139,13 +139,13 @@ export default function ProjectPage() {
             loop
             playsInline
             preload="auto"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover object-top md:object-center"
           />
         ) : (
           <img
             src={project.heroImage}
             alt={project.title}
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover object-top md:object-center"
           />
         )}
 
