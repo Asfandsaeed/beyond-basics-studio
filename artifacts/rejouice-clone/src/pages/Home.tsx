@@ -254,7 +254,65 @@ export default function Home() {
         </section>
 
         {/* ══════════════════════════════════════════════════════════════════
-            § 2  AWARDS BAR
+            § 2  ABOUT US
+            Editorial layout: big heading, then left-label / right-body rows
+            with generous white space — matching the reference style.
+        ══════════════════════════════════════════════════════════════════ */}
+        <section className="bg-white py-28 md:py-40">
+          <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+
+            {/* Big heading */}
+            <div className="reveal mb-16 md:mb-20">
+              <h2
+                className="font-sans font-light tracking-[-0.03em] leading-[1.02] text-[#0A0A0A]"
+                style={{ fontSize: "clamp(3rem, 7vw, 7.5rem)" }}
+              >
+                About Beyond.
+              </h2>
+            </div>
+
+            {/* Rows */}
+            {[
+              {
+                label: "A creative growth agency.",
+                body: "We are a collective of seasoned creatives, strategists, growth marketers, and technologists — dedicated to transforming ambitious visions into category leaders. Founded in San Francisco in 2019.",
+              },
+              {
+                label: "Performance & brand.\nYou need both.",
+                body: "We craft brands that become category leaders. These brands aren't built on products alone — emotional connection and sustainable growth are the two essentials. This is how you drive retention, advocacy, and long-term market leadership.",
+              },
+              {
+                label: "Direct access.\nNo layers.",
+                body: "We've streamlined the outdated agency model to give you direct access to the best global talent. No account managers between you and the work. No empty promises. Just strategists, designers, and developers working as a true extension of your founding team.",
+              },
+            ].map(({ label, body }) => (
+              <div
+                key={label}
+                className="reveal grid grid-cols-1 md:grid-cols-[1fr_1fr_1.4fr] gap-6 md:gap-0 py-10 md:py-14 border-t border-[#0A0A0A]/8 first:border-t"
+              >
+                {/* Left: short punchy label */}
+                <p
+                  className="font-sans font-light text-[#0A0A0A] leading-snug tracking-[-0.01em]"
+                  style={{ fontSize: "clamp(1rem, 1.5vw, 1.25rem)", whiteSpace: "pre-line" }}
+                >
+                  {label}
+                </p>
+
+                {/* Centre: empty breathing room (hidden on mobile) */}
+                <div className="hidden md:block" />
+
+                {/* Right: descriptive paragraph */}
+                <p className="font-sans text-sm md:text-[15px] font-light text-[#0A0A0A]/55 leading-[1.75] max-w-lg">
+                  {body}
+                </p>
+              </div>
+            ))}
+
+          </div>
+        </section>
+
+        {/* ══════════════════════════════════════════════════════════════════
+            § 3  AWARDS BAR
             90+ industry awards — the fastest credibility signal on the page.
         ══════════════════════════════════════════════════════════════════ */}
         <section className="bg-white py-14 md:py-16">
