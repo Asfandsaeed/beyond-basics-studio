@@ -39,7 +39,7 @@ export const industries: Industry[] = [
     category: "Tech & Digital",
     description: "SaaS brands live or die by trust. We build brand systems that communicate enterprise-grade credibility, reduce churn through emotional loyalty, and make your product feel indispensable.",
     longDescription: "The SaaS market is the most crowded space in business. Every category has a dozen well-funded competitors. The brands that break out aren't the ones with the most features — they're the ones with the clearest identity, the most human voice, and the strongest visual presence. We work with SaaS companies from seed stage through IPO to build brand equity that compounds alongside ARR.",
-    coverImage: `${IMG}/Z0csjJbqstJ970gi_2_xezmQUHZZozH1L4Cv1VKvg-11.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/aJfdrKTt2nPbaHC-_Brand-Hero.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "40%", label: "avg. reduction in churn for rebranded SaaS clients" },
       { value: "3×", label: "faster trial-to-paid conversion with strong brand" },
@@ -128,7 +128,7 @@ export const industries: Industry[] = [
     category: "Tech & Digital",
     description: "The crypto projects that endure are the ones that build real brand equity beyond the cycle. We help protocols, exchanges, and crypto companies build lasting credibility.",
     longDescription: "Most crypto brand work looks the same: gradients, hexagons, and promises of disruption. The projects that survive bear markets and build genuine communities are the ones with authentic identity, clear mission, and design quality that signals they're built to last. We bring the same brand rigor we apply to Fortune 500 clients to the crypto and blockchain space.",
-    coverImage: `${IMG}/Z0csjJbqstJ970gi_2_xezmQUHZZozH1L4Cv1VKvg-11.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/aJffGqTt2nPbaHDP_Brand-CGI.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "10×", label: "community growth for well-branded vs generic projects" },
       { value: "65%", label: "of institutional crypto investors cite brand quality as a factor" },
@@ -186,7 +186,7 @@ export const industries: Industry[] = [
     category: "Tech & Digital",
     description: "Mobile apps compete in the most crowded marketplace on earth. We build brand systems that win in App Store search, create loyal daily habits, and drive word-of-mouth growth.",
     longDescription: "The App Store and Play Store are search engines for trust. App icon, screenshots, preview video, and first-run experience — these are your brand's most important touchpoints. We build mobile app brand systems that win at discovery, create emotional connection on first use, and build the word-of-mouth loop that drives organic growth.",
-    coverImage: `${IMG}/Z218opbqstJ981rL_Group3919.png?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/aJffGaTt2nPbaHDO_Web1.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "180%", label: "avg. increase in App Store conversion after visual rebrand" },
       { value: "4.8★", label: "average App Store rating for branded client apps" },
@@ -215,7 +215,7 @@ export const industries: Industry[] = [
     category: "Tech & Digital",
     description: "Software companies compete on features until brand becomes the differentiator. We build identities that command premium pricing, attract enterprise buyers, and reduce sales cycle length.",
     longDescription: "Enterprise software buyers make brand assessments within seconds of landing on your website. A dated visual identity communicates risk. A premium brand communicates capability, stability, and trustworthiness — before any feature discussion begins. We've helped software companies at every scale build the brand presence that closes deals.",
-    coverImage: `${IMG}/Z0csjJbqstJ970gi_2_xezmQUHZZozH1L4Cv1VKvg-11.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/aJfe3qTt2nPbaHDL_Diptychd.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "35%", label: "shorter average sales cycle after brand investment" },
       { value: "2.5×", label: "more inbound leads with premium brand presence" },
@@ -237,6 +237,37 @@ export const industries: Industry[] = [
     services: ["Brand Strategy", "Visual Identity", "Website Redesign", "Sales Deck Design", "Product Marketing", "Developer Brand", "Event Materials", "Brand Guidelines"],
   },
 
+  {
+    id: "startups",
+    name: "Startups",
+    tagline: "Startup brand that raises faster, hires better, and grows harder.",
+    category: "Tech & Digital",
+    description: "Startups that invest in brand early grow faster, raise at better valuations, and attract the talent that makes the difference. We build startup brands built to scale.",
+    longDescription: "The startup brand problem is well-defined: you need to look like a category leader before you are one. Investors need to believe, employees need to join, and customers need to trust — all before you've proven most of what you're promising. We've built brands for pre-seed startups and Series D companies, and we know exactly how to create the brand credibility that makes each phase of growth more possible.",
+    coverImage: `${IMG}/aFMaEbNJEFaPYFQr_Rivian-cover.jpg?auto=format,compress&w=2400`,
+    stats: [
+      { value: "2×", label: "higher seed round valuation for startups with professional brand" },
+      { value: "5×", label: "more inbound talent applications with strong employer brand" },
+      { value: "3×", label: "faster customer acquisition with brand-led go-to-market" },
+      { value: "100+", label: "startups branded from pre-seed to IPO-ready" },
+    ],
+    expertise: [
+      { title: "Investor-Ready Brand Strategy", description: "Brand positioning and narrative that makes investors see you as the inevitable category winner." },
+      { title: "Category Creation Brand", description: "For startups inventing new categories — the language, visual identity, and market education strategy to make your category real." },
+      { title: "Launch Brand", description: "The complete brand system — visual identity, website, launch campaign — for a go-to-market that creates maximum impact." },
+      { title: "Scaling Brand Architecture", description: "Brand systems built to scale — with product line extensions, market expansions, and acquisition scenarios considered from day one." },
+    ],
+    process: [
+      { step: "01", title: "Positioning Sprint", description: "Rapid positioning work to define the exact market position and narrative before anything is built." },
+      { step: "02", title: "Identity System", description: "Logo, color, typography, and design system built for digital-first execution at startup speed." },
+      { step: "03", title: "Website & Launch Assets", description: "Website, pitch deck design, and launch campaign creative." },
+      { step: "04", title: "Go-to-Market Support", description: "PR strategy, content plan, and performance creative for launch." },
+    ],
+    services: ["Brand Strategy", "Visual Identity", "Website Design", "Pitch Deck Design", "Launch Campaign", "Content Strategy", "PR & Press Kit", "Employer Brand"],
+    caseStudyId: "tensor",
+    caseStudyName: "Tensor",
+  },
+
   // ── E-COMMERCE & DTC ────────────────────────────────────────────────────────
 
   {
@@ -246,7 +277,7 @@ export const industries: Industry[] = [
     category: "E-commerce & DTC",
     description: "E-commerce brand is the single biggest lever for reducing CAC and increasing LTV. We build visual identities and brand strategies that make customers choose you — again and again.",
     longDescription: "Price competition is a race to the bottom. Brand competition is a race to loyalty. The e-commerce brands that consistently outperform their category aren't the cheapest or the fastest — they're the ones that make customers feel something when they open the package, and share it when they do. We build the end-to-end brand experience that creates those moments.",
-    coverImage: `${IMG}/Z218opbqstJ981rL_Group3919.png?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z223fZbqstJ9816y_Group3921.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "45%", label: "average increase in repeat purchase rate after rebrand" },
       { value: "3.2×", label: "higher LTV for strongly branded e-commerce stores" },
@@ -275,7 +306,7 @@ export const industries: Industry[] = [
     category: "E-commerce & DTC",
     description: "DTC brands are built on direct relationships. We create brand identities that make customers feel like they're buying from a brand that knows them — and rewards them for knowing it back.",
     longDescription: "The DTC model gives you something traditional retail never could: a direct relationship with every customer. The brands that leverage that relationship most powerfully are the ones with the strongest identity, the most consistent voice, and the deepest understanding of who their customer actually is. We build those brands.",
-    coverImage: `${IMG}/Z218g5bqstJ981rD_oura-abdul-ovaice-photography-cd-3.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z220S5bqstJ9815q_5-3-2880x1800.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "60%", label: "of DTC customers cite brand identity as reason for first purchase" },
       { value: "4×", label: "higher subscription retention for well-branded DTC products" },
@@ -306,7 +337,7 @@ export const industries: Industry[] = [
     category: "E-commerce & DTC",
     description: "Fashion e-commerce is the most visually competitive category online. We build fashion brands with the aesthetic precision of luxury houses and the conversion science of growth marketers.",
     longDescription: "Fashion shoppers buy the brand before they buy the garment. The imagery, the typography, the editorial voice — every element tells a story about who wears this, how it feels, and why it costs what it costs. We build fashion e-commerce brands that operate with the creative discipline of editorial fashion and the data-driven rigor of performance marketing.",
-    coverImage: `${IMG}/Z218g5bqstJ981rD_oura-abdul-ovaice-photography-cd-3.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z1r5ZZbqstJ98aaI_unspun.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "55%", label: "higher average order value for premium-branded fashion stores" },
       { value: "4.5×", label: "more repeat purchases from styled brand experience" },
@@ -326,6 +357,8 @@ export const industries: Industry[] = [
       { step: "04", title: "Content System", description: "Content templates, UGC briefs, and influencer decks that maintain brand quality at scale." },
     ],
     services: ["Brand Strategy", "Visual Identity", "Photography Art Direction", "Website Design", "Lookbook Design", "Email Creative", "Social Media Brand", "Campaign Direction"],
+    caseStudyId: "unspun",
+    caseStudyName: "Unspun",
   },
 
   {
@@ -335,7 +368,7 @@ export const industries: Industry[] = [
     category: "E-commerce & DTC",
     description: "Subscription brands live and die by retention. We build brand systems that create emotional commitment — so cancellation never feels like an option.",
     longDescription: "The subscription model is built on a simple proposition: the value you provide every month must feel greater than the amount you charge. Brand is the multiplier — it makes the product feel worth more, the community feel more real, and the routine feel more meaningful. We build subscription brand systems that reduce churn through emotional loyalty.",
-    coverImage: `${IMG}/Z218opbqstJ981rL_Group3919.png?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z223K5bqstJ9816p_Group3935.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "40%", label: "lower churn for subscription brands with strong community identity" },
       { value: "3×", label: "more referrals from subscribers who identify as brand fans" },
@@ -397,7 +430,7 @@ export const industries: Industry[] = [
     category: "Health & Wellness",
     description: "Dental practices compete on trust, warmth, and expertise. We build brands that reduce patient anxiety, increase referrals, and command premium fees in your market.",
     longDescription: "The best dental practices in any city aren't necessarily the most clinically advanced — they're the ones with the strongest reputation, the most referral-worthy experience, and the brand that makes patients want to tell their friends. We've built brands for dental practices from single locations to multi-location DSOs.",
-    coverImage: `${IMG}/Z218g5bqstJ981rD_oura-abdul-ovaice-photography-cd-3.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z3fSX5bqstJ99A_s_Oura-3d-render-01.png?auto=format,compress&w=2400`,
     stats: [
       { value: "65%", label: "of new dental patients come through referral or online search" },
       { value: "4×", label: "more Google reviews from practices with branded patient experience" },
@@ -426,7 +459,7 @@ export const industries: Industry[] = [
     category: "Health & Wellness",
     description: "Physicians with strong personal brands attract better patients, command higher fees, and build practices that are acquisition-proof. We build those brands.",
     longDescription: "The best doctors in every specialty have something in common beyond clinical excellence: they're known. Known in their community, known online, known in their referral network. Personal brand is the competitive moat that no insurance company can erode. We build physician brands that turn clinical expertise into market authority.",
-    coverImage: `${IMG}/Z0csjZbqstJ970gj_abdul-wahid-ovaice-profile-picture3.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z218yZbqstJ981rO_Frame21108s.png?auto=format,compress&w=2400`,
     stats: [
       { value: "5×", label: "more new patient inquiries for well-branded physicians vs. directory listings" },
       { value: "40%", label: "premium fee command for doctors with strong personal brand" },
@@ -455,7 +488,7 @@ export const industries: Industry[] = [
     category: "Health & Wellness",
     description: "Fitness brands compete on identity and aspiration as much as product. We build fitness brands that make people feel what they're capable of — before they buy a single thing.",
     longDescription: "The fitness industry is one of the most aspirationally-driven markets in the world. People don't buy fitness products and services — they buy a version of themselves. The brands that grow fastest are the ones whose community members wear the gear, share the content, and recruit their friends. We build those brands.",
-    coverImage: `${IMG}/Z0csjpbqstJ970gk_moxionpower.2023.04.portraits-1291.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z218g5bqstJ981rD_oura-abdul-ovaice-photography-cd-3.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "8×", label: "more social sharing from fitness brand community members" },
       { value: "55%", label: "of fitness customers choose based on brand aesthetic" },
@@ -515,7 +548,7 @@ export const industries: Industry[] = [
     category: "Local & Trade",
     description: "Local businesses compete with national chains that have infinite budgets. We build brands that make local feel like the obvious, superior choice — and earn loyal customers for life.",
     longDescription: "The best local businesses in any town aren't the biggest or the cheapest — they're the most trusted. That trust comes from reputation, and reputation is built on brand. We help local businesses build the brand presence that makes them the category leader in their market — regardless of what the national chains throw at them.",
-    coverImage: `${IMG}/Z0csjpbqstJ970gk_moxionpower.2023.04.portraits-1291.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z0htLpbqstJ973RI_noovo8.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "82%", label: "of consumers prefer local businesses when brand quality is equal" },
       { value: "5×", label: "more reviews from customers of well-branded local businesses" },
@@ -573,7 +606,7 @@ export const industries: Industry[] = [
     category: "Local & Trade",
     description: "Roofing is a high-ticket, high-trust purchase. The companies that win aren't the cheapest — they're the most trusted. We build roofing brands that earn that trust.",
     longDescription: "A roof replacement or repair is one of the largest purchases most homeowners ever make. The decision of who to hire is almost entirely a trust decision. The roofing companies that dominate their markets have figured this out — they invest in brand, build reputation systematically, and charge what they're worth.",
-    coverImage: `${IMG}/Z22KFpbqstJ981ua_IMG_87781.png?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z1r5WpbqstJ98aZ1_hyperframe.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "85%", label: "of roofing jobs are won before the estimate is given" },
       { value: "30%", label: "premium pricing for roofing companies with strong brand" },
@@ -602,7 +635,7 @@ export const industries: Industry[] = [
     category: "Local & Trade",
     description: "Construction brand is the difference between chasing bids and receiving them. We build construction company brands that attract the clients and projects you actually want.",
     longDescription: "The best general contractors, builders, and specialty contractors aren't the lowest bidders — they're the most trusted. That trust is built on reputation, portfolio presentation, and a professional brand that communicates quality before a single shovel hits the ground. We build construction brands that win the jobs worth having.",
-    coverImage: `${IMG}/Z2AYnJbqstJ98i2E_moxionpower.2023.04.onlocation-17821.png?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z22StZbqstJ981w0_Group3901.png?auto=format,compress&w=2400`,
     stats: [
       { value: "60%", label: "of construction clients choose based on portfolio and brand quality" },
       { value: "25%", label: "higher bid win rate for professionally branded construction firms" },
@@ -622,6 +655,8 @@ export const industries: Industry[] = [
       { step: "04", title: "Digital & Referral Presence", description: "Website, LinkedIn, and referral strategy for the construction market." },
     ],
     services: ["Brand Strategy", "Visual Identity", "Portfolio Website", "Vehicle & Signage Design", "Proposal Templates", "Project Photography", "LinkedIn Brand", "Referral Strategy"],
+    caseStudyId: "hyperframe",
+    caseStudyName: "Hyperframe",
   },
 
   {
@@ -662,7 +697,7 @@ export const industries: Industry[] = [
     category: "Local & Trade",
     description: "Franchise brand success depends on creating the same brand experience at every location. We build franchise brand systems that scale without compromise.",
     longDescription: "The best franchise brands are the ones where a customer in any city feels the same quality, warmth, and consistency they felt the first time. Building a brand system that franchisees can execute faithfully — while still feeling locally relevant — is one of the hardest challenges in brand management. We've done it dozens of times.",
-    coverImage: `${IMG}/Z22KFpbqstJ981ua_IMG_87781.png?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z22LaZbqstJ981u4_Frame21196.png?auto=format,compress&w=2400`,
     stats: [
       { value: "40%", label: "higher franchise unit sales for well-branded franchisors" },
       { value: "3×", label: "better franchisee satisfaction with strong brand systems" },
@@ -691,7 +726,7 @@ export const industries: Industry[] = [
     category: "Local & Trade",
     description: "Logistics brands are built on one promise: reliable delivery of what you said you'd deliver, when you said you'd deliver it. We make that promise visible.",
     longDescription: "In logistics, the brand IS the service promise. Shippers and 3PLs choose partners based on trust in that promise, and they renew based on whether it's kept. Brand is what gets you in the room to prove your reliability — and what keeps clients when a competitor knocks.",
-    coverImage: `${IMG}/Z22KFpbqstJ981ua_IMG_87781.png?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z2AYnJbqstJ98i2E_moxionpower.2023.04.onlocation-17821.png?auto=format,compress&w=2400`,
     stats: [
       { value: "55%", label: "of logistics RFPs are pre-decided based on brand and reputation" },
       { value: "3×", label: "higher contract renewal rate for well-branded logistics companies" },
@@ -711,6 +746,8 @@ export const industries: Industry[] = [
       { step: "04", title: "Sales Enablement", description: "RFP templates, capability presentations, and sales collateral built for the logistics buying process." },
     ],
     services: ["Brand Strategy", "Visual Identity", "Fleet & Uniform Design", "Website Design", "Sales Decks", "RFP Templates", "Trade Marketing", "Corporate Presentations"],
+    caseStudyId: "moxion-power",
+    caseStudyName: "Moxion Power",
   },
 
   {
@@ -720,7 +757,7 @@ export const industries: Industry[] = [
     category: "Local & Trade",
     description: "Manufacturing companies often have the best products in their category and the weakest brands. We fix that imbalance — and capture the pricing power the product deserves.",
     longDescription: "The manufacturing sector is full of extraordinary companies — innovating in materials, processes, and engineering — with brand identities that look like they were designed in 1995. Brand investment in manufacturing is one of the highest-ROI marketing expenditures available, because the gap between brand quality and product quality is so large.",
-    coverImage: `${IMG}/Z2AYnJbqstJ98i2E_moxionpower.2023.04.onlocation-17821.png?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z3FRGZbqstJ984Gt_MP-lastcover.png?auto=format,compress&w=2400`,
     stats: [
       { value: "40%", label: "average pricing premium for manufacturing brands with strong identity" },
       { value: "3×", label: "faster sales cycles with professional brand presence" },
@@ -753,7 +790,7 @@ export const industries: Industry[] = [
     category: "Professional Services",
     description: "Legal clients choose attorneys based on trust, expertise, and whether they believe you understand their situation. We build law firm brands that communicate all three — before the first phone call.",
     longDescription: "The legal services market is experiencing rapid commoditization. LegalZoom, online legal services, and AI-powered tools are eroding the lower end. The law firms that thrive are the ones with the strongest brand — the clearest positioning, the most compelling story, and the professional presence that justifies premium fees. We build those brands.",
-    coverImage: `${IMG}/Z0csjZbqstJ970gj_abdul-wahid-ovaice-profile-picture3.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z22TAJbqstJ981w3_Group3909.png?auto=format,compress&w=2400`,
     stats: [
       { value: "78%", label: "of legal clients research attorney reputation before contact" },
       { value: "3×", label: "more consultations booked from professional brand vs. directory listing" },
@@ -782,7 +819,7 @@ export const industries: Industry[] = [
     category: "Professional Services",
     description: "In real estate, personal brand is the entire business. We build realtor brands that attract listings, command referrals, and survive market cycles.",
     longDescription: "The real estate market is built on relationships, but relationships are built on brand. The realtors and brokerages that dominate their markets have a clear identity, a compelling story, and a consistent presence that makes them the obvious choice when someone needs to buy or sell. We've built personal brands for individual agents and corporate brands for major brokerages.",
-    coverImage: `${IMG}/Z0csjZbqstJ970gj_abdul-wahid-ovaice-profile-picture3.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z23HTZbqstJ9819j_ConnectHomes_PaloAlto-9-1-2609x1800.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "5×", label: "more listing inquiries for well-branded realtors vs. generic" },
       { value: "85%", label: "of real estate clients choose based on agent reputation and presence" },
@@ -802,6 +839,8 @@ export const industries: Industry[] = [
       { step: "04", title: "Marketing System", description: "Website, listing templates, social content system, and sphere of influence strategy." },
     ],
     services: ["Personal Brand Strategy", "Visual Identity", "Website Design", "Listing Presentation", "Social Media Brand", "Email Marketing", "Direct Mail", "Photography Standards"],
+    caseStudyId: "connect-homes",
+    caseStudyName: "Connect Homes",
   },
 
   {
@@ -811,7 +850,7 @@ export const industries: Industry[] = [
     category: "Professional Services",
     description: "Coaching is the most personal of all professional services. Your brand IS you — and the clients you attract will be a reflection of how clearly and authentically you present yourself.",
     longDescription: "The best coaches in any category — life coaching, business coaching, executive coaching, athletic performance — have one thing in common: a clear, compelling personal brand that makes their ideal client say 'that's exactly who I need.' We build those brands, and then build the systems that fill calendars with them.",
-    coverImage: `${IMG}/Z0csjZbqstJ970gj_abdul-wahid-ovaice-profile-picture3.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z222zpbqstJ9816a_3-4-2880x1800.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "10×", label: "more inbound inquiries for well-branded coaches vs generic" },
       { value: "5×", label: "higher pricing confidence from coaches with clear brand" },
@@ -840,7 +879,7 @@ export const industries: Industry[] = [
     category: "Professional Services",
     description: "Consultants with strong brands don't chase clients — they attract them. We build consulting brands that position you as the obvious, premium choice in your domain.",
     longDescription: "The best consultants in the world don't win business by being the cheapest or the most available — they win by being the most credible authority in their domain. Brand is the platform for that authority: the website that showcases your thinking, the content that demonstrates your expertise, and the visual identity that communicates the quality of your work before any conversation begins.",
-    coverImage: `${IMG}/Z0csjpbqstJ970gk_moxionpower.2023.04.portraits-1291.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/aKRNZ6Tt2nPbadDG_OOH.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "4×", label: "higher day rate achievable with strong consultant brand" },
       { value: "70%", label: "of consulting business comes from referral — amplified by brand" },
@@ -869,7 +908,7 @@ export const industries: Industry[] = [
     category: "Professional Services",
     description: "Agencies need brand more than anyone — you can't sell brand work with a mediocre brand. We build agency identities that attract better clients, better talent, and better projects.",
     longDescription: "There's no harder sell than an agency with a weak brand trying to convince clients to trust them with their brand. Your agency's own brand is your most important new business asset. The agencies that grow the fastest are the ones that treat their own brand with the same strategic rigor they apply to client work — and we know exactly how to do that.",
-    coverImage: `${IMG}/Z0csjJbqstJ970gi_2_xezmQUHZZozH1L4Cv1VKvg-11.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z22TZJbqstJ981w9_Group3890.png?auto=format,compress&w=2400`,
     stats: [
       { value: "3×", label: "more inbound new business for well-branded agencies vs. similar-capability" },
       { value: "40%", label: "premium billing rate sustainable with strong agency brand" },
@@ -898,7 +937,7 @@ export const industries: Industry[] = [
     category: "Professional Services",
     description: "Financial services is the highest-trust category in any economy. The firms that grow are the ones that earn and maintain that trust through every brand touchpoint — not just client service.",
     longDescription: "Wealth management firms, RIAs, insurance companies, and financial advisors compete in a trust economy where every design choice communicates something about how much you care about your clients. The firms that dominate their markets have figured out that brand is the most efficient way to build trust at scale — long before a prospect ever sits across a desk from their advisor.",
-    coverImage: `${IMG}/Z0csjZbqstJ970gj_abdul-wahid-ovaice-profile-picture3.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z22NBZbqstJ981vz_Frame21197.png?auto=format,compress&w=2400`,
     stats: [
       { value: "85%", label: "of high-net-worth clients research financial advisors online before contact" },
       { value: "4×", label: "higher AUM per client for firms with premium brand" },
@@ -927,7 +966,7 @@ export const industries: Industry[] = [
     category: "Professional Services",
     description: "Schools, universities, and learning platforms compete for the most valuable resource in the world: attention and enrollment from motivated learners. Brand is what tips the decision.",
     longDescription: "Education is the only industry where the product must simultaneously attract students (who will pay for it), faculty (who will create it), donors (who will fund it), and employers (who will validate it). That requires a brand system of extraordinary sophistication. We've built brand systems for K-12 schools, universities, bootcamps, and online learning platforms.",
-    coverImage: `${IMG}/Z0csjJbqstJ970gi_2_xezmQUHZZozH1L4Cv1VKvg-11.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z23J9ZbqstJ9819y_f327fc4d-8e2c-4b3d-bf3a-f5ff03ad3478_ConnectHomes_CoolidgeAv_023-2880x1800.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "45%", label: "higher enrollment for schools with clear brand identity vs. similar rankings" },
       { value: "3×", label: "more qualified faculty applications with strong institutional brand" },
@@ -956,7 +995,7 @@ export const industries: Industry[] = [
     category: "Professional Services",
     description: "Nonprofits with strong brands raise more money, recruit better volunteers, and achieve greater impact. We build mission brands that make your cause impossible to ignore.",
     longDescription: "The best-funded nonprofits aren't always working on the most important problems — they're working on important problems and telling the story in the most compelling way. Donors give to missions they understand, organizations they trust, and brands they're proud to be associated with. We build those nonprofit brands.",
-    coverImage: `${IMG}/Z0csjpbqstJ970gk_moxionpower.2023.04.portraits-1291.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z0htK5bqstJ973RF_noovo5.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "3×", label: "more donations raised per campaign for well-branded nonprofits" },
       { value: "60%", label: "of donors research organization brand quality before giving" },
@@ -987,7 +1026,7 @@ export const industries: Industry[] = [
     category: "Creative & Personal",
     description: "Platform algorithms change. Brand equity doesn't. We build influencer brands that survive algorithm shifts, attract brand partnerships, and build business assets beyond follower count.",
     longDescription: "The influencers who turn platform audiences into lasting business assets are the ones who understand that they're building a brand, not just a following. The content is the proof of concept — but the brand is the business. We help creators build the visual identity, positioning, and business strategy that turns a large audience into a sustainable business.",
-    coverImage: `${IMG}/Z0csjZbqstJ970gj_abdul-wahid-ovaice-profile-picture3.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z218opbqstJ981rL_Group3919.png?auto=format,compress&w=2400`,
     stats: [
       { value: "5×", label: "higher brand deal rates for creators with professional brand identity" },
       { value: "3×", label: "more merchandise revenue for creators with strong visual brand" },
@@ -1016,7 +1055,7 @@ export const industries: Industry[] = [
     category: "Creative & Personal",
     description: "Writers, artists, filmmakers, and makers with strong brands earn more, work with better collaborators, and build audiences that follow them across every medium and platform.",
     longDescription: "The creative economy rewards creators who understand that their work is also their brand. The most commercially successful artists, writers, and filmmakers in the world operate with a clear creative identity — a distinctive perspective, a recognizable aesthetic, and a brand that makes their audience want to tell their friends. We build those brands.",
-    coverImage: `${IMG}/Z0csjZbqstJ970gj_abdul-wahid-ovaice-profile-picture3.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z220B5bqstJ9815n_Group3931.png?auto=format,compress&w=2400`,
     stats: [
       { value: "4×", label: "more collaboration opportunities for creators with strong brand" },
       { value: "3×", label: "higher licensing and syndication rates for branded creative work" },
@@ -1064,7 +1103,7 @@ export const industries: Industry[] = [
       { step: "03", title: "Visual Identity", description: "Professional photography direction, logo (if applicable), and visual brand standards." },
       { step: "04", title: "Content & Presence Strategy", description: "LinkedIn, website, and speaking strategy to build and maintain the brand." },
     ],
-    services: ["Personal Brand Strategy", "Photography Direction", "Website Design", "LinkedIn Optimization", "Content Strategy", "Speaker Brand", "Media Kit", "Executive Coaching Brand"],
+    services: ["Personal Brand Strategy", "Photography Direction", "Website Design", "LinkedIn Optimization", "Content Strategy", "Speaker Brand", "Media Kit", "Newsletter Launch"],
   },
 
   {
@@ -1074,7 +1113,7 @@ export const industries: Industry[] = [
     category: "Creative & Personal",
     description: "Photographers with strong brands attract better clients, command higher rates, and build practices that sustain. We build photography brands that make the right clients find you.",
     longDescription: "The photography market is more competitive than it's ever been — and more full of opportunity than it's ever been. The photographers who build sustainable, premium practices are the ones who treat their own brand with the same care they bring to client work. We've built brands for commercial photographers, portrait photographers, wedding photographers, and editorial specialists.",
-    coverImage: `${IMG}/Z0csjpbqstJ970gk_moxionpower.2023.04.portraits-1291.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z0htLJbqstJ973RG_noovo6.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "3×", label: "higher booking rates for photographers with professional brand" },
       { value: "40%", label: "premium rates achievable with strong visual brand" },
@@ -1103,7 +1142,7 @@ export const industries: Industry[] = [
     category: "Creative & Personal",
     description: "Event brands live or die on anticipation. We build event company brands and individual event identities that create the kind of excitement that fills tickets before the lineup drops.",
     longDescription: "The events industry is built on brand more than any other. Whether you're producing conferences, music events, corporate experiences, or brand activations — the event identity is everything. From the logo on the lanyard to the stage backdrop to the post-event content — every element is an expression of the brand promise you're making to attendees.",
-    coverImage: `${IMG}/Z0csjJbqstJ970gi_2_xezmQUHZZozH1L4Cv1VKvg-11.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z0hs25bqstJ973Q2_noovo3.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "65%", label: "of event tickets are sold based on brand and reputation" },
       { value: "4×", label: "more early bird registrations for well-branded conferences" },
@@ -1134,7 +1173,7 @@ export const industries: Industry[] = [
     category: "Consumer & Lifestyle",
     description: "The best restaurants in any city are known before you eat there. We build restaurant brands that create the reputation — and the reservations — before the first service.",
     longDescription: "Restaurant brand is the total sensory experience: name, logo, menu design, interior aesthetic, staff presentation, social media, and the story behind the food. The restaurants that become institutions — that people travel for, that generate press, that have waitlists — are the ones that got the brand right from the beginning. We build those brands.",
-    coverImage: `${IMG}/Z218g5bqstJ981rD_oura-abdul-ovaice-photography-cd-3.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z0htL5bqstJ973RJ_noovo9.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "72%", label: "of diners research a restaurant's social media before visiting" },
       { value: "3×", label: "higher check average for restaurants with premium brand" },
@@ -1163,7 +1202,7 @@ export const industries: Industry[] = [
     category: "Consumer & Lifestyle",
     description: "Independent and boutique hotels compete with brands that have billion-dollar marketing budgets. We build hotel brands that win on character, charm, and story — every time.",
     longDescription: "The hotel category is bifurcating: on one side, the mega-brands with loyalty programs and guaranteed consistency; on the other, the independent and boutique hotels that offer something no chain can — a genuine sense of place. We build the brands that make travelers choose the boutique over the Marriott, and come back every time they're in town.",
-    coverImage: `${IMG}/aFMcJrNJEFaPYFRF_Rivian-05.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z3FzZZbqstJ984LF_SectionCover.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "55%", label: "premium ADR achievable for well-branded boutique hotels" },
       { value: "40%", label: "higher direct booking rate for hotels with strong brand" },
@@ -1183,6 +1222,8 @@ export const industries: Industry[] = [
       { step: "04", title: "Digital & PR Brand", description: "Website, booking experience, social media, and press pitch strategy." },
     ],
     services: ["Brand Strategy", "Visual Identity", "Website & Booking Design", "In-Room Materials", "Restaurant Brand", "Social Media Brand", "Photography Direction", "PR Strategy"],
+    caseStudyId: "noovo",
+    caseStudyName: "Noovo",
   },
 
   {
@@ -1221,7 +1262,7 @@ export const industries: Industry[] = [
     category: "Consumer & Lifestyle",
     description: "Travel agencies that survive the age of online booking are the ones with something OTAs can't offer: expertise, curation, and genuine relationships. We build brands that communicate those qualities.",
     longDescription: "The travel agencies that are growing in the age of booking.com are not competing on price or access — they're competing on curation, expertise, and the irreplaceable human judgment that makes a vacation perfect. We build travel brands that make clients want to hand over their most important trip and trust that it will exceed everything they imagined.",
-    coverImage: `${IMG}/aFMcJrNJEFaPYFRF_Rivian-05.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z1r5XpbqstJ98aZ8_noovo.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "85%", label: "of luxury travelers prefer human travel expertise to online booking" },
       { value: "4×", label: "higher average booking value for curated travel brands" },
@@ -1250,7 +1291,7 @@ export const industries: Industry[] = [
     category: "Consumer & Lifestyle",
     description: "Fashion brands don't just sell clothing — they sell identity, aspiration, and belonging. We build fashion brands with the cultural intelligence and aesthetic precision to matter in the market.",
     longDescription: "The fashion market rewards brands with genuine point of view above all else. Design, quality, and price are table stakes — but the brands that build real cultural traction are the ones with a clear aesthetic identity, a compelling world, and the conviction to inhabit it fully. We've built fashion brands from direct-to-consumer startups to heritage labels entering new markets.",
-    coverImage: `${IMG}/Z218g5bqstJ981rD_oura-abdul-ovaice-photography-cd-3.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z222-JbqstJ9816b_Frame21141.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "70%", label: "of fashion purchases are driven by brand identity, not product specification" },
       { value: "5×", label: "higher press coverage for fashion brands with clear aesthetic identity" },
@@ -1279,7 +1320,7 @@ export const industries: Industry[] = [
     category: "Consumer & Lifestyle",
     description: "The beauty industry rewards brands with an undeniable aesthetic, a distinct point of view, and a community that advocates louder than any ad. We build all three.",
     longDescription: "Beauty is one of the most brand-sensitive categories in consumer goods. The product formulas are often similar — the brand is what creates preference, loyalty, and premium pricing. From indie brands born on TikTok to heritage brands re-entering a new category, we build beauty brands that connect with modern consumers and drive sell-through.",
-    coverImage: `${IMG}/Z218opbqstJ981rL_Group3919.png?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z218X5bqstJ981q6_Group3922.png?auto=format,compress&w=2400`,
     stats: [
       { value: "80%", label: "of beauty purchases are influenced by brand aesthetic over product claims" },
       { value: "6×", label: "higher TikTok engagement for beauty brands with distinct visual identity" },
@@ -1308,7 +1349,7 @@ export const industries: Industry[] = [
     category: "Consumer & Lifestyle",
     description: "Skincare consumers are the most educated and most skeptical shoppers in beauty. We build skincare brands that earn their trust through transparency, science communication, and design quality.",
     longDescription: "The skincare market has been flooded with brands making extraordinary claims backed by mediocre science. The brands that win long-term are the ones that communicate their clinical credentials honestly, build real community through results sharing, and design the packaging and brand experience with the precision the formulas deserve.",
-    coverImage: `${IMG}/Z218opbqstJ981rL_Group3919.png?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z3fSYJbqstJ99A_t_Oura-3d-render-02.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "90%", label: "of skincare buyers research ingredients and brand before purchasing" },
       { value: "4×", label: "higher retention for skincare brands with science-forward brand story" },
@@ -1337,7 +1378,7 @@ export const industries: Industry[] = [
     category: "Consumer & Lifestyle",
     description: "The modern food consumer reads labels, researches brands, and tells their friends about products they love. We build food brands that get talked about — long after the last bite.",
     longDescription: "Food is the most intimate product category — something you put inside your body that affects how you feel. The food brands that earn loyal customers are the ones that communicate where the food comes from, who made it, and why that matters. We build food brands with the origin story, design quality, and marketing strategy to break through the grocery aisle.",
-    coverImage: `${IMG}/Z218g5bqstJ981rD_oura-abdul-ovaice-photography-cd-3.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z0hsuZbqstJ973Qw_Maskgroup.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "65%", label: "of food purchases are influenced by packaging before reading a label" },
       { value: "3×", label: "higher retail sell-through for food brands with strong story" },
@@ -1366,7 +1407,7 @@ export const industries: Industry[] = [
     category: "Consumer & Lifestyle",
     description: "Salons compete on experience, expertise, and exclusivity. We build salon brands that attract the right clientele, retain them for years, and command prices that reflect your talent.",
     longDescription: "The best salons in any city aren't just places to get your hair done — they're brands. The stylists are the talent, but the brand is what makes clients loyal to the salon even when their favorite stylist moves. We've built brands for independent salons, boutique studios, and multi-location salon groups.",
-    coverImage: `${IMG}/Z218g5bqstJ981rD_oura-abdul-ovaice-photography-cd-3.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z223YJbqstJ9816s_Group3933.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "70%", label: "of salon clients choose based on brand aesthetic and social media" },
       { value: "4×", label: "more new client bookings from professional salon brand" },
@@ -1397,7 +1438,7 @@ export const industries: Industry[] = [
     category: "Real Estate & Design",
     description: "Real estate companies compete for two customers simultaneously: sellers who choose who lists their property, and producers who choose where to hang their license. We build brands that win both.",
     longDescription: "The real estate company brand has to work in two directions at once: attracting the clients who need to buy and sell, and attracting the producing agents who will serve them. The companies that grow fastest are the ones with the strongest brand in both markets — clear positioning, premium visual identity, and a culture story that attracts talent.",
-    coverImage: `${IMG}/Z0csjZbqstJ970gj_abdul-wahid-ovaice-profile-picture3.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z1r5V5bqstJ98aZx_connect-homes.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "3×", label: "more qualified agent recruits for well-branded brokerages" },
       { value: "25%", label: "higher listing conversion for branded vs. unbranded real estate companies" },
@@ -1417,6 +1458,8 @@ export const industries: Industry[] = [
       { step: "04", title: "Recruitment & Listing Materials", description: "Agent recruitment deck and listing presentation system." },
     ],
     services: ["Brand Strategy", "Visual Identity", "Signage & Vehicle Brand", "Agent Marketing System", "Website Design", "Recruitment Materials", "Listing Presentation", "Luxury Brand"],
+    caseStudyId: "connect-homes",
+    caseStudyName: "Connect Homes",
   },
 
   {
@@ -1426,7 +1469,7 @@ export const industries: Industry[] = [
     category: "Real Estate & Design",
     description: "Interior designers with strong brands attract better clients, command higher design fees, and build portfolios that open the doors to their dream projects. We build those brands.",
     longDescription: "An interior designer's brand is their most powerful sales tool. Clients hire designers they've seen in their dream home — and dream homes exist first in the portfolio, the Instagram feed, and the studio brand. The designers who build sustained, premium practices are the ones who invest in their own brand with the same devotion they bring to client projects.",
-    coverImage: `${IMG}/Z218g5bqstJ981rD_oura-abdul-ovaice-photography-cd-3.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z23LGpbqstJ98193_014.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "5×", label: "more project inquiries for well-branded interior design studios" },
       { value: "3×", label: "higher design fee rates for designers with editorial brand presence" },
@@ -1455,7 +1498,7 @@ export const industries: Industry[] = [
     category: "Real Estate & Design",
     description: "Architecture firms with strong brands win better projects, attract better talent, and build the legacy that distinguishes practice from commodity work. We build those brands.",
     longDescription: "Architecture is one of the last great professional services industries where brand is dramatically underinvested relative to its impact on practice growth. The firms that win the commissions worth winning — the cultural buildings, the landmark residences, the civic projects — are the ones whose brand communicates their design philosophy before any competition brief is opened.",
-    coverImage: `${IMG}/Z218g5bqstJ981rD_oura-abdul-ovaice-photography-cd-3.jpg?auto=format,compress&w=2400`,
+    coverImage: `${IMG}/Z23EApbqstJ9819L_4-2880x18003.jpg?auto=format,compress&w=2400`,
     stats: [
       { value: "4×", label: "more competition shortlist inclusions for well-branded architecture firms" },
       { value: "3×", label: "more unsolicited project inquiries with strong portfolio brand" },
@@ -1475,68 +1518,8 @@ export const industries: Industry[] = [
       { step: "04", title: "Portfolio & Digital Brand", description: "Website, portfolio system, and competition materials." },
     ],
     services: ["Brand Strategy", "Visual Identity", "Website Design", "Portfolio System", "Competition Materials", "Monograph Design", "Photography Standards", "Awards & Press Strategy"],
-  },
-
-  // ── FINANCE & EDUCATION ──────────────────────────────────────────────────────
-
-  {
-    id: "startups",
-    name: "Startups",
-    tagline: "Startup brand that raises faster, hires better, and grows harder.",
-    category: "Tech & Digital",
-    description: "Startups that invest in brand early grow faster, raise at better valuations, and attract the talent that makes the difference. We build startup brands built to scale.",
-    longDescription: "The startup brand problem is well-defined: you need to look like a category leader before you are one. Investors need to believe, employees need to join, and customers need to trust — all before you've proven most of what you're promising. We've built brands for pre-seed startups and Series D companies, and we know exactly how to create the brand credibility that makes each phase of growth more possible.",
-    coverImage: `${IMG}/Z0csjJbqstJ970gi_2_xezmQUHZZozH1L4Cv1VKvg-11.jpg?auto=format,compress&w=2400`,
-    stats: [
-      { value: "2×", label: "higher seed round valuation for startups with professional brand" },
-      { value: "5×", label: "more inbound talent applications with strong employer brand" },
-      { value: "3×", label: "faster customer acquisition with brand-led go-to-market" },
-      { value: "100+", label: "startups branded from pre-seed to IPO-ready" },
-    ],
-    expertise: [
-      { title: "Investor-Ready Brand Strategy", description: "Brand positioning and narrative that makes investors see you as the inevitable category winner." },
-      { title: "Category Creation Brand", description: "For startups inventing new categories — the language, visual identity, and market education strategy to make your category real." },
-      { title: "Launch Brand", description: "The complete brand system — visual identity, website, launch campaign — for a go-to-market that creates maximum impact." },
-      { title: "Scaling Brand Architecture", description: "Brand systems built to scale — with product line extensions, market expansions, and acquisition scenarios considered from day one." },
-    ],
-    process: [
-      { step: "01", title: "Positioning Sprint", description: "Rapid positioning work to define the exact market position and narrative before anything is built." },
-      { step: "02", title: "Identity System", description: "Logo, color, typography, and design system built for digital-first execution at startup speed." },
-      { step: "03", title: "Website & Launch Assets", description: "Website, pitch deck design, and launch campaign creative." },
-      { step: "04", title: "Go-to-Market Support", description: "PR strategy, content plan, and performance creative for launch." },
-    ],
-    services: ["Brand Strategy", "Visual Identity", "Website Design", "Pitch Deck Design", "Launch Campaign", "Content Strategy", "PR & Press Kit", "Employer Brand"],
-    caseStudyId: "tensor",
-    caseStudyName: "Tensor",
-  },
-
-  {
-    id: "influencer-brands",
-    name: "Personal Brands",
-    tagline: "Presence that precedes you into every room.",
-    category: "Creative & Personal",
-    description: "From executives to founders to creators — personal brand is the most compounding professional asset you can build. We build it with the strategic rigor of a corporate brand.",
-    longDescription: "Personal brand isn't self-promotion — it's reputation engineering. The founders who raise faster, the executives who get recruited, the creators who get the best partnerships — they all have a clear, compelling personal brand that communicates who they are, what they stand for, and why you should pay attention. We build those brands with discipline and authenticity.",
-    coverImage: `${IMG}/Z0csjZbqstJ970gj_abdul-wahid-ovaice-profile-picture3.jpg?auto=format,compress&w=2400`,
-    stats: [
-      { value: "8×", label: "more inbound opportunities for well-branded executives vs peers" },
-      { value: "5×", label: "higher deal close rates for founders with thought leadership brand" },
-      { value: "90%", label: "of decision-makers research personal brand before engaging" },
-      { value: "200+", label: "personal brands built" },
-    ],
-    expertise: [
-      { title: "Executive Presence Architecture", description: "Building the professional identity that precedes you — the reputation that enters the room before you do." },
-      { title: "Founder Story & Vision Narrative", description: "The origin story and future vision that makes investors, employees, and customers want to be part of your journey." },
-      { title: "Platform & Channel Strategy", description: "Choosing and optimizing the right platforms for your audience and goals — LinkedIn, Twitter/X, podcast, newsletter." },
-      { title: "Speaking & Media Positioning", description: "Positioning you as a sought-after voice in your category — with the brand assets to back it up." },
-    ],
-    process: [
-      { step: "01", title: "Story & Expertise Audit", description: "Surfacing the authentic professional story, unique expertise, and point of view worth sharing." },
-      { step: "02", title: "Brand Platform", description: "Positioning, core message, and the content territory you'll own." },
-      { step: "03", title: "Visual & Digital Identity", description: "Photography, website, and profile optimization." },
-      { step: "04", title: "Content System", description: "Editorial calendar, content frameworks, and posting strategy." },
-    ],
-    services: ["Personal Brand Strategy", "Photography Direction", "Website Design", "LinkedIn Optimization", "Content Strategy", "Media Kit", "Speaking Strategy", "Newsletter Launch"],
+    caseStudyId: "connect-homes",
+    caseStudyName: "Connect Homes",
   },
 ];
 
