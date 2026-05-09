@@ -109,12 +109,12 @@ export default function Navbar() {
       <header
         ref={navRef}
         style={{ opacity: 0 }}
-        className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-5 md:px-10 transition-all duration-300 ${bgClass}`}
+        className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-6 md:px-10 md:py-7 transition-all duration-300 ${bgClass}`}
       >
         {/* Logo */}
         <Link
           href="/"
-          className={`font-sans text-xs font-medium tracking-tight transition-colors duration-300 ${textColor}`}
+          className={`font-sans text-sm font-medium tracking-tight transition-colors duration-300 ${textColor}`}
           data-testid="link-home"
         >
           <span className="relative inline-flex h-[1.1em] overflow-hidden align-bottom">
@@ -134,7 +134,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8" data-testid="nav-links">
+        <nav className="hidden md:flex items-center gap-9" data-testid="nav-links">
           {primaryLinks.map((link) => {
             const isActive = location === link.href;
             return (
@@ -142,7 +142,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 data-testid={`link-${link.label.toLowerCase()}`}
-                className={`font-sans text-xs transition-all duration-200 ${textColor} ${
+                className={`font-sans text-sm transition-all duration-200 ${textColor} ${
                   isActive ? "opacity-100" : `${mutedColor} ${hoverColor}`
                 }`}
               >
@@ -155,26 +155,26 @@ export default function Navbar() {
           <div ref={dropRef} className="relative">
             <button
               onClick={() => setDropOpen((v) => !v)}
-              className={`flex items-center gap-1 font-sans text-xs transition-all duration-200 ${textColor} ${
+              className={`flex items-center gap-1.5 font-sans text-sm transition-all duration-200 ${textColor} ${
                 isCompanyActive ? "opacity-100" : `${mutedColor} ${hoverColor}`
               }`}
               data-testid="nav-company-dropdown"
             >
               Company
               <ChevronDown
-                size={12}
+                size={13}
                 strokeWidth={1.5}
                 className={`transition-transform duration-200 ${dropOpen ? "rotate-180" : ""}`}
               />
             </button>
 
             {dropOpen && (
-              <div className="absolute top-full right-0 mt-3 w-52 bg-white border border-[#0A0A0A]/8 rounded-sm shadow-lg overflow-hidden z-50">
+              <div className="absolute top-full right-0 mt-3 w-56 bg-white border border-[#0A0A0A]/8 rounded-sm shadow-lg overflow-hidden z-50">
                 {companyLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`block px-5 py-3 font-sans text-xs transition-colors duration-150 hover:bg-[#F5F4F0] ${
+                    className={`block px-5 py-3.5 font-sans text-sm transition-colors duration-150 hover:bg-[#F5F4F0] ${
                       location === link.href ? "text-[#0A0A0A]" : "text-[#0A0A0A]/55"
                     }`}
                   >
@@ -190,7 +190,7 @@ export default function Navbar() {
         <Link
           href="/contact"
           data-testid="btn-contact"
-          className={`hidden md:flex items-center gap-1 font-sans text-xs font-medium transition-all duration-200 ${textColor} hover:opacity-70`}
+          className={`hidden md:flex items-center gap-1 font-sans text-sm font-medium transition-all duration-200 ${textColor} hover:opacity-70`}
         >
           <span>Let's talk</span>
           <span>↗</span>
