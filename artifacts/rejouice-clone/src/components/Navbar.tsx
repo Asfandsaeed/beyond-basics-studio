@@ -117,20 +117,7 @@ export default function Navbar() {
           className={`font-sans text-sm font-medium tracking-tight transition-colors duration-300 ${textColor}`}
           data-testid="link-home"
         >
-          <span className="relative inline-flex h-[1.1em] overflow-hidden align-bottom">
-            <span
-              className="block transition-all duration-300 ease-in-out whitespace-nowrap"
-              style={{ transform: scrolled ? "translateY(-110%)" : "translateY(0)", opacity: scrolled ? 0 : 1 }}
-            >
-              The Growth Accelerator
-            </span>
-            <span
-              className="block absolute inset-0 transition-all duration-300 ease-in-out whitespace-nowrap"
-              style={{ transform: scrolled ? "translateY(0)" : "translateY(110%)", opacity: scrolled ? 1 : 0 }}
-            >
-              beyond
-            </span>
-          </span>
+          beyond
         </Link>
 
         {/* Desktop nav */}
