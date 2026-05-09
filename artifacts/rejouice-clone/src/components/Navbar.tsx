@@ -34,16 +34,25 @@ export default function Navbar() {
 
   const isHomePage = location === "/";
 
+  // Pages with dark hero backgrounds — navbar needs white text + dark bg
+  const isDarkPage =
+    location === "/work" ||
+    location.startsWith("/work/") ||
+    location === "/about" ||
+    location === "/contact";
+
   useEffect(() => {
+    // Animate in once on mount — no delay on non-home pages
+    const delay = isHomePage ? 1.6 : 0.1;
     gsap.fromTo(
       navRef.current,
       { y: -10, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, delay: 1.6, ease: "power3.out" }
+      { y: 0, opacity: 1, duration: 0.7, delay, ease: "power3.out" }
     );
-  }, []);
+  }, [isHomePage]);
 
   useEffect(() => {
-    if (!isHomePage) { setScrolled(true); return; }
+    if (!isHomePage) { setScrolled(false); return; }
     setScrolled(false);
     const raf = requestAnimationFrame(() => {
       const showreel = document.querySelector('[data-testid="showreel-section"]');
@@ -75,13 +84,23 @@ export default function Navbar() {
   // Close dropdown on route change
   useEffect(() => { setDropOpen(false); setMenuOpen(false); }, [location]);
 
-  const isLight = isHomePage && !scrolled;
-  const textColor = isLight ? "text-white" : "text-foreground";
-  const mutedColor = isLight ? "text-white/40" : "opacity-40";
-  const hoverColor = isLight ? "hover:text-white" : "hover:opacity-100";
-  const bgClass = scrolled
-    ? "bg-background/90 backdrop-blur-md border-b border-border/20"
-    : "bg-transparent";
+  // On dark pages: always white text, dark blurred background
+  // On home page before scroll: white text, transparent background
+  // On home page after scroll / other light pages: dark text, light background
+  const isLight = (isHomePage && !scrolled) || (isDarkPage && !scrolled);
+  const textColor = isLight ? "text-white" : "text-[#0A0A0A]";
+  const mutedColor = isLight ? "text-white/50" : "text-[#0A0A0A]/40";
+  const hoverColor = isLight ? "hover:text-white" : "hover:text-[#0A0A0A]";
+
+  let bgClass: string;
+  if (isDarkPage) {
+    // Dark pages: always a dark semi-transparent bar so text is always legible
+    bgClass = "bg-[#0A0A0A]/60 backdrop-blur-md border-b border-white/8";
+  } else if (scrolled) {
+    bgClass = "bg-white/90 backdrop-blur-md border-b border-[#0A0A0A]/8";
+  } else {
+    bgClass = "bg-transparent";
+  }
 
   const isCompanyActive = companyLinks.some((l) => location === l.href);
 

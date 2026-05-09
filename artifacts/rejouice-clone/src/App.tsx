@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { Switch, Route, Router as WouterRouter } from "wouter";
+import React, { useEffect, useRef } from "react";
+import { Switch, Route, Router as WouterRouter, useLocation } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -32,6 +32,28 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const queryClient = new QueryClient();
+
+// Shared lenis instance so ScrollToTop can reset it
+let lenisInstance: Lenis | null = null;
+
+// Resets scroll to top on every route change
+function ScrollToTop() {
+  const [location] = useLocation();
+
+  useEffect(() => {
+    // Kill all active ScrollTriggers so they don't interfere on the new page
+    ScrollTrigger.killAll();
+
+    // Immediately jump to top — no smooth scroll
+    if (lenisInstance) {
+      lenisInstance.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
+    }
+  }, [location]);
+
+  return null;
+}
 
 function Router() {
   return (
@@ -75,6 +97,7 @@ function Router() {
 function AppLayout() {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <Router />
       <Footer />
@@ -83,6 +106,8 @@ function AppLayout() {
 }
 
 function App() {
+  const lenisRef = useRef<Lenis | null>(null);
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -94,6 +119,9 @@ function App() {
       touchMultiplier: 2,
     });
 
+    lenisRef.current = lenis;
+    lenisInstance = lenis;
+
     lenis.on("scroll", ScrollTrigger.update);
 
     gsap.ticker.add((time) => {
@@ -104,6 +132,7 @@ function App() {
 
     return () => {
       lenis.destroy();
+      lenisInstance = null;
     };
   }, []);
 
