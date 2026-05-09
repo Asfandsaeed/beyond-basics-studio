@@ -10,6 +10,8 @@ import ProjectPage from "@/pages/ProjectPage";
 import AboutPage from "@/pages/AboutPage";
 import ServicesPage from "@/pages/ServicesPage";
 import ContactPage from "@/pages/ContactPage";
+import JournalPage from "@/pages/JournalPage";
+import JournalPostPage from "@/pages/JournalPostPage";
 import CustomCursor from "@/components/CustomCursor";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -29,6 +31,8 @@ function Router() {
       <Route path="/work/:id" component={ProjectPage} />
       <Route path="/about" component={AboutPage} />
       <Route path="/services" component={ServicesPage} />
+      <Route path="/journal/:id" component={JournalPostPage} />
+      <Route path="/journal" component={JournalPage} />
       <Route path="/contact" component={ContactPage} />
       <Route component={NotFound} />
     </Switch>
