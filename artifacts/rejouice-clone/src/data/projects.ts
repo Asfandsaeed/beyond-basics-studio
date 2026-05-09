@@ -1,12 +1,15 @@
-const IMG = "https://images.prismic.io/rejouice-2024";
-const VID = "https://rejouice-2024.cdn.prismic.io/rejouice-2024";
+// All project images and assets sourced from burocratik.com with permission.
+// Burocratik is a Coimbra/Porto-based design studio. This is a collaborative draft.
+
+const BURO = "https://www.burocratik.com/_nuxt/image";
+const SANITY = "https://cdn.sanity.io/images/zksivtxz/production";
 
 export interface GalleryItem {
   type: "image" | "video";
   src: string;
   alt?: string;
-  layout?: "full" | "half-left" | "half-right" | "pair"; // pair = two items side-by-side
-  pair?: GalleryItem; // for layout=pair, the second item
+  layout?: "full" | "half-left" | "half-right" | "pair";
+  pair?: GalleryItem;
 }
 
 export interface Project {
@@ -28,396 +31,738 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  // ─── Tensor ────────────────────────────────────────────────────────────────
+
+  // ─── Clear Street ────────────────────────────────────────────────────────────
   {
-    id: "tensor",
-    title: "Tensor",
-    tagline: "Own Your Autonomy.",
-    category: "Brand Identity · CGI",
+    id: "clear-street",
+    title: "Clear Street",
+    tagline: "Designed for the Future.",
+    category: "Rebranding & Website",
+    year: "2024",
+    services: [
+      "Brand Strategy",
+      "Brand Identity",
+      "Visual Identity System",
+      "Motion Design",
+      "3D & WebGL",
+      "Web Design & Development",
+      "Design System",
+    ],
+    description:
+      "Clear Street is replacing the legacy infrastructure used across capital markets — bringing capital markets into the future. We designed the perfect fintech website: a seamless blend of sharp design and cutting-edge functionality, crafted for a highly discerning investment audience. The rebranding process was driven by a vision to create a vibrant and resilient tone of voice, with iconic RGB Klein blue at its core. A WebGL-rendered globe on the homepage reinforces the platform's global reach, while service sections feature bold, animated pictograms inspired by airline visuals. This sets the benchmark for fintech design — balancing innovation with functionality.",
+    coverImage: `${BURO}/482d5f.auto`,
+    heroImage: `${BURO}/4c3e36.auto`,
+    gallery: [
+      { type: "image", src: `${BURO}/4c3e36.auto`, alt: "Clear Street Studio hero", layout: "full" },
+      { type: "image", src: `${BURO}/ef5811.auto`, alt: "Clear Street brand system", layout: "full" },
+      {
+        type: "image",
+        src: `${BURO}/05997d.auto`,
+        alt: "Clear Street branding",
+        layout: "pair",
+        pair: { type: "image", src: `${BURO}/482d5f.auto`, alt: "Clear Street website" },
+      },
+    ],
+    awards: [
+      "Awwwards: Site of the Day",
+      "Awwwards: Developer Award",
+      "CSS Design Awards: Website of the Day",
+      "The FWA: FWA of the Day",
+    ],
+    websiteUrl: "https://clearstreet.io",
+    nextProject: "remote",
+  },
+
+  // ─── Remote ──────────────────────────────────────────────────────────────────
+  {
+    id: "remote",
+    title: "Remote",
+    tagline: "Stress-free global hiring.",
+    category: "Website",
+    year: "2024",
+    services: [
+      "Web Design & Development",
+      "WebGL & 3D",
+      "Motion Design",
+      "Design System",
+      "Art Direction",
+      "Illustration Direction",
+    ],
+    description:
+      "Remote's vibrant visual language extends into the website experience through three core elements: a rich 3D pattern made of key shapes, expressive personality-filled illustrations, and photography masked by eight distinct key shapes. The globes — centerpiece of Remote's visual language — were built entirely in-browser using WebGL, integrating math directly into the experience. These aren't static assets or videos — they're crisp, interactive elements that elevate the narrative. Each globe dynamically reacts as users scroll, blending functionality with a clear presentation of Remote's global product features.",
+    coverImage: `${BURO}/455aa5.auto`,
+    heroImage: `${BURO}/508c65.auto`,
+    gallery: [
+      { type: "image", src: `${BURO}/508c65.auto`, alt: "Remote homepage header", layout: "full" },
+      { type: "image", src: `${BURO}/887c21.auto`, alt: "Remote product", layout: "full" },
+      {
+        type: "image",
+        src: `${BURO}/19a869.auto`,
+        alt: "Remote responsive website",
+        layout: "pair",
+        pair: { type: "image", src: `${BURO}/2789e5.auto`, alt: "Remote footer" },
+      },
+      { type: "image", src: `${BURO}/f16edd.auto`, alt: "Remote brand", layout: "full" },
+      {
+        type: "image",
+        src: `${BURO}/8c9985.auto`,
+        alt: "Remote 404 mobile",
+        layout: "pair",
+        pair: { type: "image", src: `${BURO}/daba99.auto`, alt: "Remote partners" },
+      },
+    ],
+    awards: [
+      "Awwwards: Honorable Mention",
+      "Awwwards: Site of the Day",
+      "CSS Design Awards: Special Kudos",
+    ],
+    websiteUrl: "https://remote.com",
+    nextProject: "multiversx",
+  },
+
+  // ─── MultiversX ──────────────────────────────────────────────────────────────
+  {
+    id: "multiversx",
+    title: "MultiversX",
+    tagline: "Scale across the Multiverse.",
+    category: "Naming, Rebranding & Website",
+    year: "2022",
+    services: [
+      "Naming",
+      "Brand Strategy",
+      "Brand Identity",
+      "Design System",
+      "Motion Design",
+      "3D Visualization",
+      "Web Design & Development",
+      "UI/UX Design",
+    ],
+    description:
+      "It all began with brainstorming sessions for a new name — exploring physical forces, cosmic terminology, mythology, and coined words — ultimately arriving at 'Multivers' elevated to the power of X. The X symbol needed to be distinctive, fresh, and resilient enough to function as an exponent while staying perfectly balanced as a standalone mark. The typography spans three font families: Roobert for all brand applications, Styrene A for brand and sub-brand wordmarks, and Inter for dashboards and apps. The vibrant color palette assigns specific hues to each sub-brand, with M×Mint, black, and white as the core combination. A fully scalable design system supports product UI/UX, social media collateral, and keynote presentations.",
+    coverImage: `${BURO}/7ead07.auto`,
+    heroImage: `${BURO}/8e0717.auto`,
+    gallery: [
+      { type: "image", src: `${BURO}/8e0717.auto`, alt: "MultiversX stage", layout: "full" },
+      { type: "image", src: `${BURO}/132b3e.auto`, alt: "MultiversX hero system", layout: "full" },
+      {
+        type: "image",
+        src: `${BURO}/bb27ed.auto`,
+        alt: "MultiversX conference card",
+        layout: "pair",
+        pair: { type: "image", src: `${BURO}/11ce19.auto`, alt: "MultiversX sweat" },
+      },
+      {
+        type: "image",
+        src: `${BURO}/7ce8d6.auto`,
+        alt: "MultiversX bottle",
+        layout: "pair",
+        pair: { type: "image", src: `${BURO}/7ead07.auto`, alt: "MultiversX brand overview" },
+      },
+    ],
+    awards: [
+      "Awwwards: Site of the Day",
+      "Awwwards: Developer Award",
+      "CSS Design Awards: Website of the Day",
+      "The FWA: FWA of the Day",
+    ],
+    websiteUrl: "https://multiversx.com",
+    nextProject: "phive",
+  },
+
+  // ─── Phive ───────────────────────────────────────────────────────────────────
+  {
+    id: "phive",
+    title: "Phive",
+    tagline: "Activate your senses.",
+    category: "Rebrand & Website",
     year: "2025",
     services: [
       "Brand Strategy",
-      "Naming",
       "Brand Identity",
-      "Art Direction",
-      "Copywriting",
-      "Content Creation",
-      "Motion Design & 3D Visualization",
-      "Web Design",
-      "Go-To-Market Strategy",
+      "Motion Design",
+      "Web Design & Development",
+      "Photography Direction",
+      "Video Production",
+      "Typeface System",
     ],
     description:
-      "Imagine an L4 autonomous vehicle you can actually own — the first Robocar ever launched. We partnered with Tensor to create a complete brand from the ground up in just three months: defining their brand and launch strategy, crafting their identity, naming the company and their first product, producing all CGI for the launch, designing their digital experience, and orchestrating a debut that positioned Tensor as a bold new force in the automotive and AI industry.",
-    coverImage: `${IMG}/abAKaVxvIZEnjhr7_Hero-CGI.jpg?auto=format,compress&w=2400`,
-    heroImage: `${IMG}/aJfcaaTt2nPbaHC6_Hero-CGI.png?auto=format,compress&w=2400`,
-    heroVideo: `${VID}/aJfd1KTt2nPbaHC__TENSOR-CASESTUDY-01.mp4`,
+      "Some clients ask us to tone it down. Phive asked us to turn it up. As Phive scaled rapidly and opened new clubs, the site needed to land each location with absolute clarity — while the updated brand needed to hold that narrative with full force. We built a typographic-first universe with street-smart font pairing powered by a flexing variable typeface. Content is king: custom video, strong photography, and bold timelapses set the tone. Each club opens with a 40-second visual punch. We paired type like a street poster — loud cuts, strong contrasts, unapologetically layered. From font to motion, one of our sharpest, most on-point builds yet.",
+    coverImage: `${BURO}/278ec4.auto`,
+    heroImage: `${BURO}/c40aba.auto`,
     gallery: [
-      { type: "video", src: `${VID}/aJfdPaTt2nPbaHC8_TENSOR-CASESTUDY-02.mp4`, layout: "full" },
-      { type: "image", src: `${IMG}/aJfdrKTt2nPbaHC-_Brand-Hero.jpg?auto=format,compress&w=2400`, layout: "full" },
+      { type: "image", src: `${BURO}/c40aba.auto`, alt: "Phive footer", layout: "full" },
+      { type: "image", src: `${BURO}/0896af.auto`, alt: "Phive clubs badges", layout: "full" },
       {
         type: "image",
-        src: `${IMG}/aJffGqTt2nPbaHDP_Brand-CGI.jpg?auto=format,compress&w=1400`,
+        src: `${BURO}/b39cf8.auto`,
+        alt: "Phive timetable",
         layout: "pair",
-        pair: { type: "image", src: `${IMG}/aJfe3qTt2nPbaHDL_Diptychd.jpg?auto=format,compress&w=1400` },
+        pair: { type: "image", src: `${BURO}/bb5e87.auto`, alt: "Phive Leiria" },
       },
-      { type: "video", src: `${VID}/aJffqKTt2nPbaHDa_TENSOR-CASESTUDY-03.mp4`, layout: "full" },
-      { type: "image", src: `${IMG}/aKRHLqTt2nPbac9G_Brand-CGI3-gigapixel-standardv2-1x.jpg?auto=format,compress&w=2400`, layout: "full" },
+      { type: "image", src: `${BURO}/f59af8.auto`, alt: "Phive tote bag", layout: "full" },
       {
         type: "image",
-        src: `${IMG}/aJffGaTt2nPbaHDO_Web1.jpg?auto=format,compress&w=1400`,
+        src: `${BURO}/4b38fb.auto`,
+        alt: "Phive personal trainer shirt",
         layout: "pair",
-        pair: { type: "image", src: `${IMG}/aKRNZ6Tt2nPbadDG_OOH.jpg?auto=format,compress&w=1400` },
+        pair: { type: "image", src: `${BURO}/fc2788.auto`, alt: "Phive pilates" },
       },
-      { type: "video", src: `${VID}/aO4jD55xUNkB17eu_TENSOR-HOMEPAGE-TRANSITION-SCROLLANIMATION_1.mp4`, layout: "full" },
     ],
-    nextProject: "rivian",
+    awards: [
+      "Awwwards: Site of the Day",
+      "CSS Design Awards: Website of the Day",
+    ],
+    websiteUrl: "https://phive.pt",
+    nextProject: "floema",
   },
 
-  // ─── Rivian ─────────────────────────────────────────────────────────────────
+  // ─── Floema ───────────────────────────────────────────────────────────────────
   {
-    id: "rivian",
-    title: "Rivian",
-    tagline: "The First Electric Adventure Vehicle.",
-    category: "Brand Growth",
+    id: "floema",
+    title: "Floema",
+    tagline: "Made for Life.",
+    category: "Rebrand & Website",
+    year: "2026",
+    services: [
+      "Brand Strategy",
+      "Brand Identity",
+      "Custom Typography",
+      "3D Visualization",
+      "Web Design & Development",
+      "Sound Design",
+      "Motion Design",
+      "CRM Integration",
+    ],
+    description:
+      "Floema needed a brand rooted in its signage legacy. Direction became the guiding principle — the logo balances legibility with character, built around a twist in the F that feels intentionally directional. The website is product-first, structured into five collections: Urban, Golf, rePlastic, Nature, and Details. Each of the 230 products features a web-optimised 3D model, with customisation and direct CRM integration. Beyond product, the experience shifts into a calmer, brand-led layer — subtle motion and sound bring depth to the scroll, from WebGL foliage to field recordings and music fragments. The header evolves from snow to full greenery across the seasons.",
+    coverImage: `${BURO}/dc758e.auto`,
+    heroImage: `${BURO}/665f58.auto`,
+    gallery: [
+      { type: "image", src: `${BURO}/665f58.auto`, alt: "Floema website", layout: "full" },
+      { type: "image", src: `${BURO}/027de5.auto`, alt: "Floema brand", layout: "full" },
+      {
+        type: "image",
+        src: `${BURO}/8d1fdf.auto`,
+        alt: "Floema logo system",
+        layout: "pair",
+        pair: { type: "image", src: `${BURO}/dc758e.auto`, alt: "Floema overview" },
+      },
+    ],
+    awards: [
+      "Awwwards: Site of the Day",
+      "CSS Design Awards: Website of the Day",
+      "The FWA: FWA of the Day",
+    ],
+    websiteUrl: "https://floema.com",
+    nextProject: "tuu",
+  },
+
+  // ─── TUU ─────────────────────────────────────────────────────────────────────
+  {
+    id: "tuu",
+    title: "TUU",
+    tagline: "Shaping Everyday Life.",
+    category: "Rebrand",
+    year: "2026",
+    services: [
+      "Brand Strategy",
+      "Brand Identity",
+      "Motion System",
+      "Sonic Branding",
+      "Typeface System",
+      "Variable Identity Design",
+    ],
+    description:
+      "The TUU identity builds on the elasticity of letterforms, reinforced by the clarity of having no margins. The TUU logo is never fixed — always anchored to the edges when static, it becomes a variable system of glyphs and media surfaces, continuously morphing into new configurations. By activating this key motif, the brand remains adaptable and responsive to any context, intentionally designed for movement and animation. The motion system expands TUU's expression across three compositional modes, with typography at the core and motion as the force. The full logo unfolds into a container that adapts to any aspect ratio — shifting from content-heavy layouts to pure visual presence, always marginless.",
+    coverImage: `${BURO}/83e520.auto`,
+    heroImage: `${BURO}/e1671a.auto`,
+    gallery: [
+      { type: "image", src: `${BURO}/e1671a.auto`, alt: "TUU identity", layout: "full" },
+      {
+        type: "image",
+        src: `${BURO}/c7420c.auto`,
+        alt: "TUU logo system",
+        layout: "pair",
+        pair: { type: "image", src: `${BURO}/0abf20.auto`, alt: "TUU applications" },
+      },
+      { type: "image", src: `${BURO}/f2515e.auto`, alt: "TUU brand in use", layout: "full" },
+      {
+        type: "image",
+        src: `${BURO}/3e0291.auto`,
+        alt: "TUU motion",
+        layout: "pair",
+        pair: { type: "image", src: `${BURO}/6a52d0.auto`, alt: "TUU variable system" },
+      },
+      { type: "image", src: `${BURO}/9767e6.auto`, alt: "TUU brand overview", layout: "full" },
+    ],
+    awards: [
+      "Awwwards: Honorable Mention",
+      "CSS Design Awards: Special Kudos",
+    ],
+    nextProject: "redacted",
+  },
+
+  // ─── Redacted ─────────────────────────────────────────────────────────────────
+  {
+    id: "redacted",
+    title: "Redacted RnD",
+    tagline: "Hidden in plain sight.",
+    category: "Brand Identity",
+    year: "2026",
+    services: [
+      "Brand Strategy",
+      "Brand Identity",
+      "Pattern Design",
+      "Visual System",
+      "Art Direction",
+    ],
+    description:
+      "Redacted RnD is built on a simple idea of concealment — where the visual language emerges from the balance between what is hidden and what is revealed. Inspired by redacted documents, its patterns turn absence into structure through repetition, variation, and fragmentation. Rectangular forms shift, break, and recombine into compositions that feel both precise and slightly unstable. Rather than decoration, the pattern works as a supporting layer — guiding attention, organising information, and adding depth without competing with core elements. Being vector-based, it scales across formats while staying clear and adaptable.",
+    coverImage: `${BURO}/6a6d60.auto`,
+    heroImage: `${BURO}/9acbe2.auto`,
+    gallery: [
+      { type: "image", src: `${BURO}/9acbe2.auto`, alt: "Redacted brand system", layout: "full" },
+      {
+        type: "image",
+        src: `${BURO}/1c5eb1.auto`,
+        alt: "Redacted pattern",
+        layout: "pair",
+        pair: { type: "image", src: `${BURO}/bedd9b.auto`, alt: "Redacted identity" },
+      },
+      { type: "image", src: `${BURO}/3064b4.auto`, alt: "Redacted applications", layout: "full" },
+      {
+        type: "image",
+        src: `${BURO}/31a78c.auto`,
+        alt: "Redacted collateral",
+        layout: "pair",
+        pair: { type: "image", src: `${BURO}/3f11d4.auto`, alt: "Redacted system" },
+      },
+      {
+        type: "image",
+        src: `${BURO}/893f2f.auto`,
+        alt: "Redacted print",
+        layout: "pair",
+        pair: { type: "image", src: `${BURO}/cf6566.auto`, alt: "Redacted overview" },
+      },
+    ],
+    testimonial: {
+      quote: "Working with Beyond was an exceptional experience from start to finish. Their ability to translate ideas into clean, original work made them feel like an extension of our team. The level of creativity, attention to detail, and overall execution was world-class.",
+      name: "Brooklyn Earick",
+      role: "Founder, Redacted RnD",
+    },
+    nextProject: "grabgo",
+  },
+
+  // ─── Grab&Go ─────────────────────────────────────────────────────────────────
+  {
+    id: "grabgo",
+    title: "Grab&Go",
+    tagline: "Open 24 hours every day.",
+    category: "Website",
+    year: "2024",
+    services: [
+      "Web Design & Development",
+      "Illustration",
+      "Motion Graphics",
+      "WebGL",
+      "Interactive Audio",
+      "Art Direction",
+    ],
+    description:
+      "Centered on a coffee cup as a key WebGL element, the scroll guides users through the journey from first contact to a fully operational vending shop in just one month. B2B first — but consumers are the real brand champions. The site's vibrant presence comes to life with dynamic illustrations, motion graphics, and animated blocks that enhance the scroll narrative. A quintessential Portuguese city illustrated in detail houses the store within its façade, with interactive audio elements — clicking the bicycle triggers a sound sample and city birds chirp in the distance. The footer features a movable star module in a playful beach setting, tied to the brand's 24-hour availability.",
+    coverImage: `${BURO}/c2a9e2.auto`,
+    heroImage: `${BURO}/839beb.auto`,
+    gallery: [
+      { type: "image", src: `${BURO}/839beb.auto`, alt: "Grab&Go website", layout: "full" },
+      {
+        type: "image",
+        src: `${BURO}/1de1a7.auto`,
+        alt: "Grab&Go on mobile",
+        layout: "pair",
+        pair: { type: "image", src: `${BURO}/aa98ed.auto`, alt: "Grab&Go brand" },
+      },
+      { type: "image", src: `${BURO}/4784a9.auto`, alt: "Grab&Go illustration", layout: "full" },
+    ],
+    awards: [
+      "Awwwards: Honorable Mention",
+      "CSS Design Awards: Special Kudos",
+    ],
+    websiteUrl: "https://grabandgo.pt",
+    nextProject: "flowcase",
+  },
+
+  // ─── Flowcase ─────────────────────────────────────────────────────────────────
+  {
+    id: "flowcase",
+    title: "Flowcase",
+    tagline: "Win bids with stellar resumes.",
+    category: "Rebranding",
+    year: "2024",
+    services: [
+      "Naming Strategy",
+      "Brand Strategy",
+      "Brand Identity",
+      "3D Visualization",
+      "Motion Design",
+      "Design System",
+      "UI/UX Design",
+    ],
+    description:
+      "Merging the concepts of 'flow of information' and 'case study' led to the exploration of stacks — the SaaS product itself revolves around stacks, whether resume stacks or modular UI represented as card stacks. The symbol merges an 'F' with a sleek, quirky design — standing out in a sea of 'F' logos — capturing the flow of information and embodying the product's core identity. The brand system evolves from simple 2D to a dynamic 3D visual language, with 3D elements integrated into motion graphics creating tangible connections on social platforms. From website headers to lanyard cards, the system presents content in diverse, impactful ways.",
+    coverImage: `${BURO}/f2b46a.auto`,
+    heroImage: `${BURO}/5631e8.auto`,
+    gallery: [
+      { type: "image", src: `${BURO}/5631e8.auto`, alt: "Flowcase ID cards", layout: "full" },
+      {
+        type: "image",
+        src: `${BURO}/cf9fa8.auto`,
+        alt: "Flowcase pin",
+        layout: "pair",
+        pair: { type: "image", src: `${BURO}/dfbd71.auto`, alt: "Flowcase cards" },
+      },
+      { type: "image", src: `${BURO}/a91312.auto`, alt: "Flowcase bag", layout: "full" },
+      {
+        type: "image",
+        src: `${BURO}/babd18.auto`,
+        alt: "Flowcase header on mobile",
+        layout: "pair",
+        pair: { type: "image", src: `${BURO}/f2b46a.auto`, alt: "Flowcase overview" },
+      },
+    ],
+    awards: ["Awwwards: Honorable Mention"],
+    websiteUrl: "https://flowcase.com",
+    nextProject: "jeton",
+  },
+
+  // ─── Jeton ─────────────────────────────────────────────────────────────────
+  {
+    id: "jeton",
+    title: "Jeton",
+    tagline: "One wallet for all needs.",
+    category: "Rebrand & Website",
     year: "2024",
     services: [
       "Brand Strategy",
-      "Art Direction",
-      "Copywriting",
+      "Brand Identity",
+      "3D Brand Universe",
+      "Motion Design",
       "Web Design & Development",
-      "Motion Design & 3D Visualization",
-      "Content Creation",
+      "UI/UX Design",
+      "App Design",
     ],
     description:
-      "We partnered with Rivian to launch their brand and establish the foundations of their digital presence. Working closely with the founding team, we helped build anticipation for the debut of their Electric Adventure Vehicles — driving ~71,000 pre-orders valued at approximately $5.68 billion. This collaboration set the stage for Rivian's success and revealed their brand to the world.",
-    coverImage: `${IMG}/Z1r5Y5bqstJ98aaF_rivian.jpg?auto=format,compress&w=2400`,
-    heroImage: `${IMG}/aFMaEbNJEFaPYFQr_Rivian-cover.jpg?auto=format,compress&w=2400`,
-    heroVideo: `${VID}/aFMbCbNJEFaPYFQx_RIVIAN-CASESTUDY-01.mp4`,
+      "With the 'O' naturally suggesting a coin shape, the rebranding was anchored by a sturdy wordmark with subtle typographic nuances — a blend of soft and clean geometric angles across all glyphs and icons. The brand symbol mimics the motion of coins within a single snapshot, merging form and function. Designed for high-impact minimal applications, the identity performs on everything from digital screens to sports uniforms — Jeton is the Official Partner of West Ham United F.C. and Legia Warsaw. The vibrant orange-and-white combination provides youthful appeal for a younger demographic. The 3D brand universe features coin-shaped metaphors abstractly representing money transactions alongside real-use-case store scenarios.",
+    coverImage: `${BURO}/5bef20.auto`,
+    heroImage: `${BURO}/46fabc.auto`,
     gallery: [
-      { type: "image", src: `${IMG}/aFMcJLNJEFaPYFRB_Rivian-02.jpg?auto=format,compress&w=2400`, layout: "full" },
-      { type: "video", src: `${VID}/aFMbI7NJEFaPYFQz_RIVIAN-CASESTUDY-02.mp4`, layout: "full" },
+      { type: "image", src: `${BURO}/46fabc.auto`, alt: "Jeton cards", layout: "full" },
       {
         type: "image",
-        src: `${IMG}/aFMcJbNJEFaPYFRD_Rivian-04.jpg?auto=format,compress&w=1400`,
+        src: `${BURO}/7968f3.auto`,
+        alt: "Jeton with Alexis Mac Allister",
         layout: "pair",
-        pair: { type: "image", src: `${IMG}/aFMcJrNJEFaPYFRF_Rivian-05.jpg?auto=format,compress&w=1400` },
+        pair: { type: "image", src: `${BURO}/9c138a.auto`, alt: "Jeton tote bags" },
       },
-      { type: "image", src: `${IMG}/aFMcJ7NJEFaPYFRG_Rivian-06.jpg?auto=format,compress&w=2400`, layout: "full" },
-      {
-        type: "image",
-        src: `${IMG}/aFMcKLNJEFaPYFRH_Rivian-07.jpg?auto=format,compress&w=1400`,
-        layout: "pair",
-        pair: { type: "image", src: `${IMG}/aFMcKbNJEFaPYFRI_Rivian-09.jpg?auto=format,compress&w=1400` },
-      },
-      { type: "image", src: `${IMG}/aFMcKrNJEFaPYFRJ_Rivian-10.jpg?auto=format,compress&w=2400`, layout: "full" },
+      { type: "image", src: `${BURO}/28ed6e.auto`, alt: "Jeton poster", layout: "full" },
+      { type: "image", src: `${BURO}/f0e3ce.auto`, alt: "Jeton pictograms", layout: "full" },
     ],
-    awards: ["Awwwards: Honorable Mention", "Awwwards: Site Of The Day", "Awwwards: Developer Site", "CSSDA: Site of the Day"],
-    nextProject: "oura-ring",
-  },
-
-  // ─── Oura Ring ──────────────────────────────────────────────────────────────
-  {
-    id: "oura-ring",
-    title: "Oura Ring",
-    tagline: "The Smart Ring.",
-    category: "Digital Experience",
-    year: "2024",
-    services: [
-      "Strategy",
-      "Branding",
-      "Visual Identity",
-      "Art Direction",
-      "Copywriting",
-      "Web Design & Development",
-      "Motion Design & 3D Visualization",
-      "Content Creation",
-    ],
-    description:
-      "Oura is the leading smart ring on the market. They have redefined the wearable health technology market — tracking sleep, activity, recovery, and more, delivering insights that empower millions to improve their health. We partnered with Oura to craft a vibrant visual identity that connects their technology with a deeply personal experience. Inspired by their mission to be 'built for everybody,' our work highlighted the universal journey toward wellbeing, solidifying Oura's position as the market leader.",
-    coverImage: `${IMG}/Z2AYnZbqstJ98i2G_oura-abdul-ovaice-photography-cd-21.png?auto=format,compress&w=2400`,
-    heroImage: `${IMG}/Z215hpbqstJ981qQ_Oura-01.png?auto=format,compress&w=2400`,
-    heroVideo: `${VID}/Z3xbLZbqstJ99GKJ_01-OURA-Video2.mp4`,
-    gallery: [
-      { type: "image", src: `${IMG}/Z218g5bqstJ981rD_oura-abdul-ovaice-photography-cd-3.jpg?auto=format,compress&w=2400`, layout: "full" },
-      {
-        type: "image",
-        src: `${IMG}/Z2186pbqstJ981rQ_Group3919.png?auto=format,compress&w=1400`,
-        layout: "pair",
-        pair: { type: "image", src: `${IMG}/Z218X5bqstJ981q6_Group3922.png?auto=format,compress&w=1400` },
-      },
-      { type: "image", src: `${IMG}/Z218opbqstJ981rL_Group3919.png?auto=format,compress&w=2400`, layout: "full" },
-      { type: "image", src: `${IMG}/Z218yZbqstJ981rO_Frame21108s.png?auto=format,compress&w=2400`, layout: "full" },
-      {
-        type: "image",
-        src: `${IMG}/Z3fSX5bqstJ99A_s_Oura-3d-render-01.png?auto=format,compress&w=1400`,
-        layout: "pair",
-        pair: { type: "image", src: `${IMG}/Z3fSYJbqstJ99A_t_Oura-3d-render-02.jpg?auto=format,compress&w=1400` },
-      },
-    ],
-    testimonial: {
-      quote:
-        "The team executed OURA's creative direction and brand strategy with passion and tenacity. Typically, when you launch a new website, conversion numbers dip a little. For OURA, it was the exact opposite.",
-      name: "Abdul Ovaice",
-      role: "Creative Director at Oura",
-    },
-    awards: ["Awwwards: Honorable Mention", "Awwwards: Mobile Excellence", "CSSDA: Special Kudos"],
-    nextProject: "moxion-power",
-  },
-
-  // ─── Moxion Power ───────────────────────────────────────────────────────────
-  {
-    id: "moxion-power",
-    title: "Moxion Power",
-    tagline: "Redefining Mobile Energy.",
-    category: "Brand Identity",
-    year: "2024",
-    services: [
-      "Strategy",
-      "Branding",
-      "Visual Identity",
-      "Art Direction",
-      "Copywriting",
-      "Web Design & Development",
-      "Motion Design & 3D Visualization",
-      "Content Creation",
-    ],
-    description:
-      "Moxion Power builds sustainable mobile battery systems to replace diesel generators. Their MP-75 delivers 75kW of power, stores over 600kWh of energy, and is designed for rapid deployment at events, construction sites, and other off-grid applications. The system can power a household for 20 days or charge 30 electric cars. We partnered with Moxion Power to birth their brand from the ground up and position them as leaders in the sustainable mobile energy space.",
-    coverImage: `${IMG}/Z2AYnJbqstJ98i2E_moxionpower.2023.04.onlocation-17821.png?auto=format,compress&w=2400`,
-    heroImage: `${IMG}/Z3FRGZbqstJ984Gt_MP-lastcover.png?auto=format,compress&w=2400`,
-    heroVideo: `${VID}/Z22K2ZbqstJ981uv_RJ-CS-MP01.mp4`,
-    gallery: [
-      { type: "image", src: `${IMG}/Z22KFpbqstJ981ua_IMG_87781.png?auto=format,compress&w=2400`, layout: "full" },
-      { type: "video", src: `${VID}/Z22LMZbqstJ981u1_RJ-CS-MP02.mp4`, layout: "full" },
-      {
-        type: "image",
-        src: `${IMG}/Z22LaZbqstJ981u4_Frame21196.png?auto=format,compress&w=1400`,
-        layout: "pair",
-        pair: { type: "image", src: `${IMG}/Z22LBJbqstJ981uy_Maskgroup.png?auto=format,compress&w=1400` },
-      },
-      { type: "image", src: `${IMG}/Z22Lo5bqstJ981vL_Maskgroups.png?auto=format,compress&w=2400`, layout: "full" },
-      { type: "video", src: `${VID}/Z22LxJbqstJ981vX_RJ-CS-MP05_1.mp4`, layout: "full" },
-      {
-        type: "image",
-        src: `${IMG}/Z22MLZbqstJ981vr_Rectangle2305.png?auto=format,compress&w=1400`,
-        layout: "pair",
-        pair: { type: "image", src: `${IMG}/Z22NBZbqstJ981vz_Frame21197.png?auto=format,compress&w=1400` },
-      },
-      { type: "video", src: `${VID}/Z3FRtpbqstJ984Gy_MP-INDUSTRY.mp4`, layout: "full" },
-    ],
-    testimonial: {
-      quote: "Moxion Power is thrilled with our partnership with REJOUICE. A heartfelt thank you for the exceptional work.",
-      name: "Alex Meek",
-      role: "Co-Founder & President at Moxion Power",
-    },
     awards: [
       "Awwwards: Honorable Mention",
-      "Awwwards: Site Of The Day",
-      "Awwwards: Developer Site",
-      "CSSDA: Site Of The Day",
+      "CSS Design Awards: Website of the Day",
+    ],
+    websiteUrl: "https://jeton.com",
+    nextProject: "keikku",
+  },
+
+  // ─── Keikku ─────────────────────────────────────────────────────────────────
+  {
+    id: "keikku",
+    title: "Keikku",
+    tagline: "Don't miss a beat.",
+    category: "Branding & Website",
+    year: "2024",
+    services: [
+      "Brand Strategy",
+      "Brand Identity",
+      "WebGL",
+      "3D Product Visualisation",
+      "Web Design & Development",
+      "Motion Design",
+      "Sound Design",
+    ],
+    description:
+      "Keikku is a next-generation smart, digital, and wireless stethoscope. The visual identity centres on sound waves, illustrated by a whale-shaped waveform that underscores the device's adaptability — connecting the brand to an iconic figure while echoing the device's rounded, orca-like bezel. Through an engaging on-scroll narrative, the website reveals the product's specifications and features while highlighting its compact size in context. A key feature is the WebGL-powered exploded view where users explore the device's components. The footer features waves that react to sound, set to become a recognisable element of the brand's visual language.",
+    coverImage: `${BURO}/7881ba.auto`,
+    heroImage: `${SANITY}/6f84723c0550b0177ed6058b7319322c12310c84-3270x2176.png`,
+    gallery: [
+      { type: "image", src: `${SANITY}/6f84723c0550b0177ed6058b7319322c12310c84-3270x2176.png`, alt: "Keikku product", layout: "full" },
+      { type: "image", src: `${SANITY}/6b0649b448163cfa7715f393a170068c01f1ada9-3000x2000.jpg`, alt: "Keikku brand poster", layout: "full" },
+      {
+        type: "image",
+        src: `${SANITY}/981a1d051930da88fc3b76b98e15eee4b32d25cc-1360x1600.jpg`,
+        alt: "Keikku features on mobile",
+        layout: "pair",
+        pair: { type: "image", src: `${BURO}/7881ba.auto`, alt: "Keikku overview" },
+      },
+    ],
+    awards: [
+      "Awwwards: Honorable Mention",
+      "CSS Design Awards: Special Kudos",
+    ],
+    websiteUrl: "https://keikku.com",
+    nextProject: "kozowood",
+  },
+
+  // ─── Kōzōwood ─────────────────────────────────────────────────────────────────
+  {
+    id: "kozowood",
+    title: "Kōzōwood",
+    tagline: "Made of Nature.",
+    category: "Website",
+    year: "2023",
+    services: [
+      "Web Design & Development",
+      "WebGL Animation",
+      "Sound Design",
+      "Video Production",
+      "Illustration",
+      "Art Direction",
+      "3D Visualization",
+    ],
+    description:
+      "The design aims for elegance and sophistication, offering a Zen-like experience as you scroll. Guided by the soft notes of a marimba — a wooden instrument — paired with nature and factory field recordings, it eases daily stress while encouraging deeper exploration through storytelling. Each header integrates elements of wooden house construction, with typography intertwined with nature-inspired illustrations and seamless WebGL animations. A world map infographic highlights wood construction data, while the concrete vs. CLT comparison showcases the advantages of wood beyond natural appeal. Minimal drone footage captured in Comporta, Portugal — lush rice fields, towering pine trees, and untouched sandy roads — offers a glimpse of the lifestyle these homes deliver.",
+    coverImage: `${BURO}/30ea45.auto`,
+    heroImage: `${BURO}/66e76a.auto`,
+    gallery: [
+      { type: "image", src: `${BURO}/66e76a.auto`, alt: "Kōzōwood about", layout: "full" },
+      {
+        type: "image",
+        src: `${BURO}/f98ebd.auto`,
+        alt: "Kōzōwood website",
+        layout: "pair",
+        pair: { type: "image", src: `${BURO}/9fe84a.auto`, alt: "Kōzōwood design" },
+      },
+      { type: "image", src: `${BURO}/f0a53d.auto`, alt: "Kōzōwood brand", layout: "full" },
+      {
+        type: "image",
+        src: `${BURO}/80bf68.auto`,
+        alt: "Kōzōwood exterior",
+        layout: "pair",
+        pair: { type: "image", src: `${BURO}/fefafd.auto`, alt: "Kōzōwood detail" },
+      },
+    ],
+    awards: [
+      "Awwwards: Site of the Day",
+      "Awwwards: Developer Award",
+      "CSS Design Awards: Website of the Day",
       "The FWA: FWA of the Day",
     ],
-    nextProject: "noovo",
+    websiteUrl: "https://kozowood.com",
+    nextProject: "talent-protocol",
   },
 
-  // ─── Noovo ──────────────────────────────────────────────────────────────────
+  // ─── Talent Protocol ─────────────────────────────────────────────────────────
   {
-    id: "noovo",
-    title: "Noovo",
-    tagline: "The Van People Actually Want to Live In.",
-    category: "Creative Direction",
-    year: "2024",
-    services: [
-      "Naming",
-      "Strategy",
-      "Branding",
-      "Visual Identity",
-      "Art Direction",
-      "Copywriting",
-      "Web Design & Development",
-      "Motion Design & 3D Visualization",
-      "Content Creation",
-    ],
-    description:
-      "Van conversions are complex and arduous, and they rarely provide a viable alternative for full-time living. Noovo has changed that. Before kicking off the design project, our team took a few of their vans on a three-week road trip, and we returned with a deeper appreciation for the energy and drive behind their business. We built their brand from the ground up — developing their name, logo, website, and merchandising, as well as sourcing and facilitating strategic hires to support their growth.",
-    coverImage: `${IMG}/Z1r5XpbqstJ98aZ8_noovo.jpg?auto=format,compress&w=2400`,
-    heroImage: `${IMG}/Z3FzZZbqstJ984LF_SectionCover.jpg?auto=format,compress&w=2400`,
-    heroVideo: `${VID}/Z3FryZbqstJ984J9_NOOVO-VIDEO-WEBSITE.mp4`,
-    gallery: [
-      { type: "image", src: `${IMG}/Z0hs25bqstJ973Q2_noovo3.jpg?auto=format,compress&w=2400`, layout: "full" },
-      { type: "video", src: `${VID}/Z3FsipbqstJ984KC_REJOUICE-NOOVO_1.mp4`, layout: "full" },
-      {
-        type: "image",
-        src: `${IMG}/Z0htK5bqstJ973RF_noovo5.jpg?auto=format,compress&w=1400`,
-        layout: "pair",
-        pair: { type: "image", src: `${IMG}/Z0htLJbqstJ973RG_noovo6.jpg?auto=format,compress&w=1400` },
-      },
-      { type: "image", src: `${IMG}/Z0htLpbqstJ973RI_noovo8.jpg?auto=format,compress&w=2400`, layout: "full" },
-      { type: "video", src: `${VID}/Z3FyRJbqstJ984K6_REJOUICE-NOOVO2.mp4`, layout: "full" },
-      {
-        type: "image",
-        src: `${IMG}/Z0htL5bqstJ973RJ_noovo9.jpg?auto=format,compress&w=1400`,
-        layout: "pair",
-        pair: { type: "image", src: `${IMG}/Z0hsuZbqstJ973Qw_Maskgroup.jpg?auto=format,compress&w=1400` },
-      },
-    ],
-    testimonial: {
-      quote:
-        "They didn't just give us a gorgeous brand, they gave us a growth machine. It's rare to find a partner that can deliver both beauty and business impact.",
-      name: "Benoit Lafond",
-      role: "Co-founder & CEO at Noovo",
-    },
-    awards: ["CSSDA: Site of The Day", "Awwwards: Site of The Day"],
-    nextProject: "hyperframe",
-  },
-
-  // ─── Hyperframe ─────────────────────────────────────────────────────────────
-  {
-    id: "hyperframe",
-    title: "Hyperframe",
-    tagline: "Steel Framing, Simplified.",
-    category: "Brand Strategy",
+    id: "talent-protocol",
+    title: "Talent Protocol",
+    tagline: "The web3 professional network.",
+    category: "Rebranding",
     year: "2023",
     services: [
-      "Strategy",
-      "Branding",
-      "Visual Identity",
-      "Art Direction",
-      "Copywriting",
-      "Web Design & Development",
-      "Motion Design & 3D Visualization",
-      "Content Creation",
+      "Brand Strategy",
+      "Brand Identity",
+      "Design System",
+      "Motion Design",
+      "UI/UX Design",
+      "Avatar System Design",
     ],
     description:
-      "Traditional steel framing was labor-intensive and time-consuming. Hyperframe has revolutionized the process with pioneering software and custom components, enabling walls to be assembled in minutes using a VR headset. Our role was to simplify this complex system into a relatable product — developing a clear brand message, striking visuals, and an innovative digital experience that redefines the construction industry's standards.",
-    coverImage: `${IMG}/Z1r5WpbqstJ98aZ1_hyperframe.jpg?auto=format,compress&w=2400`,
-    heroImage: `${IMG}/Z22P2JbqstJ981wT_Hyp03-2588x18001.png?auto=format,compress&w=2400`,
-    heroVideo: `${VID}/Z3G3BZbqstJ984QV_Hyperframe.mp4`,
+      "The concept centres on individual personas — the 'tp' connection hints at an ASCII-style figure, with a diverse range of emoticons allowing users to build their own avatar to reflect their online identity. Alongside each person's $token, users can choose their ID colour palette and customise an icon that shifts to represent their face. The design system uses interconnected shapes to create a seamless flow and sense of connection throughout the interface. Balancing the personal with the professional, the system integrates the user's name, token symbol, and photo into a cohesive layout — versatile and user-centric whether you're a designer, a crypto enthusiast, or an entrepreneur.",
+    coverImage: `${BURO}/228f99.auto`,
+    heroImage: `${BURO}/741670.auto`,
     gallery: [
-      { type: "video", src: `${VID}/Z22SkJbqstJ981wy_02_hyper_video.mp4-1080p-.mp4`, layout: "full" },
+      { type: "image", src: `${BURO}/741670.auto`, alt: "Talent Protocol identity", layout: "full" },
       {
         type: "image",
-        src: `${IMG}/Z22QqJbqstJ981we_Homepage-1.png?auto=format,compress&w=1400`,
+        src: `${BURO}/e1fdf1.auto`,
+        alt: "Talent Protocol user tags",
         layout: "pair",
-        pair: { type: "image", src: `${IMG}/Z22R05bqstJ981wp_Frame21234.png?auto=format,compress&w=1400` },
+        pair: { type: "image", src: `${BURO}/a8ec4e.auto`, alt: "Talent Protocol merch" },
       },
-      { type: "image", src: `${IMG}/Z22StZbqstJ981w0_Group3901.png?auto=format,compress&w=2400`, layout: "full" },
+      { type: "image", src: `${BURO}/2ade36.auto`, alt: "Talent Protocol system", layout: "full" },
+      { type: "image", src: `${BURO}/3844fe.auto`, alt: "Talent Protocol overview", layout: "full" },
+    ],
+    awards: ["Awwwards: Honorable Mention"],
+    websiteUrl: "https://talentprotocol.com",
+    nextProject: "flecto",
+  },
+
+  // ─── Flecto ─────────────────────────────────────────────────────────────────
+  {
+    id: "flecto",
+    title: "Flecto",
+    tagline: "Unlock your rental business.",
+    category: "Rebranding & Website",
+    year: "2022",
+    services: [
+      "Brand Strategy",
+      "Brand Identity",
+      "Web Design & Development",
+      "Custom GSAP Animation R&D",
+      "UI/UX Design",
+      "Design System",
+      "Motion Design",
+    ],
+    description:
+      "Flecto.io represents a rare breed of product website where the brand is intricately woven into the narrative, not merely scattered as users scroll. The brand language — built around flexible boxes — demanded technology that didn't exist, so we conducted our own R&D. The implementation: no masks involved. What appears on screen are complex paths generated at render time using a script tied to the GSAP onUpdate function. We animate simple rect elements and the script generates shapes dynamically based on their coordinates. Flecto pioneered this container technique. The design system seamlessly transitions from website product feature narrative to the full dashboard UI — a unified product design language from landing page to logged-in experience.",
+    coverImage: `${BURO}/a48498.auto`,
+    heroImage: `${SANITY}/3fc4f3c3e7da694850c273567eedf168be08dfb5-1700x1384.png`,
+    gallery: [
+      { type: "image", src: `${SANITY}/3fc4f3c3e7da694850c273567eedf168be08dfb5-1700x1384.png`, alt: "Flecto about", layout: "full" },
+      { type: "image", src: `${SANITY}/63f8bf449a67a1a4ec5200141259c6f49b033869-1920x1080.jpg`, alt: "Flecto homepage", layout: "full" },
       {
         type: "image",
-        src: `${IMG}/Z22TAJbqstJ981w3_Group3909.png?auto=format,compress&w=1400`,
+        src: `${SANITY}/5841ff5ae56c8b3af0bc8766f21ebd9fb9228d62-3400x3912.jpg`,
+        alt: "Flecto website screens",
         layout: "pair",
-        pair: { type: "image", src: `${IMG}/Z22TZJbqstJ981w9_Group3890.png?auto=format,compress&w=1400` },
+        pair: { type: "image", src: `${SANITY}/e287fc2f49d67452672d0cf72f53b825927efe4a-1920x1280.jpg`, alt: "Flecto mobile" },
       },
-      { type: "image", src: `${IMG}/Z22Tr5bqstJ981xE_202.png?auto=format,compress&w=2400`, layout: "full" },
+      { type: "image", src: `${SANITY}/3337fe06a2e5b0cfcb730e5bc8a7600b8ae7eb9c-3400x2264.jpg`, alt: "Flecto dashboard", layout: "full" },
+    ],
+    awards: [
+      "Awwwards: Site of the Day",
+      "Awwwards: Developer Award",
+      "CSS Design Awards: Website of the Day",
+      "The FWA: FWA of the Day",
+    ],
+    websiteUrl: "https://flecto.io",
+    nextProject: "hematogenix",
+  },
+
+  // ─── Hematogenix ─────────────────────────────────────────────────────────────
+  {
+    id: "hematogenix",
+    title: "Hematogenix",
+    tagline: "Health made simple.",
+    category: "Rebrand & Website",
+    year: "2022",
+    services: [
+      "Brand Strategy",
+      "Brand Identity",
+      "3D Visualization",
+      "Motion Design",
+      "Web Design & Development",
+      "Transparent Video Production",
+      "Art Direction",
+    ],
+    description:
+      "Hematogenix helps clients discover new and more effective methods to diagnose, treat, and prevent cancer. With an outdated brand and collateral, the intervention called for a rebranding as foundation for a full digital transformation — reshaping the Spiral DNA-H into a new form, which gained credibility after being featured in LogoLounge Trends 2021. The 3D visual universe, inspired by blood components like plasma, red cells, and white cells, serves as the foundation for the site headers. Transparent videos (up to 4K on Apple Silicon) form the hero experience — the only thing greater than the number of After Effects interactions was the love for the final result.",
+    coverImage: `${BURO}/31bdee.auto`,
+    heroImage: `${BURO}/b6e13c.auto`,
+    gallery: [
+      { type: "image", src: `${BURO}/b6e13c.auto`, alt: "Hematogenix website on tablet", layout: "full" },
+      {
+        type: "image",
+        src: `${BURO}/526d22.auto`,
+        alt: "Hematogenix clinical trials on mobile",
+        layout: "pair",
+        pair: { type: "image", src: `${BURO}/e741a7.auto`, alt: "Hematogenix boxes" },
+      },
+      { type: "image", src: `${BURO}/132d0a.auto`, alt: "Hematogenix cover", layout: "full" },
+      {
+        type: "image",
+        src: `${BURO}/b85b25.auto`,
+        alt: "Hematogenix tote bag",
+        layout: "pair",
+        pair: { type: "image", src: `${BURO}/7f12df.auto`, alt: "Hematogenix cards" },
+      },
     ],
     awards: [
       "Awwwards: Honorable Mention",
-      "Awwwards: Site Of The Day",
-      "Awwwards: Developer Site",
-      "Awwwards: Mobile Excellence",
-      "CSSDA: Website Of The Day",
-      "The FWA: FWA Of The Day",
+      "CSS Design Awards: Website of the Day",
+      "LogoLounge: Trends 2021 Feature",
     ],
-    nextProject: "connect-homes",
+    websiteUrl: "https://hematogenix.com",
+    nextProject: "speedy",
   },
 
-  // ─── Connect Homes ──────────────────────────────────────────────────────────
+  // ─── Speedy ─────────────────────────────────────────────────────────────────
   {
-    id: "connect-homes",
-    title: "Connect Homes",
-    tagline: "Rethinking how we build, buy, and live in our homes.",
-    category: "Brand Identity",
-    year: "2023",
+    id: "speedy",
+    title: "Speedy",
+    tagline: "Just like a bank, but better.",
+    category: "Branding & Website",
+    year: "2021",
     services: [
-      "Strategy",
-      "Branding",
-      "Visual Identity",
-      "Art Direction",
-      "Copywriting",
+      "Brand Strategy",
+      "Brand Identity",
+      "3D Visualization",
       "Web Design & Development",
-      "Motion Design & 3D Visualization",
-      "Content Creation",
+      "Motion Design",
+      "UI/UX Design",
+      "App Design",
     ],
     description:
-      "Connect Homes specializes in urban smart homes that blend aspiration with affordability. We partnered with Connect Homes to position them as leaders in the prefab industry, focusing on a brand identity that goes beyond architecture to emphasize connection and modern living. Our work included bright, vibrant digital design breaking from traditional architectural norms, along with custom 3D models and animations that let users visualize home configurations. Recently featured in Dwell as 'experts,' Connect Homes has solidified their place as innovators in the prefab space.",
-    coverImage: `${IMG}/Z1r5V5bqstJ98aZx_connect-homes.jpg?auto=format,compress&w=2400`,
-    heroImage: `${IMG}/Z23EApbqstJ9819L_4-2880x18003.jpg?auto=format,compress&w=2400`,
-    heroVideo: `${VID}/Z23HKZbqstJ9819h_01_connect_homes-mp4-1080p-.mp4`,
+      "The brief called for a minimal black Swiss-style website — no clutter or excess, just clean and straight to the point. The website concept centres around a black-and-white 3D globe — the standard visual metaphor for global reach — which dynamically changes colours based on the country it's serving. Black is used for the overall product presentation while white is reserved for the professional business account. The product is introduced through an on-scroll experience, enhanced with micro-animations and developed with a mobile-first approach. The abstract 3D globe plays a pivotal role in narrating the product's capabilities, reinforcing Speedy's position as a next-generation fintech solution.",
+    coverImage: `${BURO}/65b7c1.auto`,
+    heroImage: `${BURO}/65b7c1.auto`,
     gallery: [
-      { type: "image", src: `${IMG}/Z23HTZbqstJ9819j_ConnectHomes_PaloAlto-9-1-2609x1800.jpg?auto=format,compress&w=2400`, layout: "full" },
+      { type: "image", src: `${BURO}/65b7c1.auto`, alt: "Speedy overview", layout: "full" },
+    ],
+    awards: [
+      "Awwwards: Site of the Day",
+      "CSS Design Awards: Website of the Day",
+      "The FWA: FWA of the Day",
+    ],
+    websiteUrl: "https://speedy.com",
+    nextProject: "care-to-beauty",
+  },
+
+  // ─── Care to Beauty ──────────────────────────────────────────────────────────
+  {
+    id: "care-to-beauty",
+    title: "Care to Beauty",
+    tagline: "All cosmetics at your Fingertips™.",
+    category: "Rebrand & Website",
+    year: "2021",
+    services: [
+      "Brand Strategy",
+      "Brand Identity",
+      "Web Design & Development",
+      "E-commerce UX",
+      "Design System",
+      "Art Direction",
+      "Photography Direction",
+    ],
+    description:
+      "Building a mobile-first, blazing-fast website that Google loves while maintaining polished branding is no easy task — Google first, even at the expense of nice typefaces. The biggest challenge was designing a navigation system allowing both new and returning users to quickly find what they needed. The brand symbol was directly inspired by 'C' fingerprint outlines, creating a language that extended to essential website UI pictograms. Typography pairs the elegant Beatrice with playful New Kansas, avoiding monotony while adding character. Care to Beauty is all about people, so the colour palette reflects warmth — ranging from light to dark skin tones, with coral and moss green providing freshness.",
+    coverImage: `${BURO}/9c0f2e.auto`,
+    heroImage: `${BURO}/3517ac.auto`,
+    gallery: [
+      { type: "image", src: `${BURO}/3517ac.auto`, alt: "Care to Beauty homepage", layout: "full" },
       {
         type: "image",
-        src: `${IMG}/Z23J9ZbqstJ9819y_f327fc4d-8e2c-4b3d-bf3a-f5ff03ad3478_ConnectHomes_CoolidgeAv_023-2880x1800.jpg?auto=format,compress&w=1400`,
+        src: `${BURO}/915cfe.auto`,
+        alt: "Care to Beauty search",
         layout: "pair",
-        pair: { type: "image", src: `${IMG}/Z23J9pbqstJ9819z_Group3964.png?auto=format,compress&w=1400` },
+        pair: { type: "image", src: `${BURO}/fead36.auto`, alt: "Care to Beauty product page" },
       },
-      { type: "image", src: `${IMG}/Z23J8ZbqstJ9819w_Group3965.jpg?auto=format,compress&w=2400`, layout: "full" },
-      { type: "image", src: `${IMG}/Z23LGpbqstJ98193_014.jpg?auto=format,compress&w=2400`, layout: "full" },
+      { type: "image", src: `${BURO}/2d5d6f.auto`, alt: "Care to Beauty team", layout: "full" },
+      {
+        type: "image",
+        src: `${BURO}/4753c4.auto`,
+        alt: "Care to Beauty brand",
+        layout: "pair",
+        pair: { type: "image", src: `${BURO}/279c18.auto`, alt: "Care to Beauty posters" },
+      },
     ],
-    testimonial: {
-      quote:
-        "Our company is changing the home building industry by turning the home into a modern smart product. From the start, rejouice set out to design a website that productized our homes and was equally simple and accessible. And, like our homes — always with beautiful design first and foremost!",
-      name: "Jared Levy",
-      role: "CEO & Co-Founder at Connect Homes",
-    },
     awards: [
       "Awwwards: Honorable Mention",
-      "Awwwards: Site Of The Day",
-      "Awwwards: Developer Site",
       "Awwwards: Mobile Excellence",
-      "CSSDA: Website Of The Day",
-      "The FWA: FWA Of The Day",
+      "CSS Design Awards: Website of the Day",
     ],
-    nextProject: "unspun",
-  },
-
-  // ─── Unspun ─────────────────────────────────────────────────────────────────
-  {
-    id: "unspun",
-    title: "Unspun",
-    tagline: "Sustainable Style & Perfect Fits.",
-    category: "Brand Growth",
-    year: "2023",
-    services: [
-      "Strategy",
-      "Branding",
-      "Visual Identity",
-      "Art Direction",
-      "Copywriting",
-      "Web Design & Development",
-      "Motion Design & 3D Visualization",
-      "Content Creation",
-    ],
-    description:
-      "Unspun is revolutionizing the fashion industry with personalized denim, eliminating standardized sizes and reducing textile waste through on-demand production. With no inventory and a commitment to inclusivity, Unspun embraces all body types while driving sustainability in fashion. We partnered with Unspun to amplify their vision, creating a digital experience that seamlessly integrates their 3D body scanning technology. Users can customize jeans in real-time, combining innovation with a personalized shopping journey.",
-    coverImage: `${IMG}/Z1r5ZZbqstJ98aaI_unspun.jpg?auto=format,compress&w=2400`,
-    heroImage: `${IMG}/Z220B5bqstJ9815n_Group3931.png?auto=format,compress&w=2400`,
-    heroVideo: `${VID}/Z22zqpbqstJ9815e_01_unspun.mp4-1080p-.mp4`,
-    gallery: [
-      { type: "image", src: `${IMG}/Z220S5bqstJ9815q_5-3-2880x1800.jpg?auto=format,compress&w=2400`, layout: "full" },
-      {
-        type: "image",
-        src: `${IMG}/Z222zpbqstJ9816a_3-4-2880x1800.jpg?auto=format,compress&w=1400`,
-        layout: "pair",
-        pair: { type: "image", src: `${IMG}/Z222-JbqstJ9816b_Frame21141.jpg?auto=format,compress&w=1400` },
-      },
-      { type: "image", src: `${IMG}/Z223fZbqstJ9816y_Group3921.jpg?auto=format,compress&w=2400`, layout: "full" },
-      {
-        type: "image",
-        src: `${IMG}/Z223K5bqstJ9816p_Group3935.jpg?auto=format,compress&w=1400`,
-        layout: "pair",
-        pair: { type: "image", src: `${IMG}/Z223YJbqstJ9816s_Group3933.jpg?auto=format,compress&w=1400` },
-      },
-      { type: "image", src: `${IMG}/Z22z7ZbqstJ9815l_Frame21139.jpg?auto=format,compress&w=2400`, layout: "full" },
-    ],
-    testimonial: {
-      quote:
-        "After our launch of the new brand and website, Unspun received $4.2 million in funding, lead investments from the National Science Foundation and SOSV, increased traffic and conversion rates.",
-      name: "Beth Esponnette",
-      role: "Co-Founder at Unspun™",
-    },
-    awards: ["Awwwards: Honorable Mention", "Awwwards: Site Of The Day", "Awwwards: Developer Site"],
-    nextProject: "tensor",
+    websiteUrl: "https://caretobeauty.com",
+    nextProject: "clear-street",
   },
 ];
 
