@@ -14,6 +14,14 @@ import JournalPage from "@/pages/JournalPage";
 import JournalPostPage from "@/pages/JournalPostPage";
 import IndustriesPage from "@/pages/IndustriesPage";
 import IndustryPage from "@/pages/IndustryPage";
+import CareersPage from "@/pages/CareersPage";
+import DesignForGoodPage from "@/pages/DesignForGoodPage";
+import AccreditationsPage from "@/pages/AccreditationsPage";
+import PartnersPage from "@/pages/PartnersPage";
+import ProcessPage from "@/pages/ProcessPage";
+import FAQPage from "@/pages/FAQPage";
+import PressPage from "@/pages/PressPage";
+import { PrivacyPolicyPage, TermsPage, RefundsPage, SitemapPage } from "@/pages/LegalPage";
 import CustomCursor from "@/components/CustomCursor";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -28,6 +36,7 @@ const queryClient = new QueryClient();
 function Router() {
   return (
     <Switch>
+      {/* Core */}
       <Route path="/" component={Home} />
       <Route path="/work" component={WorkPage} />
       <Route path="/work/:id" component={ProjectPage} />
@@ -38,6 +47,26 @@ function Router() {
       <Route path="/industries/:id" component={IndustryPage} />
       <Route path="/industries" component={IndustriesPage} />
       <Route path="/contact" component={ContactPage} />
+
+      {/* Company */}
+      <Route path="/careers" component={CareersPage} />
+      <Route path="/design-for-good" component={DesignForGoodPage} />
+      <Route path="/accreditations" component={AccreditationsPage} />
+      <Route path="/press" component={PressPage} />
+
+      {/* Partners */}
+      <Route path="/partners" component={PartnersPage} />
+
+      {/* Resources */}
+      <Route path="/process" component={ProcessPage} />
+      <Route path="/faq" component={FAQPage} />
+
+      {/* Legal */}
+      <Route path="/privacy-policy" component={PrivacyPolicyPage} />
+      <Route path="/terms" component={TermsPage} />
+      <Route path="/refunds" component={RefundsPage} />
+      <Route path="/sitemap" component={SitemapPage} />
+
       <Route component={NotFound} />
     </Switch>
   );

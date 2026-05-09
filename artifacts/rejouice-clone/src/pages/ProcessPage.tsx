@@ -1,0 +1,164 @@
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "wouter";
+import { ArrowUpRight } from "lucide-react";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const phases = [
+  {
+    num: "01",
+    name: "Discovery",
+    duration: "Week 1–2",
+    tagline: "Listen before we speak.",
+    desc: "We immerse ourselves in your world — your category, your competitors, your customers, and the opportunity you're going after. We run structured discovery sessions with your founding team, review existing assets, and synthesise everything into a clear picture of where you are and where you need to go.",
+    deliverables: ["Category & competitor analysis", "Stakeholder interviews", "Audience insight report", "Discovery synthesis deck"],
+  },
+  {
+    num: "02",
+    name: "Strategy",
+    duration: "Week 2–3",
+    tagline: "Clarity before creation.",
+    desc: "Strategy is where we define the foundation everything else is built on. Positioning, naming, messaging architecture, audience personas, and the single most important idea your brand needs to own. No strategy, no creative work — this is the rule we never break.",
+    deliverables: ["Brand positioning statement", "Naming and tagline (if required)", "Messaging framework", "Brand voice guidelines"],
+  },
+  {
+    num: "03",
+    name: "Design",
+    duration: "Week 3–5",
+    tagline: "Identity that earns attention.",
+    desc: "This is where strategy becomes something you can see and feel. Logo, typography, colour, motion, and the full visual system — all built from the strategic foundation we defined together. We present one fully realised direction, not three half-baked ones.",
+    deliverables: ["Logo and mark system", "Typography and colour", "Motion identity", "Full brand guidelines"],
+  },
+  {
+    num: "04",
+    name: "Digital",
+    duration: "Week 4–7",
+    tagline: "Websites that convert and inspire.",
+    desc: "If your project includes a web presence, this phase runs parallel to design. UX strategy, information architecture, wireframes, high-fidelity design, and full-stack development — all done in-house. We build on your stack, or recommend one.",
+    deliverables: ["UX strategy and IA", "Wireframes and prototypes", "High-fidelity web design", "Development and launch"],
+  },
+  {
+    num: "05",
+    name: "Launch",
+    duration: "Week 6–8",
+    tagline: "Into market. Together.",
+    desc: "We don't hand over files and disappear. Launch week includes a handoff session, team training on the brand guidelines, a go-to-market activation plan, and a post-launch check-in two weeks later to review performance and make adjustments.",
+    deliverables: ["Complete asset handoff", "Team brand training", "Go-to-market activation plan", "30-day post-launch review"],
+  },
+  {
+    num: "06",
+    name: "Grow",
+    duration: "Ongoing",
+    tagline: "Brand-led growth that compounds.",
+    desc: "For Partnership clients, this is where we become a permanent part of your team — executing growth strategy, managing paid creative, running content, and iterating on the brand as your company scales. For Sprint clients, this is available as a growth retainer.",
+    deliverables: ["Growth strategy execution", "Paid creative management", "Brand iteration", "Monthly reporting"],
+  },
+];
+
+const principles = [
+  { label: "One direction, fully realised.", body: "We present one creative direction per phase — not three half-hearted options. We commit to a point of view and back it with strategic reasoning." },
+  { label: "Senior team, every project.", body: "No bait and switch. The team you meet in the first call is the team that does the work. No junior designers handed the brief after you sign." },
+  { label: "Radical transparency.", body: "You have full visibility into progress at all times — through a shared project workspace, weekly written updates, and scheduled calls when needed." },
+  { label: "On time, every time.", body: "We have a 97% on-time delivery rate across 90+ projects. If something is at risk, you hear about it from us first — not after it's already late." },
+];
+
+export default function ProcessPage() {
+  const pageRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    const ctx = gsap.context(() => {
+      gsap.utils.toArray<Element>(".reveal").forEach((el) => {
+        gsap.fromTo(el,
+          { opacity: 0, y: 32 },
+          { opacity: 1, y: 0, duration: 1, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 87%" } }
+        );
+      });
+      gsap.from(".page-hero-h", { opacity: 0, y: 50, duration: 1.2, ease: "power4.out", delay: 0.1 });
+    }, pageRef);
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <div ref={pageRef} className="bg-white text-[#0A0A0A] pt-24">
+
+      {/* ── Hero ─────────────────────────────────────────────────────────── */}
+      <section className="max-w-[1400px] mx-auto px-6 md:px-10 pt-16 pb-24 md:pt-24 md:pb-32">
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-8">How We Work</p>
+        <h1
+          className="page-hero-h font-sans font-light tracking-[-0.03em] leading-[1.02] text-[#0A0A0A] mb-8"
+          style={{ fontSize: "clamp(3rem, 8vw, 8rem)" }}
+        >
+          The process<br />behind the work.
+        </h1>
+        <p className="font-sans text-base md:text-lg font-light text-[#0A0A0A]/50 max-w-xl leading-relaxed">
+          Six phases. One senior team. A predictable process that consistently produces category-defining brands — from first conversation to launch and beyond.
+        </p>
+      </section>
+
+      {/* ── Phase list ───────────────────────────────────────────────────── */}
+      <section className="bg-[#F5F4F0] py-24 md:py-32">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+          {phases.map((p, i) => (
+            <div key={p.num} className="reveal grid grid-cols-1 md:grid-cols-[80px_1fr_1.2fr] gap-6 md:gap-12 py-12 md:py-16 border-t border-[#0A0A0A]/8">
+              <div className="flex flex-col gap-1">
+                <span className="font-sans text-[11px] text-[#0A0A0A]/30">{p.num}</span>
+                <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-[#0A0A0A]/25 mt-1">{p.duration}</span>
+              </div>
+              <div>
+                <h2 className="font-sans font-light text-[#0A0A0A] tracking-[-0.02em] mb-2" style={{ fontSize: "clamp(1.75rem, 3vw, 3rem)" }}>
+                  {p.name}
+                </h2>
+                <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-6">{p.tagline}</p>
+                <p className="font-sans text-sm md:text-[15px] font-light text-[#0A0A0A]/55 leading-[1.75] max-w-md">{p.desc}</p>
+              </div>
+              <div className="flex flex-col gap-2.5 self-start">
+                <p className="font-sans text-[10px] uppercase tracking-[0.18em] text-[#0A0A0A]/30 mb-2">Deliverables</p>
+                {p.deliverables.map((d) => (
+                  <span key={d} className="font-sans text-[12px] font-light text-[#0A0A0A]/55 bg-white px-3.5 py-2 rounded-sm w-fit">{d}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Working principles ───────────────────────────────────────────── */}
+      <section className="bg-white py-24 md:py-32">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10 reveal">Our working principles</p>
+          <div className="reveal grid grid-cols-1 md:grid-cols-2 gap-3">
+            {principles.map(({ label, body }) => (
+              <div key={label} className="p-9 bg-[#F5F4F0] hover:bg-[#EEEDE9] transition-colors duration-250 rounded-sm flex flex-col gap-4">
+                <h3 className="font-sans font-light text-[#0A0A0A] text-lg md:text-xl tracking-[-0.015em]">{label}</h3>
+                <p className="font-sans text-[13px] font-light text-[#0A0A0A]/50 leading-relaxed">{body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ──────────────────────────────────────────────────────────── */}
+      <section className="bg-[#0A0A0A] text-white py-28 md:py-40">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/35 mb-8 reveal">Ready?</p>
+          <h2
+            className="reveal font-sans font-light tracking-[-0.03em] leading-[1.02] text-white mb-10"
+            style={{ fontSize: "clamp(2.5rem, 6vw, 6.5rem)", maxWidth: "18ch" }}
+          >
+            Let's start with a conversation.
+          </h2>
+          <Link
+            href="/contact"
+            className="reveal inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.18em] text-white/65 border border-white/12 px-6 py-3.5 rounded-sm hover:bg-white/8 hover:text-white transition-all duration-250"
+          >
+            Start a project <ArrowUpRight size={12} strokeWidth={1.5} />
+          </Link>
+        </div>
+      </section>
+
+    </div>
+  );
+}

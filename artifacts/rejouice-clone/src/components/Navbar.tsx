@@ -2,28 +2,38 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "wouter";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ChevronDown } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const navLinks = [
-  { label: "Home", href: "/" },
+const primaryLinks = [
   { label: "Work", href: "/work" },
-  { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Industries", href: "/industries" },
   { label: "Journal", href: "/journal" },
-  { label: "Contact", href: "/contact" },
+];
+
+const companyLinks = [
+  { label: "About", href: "/about" },
+  { label: "Careers", href: "/careers" },
+  { label: "Design for Good", href: "/design-for-good" },
+  { label: "Accreditations", href: "/accreditations" },
+  { label: "Press", href: "/press" },
+  { label: "Process", href: "/process" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Partners", href: "/partners" },
 ];
 
 export default function Navbar() {
   const navRef = useRef<HTMLElement>(null);
   const [location] = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropOpen, setDropOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const dropRef = useRef<HTMLDivElement>(null);
 
   const isHomePage = location === "/";
 
-  // Entrance animation
   useEffect(() => {
     gsap.fromTo(
       navRef.current,
@@ -32,47 +42,48 @@ export default function Navbar() {
     );
   }, []);
 
-  // On the home page: flip when showreel top hits the navbar (top of viewport).
-  // On other pages: always treat as "scrolled" so the backdrop + dark text apply.
   useEffect(() => {
-    if (!isHomePage) {
-      setScrolled(true);
-      return;
-    }
-
+    if (!isHomePage) { setScrolled(true); return; }
     setScrolled(false);
-
-    // Wait a tick for the DOM to be ready (Lenis / page render)
     const raf = requestAnimationFrame(() => {
       const showreel = document.querySelector('[data-testid="showreel-section"]');
       if (!showreel) {
-        // Fallback: plain scroll threshold
         const onScroll = () => setScrolled(window.scrollY > 50);
         window.addEventListener("scroll", onScroll, { passive: true });
         return () => window.removeEventListener("scroll", onScroll);
       }
-
       const st = ScrollTrigger.create({
         trigger: showreel,
-        start: "top top",   // showreel's top edge hits the very top of viewport (navbar)
+        start: "top top",
         onEnter: () => setScrolled(true),
         onLeaveBack: () => setScrolled(false),
       });
-
       return () => st.kill();
     });
-
     return () => cancelAnimationFrame(raf);
   }, [isHomePage]);
 
-  const isLight = isHomePage && !scrolled;
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (dropRef.current && !dropRef.current.contains(e.target as Node)) setDropOpen(false);
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
 
+  // Close dropdown on route change
+  useEffect(() => { setDropOpen(false); setMenuOpen(false); }, [location]);
+
+  const isLight = isHomePage && !scrolled;
   const textColor = isLight ? "text-white" : "text-foreground";
   const mutedColor = isLight ? "text-white/40" : "opacity-40";
   const hoverColor = isLight ? "hover:text-white" : "hover:opacity-100";
   const bgClass = scrolled
     ? "bg-background/90 backdrop-blur-md border-b border-border/20"
     : "bg-transparent";
+
+  const isCompanyActive = companyLinks.some((l) => location === l.href);
 
   return (
     <>
@@ -81,7 +92,7 @@ export default function Navbar() {
         style={{ opacity: 0 }}
         className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-5 md:px-10 transition-all duration-300 ${bgClass}`}
       >
-        {/* Left: text flips exactly when showreel enters */}
+        {/* Logo */}
         <Link
           href="/"
           className={`font-sans text-xs font-medium tracking-tight transition-colors duration-300 ${textColor}`}
@@ -90,28 +101,22 @@ export default function Navbar() {
           <span className="relative inline-flex h-[1.1em] overflow-hidden align-bottom">
             <span
               className="block transition-all duration-300 ease-in-out whitespace-nowrap"
-              style={{
-                transform: scrolled ? "translateY(-110%)" : "translateY(0)",
-                opacity: scrolled ? 0 : 1,
-              }}
+              style={{ transform: scrolled ? "translateY(-110%)" : "translateY(0)", opacity: scrolled ? 0 : 1 }}
             >
               The Growth Accelerator
             </span>
             <span
               className="block absolute inset-0 transition-all duration-300 ease-in-out whitespace-nowrap"
-              style={{
-                transform: scrolled ? "translateY(0)" : "translateY(110%)",
-                opacity: scrolled ? 1 : 0,
-              }}
+              style={{ transform: scrolled ? "translateY(0)" : "translateY(110%)", opacity: scrolled ? 1 : 0 }}
             >
               beyond
             </span>
           </span>
         </Link>
 
-        {/* Center: nav links */}
+        {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8" data-testid="nav-links">
-          {navLinks.map((link) => {
+          {primaryLinks.map((link) => {
             const isActive = location === link.href;
             return (
               <Link
@@ -126,9 +131,43 @@ export default function Navbar() {
               </Link>
             );
           })}
+
+          {/* Company dropdown */}
+          <div ref={dropRef} className="relative">
+            <button
+              onClick={() => setDropOpen((v) => !v)}
+              className={`flex items-center gap-1 font-sans text-xs transition-all duration-200 ${textColor} ${
+                isCompanyActive ? "opacity-100" : `${mutedColor} ${hoverColor}`
+              }`}
+              data-testid="nav-company-dropdown"
+            >
+              Company
+              <ChevronDown
+                size={12}
+                strokeWidth={1.5}
+                className={`transition-transform duration-200 ${dropOpen ? "rotate-180" : ""}`}
+              />
+            </button>
+
+            {dropOpen && (
+              <div className="absolute top-full right-0 mt-3 w-52 bg-white border border-[#0A0A0A]/8 rounded-sm shadow-lg overflow-hidden z-50">
+                {companyLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`block px-5 py-3 font-sans text-xs transition-colors duration-150 hover:bg-[#F5F4F0] ${
+                      location === link.href ? "text-[#0A0A0A]" : "text-[#0A0A0A]/55"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
         </nav>
 
-        {/* Right: CTA */}
+        {/* CTA */}
         <Link
           href="/contact"
           data-testid="btn-contact"
@@ -153,18 +192,27 @@ export default function Navbar() {
 
       {/* Mobile overlay */}
       {menuOpen && (
-        <div className="fixed inset-0 z-40 bg-background flex flex-col items-start justify-center px-8 gap-6 md:hidden">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setMenuOpen(false)}
-              data-testid={`mobile-link-${link.label.toLowerCase()}`}
-              className="font-sans font-light tracking-[-0.025em] leading-[1.05] text-[2.75rem]"
-            >
-              {link.label}
-            </Link>
-          ))}
+        <div className="fixed inset-0 z-40 bg-background overflow-y-auto flex flex-col px-8 pt-24 pb-12 gap-0 md:hidden">
+          <div className="flex flex-col gap-1">
+            {[...primaryLinks, ...companyLinks, { label: "Contact", href: "/contact" }].map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                data-testid={`mobile-link-${link.label.toLowerCase().replace(/\s/g, "-")}`}
+                className={`font-sans font-light py-3.5 border-b border-[#0A0A0A]/6 transition-colors duration-150 hover:text-[#0A0A0A]/50 ${
+                  location === link.href ? "text-[#0A0A0A]" : "text-[#0A0A0A]"
+                }`}
+                style={{ fontSize: "clamp(1.5rem, 5vw, 2.25rem)", letterSpacing: "-0.02em" }}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+          <div className="mt-10 flex flex-col gap-2">
+            <a href="mailto:hello@beyondbasics.studio" className="font-sans text-sm text-[#0A0A0A]/40">hello@beyondbasics.studio</a>
+            <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/25">beyondbasics.studio</span>
+          </div>
         </div>
       )}
     </>
