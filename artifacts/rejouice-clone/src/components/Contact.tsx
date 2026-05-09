@@ -29,20 +29,26 @@ export default function Contact() {
       ref={sectionRef}
       className="relative w-full min-h-[90vh] bg-foreground text-background flex items-center justify-center px-6 md:px-10"
     >
-      <div className="contact-content text-center max-w-4xl mx-auto flex flex-col items-center">
-        <h2 className="font-display text-5xl md:text-8xl lg:text-[9vw] font-bold uppercase tracking-tighter leading-[0.9] mb-8">
-          Ready to build tomorrow's brand?
+      <div className="contact-content text-center max-w-5xl mx-auto flex flex-col items-center">
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] opacity-40 mb-8">
+          Let's work together
+        </p>
+        <h2
+          className="font-sans font-light leading-[1.05] tracking-[-0.025em] mb-10"
+          style={{ fontSize: "clamp(2.5rem, 6vw, 7rem)" }}
+        >
+          Ready to build<br />tomorrow's brand?
         </h2>
-        <p className="font-sans text-xl md:text-2xl font-medium mb-12 opacity-80">
+        <p className="font-sans text-base md:text-lg font-light leading-relaxed mb-12 opacity-55 max-w-md">
           Let's create something extraordinary together.
         </p>
-        <button 
-          className="bg-background text-foreground px-8 py-4 rounded-full font-sans text-sm md:text-base uppercase tracking-wider font-bold hover:scale-105 transition-transform duration-300 flex items-center gap-3"
+        <button
+          className="border border-background/20 text-background px-10 py-5 font-sans text-[11px] uppercase tracking-widest hover:bg-background hover:text-foreground transition-colors duration-300 flex items-center gap-3"
           data-testid="btn-start-project"
           data-cursor-hover
         >
           <span>Start a project</span>
-          <span className="text-xl">↗</span>
+          <span>↗</span>
         </button>
       </div>
     </section>

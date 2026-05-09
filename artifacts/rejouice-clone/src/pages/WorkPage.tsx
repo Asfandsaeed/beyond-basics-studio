@@ -69,15 +69,15 @@ export default function WorkPage() {
         </div>
 
         <div className="relative z-10 max-w-[1400px] mx-auto w-full">
-          <p className="font-sans text-xs uppercase tracking-[0.18em] text-white/40 mb-6">
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/40 mb-8">
             Selected Work
           </p>
-          <h1 className="font-display font-bold text-white leading-[1.05] tracking-tight max-w-4xl"
-              style={{ fontSize: "clamp(2.5rem, 5vw, 5rem)" }}>
+          <h1 className="font-sans font-light text-white leading-[1.08] tracking-[-0.025em] max-w-5xl"
+              style={{ fontSize: "clamp(2.4rem, 6vw, 7rem)" }}>
             Working to shape the future of your industry?{" "}
             <span className="text-white/40">We bring that ambition to life.</span>
           </h1>
-          <div className="mt-10 flex items-center gap-3 text-white/30 text-xs font-sans">
+          <div className="mt-10 flex items-center gap-3 text-white/30 text-[11px] uppercase tracking-[0.18em] font-sans">
             <span className="w-8 h-px bg-white/30 inline-block" />
             {projects.length} projects
           </div>
@@ -111,7 +111,7 @@ export default function WorkPage() {
 
           {/* Project number */}
           <div className="absolute top-6 right-6 md:top-8 md:right-10 z-10">
-            <span className="font-sans text-white/50 text-xs tracking-widest">
+            <span className="font-sans text-white/50 text-[11px] tracking-[0.18em]">
               {String(i + 1).padStart(2, "0")}
             </span>
           </div>
@@ -119,11 +119,12 @@ export default function WorkPage() {
           {/* Centered title */}
           <div className="relative z-10 flex flex-col items-center gap-2 text-center px-6">
             <h2
-              className="work-title font-display font-bold text-white leading-none tracking-tight"
+              className="work-title font-sans font-light text-white leading-[1.05] tracking-[-0.025em]"
               style={{
-                fontSize: "clamp(2.5rem, 8vw, 8rem)",
+                fontSize: "clamp(2.75rem, 7vw, 7.5rem)",
                 textDecoration: "underline",
                 textUnderlineOffset: "0.12em",
+                textDecorationThickness: "1px",
               }}
             >
               {project.title}
@@ -132,17 +133,17 @@ export default function WorkPage() {
 
           {/* Bottom left: view project */}
           <div className="absolute bottom-6 left-6 md:bottom-8 md:left-10 z-10">
-            <span className="font-sans text-white text-xs uppercase tracking-widest border-b border-white/60 pb-px">
+            <span className="font-sans text-white text-[11px] uppercase tracking-[0.18em] border-b border-white/60 pb-px">
               View project ↗
             </span>
           </div>
 
           {/* Bottom right: category + year */}
           <div className="absolute bottom-6 right-6 md:bottom-8 md:right-10 z-10 flex flex-col items-end gap-1">
-            <span className="font-sans text-white text-xs uppercase tracking-widest">
+            <span className="font-sans text-white text-[11px] uppercase tracking-[0.18em]">
               {project.category}
             </span>
-            <span className="font-sans text-white/60 text-xs tracking-widest">
+            <span className="font-sans text-white/60 text-[11px] tracking-[0.18em]">
               {project.year}
             </span>
           </div>

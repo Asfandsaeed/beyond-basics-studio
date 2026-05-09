@@ -43,7 +43,8 @@ export default function ContactPage() {
           <div className="overflow-hidden mb-24">
             <h1
               ref={headlineRef}
-              className="font-sans text-[6vw] md:text-[4.5vw] leading-[1.1] font-light tracking-[-0.02em] max-w-6xl text-white"
+              className="font-sans font-light leading-[1.08] tracking-[-0.025em] max-w-6xl text-white"
+              style={{ fontSize: "clamp(2.4rem, 5.5vw, 6.5rem)" }}
             >
               Partnering with global brands, founders, startups, and VCs to build tomorrow's brands, today.
             </h1>
@@ -53,7 +54,7 @@ export default function ContactPage() {
 
           <div ref={infoRef} className="grid md:grid-cols-3 gap-12">
             <div data-testid="contact-general">
-              <p className="font-sans text-xs uppercase tracking-[0.15em] text-white/40 mb-4">
+              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/40 mb-4">
                 Get in touch
               </p>
               <a
@@ -66,7 +67,7 @@ export default function ContactPage() {
             </div>
 
             <div data-testid="contact-business">
-              <p className="font-sans text-xs uppercase tracking-[0.15em] text-white/40 mb-4">
+              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/40 mb-4">
                 New Business.
               </p>
               <a
@@ -79,7 +80,7 @@ export default function ContactPage() {
             </div>
 
             <div data-testid="contact-careers">
-              <p className="font-sans text-xs uppercase tracking-[0.15em] text-white/40 mb-4">
+              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/40 mb-4">
                 Join the Team.
               </p>
               <a
@@ -97,7 +98,7 @@ export default function ContactPage() {
       <section className="px-6 md:px-10 py-16 border-t border-white/10">
         <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between gap-12">
           <div>
-            <p className="font-sans text-xs uppercase tracking-[0.15em] text-white/40 mb-6">
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/40 mb-6">
               Find us
             </p>
             <div className="flex flex-col gap-2">
@@ -110,7 +111,7 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <p className="font-sans text-xs uppercase tracking-[0.15em] text-white/40 mb-6">
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/40 mb-6">
               Follow us
             </p>
             <div className="flex flex-col gap-2">
@@ -132,7 +133,7 @@ export default function ContactPage() {
           </div>
 
           <div className="flex items-end">
-            <span className="font-sans text-xs text-white/30 uppercase tracking-widest">
+            <span className="font-sans text-[11px] text-white/30 uppercase tracking-[0.18em]">
               Tomorrow's Brands, Today.™
             </span>
           </div>

@@ -54,10 +54,10 @@ export default function Glance() {
     >
       <div className="max-w-[1400px] mx-auto">
         <div className="flex flex-col md:flex-row gap-4 md:gap-0 md:justify-between md:items-baseline mb-16">
-          <h2 className="font-sans text-xs uppercase tracking-[0.15em] text-foreground/40">
+          <h2 className="font-sans text-[11px] uppercase tracking-[0.18em] text-foreground/40">
             Beyond at a glance
           </h2>
-          <span className="font-sans text-xs text-foreground/30">Est. 2019</span>
+          <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-foreground/30">Est. 2019</span>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-0 md:divide-x divide-border/40 mb-20">
@@ -67,10 +67,13 @@ export default function Glance() {
               className="glance-stat flex flex-col gap-2 md:px-10 first:pl-0 last:pr-0"
               data-testid={`stat-${stat.label.toLowerCase().replace(/\s/g, "-")}`}
             >
-              <span className="font-display text-5xl md:text-6xl font-bold tracking-tight">
+              <span
+                className="font-sans font-light tracking-[-0.025em] leading-none"
+                style={{ fontSize: "clamp(2.5rem, 4vw, 4.5rem)" }}
+              >
                 {stat.value}
               </span>
-              <span className="font-sans text-sm text-foreground/40 uppercase tracking-wider">
+              <span className="font-sans text-[11px] text-foreground/40 uppercase tracking-[0.18em]">
                 {stat.label}
               </span>
             </div>
@@ -78,7 +81,7 @@ export default function Glance() {
         </div>
 
         <div className="glance-facts flex flex-col md:flex-row md:items-start gap-8 md:gap-0 border-t border-border/40 pt-10">
-          <span className="font-sans text-xs uppercase tracking-[0.15em] text-foreground/30 md:w-48 shrink-0">
+          <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-foreground/30 md:w-48 shrink-0">
             What makes us different
           </span>
           <div className="flex flex-col gap-4">

@@ -154,14 +154,14 @@ export default function ProjectPage() {
 
         {/* Hero text */}
         <div className="relative z-10 w-full px-6 md:px-10 pb-16 md:pb-20">
-          <p className="font-sans text-white/50 text-xs uppercase tracking-[0.2em] mb-4">
+          <p className="font-sans text-white/50 text-[11px] uppercase tracking-[0.18em] mb-4">
             {project.category} · {project.year}
           </p>
-          <h1 className="font-display font-bold text-white leading-none tracking-tight"
-              style={{ fontSize: "clamp(3rem, 8vw, 8rem)" }}>
+          <h1 className="font-sans font-light text-white leading-[1.05] tracking-[-0.025em]"
+              style={{ fontSize: "clamp(2.75rem, 7vw, 7.5rem)" }}>
             {project.title}
           </h1>
-          <p className="font-display text-white/60 mt-3 text-xl md:text-2xl font-light tracking-tight">
+          <p className="font-sans text-white/60 mt-4 text-lg md:text-2xl font-light tracking-[-0.01em] leading-snug max-w-2xl">
             {project.tagline}
           </p>
         </div>
@@ -175,7 +175,7 @@ export default function ProjectPage() {
             <p className="font-sans text-xs text-[#0A0A0A]/40 uppercase tracking-[0.18em] mb-8">
               Overview
             </p>
-            <p className="font-display text-[#0A0A0A] text-2xl md:text-3xl font-light leading-snug tracking-tight max-w-2xl">
+            <p className="font-sans text-[#0A0A0A] text-2xl md:text-3xl font-light leading-snug tracking-[-0.015em] max-w-2xl">
               {project.description}
             </p>
             {project.websiteUrl && (
@@ -219,7 +219,7 @@ export default function ProjectPage() {
             <p className="font-sans text-xs text-[#0A0A0A]/40 uppercase tracking-[0.18em] mb-12">
               Testimonial
             </p>
-            <blockquote className="font-display text-2xl md:text-3xl lg:text-4xl font-light leading-snug tracking-tight text-[#0A0A0A] mb-10">
+            <blockquote className="font-sans text-2xl md:text-3xl lg:text-4xl font-light leading-snug tracking-[-0.02em] text-[#0A0A0A] mb-10">
               "{project.testimonial.quote}"
             </blockquote>
             <div className="flex items-center gap-4">
@@ -273,12 +273,12 @@ export default function ProjectPage() {
           />
           <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-colors duration-500" />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 z-10">
-            <p className="font-sans text-white/50 text-xs uppercase tracking-[0.2em] mb-4">
+            <p className="font-sans text-white/50 text-[11px] uppercase tracking-[0.18em] mb-4">
               Next project
             </p>
             <h2
-              className="font-display font-bold text-white leading-none tracking-tight"
-              style={{ fontSize: "clamp(2.5rem, 7vw, 7rem)", textDecoration: "underline", textUnderlineOffset: "0.12em" }}
+              className="font-sans font-light text-white leading-[1.05] tracking-[-0.025em]"
+              style={{ fontSize: "clamp(2.5rem, 6.5vw, 7rem)", textDecoration: "underline", textUnderlineOffset: "0.12em", textDecorationThickness: "1px" }}
             >
               {next.title}
             </h2>

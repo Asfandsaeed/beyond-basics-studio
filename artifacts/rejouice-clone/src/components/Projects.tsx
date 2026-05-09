@@ -129,10 +129,10 @@ function ProjectCard({
       {/* Bottom info row */}
       <div className="absolute bottom-0 left-0 right-0 px-6 md:px-8 py-6 z-10 flex justify-between items-end pointer-events-none">
         <div className="flex flex-col gap-0.5">
-          <span className="font-sans text-[10px] uppercase tracking-[0.15em] text-white/50">
+          <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/50">
             {project.category}
           </span>
-          <h3 className="font-display text-sm font-bold text-white">
+          <h3 className="font-sans text-sm font-light tracking-[-0.01em] text-white">
             {project.title}
           </h3>
         </div>

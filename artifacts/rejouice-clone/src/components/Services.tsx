@@ -52,22 +52,27 @@ export default function Services() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-6 md:px-10 bg-background text-foreground">
+    <section ref={sectionRef} className="py-20 md:py-28 px-6 md:px-10 bg-background text-foreground">
       <div className="max-w-[1400px] mx-auto">
-        <h2 className="font-sans text-xs tracking-[0.1em] uppercase mb-12 font-semibold">Approach</h2>
-        
-        <div className="flex flex-col border-t border-border">
+        <h2 className="font-sans text-[11px] tracking-[0.18em] uppercase mb-12 text-foreground/40">Approach</h2>
+
+        <div className="flex flex-col border-t border-border/40">
           {services.map((service, idx) => (
-            <div 
-              key={idx} 
-              className="service-row py-8 md:py-12 border-b border-border flex flex-col md:flex-row md:items-baseline justify-between gap-6"
+            <div
+              key={idx}
+              className="service-row py-8 md:py-12 border-b border-border/40 flex flex-col md:flex-row md:items-baseline justify-between gap-6"
             >
               <div className="flex items-baseline gap-4 md:gap-12 w-full md:w-1/2">
-                <span className="font-sans text-sm font-semibold opacity-50">{service.num}</span>
-                <h3 className="font-display text-3xl md:text-5xl font-bold uppercase tracking-tight">{service.title}</h3>
+                <span className="font-sans text-[11px] tracking-widest text-foreground/35 w-8 shrink-0">{service.num}</span>
+                <h3
+                  className="font-sans font-light tracking-[-0.025em] leading-none"
+                  style={{ fontSize: "clamp(1.6rem, 3.5vw, 4rem)" }}
+                >
+                  {service.title}
+                </h3>
               </div>
               <div className="w-full md:w-1/3">
-                <p className="font-sans text-lg md:text-xl font-medium">{service.desc}</p>
+                <p className="font-sans text-base md:text-lg font-light text-foreground/55 leading-relaxed">{service.desc}</p>
               </div>
             </div>
           ))}

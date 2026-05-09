@@ -72,7 +72,8 @@ export default function OurApproach() {
       <div className="max-w-[1400px] mx-auto">
         <h2
           ref={headingRef}
-          className="font-sans text-4xl md:text-6xl lg:text-7xl font-light tracking-[-0.02em] mb-16 md:mb-20"
+          className="font-sans font-light tracking-[-0.025em] leading-[1.05] mb-16 md:mb-20"
+          style={{ fontSize: "clamp(2.5rem, 5.5vw, 6rem)" }}
         >
           Our approach.
         </h2>
@@ -108,15 +109,15 @@ export default function OurApproach() {
                 className="w-full h-full object-cover opacity-60"
               />
               <div className="absolute inset-0 p-6 flex flex-col justify-between">
-                <span className="font-sans text-xs text-white/40 uppercase tracking-widest">
+                <span className="font-sans text-[11px] text-white/40 uppercase tracking-[0.18em]">
                   Featured
                 </span>
                 <div>
-                  <p className="font-sans text-xs text-white/40 uppercase tracking-widest mb-1">
+                  <p className="font-sans text-[11px] text-white/40 uppercase tracking-[0.18em] mb-1">
                     Brand Identity
                   </p>
-                  <p className="font-display text-2xl font-bold uppercase tracking-tight text-white">
-                    VERTEX
+                  <p className="font-sans text-2xl font-light tracking-[-0.02em] text-white">
+                    Vertex
                   </p>
                 </div>
               </div>

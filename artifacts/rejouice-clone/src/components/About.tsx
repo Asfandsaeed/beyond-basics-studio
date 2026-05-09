@@ -50,10 +50,10 @@ export default function About() {
     >
       <div className="max-w-[1400px] mx-auto grid md:grid-cols-[1fr_2fr_1fr] gap-12 md:gap-16 items-start">
         <div className="about-meta flex flex-col gap-3">
-          <span className="font-sans text-xs uppercase tracking-[0.1em] text-foreground/40">
+          <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-foreground/40">
             Tomorrow's brands, today
           </span>
-          <span className="font-sans text-xs uppercase tracking-[0.1em] text-foreground/40">
+          <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-foreground/40">
             San Francisco
           </span>
         </div>
@@ -74,10 +74,10 @@ export default function About() {
 
         <div className="about-meta flex flex-col gap-4 md:items-end">
           <div className="flex flex-col gap-1 md:items-end">
-            <span className="font-sans text-xs uppercase tracking-[0.1em] text-foreground/40">
+            <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-foreground/40">
               Est. 2019
             </span>
-            <span className="font-sans text-xs uppercase tracking-[0.1em] text-foreground/40">
+            <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-foreground/40">
               31 Employees
             </span>
           </div>

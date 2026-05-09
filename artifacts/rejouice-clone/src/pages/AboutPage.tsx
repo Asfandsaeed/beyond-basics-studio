@@ -158,7 +158,7 @@ export default function AboutPage() {
       <section className="awards-section border-t border-[#0A0A0A]/10">
         {/* Giant "Awards" word with (x90) top-right */}
         <div className="relative px-6 md:px-10 pt-8 pb-4 border-b border-[#0A0A0A]/10">
-          <span className="absolute top-6 right-6 md:top-8 md:right-10 font-sans text-xs text-[#0A0A0A]/40 tracking-widest">
+          <span className="absolute top-6 right-6 md:top-8 md:right-10 font-sans text-[11px] text-[#0A0A0A]/40 tracking-[0.18em]">
             (x90)
           </span>
           <h2
@@ -345,10 +345,10 @@ export default function AboutPage() {
               We match your project with the right experts
             </p>
             <a
-              href="mailto:jobs@rejouice.com"
-              className="inline-flex items-center gap-2 mt-10 font-sans text-xs uppercase tracking-widest text-[#0A0A0A]/50 border-b border-[#0A0A0A]/20 pb-px hover:text-[#0A0A0A] hover:border-[#0A0A0A]/60 transition-colors"
+              href="mailto:jobs@beyond.com"
+              className="inline-flex items-center gap-2 mt-10 font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/50 border-b border-[#0A0A0A]/20 pb-px hover:text-[#0A0A0A] hover:border-[#0A0A0A]/60 transition-colors"
             >
-              jobs@rejouice.com — Join our team ↗
+              jobs@beyond.com — Join our team ↗
             </a>
           </div>
           <div className="office-img overflow-hidden rounded-sm aspect-[4/3] bg-[#e8e8e8]">
@@ -393,10 +393,11 @@ export default function AboutPage() {
             We're always looking for<br />exceptional people.
           </p>
           <a
-            href="mailto:jobs@rejouice.com"
-            className="shrink-0 inline-flex items-center gap-3 font-sans text-sm uppercase tracking-widest text-[#0A0A0A] border border-[#0A0A0A]/20 rounded-full px-8 py-4 hover:bg-[#0A0A0A] hover:text-white transition-all duration-300"
+            href="mailto:jobs@beyond.com"
+            className="shrink-0 inline-flex items-center gap-3 font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A] border border-[#0A0A0A]/20 px-10 py-5 hover:bg-[#0A0A0A] hover:text-white transition-all duration-300"
           >
-            ↗ Join our Team
+            <span>Join our team</span>
+            <span>↗</span>
           </a>
         </div>
       </section>

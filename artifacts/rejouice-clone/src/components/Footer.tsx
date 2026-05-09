@@ -26,13 +26,16 @@ export default function Footer() {
 
         {/* Left column: tagline + contact + newsletter */}
         <div className="flex flex-col justify-between gap-16">
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight max-w-sm">
+          <h2
+            className="font-sans font-light tracking-[-0.025em] text-white leading-[1.05] max-w-sm"
+            style={{ fontSize: "clamp(2.25rem, 4vw, 4rem)" }}
+          >
             Do it once.<br />Do it right.
           </h2>
 
           <div className="flex flex-col gap-10">
             <div>
-              <p className="font-sans text-xs text-white/40 mb-2 uppercase tracking-widest">
+              <p className="font-sans text-[11px] text-white/40 mb-2 uppercase tracking-[0.18em]">
                 New Business
               </p>
               <a

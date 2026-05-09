@@ -160,7 +160,7 @@ export default function Navbar() {
               href={link.href}
               onClick={() => setMenuOpen(false)}
               data-testid={`mobile-link-${link.label.toLowerCase()}`}
-              className="font-display text-4xl font-bold uppercase tracking-tight"
+              className="font-sans font-light tracking-[-0.025em] leading-[1.05] text-[2.75rem]"
             >
               {link.label}
             </Link>

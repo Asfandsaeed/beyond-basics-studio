@@ -70,7 +70,7 @@ export default function JournalPostPage() {
         {/* Title */}
         <h1
           className="hero-anim font-sans font-light leading-[1.08] tracking-[-0.025em] text-[#0A0A0A] max-w-5xl"
-          style={{ fontSize: "clamp(2rem, 5.5vw, 6.5rem)" }}
+          style={{ fontSize: "clamp(2.4rem, 6vw, 7rem)" }}
         >
           {post.title}
         </h1>
