@@ -1,176 +1,484 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SplitType from "split-type";
 import { Link } from "wouter";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const engagementModels = [
+const CDN  = "https://images.prismic.io/rejouice-2024";
+const VCDN = "https://rejouice-2024.cdn.prismic.io/rejouice-2024";
+
+// ── Asset map ────────────────────────────────────────────────────────────────
+const ASSETS = {
+  heroVideo: `${VCDN}/Z2BbT5bqstJ98kk6_REJOUICE-PORTFOLIO-LOOP-PROJECTS.mp4`,
+  // Services-page specific images
+  workspace:  `${CDN}/Z0csi5bqstJ970gh_-1x-11.jpg?auto=format,compress&w=1400`,
+  teamShot:   `${CDN}/Z0csjJbqstJ970gi_2_xezmQUHZZozH1L4Cv1VKvg-11.jpg?auto=format,compress&w=1400`,
+  portrait1:  `${CDN}/Z0csjpbqstJ970gk_moxionpower.2023.04.portraits-1291.jpg?auto=format,compress&w=1400`,
+  portrait2:  `${CDN}/Z0csjZbqstJ970gj_abdul-wahid-ovaice-profile-picture3.jpg?auto=format,compress&w=1400`,
+  // Project hero images for case study previews
+  tensor:     `${CDN}/abAKaVxvIZEnjhr7_Hero-CGI.jpg?auto=format,compress&w=1600`,
+  rivian:     `${CDN}/Z1r5Y5bqstJ98aaF_rivian.jpg?auto=format,compress&w=1600`,
+  oura:       `${CDN}/Z2AYnZbqstJ98i2G_oura-abdul-ovaice-photography-cd-21.png?auto=format,compress&w=1600`,
+  moxion:     `${CDN}/Z0csjpbqstJ970gk_moxionpower.2023.04.portraits-1291.jpg?auto=format,compress&w=1600`,
+  office:     `${CDN}/Z2GNNpbqstJ98mqU_6384a19b-fa1c-4ad1-aae0-e29e127ebeef_san-diego-office.jpg.jpg?auto=format,compress&w=1600`,
+};
+
+// ── Data ─────────────────────────────────────────────────────────────────────
+const services = [
   {
-    num: "(01)",
+    num: "01",
+    name: "Brand Strategy",
+    tagline: "Clarity before creation.",
+    desc: "We diagnose where your brand stands and chart the path to where it needs to go. Sharp positioning, a differentiated narrative, and a roadmap to lead your category.",
+    items: ["Brand Audit", "Qualitative Research", "Quantitative Research", "Discovery Workshop", "Positioning", "Brand Architecture", "Naming", "Messaging Framework"],
+    img: ASSETS.rivian,
+    caseStudy: { name: "Rivian", tag: "Brand Growth", id: "rivian" },
+  },
+  {
+    num: "02",
+    name: "Brand Identity",
+    tagline: "Identity that earns attention.",
+    desc: "We design brands that stand apart. Visual identity, typography, motion, and tone — every element purpose-built to make your brand unmistakable and unforgettable.",
+    items: ["Visual Identity", "Logo Design", "Typography System", "Color System", "Brand Guidelines", "Art Direction", "Motion Identity", "Verbal Identity"],
+    img: ASSETS.tensor,
+    caseStudy: { name: "Tensor", tag: "Brand Identity · CGI", id: "tensor" },
+  },
+  {
+    num: "03",
+    name: "Digital Experience",
+    tagline: "Websites that convert and inspire.",
+    desc: "We design and build digital products that feel as premium as the brands they represent. From landing pages to full product platforms — performance and craft in equal measure.",
+    items: ["Web Design", "Web Development", "Product Design", "Motion Design & 3D", "Campaign Creative", "UX Strategy", "Interaction Design", "No-code Platforms"],
+    img: ASSETS.oura,
+    caseStudy: { name: "Oura Ring", tag: "Digital Experience", id: "oura-ring" },
+  },
+  {
+    num: "04",
+    name: "Growth Marketing",
+    tagline: "Brand-led growth that compounds.",
+    desc: "We build the systems and content that turn your brand into a growth engine. Strategy, creative, and distribution — aligned to drive results that last beyond any single campaign.",
+    items: ["Growth Strategy", "Performance Creative", "SEO & Content Strategy", "Analytics & Attribution", "Paid Media Creative", "Email Marketing", "Social Strategy", "Go-To-Market"],
+    img: ASSETS.workspace,
+    caseStudy: { name: "Moxion Power", tag: "Brand Growth", id: "moxion-power" },
+  },
+  {
+    num: "05",
+    name: "Content & Creative",
+    tagline: "Content that earns its place.",
+    desc: "We produce content that doesn't feel like content — photography, video, copy, and creative assets that carry your brand forward across every touchpoint and channel.",
+    items: ["Brand Photography", "Video Production", "Copywriting", "Social Content", "Campaign Production", "CGI & 3D Visualization", "Editorial Design", "Podcast & Audio"],
+    img: ASSETS.portrait1,
+    caseStudy: { name: "Moxion Power", tag: "Brand Photography", id: "moxion-power" },
+  },
+];
+
+const models = [
+  {
+    num: "01",
     name: "Sprint",
-    desc: "A focused 6-week engagement to solve a specific brand or growth challenge. Perfect for companies that need momentum fast.",
+    duration: "6 weeks",
+    desc: "A focused 6-week engagement to solve a specific brand or growth challenge. Perfect for companies that need fast momentum without long-term commitment.",
     deliverables: ["Brand Sprint", "Go-to-Market", "Growth Audit", "Identity Refresh"],
+    img: ASSETS.teamShot,
   },
   {
-    num: "(02)",
+    num: "02",
     name: "Partnership",
-    desc: "An ongoing strategic partnership for companies ready to go all-in on brand-led growth. We become an extension of your team.",
+    duration: "Ongoing",
+    desc: "An ongoing strategic partnership for companies ready to go all-in on brand-led growth. We become a true extension of your founding team.",
     deliverables: ["Full Brand System", "Digital Products", "Growth Strategy", "Creative Direction"],
+    img: ASSETS.portrait2,
   },
 ];
 
-const serviceCategories = [
-  {
-    num: "(01)",
-    name: "Strategy",
-    items: ["Brand Audit", "Qualitative Research", "Quantitative Research", "Discovery Workshop"],
-  },
-  {
-    num: "(02)",
-    name: "Brand",
-    items: ["Identity Design", "Verbal Identity", "Brand Guidelines", "Positioning"],
-  },
-  {
-    num: "(03)",
-    name: "Digital",
-    items: ["Web Design", "Product Design", "Motion Design", "Campaign Creative"],
-  },
-  {
-    num: "(04)",
-    name: "Growth",
-    items: ["Growth Strategy", "Performance Creative", "SEO & Content", "Analytics"],
-  },
+const caseStudies = [
+  { name: "Tensor",    tag: "Brand Identity · CGI", img: ASSETS.tensor, id: "tensor",    video: `${VCDN}/aJfd1KTt2nPbaHC__TENSOR-CASESTUDY-01.mp4` },
+  { name: "Rivian",   tag: "Brand Growth",          img: ASSETS.rivian, id: "rivian",   video: `${VCDN}/aFMbCbNJEFaPYFQx_RIVIAN-CASESTUDY-01.mp4` },
+  { name: "Oura Ring",tag: "Digital Experience",    img: ASSETS.oura,   id: "oura-ring",video: `${VCDN}/Z3xbLZbqstJ99GKJ_01-OURA-Video2.mp4` },
 ];
 
+// ── Sub-components ────────────────────────────────────────────────────────────
+function ServiceRow({
+  s,
+  isOpen,
+  onToggle,
+}: {
+  s: typeof services[0];
+  isOpen: boolean;
+  onToggle: () => void;
+}) {
+  const bodyRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!bodyRef.current) return;
+    if (isOpen) {
+      gsap.to(bodyRef.current, { height: "auto", opacity: 1, duration: 0.55, ease: "power3.inOut" });
+    } else {
+      gsap.to(bodyRef.current, { height: 0, opacity: 0, duration: 0.45, ease: "power3.inOut" });
+    }
+  }, [isOpen]);
+
+  return (
+    <div className="service-row border-t border-[#0A0A0A]/10 last:border-b last:border-[#0A0A0A]/10">
+      <button
+        className="w-full flex items-center justify-between gap-6 py-7 text-left group"
+        onClick={onToggle}
+        aria-expanded={isOpen}
+      >
+        <span className="font-sans text-[11px] text-[#0A0A0A]/35 tracking-widest w-8 shrink-0">
+          {s.num}
+        </span>
+        <span
+          className="flex-1 font-sans font-light text-[#0A0A0A] leading-none tracking-[-0.02em] group-hover:opacity-60 transition-opacity duration-300"
+          style={{ fontSize: "clamp(1.6rem, 3.5vw, 4rem)" }}
+        >
+          {s.name}
+        </span>
+        <span className="font-sans text-sm text-[#0A0A0A]/40 hidden md:block max-w-[240px] text-right leading-snug">
+          {s.tagline}
+        </span>
+        <span
+          className="text-[#0A0A0A]/40 text-lg transition-transform duration-300 shrink-0"
+          style={{ transform: isOpen ? "rotate(45deg)" : "rotate(0deg)" }}
+        >
+          +
+        </span>
+      </button>
+
+      {/* Collapsible body */}
+      <div
+        ref={bodyRef}
+        style={{ height: 0, overflow: "hidden", opacity: 0 }}
+      >
+        <div className="pb-10 pl-14 grid md:grid-cols-[1fr_auto] gap-10">
+          {/* Left: desc + tags */}
+          <div>
+            <p className="font-sans text-sm text-[#0A0A0A]/55 leading-relaxed max-w-lg mb-8">
+              {s.desc}
+            </p>
+            <div className="flex flex-wrap gap-2 mb-8">
+              {s.items.map((item) => (
+                <span
+                  key={item}
+                  className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/50 border border-[#0A0A0A]/15 px-3 py-1.5"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+            <Link
+              href={`/work/${s.caseStudy.id}`}
+              className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/50 border-b border-[#0A0A0A]/20 pb-px hover:text-[#0A0A0A] hover:border-[#0A0A0A]/60 transition-colors"
+            >
+              <span>See case study: {s.caseStudy.name}</span>
+              <span>↗</span>
+            </Link>
+          </div>
+
+          {/* Right: case-study thumbnail */}
+          <div className="hidden md:block w-48 h-32 overflow-hidden rounded-sm shrink-0">
+            <img
+              src={s.img}
+              alt={s.caseStudy.name}
+              className="w-full h-full object-cover object-center"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function CaseCard({ c }: { c: typeof caseStudies[0] }) {
+  const [hovered, setHovered] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleEnter = () => {
+    setHovered(true);
+    videoRef.current?.play().catch(() => {});
+  };
+  const handleLeave = () => {
+    setHovered(false);
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+  };
+
+  return (
+    <Link
+      href={`/work/${c.id}`}
+      className="case-card group block relative overflow-hidden bg-[#111]"
+      onMouseEnter={handleEnter}
+      onMouseLeave={handleLeave}
+    >
+      <div className="aspect-[4/3] relative overflow-hidden">
+        <img
+          src={c.img}
+          alt={c.name}
+          className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+        />
+        {c.video && (
+          <video
+            ref={videoRef}
+            src={c.video}
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
+            style={{ opacity: hovered ? 1 : 0 }}
+          />
+        )}
+      </div>
+      <div className="flex items-center justify-between px-5 py-4">
+        <div>
+          <p className="font-sans font-light text-white text-base">{c.name}</p>
+          <p className="font-sans text-xs text-white/40 mt-0.5">{c.tag}</p>
+        </div>
+        <span className="font-sans text-white/30 text-lg group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300">
+          ↗
+        </span>
+      </div>
+    </Link>
+  );
+}
+
+// ── Page ─────────────────────────────────────────────────────────────────────
 export default function ServicesPage() {
+  const pageRef    = useRef<HTMLDivElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
+  const [openIdx, setOpenIdx] = useState<number | null>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
     const ctx = gsap.context(() => {
+      // Hero headline
       if (headlineRef.current) {
-        const split = new SplitType(headlineRef.current, { types: "lines" });
-        gsap.from(split.lines, {
-          y: "100%",
-          opacity: 0,
-          duration: 1.2,
-          stagger: 0.08,
-          ease: "power4.out",
-          delay: 0.2,
+        gsap.from(headlineRef.current, {
+          opacity: 0, y: 40, duration: 1.2, ease: "power4.out", delay: 0.15,
         });
       }
 
+      // Service rows
+      gsap.from(".service-row", {
+        opacity: 0, y: 20, duration: 0.7, stagger: 0.07, ease: "power3.out",
+        scrollTrigger: { trigger: ".services-list", start: "top 82%" },
+      });
+
+      // Model cards
       gsap.from(".model-card", {
-        opacity: 0,
-        y: 40,
-        duration: 1,
-        stagger: 0.15,
-        ease: "power3.out",
+        opacity: 0, y: 36, duration: 0.9, stagger: 0.12, ease: "power3.out",
         scrollTrigger: { trigger: ".models-section", start: "top 80%" },
       });
 
-      gsap.from(".service-cat-row", {
-        opacity: 0,
-        y: 20,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: "power3.out",
-        scrollTrigger: { trigger: ".categories-section", start: "top 80%" },
+      // Case study cards
+      gsap.from(".case-card", {
+        opacity: 0, y: 40, duration: 0.9, stagger: 0.1, ease: "power3.out",
+        scrollTrigger: { trigger: ".cases-section", start: "top 78%" },
       });
-    });
+
+      // CTA text
+      gsap.from(".cta-text", {
+        opacity: 0, y: 30, duration: 1, ease: "power3.out",
+        scrollTrigger: { trigger: ".cta-section", start: "top 80%" },
+      });
+    }, pageRef);
 
     return () => ctx.revert();
   }, []);
 
+  const toggle = (i: number) => setOpenIdx((prev) => (prev === i ? null : i));
+
   return (
-    <div className="bg-background text-foreground min-h-screen">
-      <section className="w-full min-h-screen flex flex-col justify-end px-6 md:px-10 pt-32 pb-16">
-        <div className="max-w-[1400px] mx-auto w-full">
-          <p className="font-sans text-xs uppercase tracking-[0.15em] mb-8 opacity-50">
-            Services
-          </p>
-          <div className="overflow-hidden">
-            <h1
-              ref={headlineRef}
-              className="font-sans text-[7vw] md:text-[5vw] leading-[1.1] font-light tracking-[-0.02em] max-w-5xl"
-            >
-              One mission. Two engagement models. Undeniable transformation and growth.
-            </h1>
-          </div>
+    <div ref={pageRef} className="bg-white text-[#0A0A0A]">
+
+      {/* ══ 1. HERO ═══════════════════════════════════════════════════════════ */}
+      <section className="min-h-screen flex flex-col justify-end px-6 md:px-10 pt-32 pb-16 overflow-hidden">
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40 mb-10">
+          Services
+        </p>
+        {/* Float spacer — first-line indent */}
+        <div className="float-left h-[1.2em]" style={{ width: "clamp(5rem, 22%, 18rem)" }} />
+        <h1
+          ref={headlineRef}
+          className="font-sans font-light leading-[1.08] tracking-[-0.025em] text-[#0A0A0A]"
+          style={{ fontSize: "clamp(2.4rem, 6vw, 7rem)" }}
+        >
+          One mission. Two engagement models. Undeniable transformation and growth.
+        </h1>
+
+        {/* Hero video strip */}
+        <div className="mt-16 w-full aspect-[21/6] overflow-hidden rounded-sm bg-[#111]">
+          <video
+            src={ASSETS.heroVideo}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover object-center"
+          />
         </div>
       </section>
 
-      <div className="w-full h-px bg-border" />
+      <div className="w-full h-px bg-[#0A0A0A]/10" />
 
-      <section className="models-section px-6 md:px-10 py-24">
-        <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 gap-6">
-          {engagementModels.map((model) => (
+      {/* ══ 2. SERVICES ACCORDION ════════════════════════════════════════════ */}
+      <section className="services-list px-6 md:px-10 py-16">
+        <div className="mb-10">
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40">
+            What we do
+          </p>
+        </div>
+
+        <div>
+          {services.map((s, i) => (
+            <ServiceRow
+              key={s.num}
+              s={s}
+              isOpen={openIdx === i}
+              onToggle={() => toggle(i)}
+            />
+          ))}
+        </div>
+      </section>
+
+      <div className="w-full h-px bg-[#0A0A0A]/10" />
+
+      {/* ══ 3. ENGAGEMENT MODELS ════════════════════════════════════════════ */}
+      <section className="models-section px-6 md:px-10 py-20">
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40 mb-12">
+          How we work
+        </p>
+        <div className="grid md:grid-cols-2 gap-6">
+          {models.map((m) => (
             <div
-              key={model.num}
-              className="model-card border border-border p-10 md:p-14 flex flex-col gap-8"
-              data-testid={`model-${model.name.toLowerCase()}`}
+              key={m.num}
+              className="model-card group border border-[#0A0A0A]/10 overflow-hidden"
             >
-              <div className="flex items-start justify-between">
-                <span className="font-sans text-xs opacity-40">{model.num}</span>
+              {/* Image */}
+              <div className="aspect-[16/7] overflow-hidden">
+                <img
+                  src={m.img}
+                  alt={m.name}
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                />
               </div>
-              <h2 className="font-display text-5xl md:text-7xl font-bold uppercase tracking-tight">
-                {model.name}
-              </h2>
-              <p className="font-sans text-lg font-light leading-relaxed opacity-70 max-w-sm">
-                {model.desc}
-              </p>
-              <div className="flex flex-col gap-3 mt-auto pt-8 border-t border-border">
-                {model.deliverables.map((d) => (
-                  <span key={d} className="font-sans text-sm opacity-50 uppercase tracking-wider">
-                    — {d}
+
+              {/* Content */}
+              <div className="p-8 md:p-10">
+                <div className="flex items-baseline justify-between mb-6">
+                  <span className="font-sans text-[11px] text-[#0A0A0A]/35 tracking-widest">{m.num}</span>
+                  <span className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/35 border border-[#0A0A0A]/15 px-2.5 py-1">
+                    {m.duration}
                   </span>
-                ))}
+                </div>
+                <h2
+                  className="font-sans font-light text-[#0A0A0A] leading-none tracking-[-0.02em] mb-6"
+                  style={{ fontSize: "clamp(2.5rem, 5vw, 5rem)" }}
+                >
+                  {m.name}
+                </h2>
+                <p className="font-sans text-sm text-[#0A0A0A]/55 leading-relaxed max-w-sm mb-8">
+                  {m.desc}
+                </p>
+                <div className="border-t border-[#0A0A0A]/10 pt-6 flex flex-col gap-2.5">
+                  {m.deliverables.map((d) => (
+                    <span key={d} className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/40">
+                      — {d}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="categories-section px-6 md:px-10 py-24 border-t border-border">
-        <div className="max-w-[1400px] mx-auto">
-          <p className="font-sans text-xs uppercase tracking-[0.15em] mb-16 opacity-50">
-            What we do
+      <div className="w-full h-px bg-[#0A0A0A]/10" />
+
+      {/* ══ 4. SELECTED WORK ════════════════════════════════════════════════ */}
+      <section className="cases-section px-6 md:px-10 py-20 bg-[#0A0A0A]">
+        <div className="flex items-baseline justify-between mb-12">
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/40">
+            Selected work
           </p>
-          <div className="grid md:grid-cols-4 gap-12">
-            {serviceCategories.map((cat) => (
-              <div key={cat.num} className="service-cat-row" data-testid={`cat-${cat.name.toLowerCase()}`}>
-                <div className="flex items-baseline gap-3 mb-6">
-                  <span className="font-sans text-xs opacity-40">{cat.num}</span>
-                  <span className="font-sans text-sm font-medium uppercase tracking-widest">{cat.name}</span>
-                </div>
-                <div className="flex flex-col gap-3">
-                  {cat.items.map((item) => (
-                    <span key={item} className="font-sans text-base opacity-60">
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
+          <Link
+            href="/work"
+            className="font-sans text-[11px] uppercase tracking-widest text-white/40 border-b border-white/20 pb-px hover:text-white hover:border-white/60 transition-colors"
+          >
+            All projects ↗
+          </Link>
+        </div>
+        <div className="grid md:grid-cols-3 gap-4">
+          {caseStudies.map((c) => (
+            <CaseCard key={c.id} c={c} />
+          ))}
         </div>
       </section>
 
-      <section className="px-6 md:px-10 py-24 bg-[#0A0A0A] text-white">
-        <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
-          <h2 className="font-sans text-4xl md:text-6xl font-light tracking-tight max-w-xl">
-            Ready to start your transformation?
-          </h2>
-          <Link
-            href="/contact"
-            data-testid="link-start-project"
-            className="shrink-0 border border-white/30 text-white px-10 py-5 font-sans text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-colors duration-300 flex items-center gap-3"
-          >
-            <span>Start a project</span>
-            <span>↗</span>
-          </Link>
+      {/* ══ 5. STAT STRIP ════════════════════════════════════════════════════ */}
+      <section className="px-6 md:px-10 py-16 bg-[#F5F4F0]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {[
+            { num: "90+", label: "Awards won" },
+            { num: "$5B+", label: "Client value created" },
+            { num: "8+", label: "Years experience" },
+            { num: "100+", label: "Brands transformed" },
+          ].map((s) => (
+            <div key={s.label} className="flex flex-col gap-2">
+              <span
+                className="font-sans font-light text-[#0A0A0A] leading-none tracking-[-0.02em]"
+                style={{ fontSize: "clamp(2rem, 4vw, 4.5rem)" }}
+              >
+                {s.num}
+              </span>
+              <span className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/40">
+                {s.label}
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ══ 6. OFFICE IMAGE ════════════════════════════════════════════════ */}
+      <div className="w-full aspect-[16/5] overflow-hidden">
+        <img
+          src={ASSETS.office}
+          alt="Beyond studio"
+          className="w-full h-full object-cover object-center"
+        />
+      </div>
+
+      {/* ══ 7. CTA ═══════════════════════════════════════════════════════════ */}
+      <section className="cta-section px-6 md:px-10 py-28 bg-[#0A0A0A]">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-12">
+          <div className="cta-text">
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/35 mb-8">
+              Let's work together
+            </p>
+            <h2
+              className="font-sans font-light text-white leading-[1.08] tracking-[-0.025em]"
+              style={{ fontSize: "clamp(2.4rem, 5.5vw, 6.5rem)" }}
+            >
+              Ready to start your<br />transformation?
+            </h2>
+          </div>
+          <div className="cta-text flex flex-col gap-4 md:items-end">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-3 border border-white/20 text-white px-10 py-5 font-sans text-[11px] uppercase tracking-widest hover:bg-white hover:text-[#0A0A0A] transition-colors duration-300"
+            >
+              <span>Start a project</span>
+              <span>↗</span>
+            </Link>
+            <p className="font-sans text-[11px] text-white/30 tracking-wide">
+              Or email us at{" "}
+              <a href="mailto:hello@beyond.com" className="text-white/50 hover:text-white transition-colors underline underline-offset-4">
+                hello@beyond.com
+              </a>
+            </p>
+          </div>
         </div>
       </section>
     </div>
