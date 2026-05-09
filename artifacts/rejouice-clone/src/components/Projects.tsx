@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import { Link } from "wouter";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -82,8 +83,9 @@ function ProjectCard({
   };
 
   return (
-    <div
-      className={`project-card relative overflow-hidden bg-[#0A0A0A] cursor-pointer ${heightClass}`}
+    <Link
+      href={`/work/${project.id}`}
+      className={`project-card relative overflow-hidden bg-[#0A0A0A] cursor-pointer block ${heightClass}`}
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
       data-testid={`project-${project.id}`}
@@ -144,7 +146,7 @@ function ProjectCard({
           ↗
         </span>
       </div>
-    </div>
+    </Link>
   );
 }
 
@@ -179,7 +181,21 @@ export default function Projects() {
   const portraits = projects.filter((p) => p.layout === "portrait");
 
   return (
-    <section ref={sectionRef} className="bg-background">
+    <section ref={sectionRef} className="bg-background border-t border-border/40">
+      {/* Header row */}
+      <div className="px-6 md:px-10 py-8 flex items-center justify-between border-b border-border/40">
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-foreground/40">
+          Featured Work
+        </p>
+        <Link
+          href="/work"
+          className="font-sans text-[11px] uppercase tracking-[0.18em] text-foreground/40 hover:text-foreground transition-colors duration-200 flex items-center gap-1.5"
+          data-testid="link-all-work"
+        >
+          All 24 projects ↗
+        </Link>
+      </div>
+
       {/* Row 1 — full-width Rivian */}
       <ProjectCard project={wide[0]} heightClass="w-full h-[60vh] md:h-[70vh] min-h-[420px]" />
 

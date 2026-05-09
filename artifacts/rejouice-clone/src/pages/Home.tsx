@@ -5,6 +5,8 @@ import Showreel from "@/components/Showreel";
 import About from "@/components/About";
 import ClientLogos from "@/components/ClientLogos";
 import Projects from "@/components/Projects";
+import Services from "@/components/Services";
+import HomeHub from "@/components/HomeHub";
 import Glance from "@/components/Glance";
 import OurApproach from "@/components/OurApproach";
 import Contact from "@/components/Contact";
@@ -23,6 +25,8 @@ export default function Home() {
           <About />
           <ClientLogos />
           <Projects />
+          <Services />
+          <HomeHub />
           <Glance />
           <OurApproach />
           <Contact />

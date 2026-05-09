@@ -1,5 +1,15 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from "wouter";
 import { gsap } from "gsap";
+
+const siteLinks = [
+  { label: "Work", href: "/work" },
+  { label: "Services", href: "/services" },
+  { label: "Industries", href: "/industries" },
+  { label: "Journal", href: "/journal" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+];
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -54,9 +64,9 @@ export default function Hero() {
       {/* Bottom row */}
       <div
         ref={metaRef}
-        className="flex items-end justify-between px-6 md:px-8 pb-8"
+        className="flex items-end justify-between px-6 md:px-8 pb-8 gap-6"
       >
-        {/* Left: two-column descriptor */}
+        {/* Left: descriptors */}
         <div className="flex gap-10 md:gap-16 items-start">
           <p className="font-sans text-xs md:text-sm text-white/60 leading-snug max-w-[120px]">
             Strategy, Design,<br />Performance.
@@ -66,10 +76,18 @@ export default function Hero() {
           </p>
         </div>
 
-        {/* Right: scroll arrow */}
-        <span className="font-sans text-white/50 text-lg select-none" aria-hidden="true">
-          ↓
-        </span>
+        {/* Right: site index */}
+        <nav className="flex flex-col items-end gap-1.5" aria-label="Site sections">
+          {siteLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/35 hover:text-white transition-colors duration-200"
+            >
+              {link.label} ↗
+            </Link>
+          ))}
+        </nav>
       </div>
     </section>
   );

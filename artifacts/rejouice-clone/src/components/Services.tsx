@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from "wouter";
 import { gsap } from "gsap";
 
 const services = [
@@ -54,7 +55,15 @@ export default function Services() {
   return (
     <section ref={sectionRef} className="py-20 md:py-28 px-6 md:px-10 bg-background text-foreground">
       <div className="max-w-[1400px] mx-auto">
-        <h2 className="font-sans text-[11px] tracking-[0.18em] uppercase mb-12 text-foreground/40">Approach</h2>
+        <div className="flex items-baseline justify-between mb-12">
+          <h2 className="font-sans text-[11px] tracking-[0.18em] uppercase text-foreground/40">Approach</h2>
+          <Link
+            href="/services"
+            className="font-sans text-[11px] uppercase tracking-[0.18em] text-foreground/40 hover:text-foreground transition-colors duration-200 flex items-center gap-1.5"
+          >
+            All services ↗
+          </Link>
+        </div>
 
         <div className="flex flex-col border-t border-border/40">
           {services.map((service, idx) => (
