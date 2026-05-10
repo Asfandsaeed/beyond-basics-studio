@@ -177,51 +177,24 @@ export function RefundsPage() {
 
 // ─── Sitemap page ───────────────────────────────────────────────────────────
 
-const sitemapSections = [
-  {
-    label: "Main",
-    links: [
-      { label: "Home", href: "/" },
-      { label: "Work", href: "/work" },
-      { label: "Services", href: "/services" },
-      { label: "Industries", href: "/industries" },
-      { label: "Contact", href: "/contact" },
-    ],
-  },
-  {
-    label: "Company",
-    links: [
-      { label: "About", href: "/about" },
-      { label: "Careers", href: "/careers" },
-      { label: "Press & Media", href: "/press" },
-      { label: "Design for Good", href: "/design-for-good" },
-      { label: "Accreditations", href: "/accreditations" },
-    ],
-  },
-  {
-    label: "Partners",
-    links: [
-      { label: "Become a Partner", href: "/partners" },
-    ],
-  },
-  {
-    label: "Resources",
-    links: [
-      { label: "Journal", href: "/journal" },
-      { label: "Our Process", href: "/process" },
-      { label: "FAQ", href: "/faq" },
-    ],
-  },
-  {
-    label: "Legal",
-    links: [
-      { label: "Privacy Policy", href: "/privacy-policy" },
-      { label: "Terms & Conditions", href: "/terms" },
-      { label: "Refund Policy", href: "/refunds" },
-      { label: "Sitemap", href: "/sitemap" },
-    ],
-  },
-];
+function SitemapSection({ label, links }: { label: string; links: { label: string; href: string }[] }) {
+  return (
+    <div>
+      <p className="font-sans text-[10px] uppercase tracking-[0.2em] text-[#0A0A0A]/35 mb-5 pb-3 border-b border-[#0A0A0A]/10">{label}</p>
+      <div className="flex flex-col gap-2.5">
+        {links.map((l) => (
+          <Link
+            key={l.href}
+            href={l.href}
+            className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/45 transition-colors duration-200 leading-snug"
+          >
+            {l.label}
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export function SitemapPage() {
   const pageRef = useRef<HTMLDivElement>(null);
@@ -232,29 +205,284 @@ export function SitemapPage() {
 
   return (
     <div ref={pageRef} className="bg-white text-[#0A0A0A] pt-24">
-      <section className="max-w-[1400px] mx-auto px-6 md:px-10 pt-16 pb-24 md:pt-24 md:pb-32">
+      <section className="max-w-[1400px] mx-auto px-6 md:px-10 pt-16 pb-12 md:pt-24">
         <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-8">Sitemap</p>
-        <h1 className="page-hero-h font-sans font-light tracking-[-0.03em] leading-[1.02] text-[#0A0A0A] mb-16" style={{ fontSize: "clamp(3rem, 8vw, 8rem)" }}>
+        <h1 className="page-hero-h font-sans font-light tracking-[-0.03em] leading-[1.02] text-[#0A0A0A] mb-4" style={{ fontSize: "clamp(3rem, 8vw, 8rem)" }}>
           All pages.
         </h1>
+        <p className="font-sans text-sm font-light text-[#0A0A0A]/45 mb-20">
+          Every page on beyondbasics.studio — indexed for humans.
+        </p>
+      </section>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-10">
-          {sitemapSections.map((s) => (
-            <div key={s.label}>
-              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-5">{s.label}</p>
-              <div className="flex flex-col gap-3">
-                {s.links.map((l) => (
-                  <Link
-                    key={l.href}
-                    href={l.href}
-                    className="font-sans text-sm font-light text-[#0A0A0A] hover:text-[#0A0A0A]/50 transition-colors duration-200"
-                  >
-                    {l.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
+      {/* ── Main navigation ── */}
+      <section className="max-w-[1400px] mx-auto px-6 md:px-10 pb-16 border-b border-[#0A0A0A]/08">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-10">
+          <SitemapSection label="Main" links={[
+            { label: "Home", href: "/" },
+            { label: "Work", href: "/work" },
+            { label: "Services", href: "/services" },
+            { label: "Industries", href: "/industries" },
+            { label: "Journal", href: "/journal" },
+            { label: "Contact", href: "/contact" },
+          ]} />
+          <SitemapSection label="Company" links={[
+            { label: "About", href: "/about" },
+            { label: "Careers", href: "/careers" },
+            { label: "Press & Media", href: "/press" },
+            { label: "Design for Good", href: "/design-for-good" },
+            { label: "Accreditations", href: "/accreditations" },
+            { label: "Awards", href: "/awards" },
+            { label: "Testimonials", href: "/testimonials" },
+            { label: "Partners", href: "/partners" },
+          ]} />
+          <SitemapSection label="Resources" links={[
+            { label: "Our Process", href: "/process" },
+            { label: "Pricing", href: "/pricing" },
+            { label: "FAQ", href: "/faq" },
+            { label: "Newsletter", href: "/newsletter" },
+            { label: "Guides & Resources", href: "/resources" },
+            { label: "Brand Glossary", href: "/glossary" },
+          ]} />
+          <SitemapSection label="Legal" links={[
+            { label: "Privacy Policy", href: "/privacy-policy" },
+            { label: "Terms & Conditions", href: "/terms" },
+            { label: "Refund Policy", href: "/refunds" },
+            { label: "Sitemap", href: "/sitemap" },
+          ]} />
+        </div>
+      </section>
+
+      {/* ── Work / Projects ── */}
+      <section className="max-w-[1400px] mx-auto px-6 md:px-10 py-16 border-b border-[#0A0A0A]/08">
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10">Work — 17 projects</p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-10 gap-y-2.5">
+          {[
+            { label: "Clear Street", href: "/work/clear-street" },
+            { label: "Remote", href: "/work/remote" },
+            { label: "MultiversX", href: "/work/multiversx" },
+            { label: "Phive", href: "/work/phive" },
+            { label: "Floema", href: "/work/floema" },
+            { label: "Tuu", href: "/work/tuu" },
+            { label: "Redacted", href: "/work/redacted" },
+            { label: "GrabGo", href: "/work/grabgo" },
+            { label: "Flowcase", href: "/work/flowcase" },
+            { label: "Jeton", href: "/work/jeton" },
+            { label: "Keikku", href: "/work/keikku" },
+            { label: "Kozowood", href: "/work/kozowood" },
+            { label: "Talent Protocol", href: "/work/talent-protocol" },
+            { label: "Flecto", href: "/work/flecto" },
+            { label: "Hematogenix", href: "/work/hematogenix" },
+            { label: "Speedy", href: "/work/speedy" },
+            { label: "Care to Beauty", href: "/work/care-to-beauty" },
+          ].map((l) => (
+            <Link key={l.href} href={l.href} className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/45 transition-colors duration-200">
+              {l.label}
+            </Link>
           ))}
+        </div>
+      </section>
+
+      {/* ── Services ── */}
+      <section className="max-w-[1400px] mx-auto px-6 md:px-10 py-16 border-b border-[#0A0A0A]/08">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+          <div>
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10">Core Services — 5 pages</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2.5">
+              {[
+                { label: "Brand Strategy", href: "/services/brand-strategy" },
+                { label: "Brand Identity", href: "/services/brand-identity" },
+                { label: "Digital Experience", href: "/services/digital-experience" },
+                { label: "Growth Marketing", href: "/services/growth-marketing" },
+                { label: "Content & Creative", href: "/services/content-creative" },
+              ].map((l) => (
+                <Link key={l.href} href={l.href} className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/45 transition-colors duration-200">
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div>
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10">Service × Industry — 14 pages</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2.5">
+              {[
+                { label: "Brand Strategy for Fintech", href: "/services/brand-strategy-for-fintech" },
+                { label: "Brand Strategy for Startups", href: "/services/brand-strategy-for-startups" },
+                { label: "Brand Identity for Fintech", href: "/services/brand-identity-for-fintech" },
+                { label: "Brand Identity for SaaS", href: "/services/brand-identity-for-saas" },
+                { label: "Brand Identity for Web3", href: "/services/brand-identity-for-web3" },
+                { label: "Brand Identity for Startups", href: "/services/brand-identity-for-startups" },
+                { label: "Brand Identity for Healthcare", href: "/services/brand-identity-for-healthcare" },
+                { label: "Brand Identity for E-commerce", href: "/services/brand-identity-for-ecommerce" },
+                { label: "Digital Experience for Fintech", href: "/services/digital-experience-for-fintech" },
+                { label: "Digital Experience for SaaS", href: "/services/digital-experience-for-saas" },
+                { label: "Digital Experience for E-commerce", href: "/services/digital-experience-for-ecommerce" },
+                { label: "Digital Experience for Web3", href: "/services/digital-experience-for-web3" },
+                { label: "Growth Marketing for SaaS", href: "/services/growth-marketing-for-saas" },
+                { label: "Growth Marketing for Fintech", href: "/services/growth-marketing-for-fintech" },
+              ].map((l) => (
+                <Link key={l.href} href={l.href} className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/45 transition-colors duration-200">
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Industries ── */}
+      <section className="max-w-[1400px] mx-auto px-6 md:px-10 py-16 border-b border-[#0A0A0A]/08">
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10">Industries — 51 pages</p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-10 gap-y-2.5">
+          {[
+            { label: "SaaS", href: "/industries/saas" },
+            { label: "Tech Companies", href: "/industries/tech-companies" },
+            { label: "AI Startups", href: "/industries/ai-startups" },
+            { label: "Crypto Projects", href: "/industries/crypto-projects" },
+            { label: "Web3 Brands", href: "/industries/web3-brands" },
+            { label: "Mobile Apps", href: "/industries/mobile-apps" },
+            { label: "Software Companies", href: "/industries/software-companies" },
+            { label: "Startups", href: "/industries/startups" },
+            { label: "E-commerce", href: "/industries/ecommerce" },
+            { label: "DTC Brands", href: "/industries/dtc-brands" },
+            { label: "E-commerce Fashion", href: "/industries/ecommerce-fashion" },
+            { label: "Subscription Businesses", href: "/industries/subscription-businesses" },
+            { label: "Healthcare", href: "/industries/healthcare" },
+            { label: "Dentists", href: "/industries/dentists" },
+            { label: "Doctors", href: "/industries/doctors" },
+            { label: "Fitness Brands", href: "/industries/fitness-brands" },
+            { label: "Gyms", href: "/industries/gyms" },
+            { label: "Local Businesses", href: "/industries/local-businesses" },
+            { label: "HVAC Companies", href: "/industries/hvac-companies" },
+            { label: "Roofers", href: "/industries/roofers" },
+            { label: "Construction Companies", href: "/industries/construction-companies" },
+            { label: "Automotive Businesses", href: "/industries/automotive-businesses" },
+            { label: "Franchises", href: "/industries/franchises" },
+            { label: "Logistics Companies", href: "/industries/logistics-companies" },
+            { label: "Manufacturing Companies", href: "/industries/manufacturing-companies" },
+            { label: "Lawyers", href: "/industries/lawyers" },
+            { label: "Realtors", href: "/industries/realtors" },
+            { label: "Coaches", href: "/industries/coaches" },
+            { label: "Consultants", href: "/industries/consultants" },
+            { label: "Agencies", href: "/industries/agencies" },
+            { label: "Financial Services", href: "/industries/financial-services" },
+            { label: "Educational Institutions", href: "/industries/educational-institutions" },
+            { label: "Nonprofits", href: "/industries/nonprofits" },
+            { label: "Influencers", href: "/industries/influencers" },
+            { label: "Creators", href: "/industries/creators" },
+            { label: "Personal Brands", href: "/industries/personal-brands" },
+            { label: "Photographers", href: "/industries/photographers" },
+            { label: "Event Companies", href: "/industries/event-companies" },
+            { label: "Restaurants", href: "/industries/restaurants" },
+            { label: "Hotels", href: "/industries/hotels" },
+            { label: "Hospitality Businesses", href: "/industries/hospitality-businesses" },
+            { label: "Travel Agencies", href: "/industries/travel-agencies" },
+            { label: "Fashion Brands", href: "/industries/fashion-brands" },
+            { label: "Beauty Brands", href: "/industries/beauty-brands" },
+            { label: "Skincare Brands", href: "/industries/skincare-brands" },
+            { label: "Food Brands", href: "/industries/food-brands" },
+            { label: "Salons", href: "/industries/salons" },
+            { label: "Real Estate Companies", href: "/industries/real-estate-companies" },
+            { label: "Interior Designers", href: "/industries/interior-designers" },
+            { label: "Architects", href: "/industries/architects" },
+          ].map((l) => (
+            <Link key={l.href} href={l.href} className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/45 transition-colors duration-200">
+              {l.label}
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Journal ── */}
+      <section className="max-w-[1400px] mx-auto px-6 md:px-10 py-16 border-b border-[#0A0A0A]/08">
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10">Journal — 8 articles</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-2.5">
+          {[
+            { label: "How We Built the Tensor Brand in 90 Days", href: "/journal/tensor-brand-90-days" },
+            { label: "Brand-Led Growth: Why the Best Companies Lead with Brand", href: "/journal/brand-led-growth" },
+            { label: "The Oura Strategy: Why Restraint Is the Most Powerful Design Tool", href: "/journal/oura-simplicity-strategy" },
+            { label: "The Art of Naming: How to Choose a Brand Name That Lasts", href: "/journal/art-of-naming" },
+            { label: "How Moxion Built a Sustainable Brand Without Sacrificing Premium", href: "/journal/moxion-sustainable-brand" },
+            { label: "What Makes a Digital Experience Award-Worthy", href: "/journal/award-worthy-digital-experience" },
+            { label: "Photography as Brand Language", href: "/journal/photography-as-brand-language" },
+            { label: "Pre-Launch Brand Building: How to Create Demand Before You Ship", href: "/journal/pre-launch-brand-building" },
+          ].map((l) => (
+            <Link key={l.href} href={l.href} className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/45 transition-colors duration-200 leading-snug">
+              {l.label}
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Glossary + Resources ── */}
+      <section className="max-w-[1400px] mx-auto px-6 md:px-10 py-16 border-b border-[#0A0A0A]/08">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+          <div>
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10">Brand Glossary — 25 terms</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2.5">
+              {[
+                { label: "Brand Identity", href: "/glossary/brand-identity" },
+                { label: "Brand Strategy", href: "/glossary/brand-strategy" },
+                { label: "Visual Identity", href: "/glossary/visual-identity" },
+                { label: "Logo Design", href: "/glossary/logo-design" },
+                { label: "Design System", href: "/glossary/design-system" },
+                { label: "Brand Guidelines", href: "/glossary/brand-guidelines" },
+                { label: "Typography System", href: "/glossary/typography-system" },
+                { label: "Colour System", href: "/glossary/color-system" },
+                { label: "Motion Identity", href: "/glossary/motion-identity" },
+                { label: "Verbal Identity", href: "/glossary/verbal-identity" },
+                { label: "Brand Architecture", href: "/glossary/brand-architecture" },
+                { label: "Brand Positioning", href: "/glossary/brand-positioning" },
+                { label: "Brand Audit", href: "/glossary/brand-audit" },
+                { label: "Naming Strategy", href: "/glossary/naming-strategy" },
+                { label: "Art Direction", href: "/glossary/art-direction" },
+                { label: "Design Sprint", href: "/glossary/design-sprint" },
+                { label: "Brand Equity", href: "/glossary/brand-equity" },
+                { label: "WebGL", href: "/glossary/webgl" },
+                { label: "UI/UX Design", href: "/glossary/ui-ux-design" },
+                { label: "Creative Direction", href: "/glossary/creative-direction" },
+                { label: "Brand Refresh", href: "/glossary/brand-refresh" },
+                { label: "Rebranding", href: "/glossary/rebranding" },
+                { label: "Growth Marketing", href: "/glossary/growth-marketing" },
+                { label: "Go-to-Market", href: "/glossary/go-to-market" },
+                { label: "Digital Experience", href: "/glossary/digital-experience" },
+              ].map((l) => (
+                <Link key={l.href} href={l.href} className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/45 transition-colors duration-200">
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div>
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10">Guides & Resources — 6 guides</p>
+            <div className="flex flex-col gap-2.5">
+              {[
+                { label: "The Complete Rebranding Checklist", href: "/resources/rebranding-checklist" },
+                { label: "How to Write a Brand Brief", href: "/resources/brand-brief-template" },
+                { label: "How to Choose a Brand Agency", href: "/resources/how-to-choose-a-brand-agency" },
+                { label: "How to Run a Brand Audit", href: "/resources/brand-audit-guide" },
+                { label: "The Startup Naming Guide", href: "/resources/naming-guide" },
+                { label: "How to Write a Website Brief", href: "/resources/website-brief-template" },
+              ].map((l) => (
+                <Link key={l.href} href={l.href} className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/45 transition-colors duration-200 leading-snug">
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Newsletter issues ── */}
+      <section className="max-w-[1400px] mx-auto px-6 md:px-10 py-16 pb-32">
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10">Newsletter</p>
+        <div className="flex flex-col gap-2.5 max-w-md">
+          <Link href="/newsletter" className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/45 transition-colors duration-200">
+            Newsletter — Subscribe & Archive
+          </Link>
+          <p className="font-sans text-[12px] text-[#0A0A0A]/35 font-light leading-snug mt-1">
+            Monthly dispatches on brand strategy, identity, and the business of creativity. Issues are available at /newsletter after subscribing.
+          </p>
         </div>
       </section>
     </div>
