@@ -75,17 +75,19 @@ const philosophy = [
   },
 ];
 
+const P = "https://images.prismic.io/rejouice-2024";
+
 const partners = [
-  { name: "Guillaume Hamon",    role: "Founding Partner",               img: "https://cdn.sanity.io/images/zksivtxz/production/f81eb671f4ffc4eee3da98dfdbb7f8c8d895800b-1027x1027.jpg" },
-  { name: "Jack Milburn",       role: "Partner, Brand Design",          img: "https://cdn.sanity.io/images/zksivtxz/production/31cd18479fde281c4b6a54276b18dc347dcdfa75-1027x1027.jpg" },
-  { name: "Gabriel Stik",       role: "Partner, Technical",             img: "https://cdn.sanity.io/images/zksivtxz/production/4b204a948321c1cb7d3fbfad832d6ec9997bbe3a-1026x1026.jpg" },
-  { name: "Jeffrey Blum",       role: "Partner, Business Development",  img: "https://cdn.sanity.io/images/zksivtxz/production/db9d799c0c44d370068118915f6cd31b31ebbc2c-1027x1027.jpg" },
-  { name: "Clément Brichon",    role: "Partner, Creative Director",     img: "https://cdn.sanity.io/images/zksivtxz/production/6a8576e25929e0f693ceb40e64e0ec56d07b674e-1080x1080.jpg" },
-  { name: "Jean-Michel Boujon", role: "Partner, Growth Marketing",      img: "https://cdn.sanity.io/images/zksivtxz/production/48a694fb13bbd8b3c37037aecfdce3ac244b953c-1080x1080.jpg" },
+  { name: "Guillaume Hamon",    role: "Founding Partner",               img: `${P}/aFwilXfc4bHWiuKK_Z1xCSpbqstJ98euH_test-gui-1-.avif?auto=format,compress` },
+  { name: "Jack Milburn",       role: "Partner, Brand Design",          img: `${P}/Z0dOD5bqstJ971U2_jack.jpg?auto=format,compress` },
+  { name: "Gabriel Stik",       role: "Partner, Technical",             img: `${P}/Z0dODpbqstJ971U1_gabriel.jpg?auto=format,compress` },
+  { name: "Jeffrey Blum",       role: "Partner, Business Development",  img: `${P}/Z0dOEZbqstJ971U4_jeffrey.jpg?auto=format,compress` },
+  { name: "Clément Brichon",    role: "Partner, Creative Director",     img: `${P}/Z0dODZbqstJ971U0_clement.jpg?auto=format,compress` },
+  { name: "Jean-Michel Boujon", role: "Partner, Growth Marketing",      img: `${P}/Z0dOEJbqstJ971U3_jeanmichel.jpg?auto=format,compress` },
 ];
 
-const OFFICE_IMG = "https://cdn.sanity.io/images/zksivtxz/production/28820f9c8e82e134dc7dd7d7e403da3559edcb62-1080x1080.jpg";
-const FOUNDER_IMG = "https://cdn.sanity.io/images/zksivtxz/production/f81eb671f4ffc4eee3da98dfdbb7f8c8d895800b-1027x1027.jpg";
+const OFFICE_IMG = `${P}/Z2GNNpbqstJ98mqU_6384a19b-fa1c-4ad1-aae0-e29e127ebeef_san-diego-office.jpg.jpg?auto=format,compress`;
+const FOUNDER_IMG = `${P}/aFwilXfc4bHWiuKK_Z1xCSpbqstJ98euH_test-gui-1-.avif?auto=format,compress`;
 
 // ─── Shared primitives ─────────────────────────────────────────────────────
 

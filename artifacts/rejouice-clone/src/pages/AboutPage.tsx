@@ -9,20 +9,22 @@ gsap.registerPlugin(ScrollTrigger);
 // ── Asset URLs ──────────────────────────────────────────────────────────────
 const VCDN = "https://rejouice-2024.cdn.prismic.io/rejouice-2024";
 
+const PRISMIC = "https://images.prismic.io/rejouice-2024";
+
 const ASSETS = {
   portfolioVideo: `${VCDN}/Z2BbT5bqstJ98kk6_REJOUICE-PORTFOLIO-LOOP-PROJECTS.mp4`,
-  guillaume:   "https://cdn.sanity.io/images/zksivtxz/production/f81eb671f4ffc4eee3da98dfdbb7f8c8d895800b-1027x1027.jpg",
-  jack:        "https://cdn.sanity.io/images/zksivtxz/production/31cd18479fde281c4b6a54276b18dc347dcdfa75-1027x1027.jpg",
-  gabriel:     "https://cdn.sanity.io/images/zksivtxz/production/4b204a948321c1cb7d3fbfad832d6ec9997bbe3a-1026x1026.jpg",
-  jeffrey:     "https://cdn.sanity.io/images/zksivtxz/production/db9d799c0c44d370068118915f6cd31b31ebbc2c-1027x1027.jpg",
-  clement:     "https://cdn.sanity.io/images/zksivtxz/production/6a8576e25929e0f693ceb40e64e0ec56d07b674e-1080x1080.jpg",
-  jeanmichel:  "https://cdn.sanity.io/images/zksivtxz/production/48a694fb13bbd8b3c37037aecfdce3ac244b953c-1080x1080.jpg",
-  office:      "https://cdn.sanity.io/images/zksivtxz/production/28820f9c8e82e134dc7dd7d7e403da3559edcb62-1080x1080.jpg",
-  mask1:       "https://cdn.sanity.io/images/zksivtxz/production/195dabd5e5757919b90b5d5102a477117981912e-1180x720.jpg",
-  mask2:       "https://cdn.sanity.io/images/zksivtxz/production/51d9e034ae6b13b267034a18f3b0a3d8815d27ef-1180x720.jpg",
-  mask3:       "https://cdn.sanity.io/images/zksivtxz/production/a5b674fefa860f0864baaf56bfbc2bb526b263fb-1180x720.jpg",
-  mask4:       "https://cdn.sanity.io/images/zksivtxz/production/43d9fe391c3de48c4f41dee41fd3a8c97f6540fa-1180x720.jpg",
-  mask5:       "https://cdn.sanity.io/images/zksivtxz/production/e337c6f26ce31e0404ec5ceff223fedf0c33d4eb-1080x1080.jpg",
+  guillaume:   `${PRISMIC}/aFwilXfc4bHWiuKK_Z1xCSpbqstJ98euH_test-gui-1-.avif?auto=format,compress`,
+  jack:        `${PRISMIC}/Z0dOD5bqstJ971U2_jack.jpg?auto=format,compress`,
+  gabriel:     `${PRISMIC}/Z0dODpbqstJ971U1_gabriel.jpg?auto=format,compress`,
+  jeffrey:     `${PRISMIC}/Z0dOEZbqstJ971U4_jeffrey.jpg?auto=format,compress`,
+  clement:     `${PRISMIC}/Z0dODZbqstJ971U0_clement.jpg?auto=format,compress`,
+  jeanmichel:  `${PRISMIC}/Z0dOEJbqstJ971U3_jeanmichel.jpg?auto=format,compress`,
+  office:      `${PRISMIC}/Z2GNNpbqstJ98mqU_6384a19b-fa1c-4ad1-aae0-e29e127ebeef_san-diego-office.jpg.jpg?auto=format,compress`,
+  mask1:       `${PRISMIC}/Z0eQrZbqstJ971-J_Maskgroup-1.jpg?auto=format,compress`,
+  mask2:       `${PRISMIC}/Z0eQr5bqstJ971-L_Maskgroup-3.jpg?auto=format,compress`,
+  mask3:       `${PRISMIC}/Z0eQrpbqstJ971-K_Maskgroup-2.jpg?auto=format,compress`,
+  mask4:       `${PRISMIC}/Z0eQsZbqstJ971-N_Maskgroup.jpg?auto=format,compress`,
+  mask5:       `${PRISMIC}/Z0eQsJbqstJ971-M_Maskgroup-4.jpg?auto=format,compress`,
 };
 
 const partners = [
