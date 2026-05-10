@@ -212,45 +212,62 @@ export default function AboutPage() {
       {/* ══ 6. FOUNDER ════════════════════════════════════════════════════
             Layout: photo fills left ~55%, quote top-right, "One Founder" bottom-left
       ══════════════════════════════════════════════════════════════════ */}
-      <section className="founder-section relative min-h-screen flex flex-col md:flex-row px-6 md:px-10 py-10 gap-10">
-        {/* Left: full-height portrait */}
-        <div className="relative w-full md:w-[55%] shrink-0 overflow-hidden rounded-sm bg-[#111] min-h-[56vw] md:min-h-0">
+      <section className="founder-section relative px-6 md:px-10 py-10">
+        {/* Portrait — full width on mobile, left column on desktop */}
+        <div className="w-full overflow-hidden rounded-sm bg-[#111] mb-8 md:mb-0 md:hidden" style={{ aspectRatio: "3/4" }}>
           <img
             src={ASSETS.guillaume}
             alt="Guillaume Hamon — Founding Partner"
-            className="absolute inset-0 w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center"
           />
         </div>
 
-        {/* Right: quote + bio, anchored top */}
-        <div className="flex-1 flex flex-col justify-between py-4">
-          {/* Quote top-right */}
-          <div className="max-w-sm">
-            <blockquote
-              className="founder-quote font-sans font-light leading-[1.35] text-[#0A0A0A] tracking-[-0.01em]"
-              style={{ fontSize: "clamp(1rem, 1.6vw, 1.4rem)" }}
-            >
-              "We've streamlined the outdated and layered agency model to give you direct access to the best global talent. No wasted time, no empty promises. Just impactful results."
-            </blockquote>
-
-            <div className="mt-8">
-              <p className="font-sans font-medium text-[#0A0A0A] text-sm">Guillaume Hamon</p>
-              <p className="font-sans text-xs text-[#0A0A0A]/50 mt-1">Founding Partner</p>
-              <a
-                href="https://www.linkedin.com/in/guillaumehamon/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-6 font-sans text-xs text-[#0A0A0A]/60 underline underline-offset-4 hover:text-[#0A0A0A] transition-colors"
-              >
-                LinkedIn ↗
-              </a>
-            </div>
+        {/* Desktop two-column layout */}
+        <div className="hidden md:flex min-h-screen gap-10">
+          <div className="relative w-[55%] shrink-0 overflow-hidden rounded-sm bg-[#111]">
+            <img
+              src={ASSETS.guillaume}
+              alt="Guillaume Hamon — Founding Partner"
+              className="absolute inset-0 w-full h-full object-cover object-center"
+            />
           </div>
+          <div className="flex-1 flex flex-col justify-between py-4">
+            <div className="max-w-sm">
+              <blockquote
+                className="founder-quote font-sans font-light leading-[1.35] text-[#0A0A0A] tracking-[-0.01em]"
+                style={{ fontSize: "clamp(1rem, 1.6vw, 1.4rem)" }}
+              >
+                "We've streamlined the outdated and layered agency model to give you direct access to the best global talent. No wasted time, no empty promises. Just impactful results."
+              </blockquote>
+              <div className="mt-8">
+                <p className="font-sans font-medium text-[#0A0A0A] text-sm">Guillaume Hamon</p>
+                <p className="font-sans text-xs text-[#0A0A0A]/50 mt-1">Founding Partner</p>
+                <a href="https://www.linkedin.com/in/guillaumehamon/" target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-6 font-sans text-xs text-[#0A0A0A]/60 underline underline-offset-4 hover:text-[#0A0A0A] transition-colors">
+                  LinkedIn ↗
+                </a>
+              </div>
+            </div>
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40">One Founder</p>
+          </div>
+        </div>
 
-          {/* "One Founder" label bottom-left of right panel */}
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40">
-            One Founder
-          </p>
+        {/* Mobile: quote below portrait */}
+        <div className="md:hidden flex flex-col gap-6 pb-4">
+          <blockquote
+            className="founder-quote font-sans font-light leading-[1.5] text-[#0A0A0A] tracking-[-0.01em] text-base"
+          >
+            "We've streamlined the outdated and layered agency model to give you direct access to the best global talent. No wasted time, no empty promises. Just impactful results."
+          </blockquote>
+          <div>
+            <p className="font-sans font-medium text-[#0A0A0A] text-sm">Guillaume Hamon</p>
+            <p className="font-sans text-xs text-[#0A0A0A]/50 mt-1">Founding Partner</p>
+            <a href="https://www.linkedin.com/in/guillaumehamon/" target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-5 font-sans text-xs text-[#0A0A0A]/60 underline underline-offset-4 hover:text-[#0A0A0A] transition-colors">
+              LinkedIn ↗
+            </a>
+          </div>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40 mt-2">One Founder</p>
         </div>
       </section>
 
