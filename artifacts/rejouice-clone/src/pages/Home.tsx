@@ -81,7 +81,7 @@ const partners = [
   { name: "Gabriel Stik",        role: "Partner, Technical",                 img: "https://mir-s3-cdn-cf.behance.net/projects/404/aeeb2894949381.Y3JvcCwzMDAwLDIzNDYsMCwyOQ.jpg" },
   { name: "Jeffrey Blum",        role: "Partner, Business Development",      img: "https://mir-s3-cdn-cf.behance.net/projects/404/c55abe212384375.Y3JvcCwxMjc4LDEwMDAsMTA3LDA.jpg" },
   { name: "Clément Brichon",     role: "Partner, Creative Director",         img: "https://mir-s3-cdn-cf.behance.net/projects/404/aec9b8187144685.Y3JvcCwxMzgwLDEwODAsMCww.png" },
-  { name: "Jean-Michel Boujon",  role: "Partner, Growth Marketing",          img: "https://mir-s3-cdn-cf.behance.net/projects/404/5542c1244023205.Y3JvcCw4MDgsNjMyLDAsMA.png" },
+  { name: "Jean-Michel Boujon",  role: "Partner, Growth Marketing",          img: "https://mir-s3-cdn-cf.behance.net/projects/404/3ac091217373107.Y3JvcCwyNDI0LDE4OTYsMCww.jpg" },
 ];
 
 const OFFICE_IMG = "https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/57e75e148373615.62d4db168e712.jpg";
