@@ -187,14 +187,14 @@ export default function JournalPage() {
               Strategy and craft<br />in your inbox.
             </h2>
           </div>
-          <div className="flex flex-col md:items-end gap-3">
-            <div className="flex gap-0">
+          <div className="flex flex-col gap-3 w-full md:w-auto md:items-end">
+            <div className="flex w-full md:w-auto gap-0">
               <input
                 type="email"
                 placeholder="your@email.com"
-                className="font-sans text-sm text-white bg-transparent border border-white/20 px-5 py-4 w-64 placeholder:text-white/25 focus:outline-none focus:border-white/50 transition-colors"
+                className="font-sans text-sm text-white bg-transparent border border-white/20 px-5 py-4 flex-1 md:flex-none md:w-64 placeholder:text-white/25 focus:outline-none focus:border-white/50 transition-colors"
               />
-              <button className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A] bg-white px-6 py-4 hover:bg-white/90 transition-colors">
+              <button className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A] bg-white px-6 py-4 hover:bg-white/90 transition-colors shrink-0">
                 Subscribe
               </button>
             </div>

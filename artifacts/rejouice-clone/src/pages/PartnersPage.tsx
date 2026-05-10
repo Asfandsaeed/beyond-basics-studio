@@ -156,23 +156,25 @@ export default function PartnersPage() {
           <div className="reveal grid grid-cols-1 md:grid-cols-2 gap-3">
             {partnerTypes.map(({ Icon, type, audience, commission, recurring, desc, perks }) => (
               <div key={type} className="group flex flex-col gap-7 p-10 bg-[#F5F4F0] hover:bg-[#EEEDE9] transition-colors duration-250 rounded-sm">
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <div className="w-9 h-9 flex items-center justify-center text-[#0A0A0A]/35 group-hover:text-[#0A0A0A]/70 transition-colors duration-250 mb-4">
-                      <Icon size={18} strokeWidth={1.25} />
-                    </div>
-                    <h3 className="font-sans font-light text-[#0A0A0A] tracking-[-0.02em] mb-1" style={{ fontSize: "clamp(1.25rem, 2vw, 1.75rem)" }}>
-                      {type}
-                    </h3>
-                    <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35">{audience}</p>
+                <div className="flex flex-col gap-4">
+                  <div className="w-9 h-9 flex items-center justify-center text-[#0A0A0A]/35 group-hover:text-[#0A0A0A]/70 transition-colors duration-250">
+                    <Icon size={18} strokeWidth={1.25} />
                   </div>
-                  <div className="text-right shrink-0">
-                    <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 bg-white px-3 py-1.5 rounded-sm block">
-                      {commission}
-                    </span>
-                    {recurring && (
-                      <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-green-600/70 mt-1.5 block">Recurring</span>
-                    )}
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <h3 className="font-sans font-light text-[#0A0A0A] tracking-[-0.02em] mb-1" style={{ fontSize: "clamp(1.25rem, 2vw, 1.75rem)" }}>
+                        {type}
+                      </h3>
+                      <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35">{audience}</p>
+                    </div>
+                    <div className="text-right shrink-0">
+                      <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 bg-white px-3 py-1.5 rounded-sm block max-w-[9rem] text-right leading-snug">
+                        {commission}
+                      </span>
+                      {recurring && (
+                        <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-green-600/70 mt-1.5 block">Recurring</span>
+                      )}
+                    </div>
                   </div>
                 </div>
                 <p className="font-sans text-[13px] font-light text-[#0A0A0A]/55 leading-[1.75]">{desc}</p>
