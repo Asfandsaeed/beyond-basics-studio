@@ -30,7 +30,7 @@ const assetRows = [
   { name: "Typography Specimen", detail: "Brand typefaces with specimen sheets and licensing info", size: "1.1 MB", downloadUrl: "/downloads/press-typography-specimen.pdf" },
   { name: "Photography – Office", detail: "High-res images of our San Francisco and London spaces", size: "38 MB", downloadUrl: "/downloads/press-office-photography.pdf" },
   { name: "Team Photography", detail: "Headshots of all six partners in consistent studio style", size: "22 MB", downloadUrl: "/downloads/press-team-photography.pdf" },
-  { name: "2024 Agency Profile", detail: "Two-page press-ready overview: stats, services, selected work", size: "3.8 MB", downloadUrl: "/downloads/press-agency-profile.pdf" },
+  { name: "2024 Agency Profile", detail: "20-page comprehensive profile: services, selected work, team, process & awards", size: "443 KB", downloadUrl: "/downloads/beyond-agency-profile-2024.pdf" },
 ];
 
 export default function PressPage() {
