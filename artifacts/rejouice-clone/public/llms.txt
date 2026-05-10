@@ -1,0 +1,214 @@
+# Beyond®
+
+> Creative Growth Agency — "Tomorrow's brands, today."™
+> Domain: beyondbasics.studio
+> Contact: hello@beyondbasics.studio
+> New business: hello@beyondbasics.studio
+> Careers: jobs@beyondbasics.studio
+> Press: press@beyondbasics.studio
+
+Beyond is a creative growth agency that partners with ambitious companies to transform them into category leaders. We combine brand strategy, identity design, web design & development, motion, 3D, and WebGL into end-to-end engagements. Our work has earned 50+ Awwwards, FWA, and CSS Design Awards.
+
+---
+
+## Services
+
+### Retainer — Embedded Creative Partner
+An ongoing partnership. Beyond becomes an embedded extension of your team, covering brand evolution, campaign work, product design, and continuous digital execution. Ideal for high-growth companies that need consistent, senior-level creative output without building an in-house team.
+
+### Project — Focused Transformation
+A scoped engagement with clear deliverables and timelines. Ideal for rebrands, website launches, campaign sprints, or product redesigns. We define the objective, assemble the right team, and execute with full accountability.
+
+**Service capabilities:**
+- Brand Strategy
+- Brand Identity & Visual Systems
+- Web Design & Development
+- Motion Design & Animation
+- 3D Visualization & WebGL
+- UI/UX Design
+- Design Systems
+- Art Direction
+- Photography & Video Direction
+- Sound Design
+- E-commerce UX
+- CRM Integration
+
+---
+
+## Selected Work (17 Projects)
+
+### Clear Street — Rebranding & Website (2024)
+Tagline: "Designed for the Future."
+A fintech website for capital markets infrastructure. Features a WebGL-rendered globe, animated pictograms inspired by airline visuals, and an iconic RGB Klein blue palette. Sets the benchmark for fintech design.
+Awards: Awwwards Site of the Day, Developer Award · CSS Design Awards Website of the Day · FWA of the Day
+Website: clearstreet.io
+URL: /work/clear-street
+
+### Remote — Website (2024)
+Tagline: "Stress-free global hiring."
+Rich 3D globes built entirely in-browser with WebGL, expressive illustrations, and photography masked by eight distinct key shapes. The globes react dynamically as users scroll.
+Awards: Awwwards Site of the Day, Honorable Mention · CSS Design Awards Special Kudos
+Website: remote.com
+URL: /work/remote
+
+### MultiversX — Naming, Rebranding & Website (2022)
+Tagline: "Scale across the Multiverse."
+Naming journey from brainstorming sessions to "Multivers elevated to the power of X." Three-font typography system, vibrant sub-brand colour palette, fully scalable design system spanning product UI, social, and keynote.
+Awards: Awwwards Site of the Day, Developer Award · CSS Design Awards Website of the Day · FWA of the Day
+Website: multiversx.com
+URL: /work/multiversx
+
+### Phive — Rebrand & Website (2025)
+Tagline: "Activate your senses."
+Typographic-first fitness club brand with variable typeface, custom video, bold timelapses, and 40-second visual punches per location. One of our sharpest builds.
+Awards: Awwwards Site of the Day · CSS Design Awards Website of the Day
+Website: phive.pt
+URL: /work/phive
+
+### Floema — Rebrand & Website (2026)
+Tagline: "Made for Life."
+230 web-optimised 3D product models with CRM integration, WebGL foliage, field recordings, and a header that evolves from snow to full greenery across seasons. Five product collections: Urban, Golf, rePlastic, Nature, Details.
+Awards: Awwwards Site of the Day · CSS Design Awards Website of the Day · FWA of the Day
+Website: floema.com
+URL: /work/floema
+
+### TUU — Rebrand (2026)
+Tagline: "Shaping Everyday Life."
+A variable identity system — the logo is never fixed, always anchored to edges, morphing into new configurations. Motion system across three compositional modes. Typography at core, motion as force.
+Awards: Awwwards Honorable Mention · CSS Design Awards Special Kudos
+URL: /work/tuu
+
+### Redacted RnD — Brand Identity (2026)
+Tagline: "Hidden in plain sight."
+Visual language inspired by redacted documents — rectangular forms shift, break, and recombine. Vector-based pattern scales across any format, balancing concealment and revelation.
+Client testimonial: "Working with Beyond was an exceptional experience. Their ability to translate ideas into clean, original work made them feel like an extension of our team." — Brooklyn Earick, Founder
+URL: /work/redacted
+
+### Grab&Go — Website (2024)
+Tagline: "Open 24 hours every day."
+A WebGL coffee cup as key scroll element, illustrated Portuguese city façade housing the store, interactive audio (bicycle click triggers sounds, city birds chirp), playful movable beach footer.
+Awards: Awwwards Honorable Mention · CSS Design Awards Special Kudos
+Website: grabandgo.pt
+URL: /work/grabgo
+
+### Flowcase — Rebranding (2024)
+Tagline: "Win bids with stellar resumes."
+SaaS resume platform rebranded around the concept of stacks. 'F' symbol merges flow of information with card stack metaphor. 2D-to-3D brand system, social motion graphics, from landing page to dashboard UI.
+Awards: Awwwards Honorable Mention
+Website: flowcase.com
+URL: /work/flowcase
+
+### Jeton — Rebrand & Website (2024)
+Tagline: "One wallet for all needs."
+Fintech wallet — Official Partner of West Ham United F.C. and Legia Warsaw. Coin-shaped brand symbol, vibrant orange-and-white identity, 3D brand universe with abstract money transaction metaphors.
+Awards: Awwwards Honorable Mention · CSS Design Awards Website of the Day
+Website: jeton.com
+URL: /work/jeton
+
+### Keikku — Branding & Website (2024)
+Tagline: "Don't miss a beat."
+Smart wireless stethoscope brand centred on sound waves and a whale-shaped waveform. WebGL exploded device view, footer waves that react to sound, on-scroll product narrative.
+Awards: Awwwards Honorable Mention · CSS Design Awards Special Kudos
+Website: keikku.com
+URL: /work/keikku
+
+### Kōzōwood — Website (2023)
+Tagline: "Made of Nature."
+Zen-like CLT timber homes website. Marimba-led sound design, nature field recordings, WebGL animations, world map wood construction data, drone footage from Comporta, Portugal.
+Awards: Awwwards Site of the Day, Developer Award · CSS Design Awards Website of the Day · FWA of the Day
+Website: kozowood.com
+URL: /work/kozowood
+
+### Talent Protocol — Rebranding (2023)
+Tagline: "The web3 professional network."
+Web3 professional identity platform. ASCII-figure persona system with custom avatars, token symbols, and ID colour palettes. Interconnected-shapes design system for seamless flow.
+Awards: Awwwards Honorable Mention
+Website: talentprotocol.com
+URL: /work/talent-protocol
+
+### Flecto — Rebranding & Website (2022)
+Tagline: "Unlock your rental business."
+SaaS rental platform pioneering a "flexible box" container technique — no masks, complex paths generated at render time using GSAP onUpdate. Unified design language from landing page to dashboard.
+Awards: Awwwards Site of the Day, Developer Award · CSS Design Awards Website of the Day · FWA of the Day
+Website: flecto.io
+URL: /work/flecto
+
+### Hematogenix — Rebrand & Website (2022)
+Tagline: "Health made simple."
+Cancer diagnostics lab. DNA-H spiral mark featured in LogoLounge Trends 2021. 3D visual universe inspired by blood components. Transparent video heroes (up to 4K on Apple Silicon).
+Awards: Awwwards Honorable Mention · CSS Design Awards Website of the Day · LogoLounge Trends 2021
+Website: hematogenix.com
+URL: /work/hematogenix
+
+### Speedy — Branding & Website (2021)
+Tagline: "Just like a bank, but better."
+Next-gen fintech. Minimal black Swiss-style website, 3D globe that changes colour by country, mobile-first scroll experience with micro-animations.
+Awards: Awwwards Site of the Day · CSS Design Awards Website of the Day · FWA of the Day
+Website: speedy.com
+URL: /work/speedy
+
+### Care to Beauty — Rebrand & Website (2021)
+Tagline: "All cosmetics at your Fingertips™."
+Europe's leading cosmetics e-commerce. Brand symbol from 'C' fingerprint outlines. Beatrice + New Kansas typography pair. Skin-tone-inspired warm palette. Google-first performance without sacrificing polish.
+Awards: Awwwards Honorable Mention, Mobile Excellence · CSS Design Awards Website of the Day
+Website: caretobeauty.com
+URL: /work/care-to-beauty
+
+---
+
+## Company
+
+### About Beyond
+Beyond is built around one founding partner — Guillaume Hamon — supported by a collective of seasoned creatives, strategists, growth marketers, and technologists. We deliberately avoid the bloated traditional agency model, giving clients direct access to senior global talent with no wasted layers.
+
+**Founding Partner:** Guillaume Hamon
+LinkedIn: linkedin.com/in/guillaumehamon/
+
+**Our belief:** "We've streamlined the outdated and layered agency model to give you direct access to the best global talent. No wasted time, no empty promises. Just impactful results."
+
+### Industries We Serve
+- Fintech & Financial Services
+- Web3 & Blockchain
+- SaaS & Product Companies
+- Health & Life Sciences
+- Consumer & Retail
+- Hospitality & Lifestyle
+- Sustainability & Impact
+
+### Partners Program
+Beyond runs a curated referral network. Approved partners earn a commission on every client they introduce. Apply at /partners.
+
+---
+
+## Site Map
+
+| Page | URL | Description |
+|---|---|---|
+| Home | / | Hero reel, selected work, manifesto, contact |
+| Work | /work | Full portfolio grid — all 17 projects |
+| Project detail | /work/:id | Case study with gallery, services, awards |
+| Services | /services | Retainer vs Project model, service list, case studies |
+| Industries | /industries | Sectors served with relevant project examples |
+| Journal | /journal | Long-form articles on brand strategy and design |
+| About | /about | Studio story, founder, team, values |
+| Partners | /partners | Referral partner program and application |
+| Careers | /careers | Open roles and application |
+| Contact | /contact | New business enquiry and office info |
+| Press | /press | Press kit and media contacts |
+| FAQ | /faq | Common questions answered |
+| Design for Good | /design-for-good | Pro-bono and impact work |
+| Legal | /legal | Privacy policy and terms |
+
+---
+
+## Awards & Recognition
+Beyond's portfolio has accumulated 50+ industry honours including:
+- Awwwards: Site of the Day, Developer Award, Honorable Mention, Mobile Excellence
+- The FWA: FWA of the Day
+- CSS Design Awards: Website of the Day, Special Kudos
+- LogoLounge: Trends Feature
+
+---
+
+## Technical Stack (site)
+This site is built with React, Vite, TypeScript, Tailwind CSS, GSAP (GreenSock), Lenis (smooth scroll), and SplitType for text animation.
