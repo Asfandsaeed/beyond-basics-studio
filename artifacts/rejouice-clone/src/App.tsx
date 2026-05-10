@@ -22,6 +22,15 @@ import ProcessPage from "@/pages/ProcessPage";
 import FAQPage from "@/pages/FAQPage";
 import PressPage from "@/pages/PressPage";
 import { PrivacyPolicyPage, TermsPage, RefundsPage, SitemapPage } from "@/pages/LegalPage";
+import PricingPage from "@/pages/PricingPage";
+import TestimonialsPage from "@/pages/TestimonialsPage";
+import AwardsPage from "@/pages/AwardsPage";
+import NewsletterPage from "@/pages/NewsletterPage";
+import ServiceDetailPage from "@/pages/ServiceDetailPage";
+import GlossaryPage from "@/pages/GlossaryPage";
+import GlossaryTermPage from "@/pages/GlossaryTermPage";
+import ResourcesPage from "@/pages/ResourcesPage";
+import ResourcePage from "@/pages/ResourcePage";
 import CustomCursor from "@/components/CustomCursor";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -82,6 +91,15 @@ function Router() {
       {/* Resources */}
       <Route path="/process" component={ProcessPage} />
       <Route path="/faq" component={FAQPage} />
+      <Route path="/pricing" component={PricingPage} />
+      <Route path="/testimonials" component={TestimonialsPage} />
+      <Route path="/awards" component={AwardsPage} />
+      <Route path="/newsletter" component={NewsletterPage} />
+      <Route path="/services/:slug" component={ServiceDetailPage} />
+      <Route path="/glossary/:id" component={GlossaryTermPage} />
+      <Route path="/glossary" component={GlossaryPage} />
+      <Route path="/resources/:slug" component={ResourcePage} />
+      <Route path="/resources" component={ResourcesPage} />
 
       {/* Legal */}
       <Route path="/privacy-policy" component={PrivacyPolicyPage} />

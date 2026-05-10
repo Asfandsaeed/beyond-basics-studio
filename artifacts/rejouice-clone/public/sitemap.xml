@@ -215,4 +215,174 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- New standalone pages -->
+  <url>
+    <loc>https://beyondbasics.studio/pricing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beyondbasics.studio/testimonials</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beyondbasics.studio/awards</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beyondbasics.studio/newsletter</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Service detail pages -->
+  <url>
+    <loc>https://beyondbasics.studio/services/brand-strategy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beyondbasics.studio/services/brand-identity</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beyondbasics.studio/services/digital-experience</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beyondbasics.studio/services/growth-marketing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beyondbasics.studio/services/content-creative</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Service × Industry pages -->
+  <url>
+    <loc>https://beyondbasics.studio/services/brand-strategy-for-fintech</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beyondbasics.studio/services/brand-identity-for-fintech</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beyondbasics.studio/services/brand-identity-for-saas</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beyondbasics.studio/services/brand-identity-for-web3</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beyondbasics.studio/services/brand-identity-for-startups</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beyondbasics.studio/services/digital-experience-for-fintech</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beyondbasics.studio/services/digital-experience-for-saas</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beyondbasics.studio/services/digital-experience-for-ecommerce</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beyondbasics.studio/services/brand-strategy-for-startups</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beyondbasics.studio/services/growth-marketing-for-saas</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beyondbasics.studio/services/brand-identity-for-healthcare</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beyondbasics.studio/services/digital-experience-for-web3</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beyondbasics.studio/services/growth-marketing-for-fintech</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beyondbasics.studio/services/brand-identity-for-ecommerce</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Glossary hub -->
+  <url>
+    <loc>https://beyondbasics.studio/glossary</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Glossary terms -->
+  <url><loc>https://beyondbasics.studio/glossary/brand-identity</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beyondbasics.studio/glossary/brand-strategy</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beyondbasics.studio/glossary/visual-identity</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beyondbasics.studio/glossary/logo-design</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beyondbasics.studio/glossary/design-system</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beyondbasics.studio/glossary/brand-guidelines</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beyondbasics.studio/glossary/typography-system</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beyondbasics.studio/glossary/color-system</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beyondbasics.studio/glossary/motion-identity</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beyondbasics.studio/glossary/verbal-identity</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beyondbasics.studio/glossary/brand-architecture</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beyondbasics.studio/glossary/brand-positioning</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beyondbasics.studio/glossary/brand-audit</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beyondbasics.studio/glossary/naming-strategy</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beyondbasics.studio/glossary/art-direction</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beyondbasics.studio/glossary/design-sprint</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beyondbasics.studio/glossary/brand-equity</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beyondbasics.studio/glossary/webgl</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beyondbasics.studio/glossary/ui-ux-design</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beyondbasics.studio/glossary/creative-direction</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beyondbasics.studio/glossary/brand-refresh</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beyondbasics.studio/glossary/rebranding</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beyondbasics.studio/glossary/growth-marketing</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beyondbasics.studio/glossary/go-to-market</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://beyondbasics.studio/glossary/digital-experience</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+
+  <!-- Resources hub -->
+  <url>
+    <loc>https://beyondbasics.studio/resources</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Resource guides -->
+  <url><loc>https://beyondbasics.studio/resources/rebranding-checklist</loc><changefreq>yearly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://beyondbasics.studio/resources/brand-brief-template</loc><changefreq>yearly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://beyondbasics.studio/resources/how-to-choose-a-brand-agency</loc><changefreq>yearly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://beyondbasics.studio/resources/brand-audit-guide</loc><changefreq>yearly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://beyondbasics.studio/resources/naming-guide</loc><changefreq>yearly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://beyondbasics.studio/resources/website-brief-template</loc><changefreq>yearly</changefreq><priority>0.8</priority></url>
+
 </urlset>
