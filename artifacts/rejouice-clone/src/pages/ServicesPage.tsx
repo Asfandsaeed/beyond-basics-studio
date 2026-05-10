@@ -2,26 +2,17 @@ import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "wouter";
+import { projects } from "../data/projects";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const CDN  = "https://images.prismic.io/rejouice-2024";
-const VCDN = "https://rejouice-2024.cdn.prismic.io/rejouice-2024";
+const BURO = "https://www.burocratik.com/_nuxt/image";
 
-// ── Asset map ────────────────────────────────────────────────────────────────
+// ── Asset map — Beyond/burocratik imagery only ────────────────────────────────
 const ASSETS = {
-  heroVideo: `${VCDN}/Z2BbT5bqstJ98kk6_REJOUICE-PORTFOLIO-LOOP-PROJECTS.mp4`,
-  // Services-page specific images
-  workspace:  `${CDN}/Z0csi5bqstJ970gh_-1x-11.jpg?auto=format,compress&w=1400`,
-  teamShot:   `${CDN}/Z0csjJbqstJ970gi_2_xezmQUHZZozH1L4Cv1VKvg-11.jpg?auto=format,compress&w=1400`,
-  portrait1:  `${CDN}/Z0csjpbqstJ970gk_moxionpower.2023.04.portraits-1291.jpg?auto=format,compress&w=1400`,
-  portrait2:  `${CDN}/Z0csjZbqstJ970gj_abdul-wahid-ovaice-profile-picture3.jpg?auto=format,compress&w=1400`,
-  // Project hero images for case study previews
-  tensor:     `${CDN}/abAKaVxvIZEnjhr7_Hero-CGI.jpg?auto=format,compress&w=1600`,
-  rivian:     `${CDN}/Z1r5Y5bqstJ98aaF_rivian.jpg?auto=format,compress&w=1600`,
-  oura:       `${CDN}/Z2AYnZbqstJ98i2G_oura-abdul-ovaice-photography-cd-21.png?auto=format,compress&w=1600`,
-  moxion:     `${CDN}/Z0csjpbqstJ970gk_moxionpower.2023.04.portraits-1291.jpg?auto=format,compress&w=1600`,
-  office:     `${CDN}/Z2GNNpbqstJ98mqU_6384a19b-fa1c-4ad1-aae0-e29e127ebeef_san-diego-office.jpg.jpg?auto=format,compress&w=1600`,
+  // Engagement model thumbnails
+  teamShot: `${BURO}/665f58.auto`,   // Floema — clean workspace feel
+  portrait: `${BURO}/c40aba.auto`,   // Phive — bold portrait
 };
 
 // ── Data ─────────────────────────────────────────────────────────────────────
@@ -32,8 +23,8 @@ const services = [
     tagline: "Clarity before creation.",
     desc: "We diagnose where your brand stands and chart the path to where it needs to go. Sharp positioning, a differentiated narrative, and a roadmap to lead your category.",
     items: ["Brand Audit", "Qualitative Research", "Quantitative Research", "Discovery Workshop", "Positioning", "Brand Architecture", "Naming", "Messaging Framework"],
-    img: ASSETS.rivian,
-    caseStudy: { name: "Rivian", tag: "Brand Growth", id: "rivian" },
+    img: `${BURO}/482d5f.auto`,
+    caseStudy: { name: "Clear Street", tag: "Rebranding & Website", id: "clear-street" },
   },
   {
     num: "02",
@@ -41,8 +32,8 @@ const services = [
     tagline: "Identity that earns attention.",
     desc: "We design brands that stand apart. Visual identity, typography, motion, and tone — every element purpose-built to make your brand unmistakable and unforgettable.",
     items: ["Visual Identity", "Logo Design", "Typography System", "Color System", "Brand Guidelines", "Art Direction", "Motion Identity", "Verbal Identity"],
-    img: ASSETS.tensor,
-    caseStudy: { name: "Tensor", tag: "Brand Identity · CGI", id: "tensor" },
+    img: `${BURO}/7ead07.auto`,
+    caseStudy: { name: "MultiversX", tag: "Naming, Rebranding & Website", id: "multiversx" },
   },
   {
     num: "03",
@@ -50,8 +41,8 @@ const services = [
     tagline: "Websites that convert and inspire.",
     desc: "We design and build digital products that feel as premium as the brands they represent. From landing pages to full product platforms — performance and craft in equal measure.",
     items: ["Web Design", "Web Development", "Product Design", "Motion Design & 3D", "Campaign Creative", "UX Strategy", "Interaction Design", "No-code Platforms"],
-    img: ASSETS.oura,
-    caseStudy: { name: "Oura Ring", tag: "Digital Experience", id: "oura-ring" },
+    img: `${BURO}/455aa5.auto`,
+    caseStudy: { name: "Remote", tag: "Website", id: "remote" },
   },
   {
     num: "04",
@@ -59,8 +50,8 @@ const services = [
     tagline: "Brand-led growth that compounds.",
     desc: "We build the systems and content that turn your brand into a growth engine. Strategy, creative, and distribution — aligned to drive results that last beyond any single campaign.",
     items: ["Growth Strategy", "Performance Creative", "SEO & Content Strategy", "Analytics & Attribution", "Paid Media Creative", "Email Marketing", "Social Strategy", "Go-To-Market"],
-    img: ASSETS.workspace,
-    caseStudy: { name: "Moxion Power", tag: "Brand Growth", id: "moxion-power" },
+    img: `${BURO}/278ec4.auto`,
+    caseStudy: { name: "Phive", tag: "Rebrand & Website", id: "phive" },
   },
   {
     num: "05",
@@ -68,8 +59,8 @@ const services = [
     tagline: "Content that earns its place.",
     desc: "We produce content that doesn't feel like content — photography, video, copy, and creative assets that carry your brand forward across every touchpoint and channel.",
     items: ["Brand Photography", "Video Production", "Copywriting", "Social Content", "Campaign Production", "CGI & 3D Visualization", "Editorial Design", "Podcast & Audio"],
-    img: ASSETS.portrait1,
-    caseStudy: { name: "Moxion Power", tag: "Brand Photography", id: "moxion-power" },
+    img: `${BURO}/dc758e.auto`,
+    caseStudy: { name: "Floema", tag: "Rebrand & Website", id: "floema" },
   },
 ];
 
@@ -88,15 +79,15 @@ const models = [
     duration: "Ongoing",
     desc: "An ongoing strategic partnership for companies ready to go all-in on brand-led growth. We become a true extension of your founding team.",
     deliverables: ["Full Brand System", "Digital Products", "Growth Strategy", "Creative Direction"],
-    img: ASSETS.portrait2,
+    img: ASSETS.portrait,
   },
 ];
 
-const caseStudies = [
-  { name: "Tensor",    tag: "Brand Identity · CGI", img: ASSETS.tensor, id: "tensor",    video: `${VCDN}/aJfd1KTt2nPbaHC__TENSOR-CASESTUDY-01.mp4` },
-  { name: "Rivian",   tag: "Brand Growth",          img: ASSETS.rivian, id: "rivian",   video: `${VCDN}/aFMbCbNJEFaPYFQx_RIVIAN-CASESTUDY-01.mp4` },
-  { name: "Oura Ring",tag: "Digital Experience",    img: ASSETS.oura,   id: "oura-ring",video: `${VCDN}/Z3xbLZbqstJ99GKJ_01-OURA-Video2.mp4` },
-];
+// Pull 3 showcase projects from our real data
+const caseStudyProjects = ["clear-street", "remote", "multiversx"].map((id) => {
+  const p = projects.find((x) => x.id === id)!;
+  return { id: p.id, name: p.title, tag: p.category, img: p.coverImage };
+});
 
 // ── Sub-components ────────────────────────────────────────────────────────────
 function ServiceRow({
@@ -190,28 +181,13 @@ function ServiceRow({
   );
 }
 
-function CaseCard({ c }: { c: typeof caseStudies[0] }) {
-  const [hovered, setHovered] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
+type CaseEntry = { id: string; name: string; tag: string; img: string };
 
-  const handleEnter = () => {
-    setHovered(true);
-    videoRef.current?.play().catch(() => {});
-  };
-  const handleLeave = () => {
-    setHovered(false);
-    if (videoRef.current) {
-      videoRef.current.pause();
-      videoRef.current.currentTime = 0;
-    }
-  };
-
+function CaseCard({ c }: { c: CaseEntry }) {
   return (
     <Link
       href={`/work/${c.id}`}
       className="case-card group block relative overflow-hidden bg-[#111]"
-      onMouseEnter={handleEnter}
-      onMouseLeave={handleLeave}
     >
       <div className="aspect-[4/3] relative overflow-hidden">
         <img
@@ -219,17 +195,6 @@ function CaseCard({ c }: { c: typeof caseStudies[0] }) {
           alt={c.name}
           className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
         />
-        {c.video && (
-          <video
-            ref={videoRef}
-            src={c.video}
-            muted
-            loop
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
-            style={{ opacity: hovered ? 1 : 0 }}
-          />
-        )}
       </div>
       <div className="flex items-center justify-between px-5 py-4">
         <div>
@@ -308,14 +273,11 @@ export default function ServicesPage() {
           One mission. Two engagement models. Undeniable transformation and growth.
         </h1>
 
-        {/* Hero video strip */}
+        {/* Hero image strip */}
         <div className="mt-16 w-full aspect-[21/6] overflow-hidden rounded-sm bg-[#111]">
-          <video
-            src={ASSETS.heroVideo}
-            autoPlay
-            muted
-            loop
-            playsInline
+          <img
+            src={`${BURO}/508c65.auto`}
+            alt="Beyond studio work"
             className="w-full h-full object-cover object-center"
           />
         </div>
@@ -411,7 +373,7 @@ export default function ServicesPage() {
           </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {caseStudies.map((c) => (
+          {caseStudyProjects.map((c) => (
             <CaseCard key={c.id} c={c} />
           ))}
         </div>
@@ -442,9 +404,9 @@ export default function ServicesPage() {
       </section>
 
       {/* ══ 6. OFFICE IMAGE ════════════════════════════════════════════════ */}
-      <div className="w-full aspect-[16/5] overflow-hidden">
+      <div className="w-full aspect-[16/5] md:aspect-[16/5] aspect-[4/3] overflow-hidden">
         <img
-          src={ASSETS.office}
+          src={`${BURO}/508c65.auto`}
           alt="Beyond studio"
           className="w-full h-full object-cover object-center"
         />
