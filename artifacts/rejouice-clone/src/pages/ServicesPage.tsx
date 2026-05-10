@@ -9,8 +9,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 // ── Asset map ─────────────────────────────────────────────────────────────────
 const ASSETS = {
-  teamShot: "https://mir-s3-cdn-cf.behance.net/projects/original/edd03e218139349.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg",
-  portrait: "https://mir-s3-cdn-cf.behance.net/projects/404/332bd9247049289.Y3JvcCw0MTYwLDMyNTMsMCw5Mg.jpg",
+  teamShot: "https://cdn.sanity.io/images/zksivtxz/production/6050c7bdf3bee7334eb7f07c498282e95b567c25-1080x1080.jpg",
+  portrait: "https://cdn.sanity.io/images/zksivtxz/production/f81eb671f4ffc4eee3da98dfdbb7f8c8d895800b-1027x1027.jpg",
 };
 
 // ── Data ─────────────────────────────────────────────────────────────────────
@@ -22,7 +22,7 @@ const services = [
     tagline: "Clarity before creation.",
     desc: "We diagnose where your brand stands and chart the path to where it needs to go. Sharp positioning, a differentiated narrative, and a roadmap to lead your category.",
     items: ["Brand Audit", "Qualitative Research", "Quantitative Research", "Discovery Workshop", "Positioning", "Brand Architecture", "Naming", "Messaging Framework"],
-    img: "https://mir-s3-cdn-cf.behance.net/projects/404/c5843a220845201.Y3JvcCwxNzA1LDEzMzQsMTQ3LDA.png",
+    img: "https://cdn.sanity.io/images/zksivtxz/production/a5b674fefa860f0864baaf56bfbc2bb526b263fb-1180x720.jpg",
     caseStudy: { name: "Clear Street", tag: "Rebranding & Website", id: "clear-street" },
   },
   {
@@ -30,9 +30,9 @@ const services = [
     slug: "brand-identity",
     name: "Brand Identity",
     tagline: "Identity that earns attention.",
-    desc: "We design brands that stand apart. Visual identity, typography, motion, and tone — every element purpose-built to make your brand unmistakable and unforgettable.",
-    items: ["Visual Identity", "Logo Design", "Typography System", "Color System", "Brand Guidelines", "Art Direction", "Motion Identity", "Verbal Identity"],
-    img: "https://mir-s3-cdn-cf.behance.net/projects/404/5542c1244023205.Y3JvcCw4MDgsNjMyLDAsMA.png",
+    desc: "We design brands that stand apart. Not just logos — complete visual systems built to work at every size, on every surface, in every context.",
+    items: ["Logo System", "Visual Identity", "Typography System", "Colour System", "Brand Guidelines", "Motion Identity", "Graphic Language", "Art Direction"],
+    img: "https://cdn.sanity.io/images/zksivtxz/production/195dabd5e5757919b90b5d5102a477117981912e-1180x720.jpg",
     caseStudy: { name: "MultiversX", tag: "Naming, Rebranding & Website", id: "multiversx" },
   },
   {
@@ -42,7 +42,7 @@ const services = [
     tagline: "Websites that convert and inspire.",
     desc: "We design and build digital products that feel as premium as the brands they represent. From landing pages to full product platforms — performance and craft in equal measure.",
     items: ["Web Design", "Web Development", "Product Design", "Motion Design & 3D", "Campaign Creative", "UX Strategy", "Interaction Design", "No-code Platforms"],
-    img: "https://mir-s3-cdn-cf.behance.net/projects/404/07caed248673979.Y3JvcCwyNDI0LDE4OTYsMCww.png",
+    img: "https://cdn.sanity.io/images/zksivtxz/production/51d9e034ae6b13b267034a18f3b0a3d8815d27ef-1180x720.jpg",
     caseStudy: { name: "Remote", tag: "Website", id: "remote" },
   },
   {
@@ -52,7 +52,7 @@ const services = [
     tagline: "Brand-led growth that compounds.",
     desc: "We build the systems and content that turn your brand into a growth engine. Strategy, creative, and distribution — aligned to drive results that last beyond any single campaign.",
     items: ["Growth Strategy", "Performance Creative", "SEO & Content Strategy", "Analytics & Attribution", "Paid Media Creative", "Email Marketing", "Social Strategy", "Go-To-Market"],
-    img: "https://mir-s3-cdn-cf.behance.net/projects/404/3877bf243467103.Y3JvcCwxMTkyLDkzMywxMDMsMA.png",
+    img: "https://cdn.sanity.io/images/zksivtxz/production/2405f85e088f3e9b8a28f8c364fa64a88c75bff5-1180x720.jpg",
     caseStudy: { name: "Phive", tag: "Rebrand & Website", id: "phive" },
   },
   {
@@ -62,7 +62,7 @@ const services = [
     tagline: "Content that earns its place.",
     desc: "We produce content that doesn't feel like content — photography, video, copy, and creative assets that carry your brand forward across every touchpoint and channel.",
     items: ["Brand Photography", "Video Production", "Copywriting", "Social Content", "Campaign Production", "CGI & 3D Visualization", "Editorial Design", "Podcast & Audio"],
-    img: "https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/10190a217782349.6796a530a3cec.png",
+    img: "https://cdn.sanity.io/images/zksivtxz/production/43d9fe391c3de48c4f41dee41fd3a8c97f6540fa-1180x720.jpg",
     caseStudy: { name: "Floema", tag: "Rebrand & Website", id: "floema" },
   },
 ];
@@ -293,7 +293,7 @@ export default function ServicesPage() {
         {/* Hero image strip */}
         <div className="mt-16 w-full aspect-[21/6] overflow-hidden rounded-sm bg-[#111]">
           <img
-            src="https://mir-s3-cdn-cf.behance.net/projects/original/edd03e218139349.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg"
+            src="https://cdn.sanity.io/images/zksivtxz/production/28820f9c8e82e134dc7dd7d7e403da3559edcb62-1080x1080.jpg"
             alt="Beyond studio work"
             className="w-full h-full object-cover object-center"
           />
@@ -423,7 +423,7 @@ export default function ServicesPage() {
       {/* ══ 6. OFFICE IMAGE ════════════════════════════════════════════════ */}
       <div className="w-full aspect-[16/5] md:aspect-[16/5] aspect-[4/3] overflow-hidden">
         <img
-          src="https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/57e75e148373615.62d4db168e712.jpg"
+          src="https://cdn.sanity.io/images/zksivtxz/production/28820f9c8e82e134dc7dd7d7e403da3559edcb62-1080x1080.jpg"
           alt="Beyond studio"
           className="w-full h-full object-cover object-center"
         />

@@ -153,9 +153,9 @@ export default function TestimonialsPage() {
           <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/30 mb-12 reveal">The work behind the words</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {[
-              { id: "clear-street", title: "Clear Street", img: "https://mir-s3-cdn-cf.behance.net/projects/404/c5843a220845201.Y3JvcCwxNzA1LDEzMzQsMTQ3LDA.png" },
-              { id: "multiversx", title: "MultiversX", img: "https://mir-s3-cdn-cf.behance.net/projects/404/5542c1244023205.Y3JvcCw4MDgsNjMyLDAsMA.png" },
-              { id: "floema", title: "Floema", img: "https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/10190a217782349.6796a530a3cec.png" },
+              { id: "clear-street", title: "Clear Street", img: "https://cdn.sanity.io/images/zksivtxz/production/a5b674fefa860f0864baaf56bfbc2bb526b263fb-1180x720.jpg" },
+              { id: "multiversx", title: "MultiversX", img: "https://cdn.sanity.io/images/zksivtxz/production/195dabd5e5757919b90b5d5102a477117981912e-1180x720.jpg" },
+              { id: "floema", title: "Floema", img: "https://cdn.sanity.io/images/zksivtxz/production/43d9fe391c3de48c4f41dee41fd3a8c97f6540fa-1180x720.jpg" },
             ].map((p) => (
               <Link
                 key={p.id}

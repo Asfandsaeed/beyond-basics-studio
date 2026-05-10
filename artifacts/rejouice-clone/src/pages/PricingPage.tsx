@@ -37,7 +37,7 @@ const engagements = [
       "You're at a growth inflection point (funding, launch, pivot)",
       "You want to validate the relationship before a longer engagement",
     ],
-    img: "https://mir-s3-cdn-cf.behance.net/projects/original/edd03e218139349.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg",
+    img: "https://cdn.sanity.io/images/zksivtxz/production/28820f9c8e82e134dc7dd7d7e403da3559edcb62-1080x1080.jpg",
   },
   {
     num: "02",
@@ -50,7 +50,7 @@ const engagements = [
       "You want direct access to senior creative leadership at all times",
       "You're building a category-leading brand over the long term",
     ],
-    img: "https://mir-s3-cdn-cf.behance.net/projects/404/332bd9247049289.Y3JvcCw0MTYwLDMyNTMsMCw5Mg.jpg",
+    img: "https://cdn.sanity.io/images/zksivtxz/production/f81eb671f4ffc4eee3da98dfdbb7f8c8d895800b-1027x1027.jpg",
   },
 ];
 

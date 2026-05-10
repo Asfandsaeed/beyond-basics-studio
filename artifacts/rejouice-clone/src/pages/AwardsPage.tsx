@@ -32,25 +32,25 @@ const bodies = [
     name: "Awwwards",
     desc: "The global benchmark for web design excellence — judged by an international jury of leading designers and developers.",
     count: awardsData.filter((a) => a.award.startsWith("Awwwards")).length,
-    img: "https://mir-s3-cdn-cf.behance.net/projects/404/c5843a220845201.Y3JvcCwxNzA1LDEzMzQsMTQ3LDA.png",
+    img: "https://cdn.sanity.io/images/zksivtxz/production/a5b674fefa860f0864baaf56bfbc2bb526b263fb-1180x720.jpg",
   },
   {
     name: "The FWA",
     desc: "Founded in 2000, The FWA recognises innovation in interactive design and development across the globe.",
     count: awardsData.filter((a) => a.award.startsWith("The FWA")).length,
-    img: "https://mir-s3-cdn-cf.behance.net/projects/404/5542c1244023205.Y3JvcCw4MDgsNjMyLDAsMA.png",
+    img: "https://cdn.sanity.io/images/zksivtxz/production/195dabd5e5757919b90b5d5102a477117981912e-1180x720.jpg",
   },
   {
     name: "CSS Design Awards",
     desc: "International recognition for exceptional web design, UX, and UI craft — awarded daily by a global panel.",
     count: awardsData.filter((a) => a.award.startsWith("CSS Design Awards")).length,
-    img: "https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/10190a217782349.6796a530a3cec.png",
+    img: "https://cdn.sanity.io/images/zksivtxz/production/43d9fe391c3de48c4f41dee41fd3a8c97f6540fa-1180x720.jpg",
   },
   {
     name: "LogoLounge",
     desc: "The world's most respected logo design research publication — featuring the most significant logo design trends annually.",
     count: awardsData.filter((a) => a.award.startsWith("LogoLounge")).length,
-    img: "https://mir-s3-cdn-cf.behance.net/projects/404/2f1078243332203.Y3JvcCwyMDg1LDE2MzAsMCwxOTY.jpg",
+    img: "https://cdn.sanity.io/images/zksivtxz/production/a2cdc528da6a57c2b6bbefdd87d628763e338bcc-1180x720.jpg",
   },
 ];
 

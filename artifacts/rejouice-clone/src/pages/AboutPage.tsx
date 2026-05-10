@@ -11,18 +11,18 @@ const VCDN = "https://rejouice-2024.cdn.prismic.io/rejouice-2024";
 
 const ASSETS = {
   portfolioVideo: `${VCDN}/Z2BbT5bqstJ98kk6_REJOUICE-PORTFOLIO-LOOP-PROJECTS.mp4`,
-  guillaume:   "https://mir-s3-cdn-cf.behance.net/projects/404/332bd9247049289.Y3JvcCw0MTYwLDMyNTMsMCw5Mg.jpg",
-  jack:        "https://mir-s3-cdn-cf.behance.net/projects/404/e7a39d240055097.Y3JvcCwzODM1LDMwMDAsMTgwLDA.jpg",
-  gabriel:     "https://mir-s3-cdn-cf.behance.net/projects/404/aeeb2894949381.Y3JvcCwzMDAwLDIzNDYsMCwyOQ.jpg",
-  jeffrey:     "https://mir-s3-cdn-cf.behance.net/projects/404/c55abe212384375.Y3JvcCwxMjc4LDEwMDAsMTA3LDA.jpg",
-  clement:     "https://mir-s3-cdn-cf.behance.net/projects/404/aec9b8187144685.Y3JvcCwxMzgwLDEwODAsMCww.png",
-  jeanmichel:  "https://mir-s3-cdn-cf.behance.net/projects/404/5542c1244023205.Y3JvcCw4MDgsNjMyLDAsMA.png",
-  office:      "https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/57e75e148373615.62d4db168e712.jpg",
-  mask1:       "https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/57e75e148373615.62d4db168e712.jpg",
-  mask2:       "https://mir-s3-cdn-cf.behance.net/projects/original/edd03e218139349.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg",
-  mask3:       "https://mir-s3-cdn-cf.behance.net/projects/404/3ac091217373107.Y3JvcCwyNDI0LDE4OTYsMCww.jpg",
-  mask4:       "https://mir-s3-cdn-cf.behance.net/projects/404/07caed248673979.Y3JvcCwyNDI0LDE4OTYsMCww.png",
-  mask5:       "https://mir-s3-cdn-cf.behance.net/projects/404/3ac091217373107.Y3JvcCwyNDI0LDE4OTYsMCww.jpg",
+  guillaume:   "https://cdn.sanity.io/images/zksivtxz/production/f81eb671f4ffc4eee3da98dfdbb7f8c8d895800b-1027x1027.jpg",
+  jack:        "https://cdn.sanity.io/images/zksivtxz/production/31cd18479fde281c4b6a54276b18dc347dcdfa75-1027x1027.jpg",
+  gabriel:     "https://cdn.sanity.io/images/zksivtxz/production/4b204a948321c1cb7d3fbfad832d6ec9997bbe3a-1026x1026.jpg",
+  jeffrey:     "https://cdn.sanity.io/images/zksivtxz/production/db9d799c0c44d370068118915f6cd31b31ebbc2c-1027x1027.jpg",
+  clement:     "https://cdn.sanity.io/images/zksivtxz/production/6a8576e25929e0f693ceb40e64e0ec56d07b674e-1080x1080.jpg",
+  jeanmichel:  "https://cdn.sanity.io/images/zksivtxz/production/48a694fb13bbd8b3c37037aecfdce3ac244b953c-1080x1080.jpg",
+  office:      "https://cdn.sanity.io/images/zksivtxz/production/28820f9c8e82e134dc7dd7d7e403da3559edcb62-1080x1080.jpg",
+  mask1:       "https://cdn.sanity.io/images/zksivtxz/production/195dabd5e5757919b90b5d5102a477117981912e-1180x720.jpg",
+  mask2:       "https://cdn.sanity.io/images/zksivtxz/production/51d9e034ae6b13b267034a18f3b0a3d8815d27ef-1180x720.jpg",
+  mask3:       "https://cdn.sanity.io/images/zksivtxz/production/a5b674fefa860f0864baaf56bfbc2bb526b263fb-1180x720.jpg",
+  mask4:       "https://cdn.sanity.io/images/zksivtxz/production/43d9fe391c3de48c4f41dee41fd3a8c97f6540fa-1180x720.jpg",
+  mask5:       "https://cdn.sanity.io/images/zksivtxz/production/e337c6f26ce31e0404ec5ceff223fedf0c33d4eb-1080x1080.jpg",
 };
 
 const partners = [

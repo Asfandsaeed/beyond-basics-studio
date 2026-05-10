@@ -164,7 +164,7 @@ export default function ResourcesPage() {
             </Link>
           </div>
           <div className="reveal aspect-[4/3] overflow-hidden rounded-sm">
-            <img src="https://mir-s3-cdn-cf.behance.net/projects/original/edd03e218139349.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg" alt="Brand strategy thinking" className="w-full h-full object-cover" />
+            <img src="https://cdn.sanity.io/images/zksivtxz/production/28820f9c8e82e134dc7dd7d7e403da3559edcb62-1080x1080.jpg" alt="Brand strategy thinking" className="w-full h-full object-cover" />
           </div>
         </div>
       </section>

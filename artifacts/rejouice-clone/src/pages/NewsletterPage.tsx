@@ -6,7 +6,7 @@ import { useSeoMeta } from "@/hooks/useSeoMeta";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const HERO_IMG = "https://mir-s3-cdn-cf.behance.net/projects/original/edd03e218139349.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg";
+const HERO_IMG = "https://cdn.sanity.io/images/zksivtxz/production/28820f9c8e82e134dc7dd7d7e403da3559edcb62-1080x1080.jpg";
 
 const issues = [
   {
