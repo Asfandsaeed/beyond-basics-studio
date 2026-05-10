@@ -4,11 +4,18 @@ import { Link, useLocation } from "wouter";
 const footerNav = {
   Work: [
     { label: "Selected Work", href: "/work" },
-    { label: "Services", href: "/services" },
     { label: "Industries", href: "/industries" },
     { label: "Our Process", href: "/process" },
     { label: "Awards", href: "/awards" },
     { label: "Partners & Affiliates", href: "/partners" },
+  ],
+  Services: [
+    { label: "All Services", href: "/services" },
+    { label: "Brand Strategy", href: "/services/brand-strategy" },
+    { label: "Brand Identity", href: "/services/brand-identity" },
+    { label: "Digital Experience", href: "/services/digital-experience" },
+    { label: "Growth Marketing", href: "/services/growth-marketing" },
+    { label: "Content & Creative", href: "/services/content-creative" },
   ],
   Company: [
     { label: "About", href: "/about" },
@@ -116,7 +123,7 @@ export default function Footer() {
         </div>
 
         {/* ── Nav columns ────────────────────────────────────────────────── */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-10 pt-14">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-10 pt-14">
 
           {/* Nav link groups */}
           {Object.entries(footerNav).map(([group, links]) => (

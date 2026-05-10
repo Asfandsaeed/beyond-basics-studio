@@ -1,5 +1,30 @@
 import React, { useEffect, useRef } from "react";
-import { useRoute, useLocation } from "wouter";
+import { Link, useRoute, useLocation } from "wouter";
+
+const SERVICE_SLUG_MAP: Record<string, string> = {
+  "Brand Strategy": "brand-strategy",
+  "Brand Identity": "brand-identity",
+  "Digital Experience": "digital-experience",
+  "Growth Marketing": "growth-marketing",
+  "Content & Creative": "content-creative",
+  "Visual Identity": "brand-identity",
+  "Logo Design": "brand-identity",
+  "Naming": "brand-strategy",
+  "Rebranding": "brand-identity",
+  "Web Design": "digital-experience",
+  "Web Development": "digital-experience",
+  "Website": "digital-experience",
+  "Motion & 3D": "digital-experience",
+  "Motion Design & 3D": "digital-experience",
+  "CGI & 3D": "content-creative",
+  "Photography": "content-creative",
+  "Video Production": "content-creative",
+  "Copywriting": "content-creative",
+  "Performance Marketing": "growth-marketing",
+  "Growth Strategy": "growth-marketing",
+  "SEO & Content": "growth-marketing",
+  "Email Marketing": "growth-marketing",
+};
 import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -206,12 +231,24 @@ export default function ProjectPage() {
               Services
             </p>
             <ul className="flex flex-col gap-3">
-              {project.services.map((s) => (
-                <li key={s} className="flex items-start gap-3">
-                  <span className="w-1 h-1 rounded-full bg-[#0A0A0A]/30 mt-2 shrink-0" />
-                  <span className="font-sans text-[#0A0A0A]/80 text-sm leading-relaxed">{s}</span>
-                </li>
-              ))}
+              {project.services.map((s) => {
+                const slug = SERVICE_SLUG_MAP[s];
+                return (
+                  <li key={s} className="flex items-start gap-3">
+                    <span className="w-1 h-1 rounded-full bg-[#0A0A0A]/30 mt-2 shrink-0" />
+                    {slug ? (
+                      <Link
+                        href={`/services/${slug}`}
+                        className="font-sans text-[#0A0A0A]/80 text-sm leading-relaxed hover:text-[#0A0A0A] underline underline-offset-4 decoration-[#0A0A0A]/20 hover:decoration-[#0A0A0A]/60 transition-colors"
+                      >
+                        {s}
+                      </Link>
+                    ) : (
+                      <span className="font-sans text-[#0A0A0A]/80 text-sm leading-relaxed">{s}</span>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>

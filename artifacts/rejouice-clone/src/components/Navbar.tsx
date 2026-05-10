@@ -13,6 +13,15 @@ const primaryLinks = [
   { label: "Journal", href: "/journal" },
 ];
 
+const serviceLinks = [
+  { label: "All Services", href: "/services" },
+  { label: "Brand Strategy", href: "/services/brand-strategy" },
+  { label: "Brand Identity", href: "/services/brand-identity" },
+  { label: "Digital Experience", href: "/services/digital-experience" },
+  { label: "Growth Marketing", href: "/services/growth-marketing" },
+  { label: "Content & Creative", href: "/services/content-creative" },
+];
+
 const companyLinks = [
   { label: "About", href: "/about" },
   { label: "Careers", href: "/careers" },
@@ -29,8 +38,10 @@ export default function Navbar() {
   const [location] = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropOpen, setDropOpen] = useState(false);
+  const [servDropOpen, setServDropOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const dropRef = useRef<HTMLDivElement>(null);
+  const servDropRef = useRef<HTMLDivElement>(null);
 
   const isHomePage = location === "/";
 
@@ -72,17 +83,18 @@ export default function Navbar() {
     return () => cancelAnimationFrame(raf);
   }, [isHomePage]);
 
-  // Close dropdown on outside click
+  // Close dropdowns on outside click
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (dropRef.current && !dropRef.current.contains(e.target as Node)) setDropOpen(false);
+      if (servDropRef.current && !servDropRef.current.contains(e.target as Node)) setServDropOpen(false);
     };
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
-  // Close dropdown on route change
-  useEffect(() => { setDropOpen(false); setMenuOpen(false); }, [location]);
+  // Close dropdowns on route change
+  useEffect(() => { setDropOpen(false); setServDropOpen(false); setMenuOpen(false); }, [location]);
 
   // On dark pages: always white text, dark blurred background
   // On home page before scroll: white text, transparent background
@@ -102,6 +114,7 @@ export default function Navbar() {
     bgClass = "bg-transparent";
   }
 
+  const isServicesActive = serviceLinks.some((l) => location === l.href);
   const isCompanyActive = companyLinks.some((l) => location === l.href);
 
   return (
@@ -123,7 +136,44 @@ export default function Navbar() {
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-9" data-testid="nav-links">
           {primaryLinks.map((link) => {
-            const isActive = location === link.href;
+            const isActive = location === link.href || (link.label === "Services" && isServicesActive);
+
+            if (link.label === "Services") {
+              return (
+                <div key="services" ref={servDropRef} className="relative">
+                  <button
+                    onClick={() => setServDropOpen((v) => !v)}
+                    data-testid="link-services"
+                    className={`flex items-center gap-1.5 font-sans text-sm transition-all duration-200 ${textColor} ${
+                      isServicesActive ? "opacity-100" : `${mutedColor} ${hoverColor}`
+                    }`}
+                  >
+                    Services
+                    <ChevronDown
+                      size={13}
+                      strokeWidth={1.5}
+                      className={`transition-transform duration-200 ${servDropOpen ? "rotate-180" : ""}`}
+                    />
+                  </button>
+                  {servDropOpen && (
+                    <div className="absolute top-full left-0 mt-3 w-52 bg-white border border-[#0A0A0A]/8 rounded-sm shadow-lg overflow-hidden z-50">
+                      {serviceLinks.map((sl) => (
+                        <Link
+                          key={sl.href}
+                          href={sl.href}
+                          className={`block px-5 py-3.5 font-sans text-sm transition-colors duration-150 hover:bg-[#F5F4F0] ${
+                            location === sl.href ? "text-[#0A0A0A]" : "text-[#0A0A0A]/55"
+                          }${sl.href === "/services" ? " border-b border-[#0A0A0A]/8 font-normal" : ""}`}
+                        >
+                          {sl.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            }
+
             return (
               <Link
                 key={link.href}

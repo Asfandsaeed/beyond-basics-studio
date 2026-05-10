@@ -20,6 +20,7 @@ const ASSETS = {
 const services = [
   {
     num: "01",
+    slug: "brand-strategy",
     name: "Brand Strategy",
     tagline: "Clarity before creation.",
     desc: "We diagnose where your brand stands and chart the path to where it needs to go. Sharp positioning, a differentiated narrative, and a roadmap to lead your category.",
@@ -29,6 +30,7 @@ const services = [
   },
   {
     num: "02",
+    slug: "brand-identity",
     name: "Brand Identity",
     tagline: "Identity that earns attention.",
     desc: "We design brands that stand apart. Visual identity, typography, motion, and tone — every element purpose-built to make your brand unmistakable and unforgettable.",
@@ -38,6 +40,7 @@ const services = [
   },
   {
     num: "03",
+    slug: "digital-experience",
     name: "Digital Experience",
     tagline: "Websites that convert and inspire.",
     desc: "We design and build digital products that feel as premium as the brands they represent. From landing pages to full product platforms — performance and craft in equal measure.",
@@ -47,6 +50,7 @@ const services = [
   },
   {
     num: "04",
+    slug: "growth-marketing",
     name: "Growth Marketing",
     tagline: "Brand-led growth that compounds.",
     desc: "We build the systems and content that turn your brand into a growth engine. Strategy, creative, and distribution — aligned to drive results that last beyond any single campaign.",
@@ -56,6 +60,7 @@ const services = [
   },
   {
     num: "05",
+    slug: "content-creative",
     name: "Content & Creative",
     tagline: "Content that earns its place.",
     desc: "We produce content that doesn't feel like content — photography, video, copy, and creative assets that carry your brand forward across every touchpoint and channel.",
@@ -99,6 +104,7 @@ function ServiceRow({
   s: typeof services[0];
   isOpen: boolean;
   onToggle: () => void;
+  // slug is on s
 }) {
   const bodyRef = useRef<HTMLDivElement>(null);
 
@@ -159,13 +165,22 @@ function ServiceRow({
                 </span>
               ))}
             </div>
-            <Link
-              href={`/work/${s.caseStudy.id}`}
-              className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/50 border-b border-[#0A0A0A]/20 pb-px hover:text-[#0A0A0A] hover:border-[#0A0A0A]/60 transition-colors"
-            >
-              <span>See case study: {s.caseStudy.name}</span>
-              <span>↗</span>
-            </Link>
+            <div className="flex flex-wrap gap-6">
+              <Link
+                href={`/work/${s.caseStudy.id}`}
+                className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/50 border-b border-[#0A0A0A]/20 pb-px hover:text-[#0A0A0A] hover:border-[#0A0A0A]/60 transition-colors"
+              >
+                <span>See case study: {s.caseStudy.name}</span>
+                <span>↗</span>
+              </Link>
+              <Link
+                href={`/services/${s.slug}`}
+                className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A] border-b border-[#0A0A0A]/60 pb-px hover:text-[#0A0A0A]/50 hover:border-[#0A0A0A]/30 transition-colors"
+              >
+                <span>Full {s.name} page</span>
+                <span>↗</span>
+              </Link>
+            </div>
           </div>
 
           {/* Right: case-study thumbnail */}

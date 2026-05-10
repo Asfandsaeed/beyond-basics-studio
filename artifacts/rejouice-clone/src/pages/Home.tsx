@@ -31,11 +31,11 @@ const awards = [
 ];
 
 const services = [
-  { Icon: Target,    name: "Brand Strategy",        tagline: "Clarity before creation.",          deliverables: ["Positioning", "Naming", "Brand Architecture", "Messaging Framework"] },
-  { Icon: Gem,       name: "Brand Identity",         tagline: "Identity that earns attention.",    deliverables: ["Visual Identity", "Logo Design", "Typography System", "Motion Identity"] },
-  { Icon: Monitor,   name: "Digital Experience",     tagline: "Websites that convert and inspire.",deliverables: ["Web Design", "Web Development", "UX Strategy", "3D & Motion"] },
-  { Icon: TrendingUp,name: "Growth Marketing",       tagline: "Brand-led growth that compounds.",  deliverables: ["Growth Strategy", "Paid Creative", "SEO & Content", "Email Marketing"] },
-  { Icon: PenTool,   name: "Content & Creative",     tagline: "Content that earns its place.",     deliverables: ["Brand Photography", "Video Production", "Copywriting", "CGI & 3D"] },
+  { Icon: Target,    name: "Brand Strategy",    slug: "brand-strategy",    tagline: "Clarity before creation.",          deliverables: ["Positioning", "Naming", "Brand Architecture", "Messaging Framework"] },
+  { Icon: Gem,       name: "Brand Identity",    slug: "brand-identity",    tagline: "Identity that earns attention.",    deliverables: ["Visual Identity", "Logo Design", "Typography System", "Motion Identity"] },
+  { Icon: Monitor,   name: "Digital Experience",slug: "digital-experience",tagline: "Websites that convert and inspire.",deliverables: ["Web Design", "Web Development", "UX Strategy", "3D & Motion"] },
+  { Icon: TrendingUp,name: "Growth Marketing",  slug: "growth-marketing",  tagline: "Brand-led growth that compounds.",  deliverables: ["Growth Strategy", "Paid Creative", "SEO & Content", "Email Marketing"] },
+  { Icon: PenTool,   name: "Content & Creative",slug: "content-creative",  tagline: "Content that earns its place.",     deliverables: ["Brand Photography", "Video Production", "Copywriting", "CGI & 3D"] },
 ];
 
 const models = [
@@ -423,9 +423,10 @@ export default function Home() {
 
             {/* Service cards — no hard borders, background differentiates */}
             <div className="reveal grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-14">
-              {services.map(({ Icon, name, tagline, deliverables }, idx) => (
-                <div
+              {services.map(({ Icon, name, slug, tagline, deliverables }, idx) => (
+                <Link
                   key={name}
+                  href={`/services/${slug}`}
                   className={`group flex flex-col gap-7 p-9 md:p-10 hover:bg-[#F5F4F0] transition-colors duration-250 rounded-sm ${idx === 4 ? "sm:col-span-2 lg:col-span-1" : ""}`}
                 >
                   <div className="w-10 h-10 flex items-center justify-center text-[#0A0A0A]/35 group-hover:text-[#0A0A0A]/70 transition-colors duration-250">
@@ -447,7 +448,10 @@ export default function Home() {
                       </span>
                     ))}
                   </div>
-                </div>
+                  <span className="font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/25 group-hover:text-[#0A0A0A]/60 transition-colors mt-auto">
+                    Explore service ↗
+                  </span>
+                </Link>
               ))}
             </div>
 

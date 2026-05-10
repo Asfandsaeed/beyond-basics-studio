@@ -4,6 +4,24 @@ import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { industries } from "@/data/industries";
+import { servicePages } from "@/data/servicePages";
+
+const INDUSTRY_SERVICE_SUFFIX: Record<string, string> = {
+  saas: "saas",
+  "ai-startups": "saas",
+  "software-companies": "saas",
+  startups: "startups",
+  "tech-startups": "startups",
+  fintech: "fintech",
+  "financial-services": "fintech",
+  web3: "web3",
+  "web3-brands": "web3",
+  "crypto-projects": "web3",
+  healthcare: "healthcare",
+  ecommerce: "ecommerce",
+  "ecommerce-fashion": "ecommerce",
+  "dtc-brands": "ecommerce",
+};
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -246,16 +264,42 @@ export default function IndustryPage() {
             What we deliver for {industry.name}.
           </h2>
         </div>
-        <div className="flex flex-wrap gap-2.5">
+        <div className="flex flex-wrap gap-2.5 mb-12">
           {industry.services.map((service, i) => (
             <span
               key={i}
-              className="service-pill font-sans text-[11px] uppercase tracking-widest text-white/60 border border-white/15 px-4 py-2.5 hover:text-white hover:border-white/40 transition-colors duration-200"
+              className="service-pill font-sans text-[11px] uppercase tracking-widest text-white/60 border border-white/15 px-4 py-2.5"
             >
               {service}
             </span>
           ))}
         </div>
+        {(() => {
+          const suffix = INDUSTRY_SERVICE_SUFFIX[industry.id];
+          const specialistPages = suffix
+            ? servicePages.filter((sp) => sp.slug.endsWith(`-for-${suffix}`))
+            : [];
+          if (!specialistPages.length) return null;
+          return (
+            <div>
+              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/30 mb-6">
+                Specialist service pages for {industry.name}
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {specialistPages.map((sp) => (
+                  <Link
+                    key={sp.slug}
+                    href={`/services/${sp.slug}`}
+                    className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-widest text-white border border-white/25 px-5 py-3 hover:bg-white hover:text-[#0A0A0A] transition-colors duration-200"
+                  >
+                    <span>{sp.name}</span>
+                    <span>↗</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          );
+        })()}
       </section>
 
       {/* ── 8. CASE STUDY LINK ──────────────────────────────────────────────── */}
