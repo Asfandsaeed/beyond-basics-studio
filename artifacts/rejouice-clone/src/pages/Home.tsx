@@ -220,32 +220,32 @@ export default function Home() {
             The brand's north star — "beyond" fills the screen.
         ══════════════════════════════════════════════════════════════════ */}
         <section
-          className="relative w-full min-h-screen flex flex-col bg-[#0A0A0A] text-white overflow-hidden"
+          className="relative w-full min-h-[100svh] flex flex-col bg-[#0A0A0A] text-white overflow-hidden"
           data-testid="hero-section"
         >
           <div className="flex-1 flex flex-col justify-center overflow-hidden px-6 md:px-10">
             <h1
               className="hero-word font-display font-bold lowercase text-white select-none leading-none"
-              style={{ fontSize: "clamp(80px, 25vw, 440px)", letterSpacing: "-0.03em", lineHeight: 0.85 }}
+              style={{ fontSize: "clamp(64px, 20vw, 440px)", letterSpacing: "-0.03em", lineHeight: 0.88 }}
               data-testid="hero-wordmark"
             >
               beyond
             </h1>
           </div>
 
-          <div className="hero-meta px-6 md:px-10 py-8 flex flex-col md:flex-row md:items-center justify-between gap-6 bg-white/[0.03]">
+          <div className="hero-meta px-6 md:px-10 py-6 md:py-8 flex flex-col gap-5 md:flex-row md:items-center md:justify-between bg-white/[0.03] border-t border-white/[0.06]">
             <div>
-              <p className="font-sans text-base md:text-lg font-light text-white/55 max-w-md leading-snug">
+              <p className="font-sans text-sm md:text-lg font-light text-white/55 max-w-md leading-snug">
                 Creative growth agency for tomorrow's most ambitious brands.
               </p>
-              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/25 mt-2">
+              <p className="font-sans text-[10px] uppercase tracking-[0.18em] text-white/25 mt-1.5">
                 Tomorrow's Brands, Today.™
               </p>
             </div>
-            <div className="flex gap-8 md:gap-12 shrink-0">
+            <div className="flex gap-6 md:gap-12 shrink-0">
               {[["90+","Projects"],["31","People"],["2019","Founded"]].map(([v,l]) => (
                 <div key={l} className="flex flex-col gap-0.5">
-                  <span className="font-sans text-2xl font-light text-white leading-none">{v}</span>
+                  <span className="font-sans text-xl md:text-2xl font-light text-white leading-none">{v}</span>
                   <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-white/30">{l}</span>
                 </div>
               ))}
