@@ -398,14 +398,14 @@ export function SitemapPage() {
         <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10">Journal — 8 articles</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-2.5">
           {[
-            { label: "How We Built the Tensor Brand in 90 Days", href: "/journal/tensor-brand-90-days" },
+            { label: "How We Built the MultiversX Brand in 90 Days", href: "/journal/tensor-brand-90-days" },
             { label: "Brand-Led Growth: Why the Best Companies Lead with Brand", href: "/journal/brand-led-growth" },
-            { label: "The Oura Strategy: Why Restraint Is the Most Powerful Design Tool", href: "/journal/oura-simplicity-strategy" },
+            { label: "Simplicity as Strategy: The Keikku Brand", href: "/journal/oura-simplicity-strategy" },
             { label: "The Art of Naming: How to Choose a Brand Name That Lasts", href: "/journal/art-of-naming" },
-            { label: "How Moxion Built a Sustainable Brand Without Sacrificing Premium", href: "/journal/moxion-sustainable-brand" },
+            { label: "Branding the Building Revolution: Kōzōwood", href: "/journal/moxion-sustainable-brand" },
             { label: "What Makes a Digital Experience Award-Worthy", href: "/journal/award-worthy-digital-experience" },
             { label: "Photography as Brand Language", href: "/journal/photography-as-brand-language" },
-            { label: "Pre-Launch Brand Building: How to Create Demand Before You Ship", href: "/journal/pre-launch-brand-building" },
+            { label: "Brand as Expansion Engine: How Phive Built a Multi-Location Presence", href: "/journal/pre-launch-brand-building" },
           ].map((l) => (
             <Link key={l.href} href={l.href} className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/45 transition-colors duration-200 leading-snug">
               {l.label}

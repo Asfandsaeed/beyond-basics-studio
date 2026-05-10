@@ -87,8 +87,8 @@ export const industries: Industry[] = [
       { step: "04", title: "System Rollout", description: "Phased rollout across website, product, sales, recruiting, and communications — with internal training included." },
     ],
     services: ["Brand Strategy", "Visual Identity", "Employer Brand", "Website Design & Development", "Product Naming", "Investor Decks", "Brand Guidelines", "Motion Design"],
-    caseStudyId: "tensor",
-    caseStudyName: "Tensor",
+    caseStudyId: "multiversx",
+    caseStudyName: "MultiversX",
   },
 
   {
@@ -263,8 +263,8 @@ export const industries: Industry[] = [
       { step: "04", title: "Go-to-Market Support", description: "PR strategy, content plan, and performance creative for launch." },
     ],
     services: ["Brand Strategy", "Visual Identity", "Website Design", "Pitch Deck Design", "Launch Campaign", "Content Strategy", "PR & Press Kit", "Employer Brand"],
-    caseStudyId: "tensor",
-    caseStudyName: "Tensor",
+    caseStudyId: "flowcase",
+    caseStudyName: "Flowcase",
   },
 
   // ── E-COMMERCE & DTC ────────────────────────────────────────────────────────
@@ -325,8 +325,8 @@ export const industries: Industry[] = [
       { step: "04", title: "Launch Strategy", description: "Pre-launch community building, launch week content plan, and post-purchase retention strategy." },
     ],
     services: ["Brand Strategy", "Visual Identity", "Packaging Design", "Website Design", "Email Marketing", "Social Media Brand", "Performance Creative", "Community Strategy"],
-    caseStudyId: "oura-ring",
-    caseStudyName: "Oura Ring",
+    caseStudyId: "care-to-beauty",
+    caseStudyName: "Care to Beauty",
   },
 
   {
@@ -356,8 +356,8 @@ export const industries: Industry[] = [
       { step: "04", title: "Content System", description: "Content templates, UGC briefs, and influencer decks that maintain brand quality at scale." },
     ],
     services: ["Brand Strategy", "Visual Identity", "Photography Art Direction", "Website Design", "Lookbook Design", "Email Creative", "Social Media Brand", "Campaign Direction"],
-    caseStudyId: "unspun",
-    caseStudyName: "Unspun",
+    caseStudyId: "floema",
+    caseStudyName: "Floema",
   },
 
   {
@@ -393,6 +393,7 @@ export const industries: Industry[] = [
 
   {
     id: "healthcare",
+
     name: "Healthcare",
     tagline: "Brand that makes patients trust before the first appointment.",
     category: "Health & Wellness",
@@ -418,8 +419,8 @@ export const industries: Industry[] = [
       { step: "04", title: "Digital Presence", description: "HIPAA-compliant website, Google Business optimization, and patient acquisition marketing strategy." },
     ],
     services: ["Brand Strategy", "Visual Identity", "Website Design", "Patient Communications", "Digital Marketing", "Social Media", "Signage & Environmental", "Staff Onboarding Brand"],
-    caseStudyId: "oura-ring",
-    caseStudyName: "Oura Ring",
+    caseStudyId: "hematogenix",
+    caseStudyName: "Hematogenix",
   },
 
   {
@@ -654,8 +655,8 @@ export const industries: Industry[] = [
       { step: "04", title: "Digital & Referral Presence", description: "Website, LinkedIn, and referral strategy for the construction market." },
     ],
     services: ["Brand Strategy", "Visual Identity", "Portfolio Website", "Vehicle & Signage Design", "Proposal Templates", "Project Photography", "LinkedIn Brand", "Referral Strategy"],
-    caseStudyId: "hyperframe",
-    caseStudyName: "Hyperframe",
+    caseStudyId: "kozowood",
+    caseStudyName: "Kōzōwood",
   },
 
   {
@@ -685,8 +686,8 @@ export const industries: Industry[] = [
       { step: "04", title: "Digital & Review Strategy", description: "Website, Google, and reputation management strategy for the automotive market." },
     ],
     services: ["Brand Strategy", "Visual Identity", "Dealership Environment Design", "Vehicle Wraps", "Website Design", "Google Ads", "Campaign Creative", "Review Strategy"],
-    caseStudyId: "rivian",
-    caseStudyName: "Rivian",
+    caseStudyId: "flecto",
+    caseStudyName: "Flecto",
   },
 
   {
@@ -745,8 +746,8 @@ export const industries: Industry[] = [
       { step: "04", title: "Sales Enablement", description: "RFP templates, capability presentations, and sales collateral built for the logistics buying process." },
     ],
     services: ["Brand Strategy", "Visual Identity", "Fleet & Uniform Design", "Website Design", "Sales Decks", "RFP Templates", "Trade Marketing", "Corporate Presentations"],
-    caseStudyId: "moxion-power",
-    caseStudyName: "Moxion Power",
+    caseStudyId: "grabgo",
+    caseStudyName: "Grab&Go",
   },
 
   {
@@ -776,8 +777,8 @@ export const industries: Industry[] = [
       { step: "04", title: "Sales & Trade Materials", description: "Website, product catalogs, spec sheets, and trade show materials." },
     ],
     services: ["Brand Strategy", "Visual Identity", "Trade Show Design", "Website Design", "Product Catalogs", "Spec Sheets", "Fleet & Signage", "Sales Presentations"],
-    caseStudyId: "moxion-power",
-    caseStudyName: "Moxion Power",
+    caseStudyId: "tuu",
+    caseStudyName: "TUU",
   },
 
   // ── PROFESSIONAL SERVICES ────────────────────────────────────────────────────
@@ -838,8 +839,8 @@ export const industries: Industry[] = [
       { step: "04", title: "Marketing System", description: "Website, listing templates, social content system, and sphere of influence strategy." },
     ],
     services: ["Personal Brand Strategy", "Visual Identity", "Website Design", "Listing Presentation", "Social Media Brand", "Email Marketing", "Direct Mail", "Photography Standards"],
-    caseStudyId: "connect-homes",
-    caseStudyName: "Connect Homes",
+    caseStudyId: "kozowood",
+    caseStudyName: "Kōzōwood",
   },
 
   {
@@ -1221,8 +1222,8 @@ export const industries: Industry[] = [
       { step: "04", title: "Digital & PR Brand", description: "Website, booking experience, social media, and press pitch strategy." },
     ],
     services: ["Brand Strategy", "Visual Identity", "Website & Booking Design", "In-Room Materials", "Restaurant Brand", "Social Media Brand", "Photography Direction", "PR Strategy"],
-    caseStudyId: "noovo",
-    caseStudyName: "Noovo",
+    caseStudyId: "phive",
+    caseStudyName: "Phive",
   },
 
   {
@@ -1457,8 +1458,8 @@ export const industries: Industry[] = [
       { step: "04", title: "Recruitment & Listing Materials", description: "Agent recruitment deck and listing presentation system." },
     ],
     services: ["Brand Strategy", "Visual Identity", "Signage & Vehicle Brand", "Agent Marketing System", "Website Design", "Recruitment Materials", "Listing Presentation", "Luxury Brand"],
-    caseStudyId: "connect-homes",
-    caseStudyName: "Connect Homes",
+    caseStudyId: "kozowood",
+    caseStudyName: "Kōzōwood",
   },
 
   {
@@ -1517,8 +1518,8 @@ export const industries: Industry[] = [
       { step: "04", title: "Portfolio & Digital Brand", description: "Website, portfolio system, and competition materials." },
     ],
     services: ["Brand Strategy", "Visual Identity", "Website Design", "Portfolio System", "Competition Materials", "Monograph Design", "Photography Standards", "Awards & Press Strategy"],
-    caseStudyId: "connect-homes",
-    caseStudyName: "Connect Homes",
+    caseStudyId: "kozowood",
+    caseStudyName: "Kōzōwood",
   },
 ];
 
