@@ -127,7 +127,7 @@ export const industries: Industry[] = [
     category: "Tech & Digital",
     description: "The crypto projects that endure are the ones that build real brand equity beyond the cycle. We help protocols, exchanges, and crypto companies build lasting credibility.",
     longDescription: "Most crypto brand work looks the same: gradients, hexagons, and promises of disruption. The projects that survive bear markets and build genuine communities are the ones with authentic identity, clear mission, and design quality that signals they're built to last. We bring the same brand rigor we apply to Fortune 500 clients to the crypto and blockchain space.",
-    coverImage: "https://imgs.search.brave.com/Plh_KWz21deLVglb-r_O1PyeUMvuiuFlU_i1h7fTryI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RzLzQwNC81/Zjc5NDUxNDMwMTIw/NzUuWTNKdmNDd3hN/elEzTERFd05UUXNO/RE1zTUEuanBn",
+    coverImage: "https://imgs.search.brave.com/f3sSoqagjQIlf_WaFWCQtaVHhIU6uzFPEkae3QLHJE4/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RfbW9kdWxl/cy9mc193ZWJwLzYx/MWQxMTE0MzQ5Mzgz/OS42MmZlNzE0N2M1/NjU5LnBuZw",
     stats: [
       { value: "10×", label: "community growth for well-branded vs generic projects" },
       { value: "65%", label: "of institutional crypto investors cite brand quality as a factor" },
@@ -336,7 +336,7 @@ export const industries: Industry[] = [
     category: "E-commerce & DTC",
     description: "Fashion e-commerce is the most visually competitive category online. We build fashion brands with the aesthetic precision of luxury houses and the conversion science of growth marketers.",
     longDescription: "Fashion shoppers buy the brand before they buy the garment. The imagery, the typography, the editorial voice — every element tells a story about who wears this, how it feels, and why it costs what it costs. We build fashion e-commerce brands that operate with the creative discipline of editorial fashion and the data-driven rigor of performance marketing.",
-    coverImage: "https://imgs.search.brave.com/xEq1gnOZsAwd44i4Dnim_fzetGfXBiXvu2CMYzNZsUM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RfbW9kdWxl/cy8xNDAwX3dlYnAv/ODVkM2IzMTY1NjY3/NTk3LjY0MGIyYjQ0/YWM1NjAuanBn",
+    coverImage: "https://imgs.search.brave.com/nl06VK3rhrFs1VAvhwmCyosxBjVC5hRmlonjbumKvJk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RzLzQwNC82/MWM1NjAyNDM4ODEy/NTUuWTNKdmNDd3pP/RFF3TERNd01ETXNN/Q3c1LnBuZw",
     stats: [
       { value: "55%", label: "higher average order value for premium-branded fashion stores" },
       { value: "4.5×", label: "more repeat purchases from styled brand experience" },
@@ -399,7 +399,7 @@ export const industries: Industry[] = [
     category: "Health & Wellness",
     description: "Healthcare brand is a matter of trust. We build identities for healthcare organizations that communicate expertise, warmth, and reliability — in a category where those qualities determine patient choice.",
     longDescription: "Patients choose healthcare providers before they meet them — based on website, reviews, and first impressions. The healthcare organizations that attract the best patients and the best staff are the ones whose brand communicates both clinical excellence and genuine human care. We build those brands.",
-    coverImage: "https://imgs.search.brave.com/TyDekIrjnbdomCc6gIEmYNSr75RjCV7f6qrg0gxF860/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RfbW9kdWxl/cy8xNDAwX3dlYnAv/MDIzNWZhMTkyMjk4/MDczLjY1ZDkyNDk1/OWNmOTAuanBn",
+    coverImage: "https://imgs.search.brave.com/_B3ze58rynJBnR15CC9uNwgy6wBeETqmUe3KFZbqCDk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RzLzQwNC8z/ZDM4OGYyMzM4MTc1/MTUuWTNKdmNDd3hN/elF5TERFd05UQXNN/amtzTUEuanBn",
     stats: [
       { value: "70%", label: "of patients choose a provider based on online presence" },
       { value: "3×", label: "more referrals from patients of well-branded practices" },
@@ -430,7 +430,7 @@ export const industries: Industry[] = [
     category: "Health & Wellness",
     description: "Dental practices compete on trust, warmth, and expertise. We build brands that reduce patient anxiety, increase referrals, and command premium fees in your market.",
     longDescription: "The best dental practices in any city aren't necessarily the most clinically advanced — they're the ones with the strongest reputation, the most referral-worthy experience, and the brand that makes patients want to tell their friends. We've built brands for dental practices from single locations to multi-location DSOs.",
-    coverImage: "https://imgs.search.brave.com/4XUQD159pxmSjKokBwWf5OrEXhsUfxcFB_PzrZGwhHA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RzLzQwNC9i/MTE1ZTgyNDA3Nzg0/MTMuWTNKdmNDdzRO/alVzTmpjMkxESTVO/eXd3LnBuZw",
+    coverImage: "https://imgs.search.brave.com/IzwmxNCuEQGw-dN8UdcCsbM7dp6bZa42AoxeLeVElBw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RzLzQwNC82/NDlmZDYyMzM3ODQ5/ODMuWTNKdmNDd3hN/VEl5TERnM09Dd3hN/emdzTUEuanBn",
     stats: [
       { value: "65%", label: "of new dental patients come through referral or online search" },
       { value: "4×", label: "more Google reviews from practices with branded patient experience" },
@@ -459,7 +459,7 @@ export const industries: Industry[] = [
     category: "Health & Wellness",
     description: "Physicians with strong personal brands attract better patients, command higher fees, and build practices that are acquisition-proof. We build those brands.",
     longDescription: "The best doctors in every specialty have something in common beyond clinical excellence: they're known. Known in their community, known online, known in their referral network. Personal brand is the competitive moat that no insurance company can erode. We build physician brands that turn clinical expertise into market authority.",
-    coverImage: "https://imgs.search.brave.com/O3TjXX_icbnr1Ur5M30kEUNi2SapHkuS2_rGJobBjfU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RfbW9kdWxl/cy8xNDAwX3dlYnAv/MzBlYjgwMzIzNTQx/OTkuNTY3YzYyODcz/Zjc2Mi5qcGc",
+    coverImage: "https://imgs.search.brave.com/-0_BagflkxtYpjuKwUCPuLlgiD4gZettUn3-Cmxb3rw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RzLzQwNC9l/MTI5MzIyNDE0Njgy/ODMuWTNKdmNDdzBN/VFF5TERNeU5EQXNP/REV3TERBLnBuZw",
     stats: [
       { value: "5×", label: "more new patient inquiries for well-branded physicians vs. directory listings" },
       { value: "40%", label: "premium fee command for doctors with strong personal brand" },
@@ -666,7 +666,7 @@ export const industries: Industry[] = [
     category: "Local & Trade",
     description: "Auto dealers, service shops, and automotive brands compete in a category defined by distrust. We build the brands that change that — and earn customers for decades.",
     longDescription: "Car purchases and service visits are among the most emotionally charged transactions consumers make. Brand is the difference between the dealership or shop that people recommend and the one they warn their friends about. We've built automotive brands for OEMs, dealerships, detailing shops, and specialty automotive companies.",
-    coverImage: "https://imgs.search.brave.com/9v3NlmXRKiUXLSdB1AHZVqW6c5OBKg6Nqzmul8olXRQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RfbW9kdWxl/cy9tYXhfNjMyX3dl/YnAvNjY4ZjQ0NzY0/MTkwNTkuNWM2OTlh/MmQzNzQ3Yy5qcGc",
+    coverImage: "https://imgs.search.brave.com/FcwMTUWvriofGfZy9STtDvr_2eBHCSGnq5-IkI0e64s/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RzLzQwNC8w/Zjc4YjEyNDQyNzYy/NDcuWTNKdmNDd3hN/amM0TERFd01EQXNN/VFV4TERBLmpwZw",
     stats: [
       { value: "72%", label: "of car buyers research brand reputation before stepping into a dealership" },
       { value: "3.5×", label: "higher lifetime value from loyal automotive service customers" },
@@ -697,7 +697,7 @@ export const industries: Industry[] = [
     category: "Local & Trade",
     description: "Franchise brand success depends on creating the same brand experience at every location. We build franchise brand systems that scale without compromise.",
     longDescription: "The best franchise brands are the ones where a customer in any city feels the same quality, warmth, and consistency they felt the first time. Building a brand system that franchisees can execute faithfully — while still feeling locally relevant — is one of the hardest challenges in brand management. We've done it dozens of times.",
-    coverImage: "https://imgs.search.brave.com/DzYKVP6AAK7pnKLmDWr_GkiIxNRm1N-1BpyHZHYh3nU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RfbW9kdWxl/cy8xNDAwX3dlYnAv/MjkwZTFhMjQ0NDM2/NDExLjY5OTc5NzRi/N2M0YWQucG5n",
+    coverImage: "https://imgs.search.brave.com/G8gaEiCU2W-WhX2qrIRNsLUOvvt5hz8llcQMo3RGfsE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RzLzQwNC9h/ZGY5NGMyMzI0Mzg2/MTMuWTNKdmNDd3lP/RGs1TERJeU5qY3NN/emd3TERFeU5qTS5q/cGc",
     stats: [
       { value: "40%", label: "higher franchise unit sales for well-branded franchisors" },
       { value: "3×", label: "better franchisee satisfaction with strong brand systems" },
@@ -819,7 +819,7 @@ export const industries: Industry[] = [
     category: "Professional Services",
     description: "In real estate, personal brand is the entire business. We build realtor brands that attract listings, command referrals, and survive market cycles.",
     longDescription: "The real estate market is built on relationships, but relationships are built on brand. The realtors and brokerages that dominate their markets have a clear identity, a compelling story, and a consistent presence that makes them the obvious choice when someone needs to buy or sell. We've built personal brands for individual agents and corporate brands for major brokerages.",
-    coverImage: "https://imgs.search.brave.com/dk2gr_YUseKABNYl7rOC3usK0oq-m0QldP3zvCzVNkI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RzLzQwNC9l/MzhhMjAyNDE1NDA3/NjEuWTNKdmNDd3pN/VEEzTERJME16RXNO/amtzTUEucG5n",
+    coverImage: "https://imgs.search.brave.com/DnTeqpW2pxUUPV_W1clQeu8XB3MV30aotXetfftv1qk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RzLzQwNC85/NmYyZTQyMTY3MDU0/NzkuWTNKdmNDd3pN/ek16TERJMk1EY3NN/Q3cxTncuanBn",
     stats: [
       { value: "5×", label: "more listing inquiries for well-branded realtors vs. generic" },
       { value: "85%", label: "of real estate clients choose based on agent reputation and presence" },
@@ -850,7 +850,7 @@ export const industries: Industry[] = [
     category: "Professional Services",
     description: "Coaching is the most personal of all professional services. Your brand IS you — and the clients you attract will be a reflection of how clearly and authentically you present yourself.",
     longDescription: "The best coaches in any category — life coaching, business coaching, executive coaching, athletic performance — have one thing in common: a clear, compelling personal brand that makes their ideal client say 'that's exactly who I need.' We build those brands, and then build the systems that fill calendars with them.",
-    coverImage: "https://imgs.search.brave.com/5wIfh4x3kZC2pTuqVJxQJano8gFTh1pu5FGkTPQVN38/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RzLzQwNC81/OWI5MDYyMzk0NDQx/ODEuWTNKdmNDdzNO/VGdzTlRrekxESTRO/eXd6TVRNLnBuZw",
+    coverImage: "https://imgs.search.brave.com/GHHCtZpQjd7CtY213oaurfWYUTSura3-DkeLpq4HPuY/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RzLzQwNC85/ZjllZjExNTgxOTM0/MDkuWTNKdmNDd3hO/REF3TERFd09UVXNN/Q3cwT1RrLmpwZw",
     stats: [
       { value: "10×", label: "more inbound inquiries for well-branded coaches vs generic" },
       { value: "5×", label: "higher pricing confidence from coaches with clear brand" },
@@ -937,7 +937,7 @@ export const industries: Industry[] = [
     category: "Professional Services",
     description: "Financial services is the highest-trust category in any economy. The firms that grow are the ones that earn and maintain that trust through every brand touchpoint — not just client service.",
     longDescription: "Wealth management firms, RIAs, insurance companies, and financial advisors compete in a trust economy where every design choice communicates something about how much you care about your clients. The firms that dominate their markets have figured out that brand is the most efficient way to build trust at scale — long before a prospect ever sits across a desk from their advisor.",
-    coverImage: "https://imgs.search.brave.com/3_uAw55f1_XgN24S9Zq5WqxYF5tS_A3sRx39yuQQwWs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RzLzQwNC9m/ZGZmNTcxMTI0MjM4/MzUuWTNKdmNDdzRO/aklzTmpjMUxESTBN/eXd3LnBuZw",
+    coverImage: "https://imgs.search.brave.com/hVrMG2raCAXp0HW-Q8k0N4dXee93_HDL-p65_BGGe3Y/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RfbW9kdWxl/cy8xNDAwX3dlYnAv/ZDlmNjg5MjA4Mzgy/MzMxLjY3MGY4NWY0/MTRjYWIucG5n",
     stats: [
       { value: "85%", label: "of high-net-worth clients research financial advisors online before contact" },
       { value: "4×", label: "higher AUM per client for firms with premium brand" },
@@ -966,7 +966,7 @@ export const industries: Industry[] = [
     category: "Professional Services",
     description: "Schools, universities, and learning platforms compete for the most valuable resource in the world: attention and enrollment from motivated learners. Brand is what tips the decision.",
     longDescription: "Education is the only industry where the product must simultaneously attract students (who will pay for it), faculty (who will create it), donors (who will fund it), and employers (who will validate it). That requires a brand system of extraordinary sophistication. We've built brand systems for K-12 schools, universities, bootcamps, and online learning platforms.",
-    coverImage: "https://imgs.search.brave.com/sEo6R89aB7knmQEgY-HfMTjJW71NvNAmTwRdz-MQEcc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RfbW9kdWxl/cy8xNDAwX3dlYnAv/MDQ2MzdhMjMxODMx/Nzc5LjY4OTBkOWNi/MTgxM2YuanBn",
+    coverImage: "https://imgs.search.brave.com/Q_iEvyViO0_P4wd5dwBVBtbdTu2K80o_BoPhrMBTq2Y/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RfbW9kdWxl/cy8xNDAwX3dlYnAv/ZDI5MjIwMTgzNjUx/NTA1LjY1NDM4Nzdl/ZTc5MmUucG5n",
     stats: [
       { value: "45%", label: "higher enrollment for schools with clear brand identity vs. similar rankings" },
       { value: "3×", label: "more qualified faculty applications with strong institutional brand" },
@@ -1084,7 +1084,7 @@ export const industries: Industry[] = [
     category: "Creative & Personal",
     description: "Personal brand is the most valuable professional asset you can build in the modern economy. We help founders, executives, and professionals build personal brands that open doors, command respect, and create opportunity.",
     longDescription: "Everyone has a personal brand — most people just aren't managing it. The founders who raise money faster, the executives who get promoted, the professionals who get the call — they all have one thing in common: a clear, compelling personal brand that communicates who they are, what they stand for, and why you should pay attention. We build those brands.",
-    coverImage: "https://imgs.search.brave.com/fEZ1wfDtFhJMvE7b2hKYLNjZ3UYJVqZqO70mp5FmLII/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RfbW9kdWxl/cy9tYXhfNjMyX3dl/YnAvNGViZGQ5MzM0/MzU2MTMuNTZhYWQ1/YTU5NzljMC5qcGc",
+    coverImage: "https://imgs.search.brave.com/4V8_emfVucgTzQ9eyIwa40HYWHdiiLHpje6cpoO55Y4/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RfbW9kdWxl/cy8xNDAwX3dlYnAv/ZGM1YTZmMTYyMDIw/OTQ5LjYzY2VmNzJi/YjBmNTUucG5n",
     stats: [
       { value: "7×", label: "more investment inquiries for founders with strong personal brand" },
       { value: "10×", label: "more speaking invitations for executives with thought leadership brand" },
@@ -1113,7 +1113,7 @@ export const industries: Industry[] = [
     category: "Creative & Personal",
     description: "Photographers with strong brands attract better clients, command higher rates, and build practices that sustain. We build photography brands that make the right clients find you.",
     longDescription: "The photography market is more competitive than it's ever been — and more full of opportunity than it's ever been. The photographers who build sustainable, premium practices are the ones who treat their own brand with the same care they bring to client work. We've built brands for commercial photographers, portrait photographers, wedding photographers, and editorial specialists.",
-    coverImage: "https://imgs.search.brave.com/QWbhmCJcQJt_yNvjgjW-FgZUgY_gdZly0zRWBR86MEI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RfbW9kdWxl/cy8xNDAwX3dlYnAv/MWQ5MzU5MjQ0ODAz/ODI5LjY5OWZmMzg2/NWVjMzIucG5n",
+    coverImage: "https://imgs.search.brave.com/7ysxgwRKC61AyLEarvjFcGhFuXRS8xOb8VwrQqHe1Hg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RfbW9kdWxl/cy8xNDAwX3dlYnAv/YzIzMzZmMjQ1Nzgz/NDEzLjY5YjRmMTdi/ZDA2M2QucG5n",
     stats: [
       { value: "3×", label: "higher booking rates for photographers with professional brand" },
       { value: "40%", label: "premium rates achievable with strong visual brand" },
@@ -1291,7 +1291,7 @@ export const industries: Industry[] = [
     category: "Consumer & Lifestyle",
     description: "Fashion brands don't just sell clothing — they sell identity, aspiration, and belonging. We build fashion brands with the cultural intelligence and aesthetic precision to matter in the market.",
     longDescription: "The fashion market rewards brands with genuine point of view above all else. Design, quality, and price are table stakes — but the brands that build real cultural traction are the ones with a clear aesthetic identity, a compelling world, and the conviction to inhabit it fully. We've built fashion brands from direct-to-consumer startups to heritage labels entering new markets.",
-    coverImage: "https://imgs.search.brave.com/t7rIS6GhXQfL5LOD-Dz8bnzO2L5aHwJ8t_IE6v9TXWs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RfbW9kdWxl/cy9tYXhfNjMyX3dl/YnAvOTA5YmYwMTcx/OTUyNzczLjY0Nzcz/ZTY2NDhmMzQucG5n",
+    coverImage: "https://imgs.search.brave.com/8pR9AXCLu3qhVdXypK3yPysGzHvC_zbhyg47S3pcrvk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RfbW9kdWxl/cy9mc193ZWJwLzYx/Njk0YjEzODUxNzIx/OS42MjJlZGMyYjA1/ZmUzLmpwZw",
     stats: [
       { value: "70%", label: "of fashion purchases are driven by brand identity, not product specification" },
       { value: "5×", label: "higher press coverage for fashion brands with clear aesthetic identity" },
