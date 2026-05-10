@@ -25,12 +25,12 @@ const facts = [
 ];
 
 const assetRows = [
-  { name: "Beyond Logo Pack", detail: "SVG, PNG, PDF — light and dark variants", size: "4.2 MB" },
-  { name: "Brand Colour System", detail: "Primary, secondary, and neutral palette with hex, RGB, CMYK", size: "280 KB" },
-  { name: "Typography Specimen", detail: "Brand typefaces with specimen sheets and licensing info", size: "1.1 MB" },
-  { name: "Photography – Office", detail: "High-res images of our San Francisco and London spaces", size: "38 MB" },
-  { name: "Team Photography", detail: "Headshots of all six partners in consistent studio style", size: "22 MB" },
-  { name: "2024 Agency Profile", detail: "Two-page press-ready overview: stats, services, selected work", size: "3.8 MB" },
+  { name: "Beyond Logo Pack", detail: "SVG, PNG, PDF — light and dark variants", size: "4.2 MB", downloadUrl: "/downloads/press-logo-pack.pdf" },
+  { name: "Brand Colour System", detail: "Primary, secondary, and neutral palette with hex, RGB, CMYK", size: "280 KB", downloadUrl: "/downloads/press-colour-system.pdf" },
+  { name: "Typography Specimen", detail: "Brand typefaces with specimen sheets and licensing info", size: "1.1 MB", downloadUrl: "/downloads/press-typography-specimen.pdf" },
+  { name: "Photography – Office", detail: "High-res images of our San Francisco and London spaces", size: "38 MB", downloadUrl: "/downloads/press-office-photography.pdf" },
+  { name: "Team Photography", detail: "Headshots of all six partners in consistent studio style", size: "22 MB", downloadUrl: "/downloads/press-team-photography.pdf" },
+  { name: "2024 Agency Profile", detail: "Two-page press-ready overview: stats, services, selected work", size: "3.8 MB", downloadUrl: "/downloads/press-agency-profile.pdf" },
 ];
 
 export default function PressPage() {
@@ -133,11 +133,12 @@ export default function PressPage() {
             All assets below are approved for media use. Please do not alter logos, crop team photography, or use brand colours outside the provided system without written approval.
           </p>
           <div className="reveal flex flex-col gap-0">
-            {assetRows.map(({ name, detail, size }) => (
-              <div
+            {assetRows.map(({ name, detail, size, downloadUrl }) => (
+              <a
                 key={name}
-                className="group flex flex-col md:flex-row md:items-center justify-between gap-4 py-6 border-t border-[#0A0A0A]/8 hover:bg-[#EEEDE9] -mx-6 px-6 md:-mx-10 md:px-10 transition-colors duration-200 cursor-pointer"
-                onClick={() => window.location.href = "mailto:press@beyondbasics.studio?subject=Press Kit Asset Request"}
+                href={downloadUrl}
+                download
+                className="group flex flex-col md:flex-row md:items-center justify-between gap-4 py-6 border-t border-[#0A0A0A]/8 hover:bg-[#EEEDE9] -mx-6 px-6 md:-mx-10 md:px-10 transition-colors duration-200"
               >
                 <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-8">
                   <span className="font-sans font-light text-[#0A0A0A] text-base">{name}</span>
@@ -147,11 +148,11 @@ export default function PressPage() {
                   <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/30">{size}</span>
                   <Download size={15} strokeWidth={1.5} className="text-[#0A0A0A]/25 group-hover:text-[#0A0A0A] transition-colors duration-200" />
                 </div>
-              </div>
+              </a>
             ))}
           </div>
           <p className="reveal mt-8 font-sans text-sm font-light text-[#0A0A0A]/40">
-            Request assets via{" "}
+            For additional assets or custom requests:{" "}
             <a href="mailto:press@beyondbasics.studio" className="text-[#0A0A0A] underline underline-offset-4">press@beyondbasics.studio</a>
           </p>
         </div>
