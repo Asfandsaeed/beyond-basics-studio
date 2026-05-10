@@ -3,6 +3,10 @@ import { gsap } from "gsap";
 
 export default function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
+
+  // Don't render on touch-only devices (phones/tablets)
+  const isTouch = typeof window !== "undefined" && window.matchMedia("(pointer: coarse)").matches;
+  if (isTouch) return null;
   
   useEffect(() => {
     const cursor = cursorRef.current;
