@@ -209,7 +209,7 @@ export default function PartnersPage() {
       {/* ── Application form ─────────────────────────────────────────────── */}
       <section className="bg-white py-24 md:py-32" id="apply">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-start">
 
             {/* Left copy */}
             <div>

@@ -140,7 +140,7 @@ export default function IndustryPage() {
 
       {/* ── 4. DESCRIPTION ──────────────────────────────────────────────────── */}
       <section className="px-6 md:px-10 py-20">
-        <div className="grid md:grid-cols-[1fr_2fr] gap-12 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 items-start">
           <div>
             <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40">
               The challenge
@@ -173,7 +173,7 @@ export default function IndustryPage() {
             What we bring to {industry.name} brands.
           </h2>
         </div>
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {industry.expertise.map((item, i) => (
             <div key={i} className="expertise-card bg-white p-8 flex flex-col gap-3">
               <div className="flex items-baseline gap-3">
@@ -206,7 +206,7 @@ export default function IndustryPage() {
             The process that gets results.
           </h2>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {industry.process.map((step, i) => (
             <div key={i} className="process-step flex flex-col gap-4 pt-6 border-t-2 border-[#0A0A0A]/10">
               <span className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/30">
@@ -292,7 +292,7 @@ export default function IndustryPage() {
               All industries ↗
             </Link>
           </div>
-          <div className="grid md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {related.map((ind) => (
               <Link
                 key={ind.id}

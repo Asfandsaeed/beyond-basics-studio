@@ -212,9 +212,9 @@ export default function AboutPage() {
       {/* ══ 6. FOUNDER ════════════════════════════════════════════════════
             Layout: photo fills left ~55%, quote top-right, "One Founder" bottom-left
       ══════════════════════════════════════════════════════════════════ */}
-      <section className="founder-section relative min-h-screen flex px-6 md:px-10 py-10 gap-10">
+      <section className="founder-section relative min-h-screen flex flex-col md:flex-row px-6 md:px-10 py-10 gap-10">
         {/* Left: full-height portrait */}
-        <div className="relative w-[55%] shrink-0 overflow-hidden rounded-sm bg-[#111]">
+        <div className="relative w-full md:w-[55%] shrink-0 overflow-hidden rounded-sm bg-[#111] min-h-[56vw] md:min-h-0">
           <img
             src={ASSETS.guillaume}
             alt="Guillaume Hamon — Founding Partner"

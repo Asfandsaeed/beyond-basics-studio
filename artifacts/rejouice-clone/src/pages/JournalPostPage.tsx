@@ -114,7 +114,7 @@ export default function JournalPostPage() {
       </section>
 
       {/* ══ 2. COVER IMAGE / VIDEO ════════════════════════════════════════════ */}
-      <div className="w-full aspect-[21/9] overflow-hidden bg-[#111]">
+      <div className="w-full aspect-[4/3] md:aspect-[21/9] overflow-hidden bg-[#111]">
         {post.coverVideo ? (
           <video
             src={post.coverVideo}
@@ -273,7 +273,7 @@ export default function JournalPostPage() {
               All posts ↗
             </Link>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {related.map((p) => (
               <Link
                 key={p.id}

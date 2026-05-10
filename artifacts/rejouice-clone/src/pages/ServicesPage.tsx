@@ -151,7 +151,7 @@ function ServiceRow({
         ref={bodyRef}
         style={{ height: 0, overflow: "hidden", opacity: 0 }}
       >
-        <div className="pb-10 pl-14 grid md:grid-cols-[1fr_auto] gap-10">
+        <div className="pb-10 pl-0 md:pl-14 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-10">
           {/* Left: desc + tags */}
           <div>
             <p className="font-sans text-sm text-[#0A0A0A]/55 leading-relaxed max-w-lg mb-8">
@@ -350,7 +350,7 @@ export default function ServicesPage() {
         <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40 mb-12">
           How we work
         </p>
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {models.map((m) => (
             <div
               key={m.num}
@@ -410,7 +410,7 @@ export default function ServicesPage() {
             All projects ↗
           </Link>
         </div>
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {caseStudies.map((c) => (
             <CaseCard key={c.id} c={c} />
           ))}

@@ -52,7 +52,7 @@ export default function ContactPage() {
 
           <div className="w-full h-px bg-white/10 mb-16" />
 
-          <div ref={infoRef} className="grid md:grid-cols-3 gap-12">
+          <div ref={infoRef} className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div data-testid="contact-general">
               <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/40 mb-4">
                 Get in touch
