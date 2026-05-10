@@ -14,9 +14,27 @@ export default function GlossaryTermPage() {
   const pageRef = useRef<HTMLDivElement>(null);
 
   useSeoMeta({
-    title: term ? `${term.term} | Glossary | Beyond®` : "Glossary | Beyond®",
-    description: term ? term.summary : "Brand and design glossary from Beyond®.",
+    title: term ? `${term.term} — Definition | Beyond® Glossary` : "Glossary | Beyond®",
+    description: term ? term.summary.slice(0, 160) : "Brand and design glossary from Beyond®.",
     path: `/glossary/${id}`,
+    breadcrumbs: term ? [
+      { name: "Home", path: "/" },
+      { name: "Glossary", path: "/glossary" },
+      { name: term.term, path: `/glossary/${term.id}` },
+    ] : undefined,
+    schema: term ? {
+      "@context": "https://schema.org",
+      "@type": "DefinedTerm",
+      name: term.term,
+      description: term.summary,
+      inDefinedTermSet: {
+        "@type": "DefinedTermSet",
+        name: "Beyond® Brand & Design Glossary",
+        url: "https://beyondbasics.studio/glossary",
+      },
+      url: `https://beyondbasics.studio/glossary/${term.id}`,
+      termCode: term.id,
+    } : undefined,
   });
 
   useEffect(() => {

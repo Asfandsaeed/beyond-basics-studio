@@ -28,9 +28,39 @@ export default function ServiceDetailPage() {
   const pageRef = useRef<HTMLDivElement>(null);
 
   useSeoMeta({
-    title: page ? `${page.name} | Beyond®` : "Service | Beyond®",
-    description: page ? page.intro.slice(0, 155) : "Beyond® creative growth agency services.",
+    title: page ? `${page.name} — ${page.tagline} | Beyond®` : "Service | Beyond®",
+    description: page ? page.intro.slice(0, 160) : "Beyond® creative growth agency services.",
     path: `/services/${slug}`,
+    ogImage: page?.heroImage,
+    breadcrumbs: page ? [
+      { name: "Home", path: "/" },
+      { name: "Services", path: "/services" },
+      ...(page.parentService ? [{ name: page.parentService, path: `/services/${page.parentService.toLowerCase().replace(/\s+/g, "-").replace("&", "and")}` }] : []),
+      { name: page.name, path: `/services/${page.slug}` },
+    ] : undefined,
+    schema: page ? {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: page.name,
+      description: page.intro,
+      provider: {
+        "@type": "Organization",
+        name: "Beyond®",
+        url: "https://beyondbasics.studio",
+      },
+      areaServed: page.industryName ?? "Worldwide",
+      serviceType: page.parentService ?? page.name,
+      url: `https://beyondbasics.studio/services/${page.slug}`,
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: `${page.name} deliverables`,
+        itemListElement: page.deliverables.map((d) => ({
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: d },
+        })),
+      },
+    } : undefined,
+    faqs: page?.faqs,
   });
 
   useEffect(() => {

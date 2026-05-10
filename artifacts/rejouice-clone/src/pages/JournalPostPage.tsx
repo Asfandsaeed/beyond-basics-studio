@@ -17,11 +17,53 @@ export default function JournalPostPage() {
     ? posts.filter((p) => p.id !== post.id && p.tags.some((t) => post.tags.includes(t))).slice(0, 2)
     : [];
 
+  // Convert "March 2025" → ISO 8601 (first of month) for schema date fields
+  const isoDate = post ? (() => {
+    const d = new Date(`${post.date} 1`);
+    return isNaN(d.getTime()) ? undefined : d.toISOString().slice(0, 10);
+  })() : undefined;
+
   useSeoMeta({
     title: post ? `${post.title} | Beyond® Journal` : "Journal | Beyond®",
     description: post ? post.subtitle.slice(0, 155) : "Long-form thinking on brand strategy and design craft from Beyond Creative Growth Agency.",
     path: `/journal/${id}`,
     ogImage: post?.coverImage,
+    ogType: post ? "article" : "website",
+    datePublished: isoDate,
+    dateModified: isoDate,
+    breadcrumbs: post ? [
+      { name: "Home", path: "/" },
+      { name: "Journal", path: "/journal" },
+      { name: post.title, path: `/journal/${post.id}` },
+    ] : undefined,
+    schema: post ? {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: post.title,
+      description: post.subtitle,
+      image: post.coverImage,
+      datePublished: isoDate,
+      dateModified: isoDate,
+      articleSection: post.category,
+      keywords: post.tags.join(", "),
+      author: {
+        "@type": "Organization",
+        name: "Beyond®",
+        url: "https://beyondbasics.studio",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "Beyond®",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://beyondbasics.studio/favicon.svg",
+        },
+      },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": `https://beyondbasics.studio/journal/${post.id}`,
+      },
+    } : undefined,
   });
 
   useEffect(() => {

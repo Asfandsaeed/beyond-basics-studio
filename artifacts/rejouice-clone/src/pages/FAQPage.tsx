@@ -123,10 +123,16 @@ function FAQItem({ q, a }: FAQ) {
 }
 
 export default function FAQPage() {
+  const allFaqs = sections.flatMap((s) => s.faqs);
   useSeoMeta({
     title: "FAQ | Beyond®",
     description: "Common questions about working with Beyond — our process, pricing models, timelines, and what to expect from a Retainer or Project engagement.",
     path: "/faq",
+    breadcrumbs: [
+      { name: "Home", path: "/" },
+      { name: "FAQ", path: "/faq" },
+    ],
+    faqs: allFaqs,
   });
   const pageRef = useRef<HTMLDivElement>(null);
 

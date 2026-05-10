@@ -20,9 +20,38 @@ export default function ResourcePage() {
   const pageRef = useRef<HTMLDivElement>(null);
 
   useSeoMeta({
-    title: resource ? `${resource.title} | Beyond®` : "Resources | Beyond®",
-    description: resource ? resource.subtitle : "Brand strategy guides from Beyond®.",
+    title: resource ? `${resource.title} | Beyond® Resources` : "Resources | Beyond®",
+    description: resource ? resource.subtitle.slice(0, 160) : "Brand strategy guides from Beyond®.",
     path: `/resources/${slug}`,
+    ogImage: resource?.heroImage,
+    ogType: resource ? "article" : "website",
+    datePublished: resource?.publishDate,
+    dateModified: resource?.publishDate,
+    breadcrumbs: resource ? [
+      { name: "Home", path: "/" },
+      { name: "Resources", path: "/resources" },
+      { name: resource.title, path: `/resources/${resource.slug}` },
+    ] : undefined,
+    schema: resource ? {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: resource.title,
+      description: resource.subtitle,
+      image: resource.heroImage,
+      datePublished: resource.publishDate,
+      dateModified: resource.publishDate,
+      articleSection: resource.category,
+      author: { "@type": "Organization", name: "Beyond®", url: "https://beyondbasics.studio" },
+      publisher: {
+        "@type": "Organization",
+        name: "Beyond®",
+        logo: { "@type": "ImageObject", url: "https://beyondbasics.studio/favicon.svg" },
+      },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": `https://beyondbasics.studio/resources/${resource.slug}`,
+      },
+    } : undefined,
   });
 
   useEffect(() => {
