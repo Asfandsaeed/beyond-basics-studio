@@ -450,9 +450,9 @@ export default function Home() {
               <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-8">
                 How we work together
               </p>
-              <div className="grid md:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 w-full">
                 {models.map((m) => (
-                  <div key={m.num} className="group p-9 bg-[#F5F4F0] hover:bg-[#EEEDE9] transition-colors duration-250 rounded-sm flex flex-col gap-5">
+                  <div key={m.num} className="group w-full p-9 bg-[#F5F4F0] hover:bg-[#EEEDE9] transition-colors duration-250 rounded-sm flex flex-col gap-5">
                     <div className="flex items-start justify-between">
                       <div>
                         <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/30 mb-1">{m.num}</p>
