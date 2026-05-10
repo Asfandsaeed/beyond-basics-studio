@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "wouter";
@@ -211,6 +212,11 @@ function CaseCard({ c }: { c: CaseEntry }) {
 
 // ── Page ─────────────────────────────────────────────────────────────────────
 export default function ServicesPage() {
+  useSeoMeta({
+    title: "Services | Beyond®",
+    description: "Two engagement models: Retainer (embedded creative partner) or Project (focused transformation). Brand strategy, identity, web design, motion, 3D & WebGL.",
+    path: "/services",
+  });
   const pageRef    = useRef<HTMLDivElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const [openIdx, setOpenIdx] = useState<number | null>(null);

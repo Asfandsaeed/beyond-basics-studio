@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
@@ -45,6 +46,11 @@ function revealFrom(selector: string, trigger: string, opts = {}) {
 
 // ── Component ────────────────────────────────────────────────────────────────
 export default function AboutPage() {
+  useSeoMeta({
+    title: "About | Beyond®",
+    description: "A collective of seasoned creatives, strategists, growth marketers, and technologists. One founding partner: Guillaume Hamon. Direct access, no wasted layers.",
+    path: "/about",
+  });
   const pageRef  = useRef<HTMLDivElement>(null);
   const heroRef  = useRef<HTMLHeadingElement>(null);
   const awardsNumRef = useRef<HTMLHeadingElement>(null);

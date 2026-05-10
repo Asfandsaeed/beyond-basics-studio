@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Link, useParams } from "wouter";
+import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { industries } from "@/data/industries";
@@ -17,6 +18,14 @@ export default function IndustryPage() {
         .filter((i) => i.id !== industry.id && i.category === industry.category)
         .slice(0, 3)
     : [];
+
+  useSeoMeta({
+    title: industry ? `${industry.name} Branding & Web Design | Beyond®` : "Industries | Beyond®",
+    description: industry
+      ? `Beyond partners with ${industry.name.toLowerCase()} companies on brand strategy, identity, and web design. Award-winning work across the sector.`
+      : "Beyond serves fintech, web3, SaaS, health, consumer, and lifestyle brands.",
+    path: `/industries/${id}`,
+  });
 
   useEffect(() => {
     window.scrollTo(0, 0);

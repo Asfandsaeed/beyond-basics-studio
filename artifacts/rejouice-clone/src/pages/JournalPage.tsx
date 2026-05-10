@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
+import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { posts, categories } from "@/data/journal";
@@ -89,6 +90,11 @@ function PostCard({ post, large = false }: { post: typeof posts[0]; large?: bool
 }
 
 export default function JournalPage() {
+  useSeoMeta({
+    title: "Journal | Beyond®",
+    description: "Long-form thinking on brand strategy, design craft, creative growth, and the work that shapes tomorrow's category leaders.",
+    path: "/journal",
+  });
   const pageRef   = useRef<HTMLDivElement>(null);
   const heroRef   = useRef<HTMLHeadingElement>(null);
   const [activeCat, setActiveCat] = useState("All");

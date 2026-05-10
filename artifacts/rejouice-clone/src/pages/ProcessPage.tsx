@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "wouter";
@@ -65,6 +66,11 @@ const principles = [
 ];
 
 export default function ProcessPage() {
+  useSeoMeta({
+    title: "Our Process | Beyond®",
+    description: "How Beyond works: strategy-first, deeply collaborative, with full accountability. From discovery to launch and beyond.",
+    path: "/process",
+  });
   const pageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight, MapPin, Clock, Zap, Globe, Heart, TrendingUp, BookOpen, Shield, Sun } from "lucide-react";
@@ -46,6 +47,11 @@ const whyRows = [
 ];
 
 export default function CareersPage() {
+  useSeoMeta({
+    title: "Careers | Beyond®",
+    description: "Join a collective of world-class creatives. Remote-first, senior-level, deeply collaborative. Open roles in design, strategy, and development.",
+    path: "/careers",
+  });
   const pageRef = useRef<HTMLDivElement>(null);
   const [applied, setApplied] = useState<string | null>(null);
 

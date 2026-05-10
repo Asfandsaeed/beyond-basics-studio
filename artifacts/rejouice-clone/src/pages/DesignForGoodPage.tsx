@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight, Leaf, Users, BookOpen, Globe } from "lucide-react";
@@ -75,6 +76,11 @@ const approachRows = [
 ];
 
 export default function DesignForGoodPage() {
+  useSeoMeta({
+    title: "Design for Good | Beyond®",
+    description: "Beyond's pro-bono and impact program. We partner with nonprofits and social enterprises to deliver world-class brand and digital work.",
+    path: "/design-for-good",
+  });
   const pageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

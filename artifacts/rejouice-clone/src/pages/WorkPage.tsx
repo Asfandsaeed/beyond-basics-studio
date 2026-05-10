@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useLocation } from "wouter";
+import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { projects } from "@/data/projects";
@@ -7,6 +8,11 @@ import { projects } from "@/data/projects";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function WorkPage() {
+  useSeoMeta({
+    title: "Work | Beyond®",
+    description: "17 award-winning brand and web projects across fintech, web3, SaaS, health, and lifestyle. 50+ Awwwards, FWA, and CSS Design Awards.",
+    path: "/work",
+  });
   const containerRef = useRef<HTMLDivElement>(null);
   const [, navigate] = useLocation();
 

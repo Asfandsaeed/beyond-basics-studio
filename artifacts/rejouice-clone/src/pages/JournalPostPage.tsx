@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Link, useParams } from "wouter";
+import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { posts } from "@/data/journal";
@@ -15,6 +16,13 @@ export default function JournalPostPage() {
   const related = post
     ? posts.filter((p) => p.id !== post.id && p.tags.some((t) => post.tags.includes(t))).slice(0, 2)
     : [];
+
+  useSeoMeta({
+    title: post ? `${post.title} | Beyond® Journal` : "Journal | Beyond®",
+    description: post ? post.subtitle.slice(0, 155) : "Long-form thinking on brand strategy and design craft from Beyond Creative Growth Agency.",
+    path: `/journal/${id}`,
+    ogImage: post?.coverImage,
+  });
 
   useEffect(() => {
     window.scrollTo(0, 0);

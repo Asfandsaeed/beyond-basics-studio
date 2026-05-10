@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "wouter";
@@ -122,6 +123,11 @@ function FAQItem({ q, a }: FAQ) {
 }
 
 export default function FAQPage() {
+  useSeoMeta({
+    title: "FAQ | Beyond®",
+    description: "Common questions about working with Beyond — our process, pricing models, timelines, and what to expect from a Retainer or Project engagement.",
+    path: "/faq",
+  });
   const pageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

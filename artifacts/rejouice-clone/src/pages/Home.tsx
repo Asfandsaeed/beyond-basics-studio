@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import { Link } from "wouter";
+import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import useEmblaCarousel from "embla-carousel-react";
@@ -191,6 +192,11 @@ function IndustriesSlider() {
 // ─── Main page ─────────────────────────────────────────────────────────────
 
 export default function Home() {
+  useSeoMeta({
+    title: "Beyond® — Creative Growth Agency",
+    description: "Beyond partners with ambitious companies to become category leaders. Brand strategy, identity, web design, motion, 3D & WebGL. Tomorrow's brands, today.",
+    path: "/",
+  });
   const [loaded, setLoaded] = useState(false);
   const pageRef = useRef<HTMLDivElement>(null);
 

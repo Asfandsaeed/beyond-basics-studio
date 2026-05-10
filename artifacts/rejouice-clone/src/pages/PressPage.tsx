@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight, Download } from "lucide-react";
@@ -33,6 +34,11 @@ const assetRows = [
 ];
 
 export default function PressPage() {
+  useSeoMeta({
+    title: "Press | Beyond®",
+    description: "Press resources, coverage, and media kit for Beyond Creative Growth Agency. Contact press@beyondbasics.studio for inquiries.",
+    path: "/press",
+  });
   const pageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

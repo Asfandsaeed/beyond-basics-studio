@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useRoute, useLocation } from "wouter";
+import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { getProjectById, getNextProject, type GalleryItem } from "@/data/projects";
@@ -83,6 +84,15 @@ export default function ProjectPage() {
   const id = params?.id ?? "";
   const project = getProjectById(id);
   const next = getNextProject(id);
+
+  useSeoMeta({
+    title: project ? `${project.title} — ${project.category} | Beyond®` : "Work | Beyond®",
+    description: project
+      ? project.description.slice(0, 155) + "…"
+      : "Award-winning brand and web project by Beyond Creative Growth Agency.",
+    path: `/work/${id}`,
+    ogImage: project?.heroImage,
+  });
 
   useEffect(() => {
     window.scrollTo(0, 0);

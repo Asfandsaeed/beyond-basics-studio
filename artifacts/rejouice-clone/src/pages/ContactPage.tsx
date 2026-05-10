@@ -1,8 +1,14 @@
 import React, { useEffect, useRef } from "react";
+import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
 import SplitType from "split-type";
 
 export default function ContactPage() {
+  useSeoMeta({
+    title: "Contact | Beyond®",
+    description: "Start a conversation about your brand. Reach us at hello@beyondbasics.studio or fill in the brief — we respond within 24 hours.",
+    path: "/contact",
+  });
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const infoRef = useRef<HTMLDivElement>(null);
 

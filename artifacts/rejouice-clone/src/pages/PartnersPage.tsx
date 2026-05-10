@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight, Check, DollarSign, Share2, Handshake, Star } from "lucide-react";
@@ -78,6 +79,11 @@ type FormData = {
 };
 
 export default function PartnersPage() {
+  useSeoMeta({
+    title: "Partners | Beyond®",
+    description: "Join the Beyond referral network. Earn commission on every client you introduce. Designed for consultants, advisors, and creative directors.",
+    path: "/partners",
+  });
   const pageRef = useRef<HTMLDivElement>(null);
   const [form, setForm] = useState<FormData>({ name: "", email: "", company: "", type: "", audience: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
