@@ -127,7 +127,7 @@ export const industries: Industry[] = [
     category: "Tech & Digital",
     description: "The crypto projects that endure are the ones that build real brand equity beyond the cycle. We help protocols, exchanges, and crypto companies build lasting credibility.",
     longDescription: "Most crypto brand work looks the same: gradients, hexagons, and promises of disruption. The projects that survive bear markets and build genuine communities are the ones with authentic identity, clear mission, and design quality that signals they're built to last. We bring the same brand rigor we apply to Fortune 500 clients to the crypto and blockchain space.",
-    coverImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/ad0559235429469.68d6ae3d5fadf.png",
+    coverImage: "https://mir-s3-cdn-cf.behance.net/projects/404/dad91c232858645.Y3JvcCw0MzcwLDM0MTgsMCww.jpg",
     stats: [
       { value: "10×", label: "community growth for well-branded vs generic projects" },
       { value: "65%", label: "of institutional crypto investors cite brand quality as a factor" },
