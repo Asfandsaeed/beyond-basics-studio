@@ -7,8 +7,6 @@ import { resources } from "@/data/resources";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const BURO = "https://www.burocratik.com/_nuxt/image";
-
 const categoryColors: Record<string, string> = {
   Strategy: "bg-[#0A0A0A]/6 text-[#0A0A0A]/55",
   Identity: "bg-[#F5F4F0] text-[#0A0A0A]/55",
@@ -166,7 +164,7 @@ export default function ResourcesPage() {
             </Link>
           </div>
           <div className="reveal aspect-[4/3] overflow-hidden rounded-sm">
-            <img src={`${BURO}/665f58.auto`} alt="Brand strategy thinking" className="w-full h-full object-cover" />
+            <img src="https://mir-s3-cdn-cf.behance.net/projects/original/edd03e218139349.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg" alt="Brand strategy thinking" className="w-full h-full object-cover" />
           </div>
         </div>
       </section>

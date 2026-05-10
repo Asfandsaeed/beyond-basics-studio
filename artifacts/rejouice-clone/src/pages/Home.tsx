@@ -16,7 +16,6 @@ import Loader from "@/components/Loader";
 gsap.registerPlugin(ScrollTrigger);
 
 // ─── Asset URLs ────────────────────────────────────────────────────────────
-const CDN  = "https://images.prismic.io/rejouice-2024";
 
 // ─── Static data ───────────────────────────────────────────────────────────
 const featuredProjects = projects.slice(0, 3);
@@ -77,16 +76,16 @@ const philosophy = [
 ];
 
 const partners = [
-  { name: "Guillaume Hamon",     role: "Founding Partner",                   img: `${CDN}/aFwilXfc4bHWiuKK_Z1xCSpbqstJ98euH_test-gui-1-.avif` },
-  { name: "Jack Milburn",        role: "Partner, Brand Design",              img: `${CDN}/Z0dOD5bqstJ971U2_jack.jpg` },
-  { name: "Gabriel Stik",        role: "Partner, Technical",                 img: `${CDN}/Z0dODpbqstJ971U1_gabriel.jpg` },
-  { name: "Jeffrey Blum",        role: "Partner, Business Development",      img: `${CDN}/Z0dOEZbqstJ971U4_jeffrey.jpg` },
-  { name: "Clément Brichon",     role: "Partner, Creative Director",         img: `${CDN}/Z0dODZbqstJ971U0_clement.jpg` },
-  { name: "Jean-Michel Boujon",  role: "Partner, Growth Marketing",          img: `${CDN}/Z0dOEJbqstJ971U3_jeanmichel.jpg` },
+  { name: "Guillaume Hamon",     role: "Founding Partner",                   img: "https://mir-s3-cdn-cf.behance.net/projects/404/332bd9247049289.Y3JvcCw0MTYwLDMyNTMsMCw5Mg.jpg" },
+  { name: "Jack Milburn",        role: "Partner, Brand Design",              img: "https://mir-s3-cdn-cf.behance.net/projects/404/e7a39d240055097.Y3JvcCwzODM1LDMwMDAsMTgwLDA.jpg" },
+  { name: "Gabriel Stik",        role: "Partner, Technical",                 img: "https://mir-s3-cdn-cf.behance.net/projects/404/aeeb2894949381.Y3JvcCwzMDAwLDIzNDYsMCwyOQ.jpg" },
+  { name: "Jeffrey Blum",        role: "Partner, Business Development",      img: "https://mir-s3-cdn-cf.behance.net/projects/404/c55abe212384375.Y3JvcCwxMjc4LDEwMDAsMTA3LDA.jpg" },
+  { name: "Clément Brichon",     role: "Partner, Creative Director",         img: "https://mir-s3-cdn-cf.behance.net/projects/404/aec9b8187144685.Y3JvcCwxMzgwLDEwODAsMCww.png" },
+  { name: "Jean-Michel Boujon",  role: "Partner, Growth Marketing",          img: "https://mir-s3-cdn-cf.behance.net/projects/404/5542c1244023205.Y3JvcCw4MDgsNjMyLDAsMA.png" },
 ];
 
-const OFFICE_IMG = `${CDN}/Z2GNNpbqstJ98mqU_6384a19b-fa1c-4ad1-aae0-e29e127ebeef_san-diego-office.jpg.jpg?auto=format,compress&w=1600`;
-const FOUNDER_IMG = `${CDN}/aFwilXfc4bHWiuKK_Z1xCSpbqstJ98euH_test-gui-1-.avif?auto=format,compress&w=900`;
+const OFFICE_IMG = "https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/57e75e148373615.62d4db168e712.jpg";
+const FOUNDER_IMG = "https://mir-s3-cdn-cf.behance.net/projects/404/332bd9247049289.Y3JvcCw0MTYwLDMyNTMsMCw5Mg.jpg";
 
 // ─── Shared primitives ─────────────────────────────────────────────────────
 

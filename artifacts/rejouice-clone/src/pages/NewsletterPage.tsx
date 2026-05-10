@@ -6,7 +6,7 @@ import { useSeoMeta } from "@/hooks/useSeoMeta";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const BURO = "https://www.burocratik.com/_nuxt/image";
+const HERO_IMG = "https://mir-s3-cdn-cf.behance.net/projects/original/edd03e218139349.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg";
 
 const issues = [
   {
@@ -173,7 +173,7 @@ export default function NewsletterPage() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 pb-0">
         <div className="w-full aspect-[21/6] overflow-hidden rounded-sm bg-[#111]">
           <img
-            src={`${BURO}/508c65.auto`}
+            src={HERO_IMG}
             alt="Beyond studio — brand thinking"
             className="w-full h-full object-cover object-center"
           />

@@ -5,8 +5,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Real assets pulled directly from rejouice.com's Prismic CDN
-const CDN = "https://images.prismic.io/rejouice-2024";
 const VCDN = "https://rejouice-2024.cdn.prismic.io/rejouice-2024";
 
 interface Project {
@@ -24,7 +22,7 @@ const projects: Project[] = [
     id: "rivian",
     title: "Rivian",
     category: "Brand Growth",
-    image: `${CDN}/Z1r5Y5bqstJ98aaF_rivian.jpg?auto=format,compress&w=2400`,
+    image: "https://mir-s3-cdn-cf.behance.net/projects/404/3877bf243467103.Y3JvcCwxMTkyLDkzMywxMDMsMA.png",
     logo: `${VCDN}/Z0ck9pbqstJ970bM_rivian-white.svg`,
     hoverVideo: `${VCDN}/Z2BZfpbqstJ98kkB_RJ-HIGHLIGHT-Work-01.mp4`,
     layout: "wide",
@@ -33,7 +31,7 @@ const projects: Project[] = [
     id: "oura",
     title: "Oura",
     category: "Digital Experience",
-    image: `${CDN}/Z2AYnZbqstJ98i2G_oura-abdul-ovaice-photography-cd-21.png?auto=format,compress&w=1200`,
+    image: "https://mir-s3-cdn-cf.behance.net/projects/404/5059e3205876773.Y3JvcCwxMDgwLDg0NCwwLDExNw.jpg",
     logo: `${VCDN}/Z2Ae95bqstJ98i6i_oura-logo-white.svg`,
     hoverVideo: `${VCDN}/Z2BZoJbqstJ98kkL_RJ-HIGHLIGHT-Work-02.mp4`,
     layout: "portrait",
@@ -42,7 +40,7 @@ const projects: Project[] = [
     id: "moxion",
     title: "Moxion Power",
     category: "Brand Identity",
-    image: `${CDN}/Z2AYnJbqstJ98i2E_moxionpower.2023.04.onlocation-17821.png?auto=format,compress&w=1200`,
+    image: "https://mir-s3-cdn-cf.behance.net/projects/404/494a6a228812019.Y3JvcCwxNDM4LDExMjUsNDI3LDA.png",
     logo: `${VCDN}/Z2Ae9pbqstJ98i6h_mixion-logo-white.svg`,
     hoverVideo: `${VCDN}/Z2BZvpbqstJ98kkM_RJ-HIGHLIGHT-Work-03.mp4`,
     layout: "portrait",
@@ -51,7 +49,7 @@ const projects: Project[] = [
     id: "noovo",
     title: "Noovo",
     category: "Creative Direction",
-    image: `${CDN}/Z1r5XpbqstJ98aZ8_noovo.jpg?auto=format,compress&w=2400`,
+    image: "https://mir-s3-cdn-cf.behance.net/projects/404/51d8b3235725883.Y3JvcCwzMjAwLDI1MDIsMCww.png",
     hoverVideo: `${VCDN}/Z2BbT5bqstJ98kk6_REJOUICE-PORTFOLIO-LOOP-PROJECTS.mp4`,
     layout: "wide",
   },

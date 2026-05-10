@@ -1,7 +1,4 @@
-// All project images and assets sourced from burocratik.com with permission.
-// Burocratik is a Coimbra/Porto-based design studio. This is a collaborative draft.
 
-const BURO = "https://www.burocratik.com/_nuxt/image";
 const SANITY = "https://cdn.sanity.io/images/zksivtxz/production";
 
 export interface GalleryItem {
@@ -50,17 +47,17 @@ export const projects: Project[] = [
     ],
     description:
       "Clear Street is replacing the legacy infrastructure used across capital markets — bringing capital markets into the future. We designed the perfect fintech website: a seamless blend of sharp design and cutting-edge functionality, crafted for a highly discerning investment audience. The rebranding process was driven by a vision to create a vibrant and resilient tone of voice, with iconic RGB Klein blue at its core. A WebGL-rendered globe on the homepage reinforces the platform's global reach, while service sections feature bold, animated pictograms inspired by airline visuals. This sets the benchmark for fintech design — balancing innovation with functionality.",
-    coverImage: `${BURO}/482d5f.auto`,
-    heroImage: `${BURO}/4c3e36.auto`,
+    coverImage: `https://mir-s3-cdn-cf.behance.net/projects/404/c5843a220845201.Y3JvcCwxNzA1LDEzMzQsMTQ3LDA.png`,
+    heroImage: `https://mir-s3-cdn-cf.behance.net/projects/404/5542c1244023205.Y3JvcCw4MDgsNjMyLDAsMA.png`,
     gallery: [
-      { type: "image", src: `${BURO}/4c3e36.auto`, alt: "Clear Street Studio hero", layout: "full" },
-      { type: "image", src: `${BURO}/ef5811.auto`, alt: "Clear Street brand system", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/5542c1244023205.Y3JvcCw4MDgsNjMyLDAsMA.png`, alt: "Clear Street Studio hero", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/07caed248673979.Y3JvcCwyNDI0LDE4OTYsMCww.png`, alt: "Clear Street brand system", layout: "full" },
       {
         type: "image",
-        src: `${BURO}/05997d.auto`,
+        src: `https://mir-s3-cdn-cf.behance.net/projects/404/3877bf243467103.Y3JvcCwxMTkyLDkzMywxMDMsMA.png`,
         alt: "Clear Street branding",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/482d5f.auto`, alt: "Clear Street website" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/c5843a220845201.Y3JvcCwxNzA1LDEzMzQsMTQ3LDA.png`, alt: "Clear Street website" },
       },
     ],
     awards: [
@@ -90,25 +87,25 @@ export const projects: Project[] = [
     ],
     description:
       "Remote's vibrant visual language extends into the website experience through three core elements: a rich 3D pattern made of key shapes, expressive personality-filled illustrations, and photography masked by eight distinct key shapes. The globes — centerpiece of Remote's visual language — were built entirely in-browser using WebGL, integrating math directly into the experience. These aren't static assets or videos — they're crisp, interactive elements that elevate the narrative. Each globe dynamically reacts as users scroll, blending functionality with a clear presentation of Remote's global product features.",
-    coverImage: `${BURO}/455aa5.auto`,
-    heroImage: `${BURO}/508c65.auto`,
+    coverImage: `https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/10190a217782349.6796a530a3cec.png`,
+    heroImage: `https://mir-s3-cdn-cf.behance.net/projects/original/edd03e218139349.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg`,
     gallery: [
-      { type: "image", src: `${BURO}/508c65.auto`, alt: "Remote homepage header", layout: "full" },
-      { type: "image", src: `${BURO}/887c21.auto`, alt: "Remote product", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/original/edd03e218139349.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg`, alt: "Remote homepage header", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/332bd9247049289.Y3JvcCw0MTYwLDMyNTMsMCw5Mg.jpg`, alt: "Remote product", layout: "full" },
       {
         type: "image",
-        src: `${BURO}/19a869.auto`,
+        src: `https://mir-s3-cdn-cf.behance.net/projects/404/2f1078243332203.Y3JvcCwyMDg1LDE2MzAsMCwxOTY.jpg`,
         alt: "Remote responsive website",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/2789e5.auto`, alt: "Remote footer" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/e7a39d240055097.Y3JvcCwzODM1LDMwMDAsMTgwLDA.jpg`, alt: "Remote footer" },
       },
-      { type: "image", src: `${BURO}/f16edd.auto`, alt: "Remote brand", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/aeeb2894949381.Y3JvcCwzMDAwLDIzNDYsMCwyOQ.jpg`, alt: "Remote brand", layout: "full" },
       {
         type: "image",
-        src: `${BURO}/8c9985.auto`,
+        src: `https://mir-s3-cdn-cf.behance.net/projects/404/c55abe212384375.Y3JvcCwxMjc4LDEwMDAsMTA3LDA.jpg`,
         alt: "Remote 404 mobile",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/daba99.auto`, alt: "Remote partners" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/aec9b8187144685.Y3JvcCwxMzgwLDEwODAsMCww.png`, alt: "Remote partners" },
       },
     ],
     awards: [
@@ -139,24 +136,24 @@ export const projects: Project[] = [
     ],
     description:
       "It all began with brainstorming sessions for a new name — exploring physical forces, cosmic terminology, mythology, and coined words — ultimately arriving at 'Multivers' elevated to the power of X. The X symbol needed to be distinctive, fresh, and resilient enough to function as an exponent while staying perfectly balanced as a standalone mark. The typography spans three font families: Roobert for all brand applications, Styrene A for brand and sub-brand wordmarks, and Inter for dashboards and apps. The vibrant color palette assigns specific hues to each sub-brand, with M×Mint, black, and white as the core combination. A fully scalable design system supports product UI/UX, social media collateral, and keynote presentations.",
-    coverImage: `${BURO}/7ead07.auto`,
-    heroImage: `${BURO}/8e0717.auto`,
+    coverImage: `https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/57e75e148373615.62d4db168e712.jpg`,
+    heroImage: `https://mir-s3-cdn-cf.behance.net/projects/404/5059e3205876773.Y3JvcCwxMDgwLDg0NCwwLDExNw.jpg`,
     gallery: [
-      { type: "image", src: `${BURO}/8e0717.auto`, alt: "MultiversX stage", layout: "full" },
-      { type: "image", src: `${BURO}/132b3e.auto`, alt: "MultiversX hero system", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/5059e3205876773.Y3JvcCwxMDgwLDg0NCwwLDExNw.jpg`, alt: "MultiversX stage", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/494a6a228812019.Y3JvcCwxNDM4LDExMjUsNDI3LDA.png`, alt: "MultiversX hero system", layout: "full" },
       {
         type: "image",
-        src: `${BURO}/bb27ed.auto`,
+        src: `https://mir-s3-cdn-cf.behance.net/projects/404/51d8b3235725883.Y3JvcCwzMjAwLDI1MDIsMCww.png`,
         alt: "MultiversX conference card",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/11ce19.auto`, alt: "MultiversX sweat" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/c5843a220845201.Y3JvcCwxNzA1LDEzMzQsMTQ3LDA.png`, alt: "MultiversX sweat" },
       },
       {
         type: "image",
-        src: `${BURO}/7ce8d6.auto`,
+        src: `https://mir-s3-cdn-cf.behance.net/projects/404/5542c1244023205.Y3JvcCw4MDgsNjMyLDAsMA.png`,
         alt: "MultiversX bottle",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/7ead07.auto`, alt: "MultiversX brand overview" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/57e75e148373615.62d4db168e712.jpg`, alt: "MultiversX brand overview" },
       },
     ],
     awards: [
@@ -187,25 +184,25 @@ export const projects: Project[] = [
     ],
     description:
       "Some clients ask us to tone it down. Phive asked us to turn it up. As Phive scaled rapidly and opened new clubs, the site needed to land each location with absolute clarity — while the updated brand needed to hold that narrative with full force. We built a typographic-first universe with street-smart font pairing powered by a flexing variable typeface. Content is king: custom video, strong photography, and bold timelapses set the tone. Each club opens with a 40-second visual punch. We paired type like a street poster — loud cuts, strong contrasts, unapologetically layered. From font to motion, one of our sharpest, most on-point builds yet.",
-    coverImage: `${BURO}/278ec4.auto`,
-    heroImage: `${BURO}/c40aba.auto`,
+    coverImage: `https://mir-s3-cdn-cf.behance.net/projects/404/07caed248673979.Y3JvcCwyNDI0LDE4OTYsMCww.png`,
+    heroImage: `https://mir-s3-cdn-cf.behance.net/projects/404/3877bf243467103.Y3JvcCwxMTkyLDkzMywxMDMsMA.png`,
     gallery: [
-      { type: "image", src: `${BURO}/c40aba.auto`, alt: "Phive footer", layout: "full" },
-      { type: "image", src: `${BURO}/0896af.auto`, alt: "Phive clubs badges", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/3877bf243467103.Y3JvcCwxMTkyLDkzMywxMDMsMA.png`, alt: "Phive footer", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/10190a217782349.6796a530a3cec.png`, alt: "Phive clubs badges", layout: "full" },
       {
         type: "image",
-        src: `${BURO}/b39cf8.auto`,
+        src: `https://mir-s3-cdn-cf.behance.net/projects/original/edd03e218139349.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg`,
         alt: "Phive timetable",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/bb5e87.auto`, alt: "Phive Leiria" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/332bd9247049289.Y3JvcCw0MTYwLDMyNTMsMCw5Mg.jpg`, alt: "Phive Leiria" },
       },
-      { type: "image", src: `${BURO}/f59af8.auto`, alt: "Phive tote bag", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/2f1078243332203.Y3JvcCwyMDg1LDE2MzAsMCwxOTY.jpg`, alt: "Phive tote bag", layout: "full" },
       {
         type: "image",
-        src: `${BURO}/4b38fb.auto`,
+        src: `https://mir-s3-cdn-cf.behance.net/projects/404/e7a39d240055097.Y3JvcCwzODM1LDMwMDAsMTgwLDA.jpg`,
         alt: "Phive personal trainer shirt",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/fc2788.auto`, alt: "Phive pilates" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/aeeb2894949381.Y3JvcCwzMDAwLDIzNDYsMCwyOQ.jpg`, alt: "Phive pilates" },
       },
     ],
     awards: [
@@ -235,17 +232,17 @@ export const projects: Project[] = [
     ],
     description:
       "Floema needed a brand rooted in its signage legacy. Direction became the guiding principle — the logo balances legibility with character, built around a twist in the F that feels intentionally directional. The website is product-first, structured into five collections: Urban, Golf, rePlastic, Nature, and Details. Each of the 230 products features a web-optimised 3D model, with customisation and direct CRM integration. Beyond product, the experience shifts into a calmer, brand-led layer — subtle motion and sound bring depth to the scroll, from WebGL foliage to field recordings and music fragments. The header evolves from snow to full greenery across the seasons.",
-    coverImage: `${BURO}/dc758e.auto`,
-    heroImage: `${BURO}/665f58.auto`,
+    coverImage: `https://mir-s3-cdn-cf.behance.net/projects/404/c55abe212384375.Y3JvcCwxMjc4LDEwMDAsMTA3LDA.jpg`,
+    heroImage: `https://mir-s3-cdn-cf.behance.net/projects/404/aec9b8187144685.Y3JvcCwxMzgwLDEwODAsMCww.png`,
     gallery: [
-      { type: "image", src: `${BURO}/665f58.auto`, alt: "Floema website", layout: "full" },
-      { type: "image", src: `${BURO}/027de5.auto`, alt: "Floema brand", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/aec9b8187144685.Y3JvcCwxMzgwLDEwODAsMCww.png`, alt: "Floema website", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/57e75e148373615.62d4db168e712.jpg`, alt: "Floema brand", layout: "full" },
       {
         type: "image",
-        src: `${BURO}/8d1fdf.auto`,
+        src: `https://mir-s3-cdn-cf.behance.net/projects/404/5059e3205876773.Y3JvcCwxMDgwLDg0NCwwLDExNw.jpg`,
         alt: "Floema logo system",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/dc758e.auto`, alt: "Floema overview" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/c55abe212384375.Y3JvcCwxMjc4LDEwMDAsMTA3LDA.jpg`, alt: "Floema overview" },
       },
     ],
     awards: [
@@ -274,26 +271,26 @@ export const projects: Project[] = [
     ],
     description:
       "The TUU identity builds on the elasticity of letterforms, reinforced by the clarity of having no margins. The TUU logo is never fixed — always anchored to the edges when static, it becomes a variable system of glyphs and media surfaces, continuously morphing into new configurations. By activating this key motif, the brand remains adaptable and responsive to any context, intentionally designed for movement and animation. The motion system expands TUU's expression across three compositional modes, with typography at the core and motion as the force. The full logo unfolds into a container that adapts to any aspect ratio — shifting from content-heavy layouts to pure visual presence, always marginless.",
-    coverImage: `${BURO}/83e520.auto`,
-    heroImage: `${BURO}/e1671a.auto`,
+    coverImage: `https://mir-s3-cdn-cf.behance.net/projects/404/494a6a228812019.Y3JvcCwxNDM4LDExMjUsNDI3LDA.png`,
+    heroImage: `https://mir-s3-cdn-cf.behance.net/projects/404/51d8b3235725883.Y3JvcCwzMjAwLDI1MDIsMCww.png`,
     gallery: [
-      { type: "image", src: `${BURO}/e1671a.auto`, alt: "TUU identity", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/51d8b3235725883.Y3JvcCwzMjAwLDI1MDIsMCww.png`, alt: "TUU identity", layout: "full" },
       {
         type: "image",
-        src: `${BURO}/c7420c.auto`,
+        src: `https://mir-s3-cdn-cf.behance.net/projects/404/c5843a220845201.Y3JvcCwxNzA1LDEzMzQsMTQ3LDA.png`,
         alt: "TUU logo system",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/0abf20.auto`, alt: "TUU applications" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/5542c1244023205.Y3JvcCw4MDgsNjMyLDAsMA.png`, alt: "TUU applications" },
       },
-      { type: "image", src: `${BURO}/f2515e.auto`, alt: "TUU brand in use", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/07caed248673979.Y3JvcCwyNDI0LDE4OTYsMCww.png`, alt: "TUU brand in use", layout: "full" },
       {
         type: "image",
-        src: `${BURO}/3e0291.auto`,
+        src: `https://mir-s3-cdn-cf.behance.net/projects/404/3877bf243467103.Y3JvcCwxMTkyLDkzMywxMDMsMA.png`,
         alt: "TUU motion",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/6a52d0.auto`, alt: "TUU variable system" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/10190a217782349.6796a530a3cec.png`, alt: "TUU variable system" },
       },
-      { type: "image", src: `${BURO}/9767e6.auto`, alt: "TUU brand overview", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/original/edd03e218139349.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg`, alt: "TUU brand overview", layout: "full" },
     ],
     awards: [
       "Awwwards: Honorable Mention",
@@ -318,31 +315,31 @@ export const projects: Project[] = [
     ],
     description:
       "Redacted RnD is built on a simple idea of concealment — where the visual language emerges from the balance between what is hidden and what is revealed. Inspired by redacted documents, its patterns turn absence into structure through repetition, variation, and fragmentation. Rectangular forms shift, break, and recombine into compositions that feel both precise and slightly unstable. Rather than decoration, the pattern works as a supporting layer — guiding attention, organising information, and adding depth without competing with core elements. Being vector-based, it scales across formats while staying clear and adaptable.",
-    coverImage: `${BURO}/6a6d60.auto`,
-    heroImage: `${BURO}/9acbe2.auto`,
+    coverImage: `https://mir-s3-cdn-cf.behance.net/projects/404/332bd9247049289.Y3JvcCw0MTYwLDMyNTMsMCw5Mg.jpg`,
+    heroImage: `https://mir-s3-cdn-cf.behance.net/projects/404/2f1078243332203.Y3JvcCwyMDg1LDE2MzAsMCwxOTY.jpg`,
     gallery: [
-      { type: "image", src: `${BURO}/9acbe2.auto`, alt: "Redacted brand system", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/2f1078243332203.Y3JvcCwyMDg1LDE2MzAsMCwxOTY.jpg`, alt: "Redacted brand system", layout: "full" },
       {
         type: "image",
-        src: `${BURO}/1c5eb1.auto`,
+        src: `https://mir-s3-cdn-cf.behance.net/projects/404/e7a39d240055097.Y3JvcCwzODM1LDMwMDAsMTgwLDA.jpg`,
         alt: "Redacted pattern",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/bedd9b.auto`, alt: "Redacted identity" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/aeeb2894949381.Y3JvcCwzMDAwLDIzNDYsMCwyOQ.jpg`, alt: "Redacted identity" },
       },
-      { type: "image", src: `${BURO}/3064b4.auto`, alt: "Redacted applications", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/c55abe212384375.Y3JvcCwxMjc4LDEwMDAsMTA3LDA.jpg`, alt: "Redacted applications", layout: "full" },
       {
         type: "image",
-        src: `${BURO}/31a78c.auto`,
+        src: `https://mir-s3-cdn-cf.behance.net/projects/404/aec9b8187144685.Y3JvcCwxMzgwLDEwODAsMCww.png`,
         alt: "Redacted collateral",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/3f11d4.auto`, alt: "Redacted system" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/57e75e148373615.62d4db168e712.jpg`, alt: "Redacted system" },
       },
       {
         type: "image",
-        src: `${BURO}/893f2f.auto`,
+        src: `https://mir-s3-cdn-cf.behance.net/projects/404/5059e3205876773.Y3JvcCwxMDgwLDg0NCwwLDExNw.jpg`,
         alt: "Redacted print",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/cf6566.auto`, alt: "Redacted overview" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/494a6a228812019.Y3JvcCwxNDM4LDExMjUsNDI3LDA.png`, alt: "Redacted overview" },
       },
     ],
     testimonial: {
@@ -370,18 +367,18 @@ export const projects: Project[] = [
     ],
     description:
       "Centered on a coffee cup as a key WebGL element, the scroll guides users through the journey from first contact to a fully operational vending shop in just one month. B2B first — but consumers are the real brand champions. The site's vibrant presence comes to life with dynamic illustrations, motion graphics, and animated blocks that enhance the scroll narrative. A quintessential Portuguese city illustrated in detail houses the store within its façade, with interactive audio elements — clicking the bicycle triggers a sound sample and city birds chirp in the distance. The footer features a movable star module in a playful beach setting, tied to the brand's 24-hour availability.",
-    coverImage: `${BURO}/c2a9e2.auto`,
-    heroImage: `${BURO}/839beb.auto`,
+    coverImage: `https://mir-s3-cdn-cf.behance.net/projects/404/51d8b3235725883.Y3JvcCwzMjAwLDI1MDIsMCww.png`,
+    heroImage: `https://mir-s3-cdn-cf.behance.net/projects/404/c5843a220845201.Y3JvcCwxNzA1LDEzMzQsMTQ3LDA.png`,
     gallery: [
-      { type: "image", src: `${BURO}/839beb.auto`, alt: "Grab&Go website", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/c5843a220845201.Y3JvcCwxNzA1LDEzMzQsMTQ3LDA.png`, alt: "Grab&Go website", layout: "full" },
       {
         type: "image",
-        src: `${BURO}/1de1a7.auto`,
+        src: `https://mir-s3-cdn-cf.behance.net/projects/404/5542c1244023205.Y3JvcCw4MDgsNjMyLDAsMA.png`,
         alt: "Grab&Go on mobile",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/aa98ed.auto`, alt: "Grab&Go brand" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/07caed248673979.Y3JvcCwyNDI0LDE4OTYsMCww.png`, alt: "Grab&Go brand" },
       },
-      { type: "image", src: `${BURO}/4784a9.auto`, alt: "Grab&Go illustration", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/3877bf243467103.Y3JvcCwxMTkyLDkzMywxMDMsMA.png`, alt: "Grab&Go illustration", layout: "full" },
     ],
     awards: [
       "Awwwards: Honorable Mention",
@@ -409,24 +406,24 @@ export const projects: Project[] = [
     ],
     description:
       "Merging the concepts of 'flow of information' and 'case study' led to the exploration of stacks — the SaaS product itself revolves around stacks, whether resume stacks or modular UI represented as card stacks. The symbol merges an 'F' with a sleek, quirky design — standing out in a sea of 'F' logos — capturing the flow of information and embodying the product's core identity. The brand system evolves from simple 2D to a dynamic 3D visual language, with 3D elements integrated into motion graphics creating tangible connections on social platforms. From website headers to lanyard cards, the system presents content in diverse, impactful ways.",
-    coverImage: `${BURO}/f2b46a.auto`,
-    heroImage: `${BURO}/5631e8.auto`,
+    coverImage: `https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/10190a217782349.6796a530a3cec.png`,
+    heroImage: `https://mir-s3-cdn-cf.behance.net/projects/original/edd03e218139349.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg`,
     gallery: [
-      { type: "image", src: `${BURO}/5631e8.auto`, alt: "Flowcase ID cards", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/original/edd03e218139349.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg`, alt: "Flowcase ID cards", layout: "full" },
       {
         type: "image",
-        src: `${BURO}/cf9fa8.auto`,
+        src: `https://mir-s3-cdn-cf.behance.net/projects/404/332bd9247049289.Y3JvcCw0MTYwLDMyNTMsMCw5Mg.jpg`,
         alt: "Flowcase pin",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/dfbd71.auto`, alt: "Flowcase cards" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/2f1078243332203.Y3JvcCwyMDg1LDE2MzAsMCwxOTY.jpg`, alt: "Flowcase cards" },
       },
-      { type: "image", src: `${BURO}/a91312.auto`, alt: "Flowcase bag", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/e7a39d240055097.Y3JvcCwzODM1LDMwMDAsMTgwLDA.jpg`, alt: "Flowcase bag", layout: "full" },
       {
         type: "image",
-        src: `${BURO}/babd18.auto`,
+        src: `https://mir-s3-cdn-cf.behance.net/projects/404/aeeb2894949381.Y3JvcCwzMDAwLDIzNDYsMCwyOQ.jpg`,
         alt: "Flowcase header on mobile",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/f2b46a.auto`, alt: "Flowcase overview" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/10190a217782349.6796a530a3cec.png`, alt: "Flowcase overview" },
       },
     ],
     awards: ["Awwwards: Honorable Mention"],
@@ -452,19 +449,19 @@ export const projects: Project[] = [
     ],
     description:
       "With the 'O' naturally suggesting a coin shape, the rebranding was anchored by a sturdy wordmark with subtle typographic nuances — a blend of soft and clean geometric angles across all glyphs and icons. The brand symbol mimics the motion of coins within a single snapshot, merging form and function. Designed for high-impact minimal applications, the identity performs on everything from digital screens to sports uniforms — Jeton is the Official Partner of West Ham United F.C. and Legia Warsaw. The vibrant orange-and-white combination provides youthful appeal for a younger demographic. The 3D brand universe features coin-shaped metaphors abstractly representing money transactions alongside real-use-case store scenarios.",
-    coverImage: `${BURO}/5bef20.auto`,
-    heroImage: `${BURO}/46fabc.auto`,
+    coverImage: `https://mir-s3-cdn-cf.behance.net/projects/404/c55abe212384375.Y3JvcCwxMjc4LDEwMDAsMTA3LDA.jpg`,
+    heroImage: `https://mir-s3-cdn-cf.behance.net/projects/404/aec9b8187144685.Y3JvcCwxMzgwLDEwODAsMCww.png`,
     gallery: [
-      { type: "image", src: `${BURO}/46fabc.auto`, alt: "Jeton cards", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/aec9b8187144685.Y3JvcCwxMzgwLDEwODAsMCww.png`, alt: "Jeton cards", layout: "full" },
       {
         type: "image",
-        src: `${BURO}/7968f3.auto`,
+        src: `https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/57e75e148373615.62d4db168e712.jpg`,
         alt: "Jeton with Alexis Mac Allister",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/9c138a.auto`, alt: "Jeton tote bags" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/5059e3205876773.Y3JvcCwxMDgwLDg0NCwwLDExNw.jpg`, alt: "Jeton tote bags" },
       },
-      { type: "image", src: `${BURO}/28ed6e.auto`, alt: "Jeton poster", layout: "full" },
-      { type: "image", src: `${BURO}/f0e3ce.auto`, alt: "Jeton pictograms", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/494a6a228812019.Y3JvcCwxNDM4LDExMjUsNDI3LDA.png`, alt: "Jeton poster", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/51d8b3235725883.Y3JvcCwzMjAwLDI1MDIsMCww.png`, alt: "Jeton pictograms", layout: "full" },
     ],
     awards: [
       "Awwwards: Honorable Mention",
@@ -492,7 +489,7 @@ export const projects: Project[] = [
     ],
     description:
       "Keikku is a next-generation smart, digital, and wireless stethoscope. The visual identity centres on sound waves, illustrated by a whale-shaped waveform that underscores the device's adaptability — connecting the brand to an iconic figure while echoing the device's rounded, orca-like bezel. Through an engaging on-scroll narrative, the website reveals the product's specifications and features while highlighting its compact size in context. A key feature is the WebGL-powered exploded view where users explore the device's components. The footer features waves that react to sound, set to become a recognisable element of the brand's visual language.",
-    coverImage: `${BURO}/7881ba.auto`,
+    coverImage: `https://mir-s3-cdn-cf.behance.net/projects/404/c5843a220845201.Y3JvcCwxNzA1LDEzMzQsMTQ3LDA.png`,
     heroImage: `${SANITY}/6f84723c0550b0177ed6058b7319322c12310c84-3270x2176.png`,
     gallery: [
       { type: "image", src: `${SANITY}/6f84723c0550b0177ed6058b7319322c12310c84-3270x2176.png`, alt: "Keikku product", layout: "full" },
@@ -502,7 +499,7 @@ export const projects: Project[] = [
         src: `${SANITY}/981a1d051930da88fc3b76b98e15eee4b32d25cc-1360x1600.jpg`,
         alt: "Keikku features on mobile",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/7881ba.auto`, alt: "Keikku overview" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/c5843a220845201.Y3JvcCwxNzA1LDEzMzQsMTQ3LDA.png`, alt: "Keikku overview" },
       },
     ],
     awards: [
@@ -531,24 +528,24 @@ export const projects: Project[] = [
     ],
     description:
       "The design aims for elegance and sophistication, offering a Zen-like experience as you scroll. Guided by the soft notes of a marimba — a wooden instrument — paired with nature and factory field recordings, it eases daily stress while encouraging deeper exploration through storytelling. Each header integrates elements of wooden house construction, with typography intertwined with nature-inspired illustrations and seamless WebGL animations. A world map infographic highlights wood construction data, while the concrete vs. CLT comparison showcases the advantages of wood beyond natural appeal. Minimal drone footage captured in Comporta, Portugal — lush rice fields, towering pine trees, and untouched sandy roads — offers a glimpse of the lifestyle these homes deliver.",
-    coverImage: `${BURO}/30ea45.auto`,
-    heroImage: `${BURO}/66e76a.auto`,
+    coverImage: `https://mir-s3-cdn-cf.behance.net/projects/404/5542c1244023205.Y3JvcCw4MDgsNjMyLDAsMA.png`,
+    heroImage: `https://mir-s3-cdn-cf.behance.net/projects/404/07caed248673979.Y3JvcCwyNDI0LDE4OTYsMCww.png`,
     gallery: [
-      { type: "image", src: `${BURO}/66e76a.auto`, alt: "Kōzōwood about", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/07caed248673979.Y3JvcCwyNDI0LDE4OTYsMCww.png`, alt: "Kōzōwood about", layout: "full" },
       {
         type: "image",
-        src: `${BURO}/f98ebd.auto`,
+        src: `https://mir-s3-cdn-cf.behance.net/projects/404/3877bf243467103.Y3JvcCwxMTkyLDkzMywxMDMsMA.png`,
         alt: "Kōzōwood website",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/9fe84a.auto`, alt: "Kōzōwood design" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/10190a217782349.6796a530a3cec.png`, alt: "Kōzōwood design" },
       },
-      { type: "image", src: `${BURO}/f0a53d.auto`, alt: "Kōzōwood brand", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/original/edd03e218139349.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg`, alt: "Kōzōwood brand", layout: "full" },
       {
         type: "image",
-        src: `${BURO}/80bf68.auto`,
+        src: `https://mir-s3-cdn-cf.behance.net/projects/404/332bd9247049289.Y3JvcCw0MTYwLDMyNTMsMCw5Mg.jpg`,
         alt: "Kōzōwood exterior",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/fefafd.auto`, alt: "Kōzōwood detail" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/2f1078243332203.Y3JvcCwyMDg1LDE2MzAsMCwxOTY.jpg`, alt: "Kōzōwood detail" },
       },
     ],
     awards: [
@@ -578,19 +575,19 @@ export const projects: Project[] = [
     ],
     description:
       "The concept centres on individual personas — the 'tp' connection hints at an ASCII-style figure, with a diverse range of emoticons allowing users to build their own avatar to reflect their online identity. Alongside each person's $token, users can choose their ID colour palette and customise an icon that shifts to represent their face. The design system uses interconnected shapes to create a seamless flow and sense of connection throughout the interface. Balancing the personal with the professional, the system integrates the user's name, token symbol, and photo into a cohesive layout — versatile and user-centric whether you're a designer, a crypto enthusiast, or an entrepreneur.",
-    coverImage: `${BURO}/228f99.auto`,
-    heroImage: `${BURO}/741670.auto`,
+    coverImage: `https://mir-s3-cdn-cf.behance.net/projects/404/e7a39d240055097.Y3JvcCwzODM1LDMwMDAsMTgwLDA.jpg`,
+    heroImage: `https://mir-s3-cdn-cf.behance.net/projects/404/aeeb2894949381.Y3JvcCwzMDAwLDIzNDYsMCwyOQ.jpg`,
     gallery: [
-      { type: "image", src: `${BURO}/741670.auto`, alt: "Talent Protocol identity", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/aeeb2894949381.Y3JvcCwzMDAwLDIzNDYsMCwyOQ.jpg`, alt: "Talent Protocol identity", layout: "full" },
       {
         type: "image",
-        src: `${BURO}/e1fdf1.auto`,
+        src: `https://mir-s3-cdn-cf.behance.net/projects/404/c55abe212384375.Y3JvcCwxMjc4LDEwMDAsMTA3LDA.jpg`,
         alt: "Talent Protocol user tags",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/a8ec4e.auto`, alt: "Talent Protocol merch" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/aec9b8187144685.Y3JvcCwxMzgwLDEwODAsMCww.png`, alt: "Talent Protocol merch" },
       },
-      { type: "image", src: `${BURO}/2ade36.auto`, alt: "Talent Protocol system", layout: "full" },
-      { type: "image", src: `${BURO}/3844fe.auto`, alt: "Talent Protocol overview", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/57e75e148373615.62d4db168e712.jpg`, alt: "Talent Protocol system", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/5059e3205876773.Y3JvcCwxMDgwLDg0NCwwLDExNw.jpg`, alt: "Talent Protocol overview", layout: "full" },
     ],
     awards: ["Awwwards: Honorable Mention"],
     websiteUrl: "https://talentprotocol.com",
@@ -615,7 +612,7 @@ export const projects: Project[] = [
     ],
     description:
       "Flecto.io represents a rare breed of product website where the brand is intricately woven into the narrative, not merely scattered as users scroll. The brand language — built around flexible boxes — demanded technology that didn't exist, so we conducted our own R&D. The implementation: no masks involved. What appears on screen are complex paths generated at render time using a script tied to the GSAP onUpdate function. We animate simple rect elements and the script generates shapes dynamically based on their coordinates. Flecto pioneered this container technique. The design system seamlessly transitions from website product feature narrative to the full dashboard UI — a unified product design language from landing page to logged-in experience.",
-    coverImage: `${BURO}/a48498.auto`,
+    coverImage: `https://mir-s3-cdn-cf.behance.net/projects/404/494a6a228812019.Y3JvcCwxNDM4LDExMjUsNDI3LDA.png`,
     heroImage: `${SANITY}/3fc4f3c3e7da694850c273567eedf168be08dfb5-1700x1384.png`,
     gallery: [
       { type: "image", src: `${SANITY}/3fc4f3c3e7da694850c273567eedf168be08dfb5-1700x1384.png`, alt: "Flecto about", layout: "full" },
@@ -657,24 +654,24 @@ export const projects: Project[] = [
     ],
     description:
       "Hematogenix helps clients discover new and more effective methods to diagnose, treat, and prevent cancer. With an outdated brand and collateral, the intervention called for a rebranding as foundation for a full digital transformation — reshaping the Spiral DNA-H into a new form, which gained credibility after being featured in LogoLounge Trends 2021. The 3D visual universe, inspired by blood components like plasma, red cells, and white cells, serves as the foundation for the site headers. Transparent videos (up to 4K on Apple Silicon) form the hero experience — the only thing greater than the number of After Effects interactions was the love for the final result.",
-    coverImage: `${BURO}/31bdee.auto`,
-    heroImage: `${BURO}/b6e13c.auto`,
+    coverImage: `https://mir-s3-cdn-cf.behance.net/projects/404/51d8b3235725883.Y3JvcCwzMjAwLDI1MDIsMCww.png`,
+    heroImage: `https://mir-s3-cdn-cf.behance.net/projects/404/c5843a220845201.Y3JvcCwxNzA1LDEzMzQsMTQ3LDA.png`,
     gallery: [
-      { type: "image", src: `${BURO}/b6e13c.auto`, alt: "Hematogenix website on tablet", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/c5843a220845201.Y3JvcCwxNzA1LDEzMzQsMTQ3LDA.png`, alt: "Hematogenix website on tablet", layout: "full" },
       {
         type: "image",
-        src: `${BURO}/526d22.auto`,
+        src: `https://mir-s3-cdn-cf.behance.net/projects/404/5542c1244023205.Y3JvcCw4MDgsNjMyLDAsMA.png`,
         alt: "Hematogenix clinical trials on mobile",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/e741a7.auto`, alt: "Hematogenix boxes" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/07caed248673979.Y3JvcCwyNDI0LDE4OTYsMCww.png`, alt: "Hematogenix boxes" },
       },
-      { type: "image", src: `${BURO}/132d0a.auto`, alt: "Hematogenix cover", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/3877bf243467103.Y3JvcCwxMTkyLDkzMywxMDMsMA.png`, alt: "Hematogenix cover", layout: "full" },
       {
         type: "image",
-        src: `${BURO}/b85b25.auto`,
+        src: `https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/10190a217782349.6796a530a3cec.png`,
         alt: "Hematogenix tote bag",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/7f12df.auto`, alt: "Hematogenix cards" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/original/edd03e218139349.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg`, alt: "Hematogenix cards" },
       },
     ],
     awards: [
@@ -704,10 +701,10 @@ export const projects: Project[] = [
     ],
     description:
       "The brief called for a minimal black Swiss-style website — no clutter or excess, just clean and straight to the point. The website concept centres around a black-and-white 3D globe — the standard visual metaphor for global reach — which dynamically changes colours based on the country it's serving. Black is used for the overall product presentation while white is reserved for the professional business account. The product is introduced through an on-scroll experience, enhanced with micro-animations and developed with a mobile-first approach. The abstract 3D globe plays a pivotal role in narrating the product's capabilities, reinforcing Speedy's position as a next-generation fintech solution.",
-    coverImage: `${BURO}/65b7c1.auto`,
-    heroImage: `${BURO}/65b7c1.auto`,
+    coverImage: `https://mir-s3-cdn-cf.behance.net/projects/404/332bd9247049289.Y3JvcCw0MTYwLDMyNTMsMCw5Mg.jpg`,
+    heroImage: `https://mir-s3-cdn-cf.behance.net/projects/404/332bd9247049289.Y3JvcCw0MTYwLDMyNTMsMCw5Mg.jpg`,
     gallery: [
-      { type: "image", src: `${BURO}/65b7c1.auto`, alt: "Speedy overview", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/332bd9247049289.Y3JvcCw0MTYwLDMyNTMsMCw5Mg.jpg`, alt: "Speedy overview", layout: "full" },
     ],
     awards: [
       "Awwwards: Site of the Day",
@@ -736,24 +733,24 @@ export const projects: Project[] = [
     ],
     description:
       "Building a mobile-first, blazing-fast website that Google loves while maintaining polished branding is no easy task — Google first, even at the expense of nice typefaces. The biggest challenge was designing a navigation system allowing both new and returning users to quickly find what they needed. The brand symbol was directly inspired by 'C' fingerprint outlines, creating a language that extended to essential website UI pictograms. Typography pairs the elegant Beatrice with playful New Kansas, avoiding monotony while adding character. Care to Beauty is all about people, so the colour palette reflects warmth — ranging from light to dark skin tones, with coral and moss green providing freshness.",
-    coverImage: `${BURO}/9c0f2e.auto`,
-    heroImage: `${BURO}/3517ac.auto`,
+    coverImage: `https://mir-s3-cdn-cf.behance.net/projects/404/2f1078243332203.Y3JvcCwyMDg1LDE2MzAsMCwxOTY.jpg`,
+    heroImage: `https://mir-s3-cdn-cf.behance.net/projects/404/e7a39d240055097.Y3JvcCwzODM1LDMwMDAsMTgwLDA.jpg`,
     gallery: [
-      { type: "image", src: `${BURO}/3517ac.auto`, alt: "Care to Beauty homepage", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/e7a39d240055097.Y3JvcCwzODM1LDMwMDAsMTgwLDA.jpg`, alt: "Care to Beauty homepage", layout: "full" },
       {
         type: "image",
-        src: `${BURO}/915cfe.auto`,
+        src: `https://mir-s3-cdn-cf.behance.net/projects/404/aeeb2894949381.Y3JvcCwzMDAwLDIzNDYsMCwyOQ.jpg`,
         alt: "Care to Beauty search",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/fead36.auto`, alt: "Care to Beauty product page" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/c55abe212384375.Y3JvcCwxMjc4LDEwMDAsMTA3LDA.jpg`, alt: "Care to Beauty product page" },
       },
-      { type: "image", src: `${BURO}/2d5d6f.auto`, alt: "Care to Beauty team", layout: "full" },
+      { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/aec9b8187144685.Y3JvcCwxMzgwLDEwODAsMCww.png`, alt: "Care to Beauty team", layout: "full" },
       {
         type: "image",
-        src: `${BURO}/4753c4.auto`,
+        src: `https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/57e75e148373615.62d4db168e712.jpg`,
         alt: "Care to Beauty brand",
         layout: "pair",
-        pair: { type: "image", src: `${BURO}/279c18.auto`, alt: "Care to Beauty posters" },
+        pair: { type: "image", src: `https://mir-s3-cdn-cf.behance.net/projects/404/5059e3205876773.Y3JvcCwxMDgwLDg0NCwwLDExNw.jpg`, alt: "Care to Beauty posters" },
       },
     ],
     awards: [

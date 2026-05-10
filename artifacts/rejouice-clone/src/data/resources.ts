@@ -11,8 +11,6 @@ export interface ResourceGuide {
   heroImage: string;
 }
 
-const BURO = "https://www.burocratik.com/_nuxt/image";
-
 export const resources: ResourceGuide[] = [
   {
     slug: "rebranding-checklist",
@@ -109,7 +107,7 @@ export const resources: ResourceGuide[] = [
       },
     ],
     relatedSlugs: ["how-to-choose-a-brand-agency", "brand-audit-guide", "brand-brief-template"],
-    heroImage: `${BURO}/482d5f.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/projects/404/c5843a220845201.Y3JvcCwxNzA1LDEzMzQsMTQ3LDA.png",
   },
 
   {
@@ -199,7 +197,7 @@ export const resources: ResourceGuide[] = [
       },
     ],
     relatedSlugs: ["how-to-choose-a-brand-agency", "rebranding-checklist", "brand-audit-guide"],
-    heroImage: `${BURO}/7ead07.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/projects/404/5542c1244023205.Y3JvcCw4MDgsNjMyLDAsMA.png",
   },
 
   {
@@ -255,7 +253,7 @@ export const resources: ResourceGuide[] = [
       },
     ],
     relatedSlugs: ["brand-brief-template", "rebranding-checklist", "brand-audit-guide"],
-    heroImage: `${BURO}/455aa5.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/projects/404/07caed248673979.Y3JvcCwyNDI0LDE4OTYsMCww.png",
   },
 
   {
@@ -322,7 +320,7 @@ export const resources: ResourceGuide[] = [
       },
     ],
     relatedSlugs: ["rebranding-checklist", "brand-brief-template", "how-to-choose-a-brand-agency"],
-    heroImage: `${BURO}/278ec4.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/projects/404/3877bf243467103.Y3JvcCwxMTkyLDkzMywxMDMsMA.png",
   },
 
   {
@@ -387,7 +385,7 @@ export const resources: ResourceGuide[] = [
       },
     ],
     relatedSlugs: ["brand-brief-template", "rebranding-checklist", "how-to-choose-a-brand-agency"],
-    heroImage: `${BURO}/dc758e.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/10190a217782349.6796a530a3cec.png",
   },
 
   {
@@ -467,7 +465,7 @@ export const resources: ResourceGuide[] = [
       },
     ],
     relatedSlugs: ["brand-brief-template", "how-to-choose-a-brand-agency", "rebranding-checklist"],
-    heroImage: `${BURO}/665f58.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/projects/original/edd03e218139349.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg",
   },
 ];
 

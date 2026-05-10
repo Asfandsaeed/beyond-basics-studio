@@ -7,8 +7,6 @@ import { projects } from "@/data/projects";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const BURO = "https://www.burocratik.com/_nuxt/image";
-
 const testimonials = projects
   .filter((p) => p.testimonial)
   .map((p) => ({ ...p.testimonial!, project: p.title, category: p.category, projectId: p.id, img: p.coverImage }));
@@ -155,9 +153,9 @@ export default function TestimonialsPage() {
           <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/30 mb-12 reveal">The work behind the words</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {[
-              { id: "clear-street", title: "Clear Street", img: `${BURO}/482d5f.auto` },
-              { id: "multiversx", title: "MultiversX", img: `${BURO}/7ead07.auto` },
-              { id: "floema", title: "Floema", img: `${BURO}/dc758e.auto` },
+              { id: "clear-street", title: "Clear Street", img: "https://mir-s3-cdn-cf.behance.net/projects/404/c5843a220845201.Y3JvcCwxNzA1LDEzMzQsMTQ3LDA.png" },
+              { id: "multiversx", title: "MultiversX", img: "https://mir-s3-cdn-cf.behance.net/projects/404/5542c1244023205.Y3JvcCw4MDgsNjMyLDAsMA.png" },
+              { id: "floema", title: "Floema", img: "https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/10190a217782349.6796a530a3cec.png" },
             ].map((p) => (
               <Link
                 key={p.id}

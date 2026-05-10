@@ -17,8 +17,6 @@ export interface ServicePage {
   industryName?: string;
 }
 
-const BURO = "https://www.burocratik.com/_nuxt/image";
-
 export const servicePages: ServicePage[] = [
 
   // ─── Brand Strategy ─────────────────────────────────────────────────────────
@@ -48,7 +46,7 @@ export const servicePages: ServicePage[] = [
       { q: "Can you do strategy without redesigning our identity?", a: "Absolutely. Sometimes the brand strategy needs refreshing while the visual identity remains strong. We can scope a strategy-only engagement that produces a new positioning and messaging framework without touching the visual side." },
       { q: "How long does a brand strategy engagement take?", a: "A focused strategy sprint takes 3–5 weeks from kickoff to final deliverables. A deeper engagement that includes research, workshops, and multiple rounds of positioning development typically runs 6–8 weeks." },
     ],
-    heroImage: `${BURO}/482d5f.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/projects/404/c5843a220845201.Y3JvcCwxNzA1LDEzMzQsMTQ3LDA.png",
   },
 
   // ─── Brand Identity ──────────────────────────────────────────────────────────
@@ -78,7 +76,7 @@ export const servicePages: ServicePage[] = [
       { q: "What file formats are included in the handover?", a: "All logo files in SVG, EPS, PNG (transparent), and PDF. Full colour codes in HEX, RGB, CMYK, and Pantone. Font licence guidance, pattern and graphic element files, and comprehensive brand guidelines in PDF." },
       { q: "Can you work with an existing brand we're refreshing?", a: "Yes. Many of our best projects are brand refreshes — preserving what's working while updating what's aged. We'll audit the existing brand to identify what should be retained and what should evolve." },
     ],
-    heroImage: `${BURO}/7ead07.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/projects/404/5542c1244023205.Y3JvcCw4MDgsNjMyLDAsMA.png",
   },
 
   // ─── Digital Experience ──────────────────────────────────────────────────────
@@ -108,7 +106,7 @@ export const servicePages: ServicePage[] = [
       { q: "How do you handle SEO during a website rebuild?", a: "SEO is part of our build process from the start — not an afterthought. We audit the existing site's SEO equity, implement redirects to protect ranking pages, build with semantic HTML, and optimise Core Web Vitals." },
       { q: "What's included in the ongoing relationship after launch?", a: "Our Partnership model includes ongoing support, updates, and growth work. For Sprint engagements, we handover with full documentation and a 30-day support window post-launch." },
     ],
-    heroImage: `${BURO}/455aa5.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/projects/404/07caed248673979.Y3JvcCwyNDI0LDE4OTYsMCww.png",
   },
 
   // ─── Growth Marketing ────────────────────────────────────────────────────────
@@ -137,7 +135,7 @@ export const servicePages: ServicePage[] = [
       { q: "Do you run paid media campaigns?", a: "We produce the creative strategy and assets for paid media, and we can advise on channel and budget allocation — but we don't act as a paid media buying agency. We work in partnership with your internal team or media agency." },
       { q: "How do brand and growth work together?", a: "Brand creates the conditions in which growth is more efficient. A strong brand converts better from every paid channel, retains customers longer, and generates referrals that no budget can replicate. Growth marketing without brand investment optimises the tap while leaving the pipe leaking." },
     ],
-    heroImage: `${BURO}/278ec4.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/projects/404/3877bf243467103.Y3JvcCwxMTkyLDkzMywxMDMsMA.png",
   },
 
   // ─── Content & Creative ──────────────────────────────────────────────────────
@@ -166,7 +164,7 @@ export const servicePages: ServicePage[] = [
       { q: "Can you produce CGI and 3D assets?", a: "Yes. We produce CGI product visualisations, 3D brand elements, and animation — all built to integrate with the broader brand system." },
       { q: "Do you write brand copy and website copy?", a: "Yes. Our copywriting work covers brand messaging, website copy, campaign concepts, and ongoing content strategy. All copy is written within the verbal identity we've established (or audited) for the brand." },
     ],
-    heroImage: `${BURO}/dc758e.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/10190a217782349.6796a530a3cec.png",
   },
 
   // ─── Service × Industry pages ─────────────────────────────────────────────────
@@ -192,7 +190,7 @@ export const servicePages: ServicePage[] = [
       { q: "How does fintech brand strategy differ from other sectors?", a: "Fintech brands must balance innovation signalling with trust signalling — getting either wrong is costly. The strategy work is more demanding because the audience has higher stakes: they're trusting you with their money." },
       { q: "Do you work with regulated financial companies?", a: "Yes. We understand the compliance constraints that affect messaging in regulated sectors and factor them into the strategy from the outset." },
     ],
-    heroImage: `${BURO}/482d5f.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/projects/404/c5843a220845201.Y3JvcCwxNzA1LDEzMzQsMTQ3LDA.png",
     parentService: "brand-strategy",
     industryName: "Fintech",
   },
@@ -217,7 +215,7 @@ export const servicePages: ServicePage[] = [
     faqs: [
       { q: "Do you have experience with regulated brand applications?", a: "Yes. We factor compliance requirements (advertising standards, disclosure requirements) into the brand guidelines from the outset — so the team applying the brand doesn't run into problems later." },
     ],
-    heroImage: `${BURO}/46fabc.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/5d3dd9219754455.67b727e3c2ada.jpg",
     parentService: "brand-identity",
     industryName: "Fintech",
   },
@@ -242,7 +240,7 @@ export const servicePages: ServicePage[] = [
     faqs: [
       { q: "Can you help align our product UI with a new brand identity?", a: "Yes. We can scope product UI alignment work alongside the identity project — ensuring the brand and the product feel like they came from the same hand." },
     ],
-    heroImage: `${BURO}/a48498.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/projects/404/512e32236000279.Y3JvcCw4NjQxLDY3NTksMCww.png",
     parentService: "brand-identity",
     industryName: "SaaS",
   },
@@ -267,7 +265,7 @@ export const servicePages: ServicePage[] = [
     faqs: [
       { q: "Can you design for DAOs and community-governed projects?", a: "Yes. We've built community-focused brand systems that include governance guidelines for how community contributors can apply the brand — without requiring central approval for every application." },
     ],
-    heroImage: `${BURO}/7ead07.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/projects/404/5542c1244023205.Y3JvcCw4MDgsNjMyLDAsMA.png",
     parentService: "brand-identity",
     industryName: "Web3",
   },
@@ -293,7 +291,7 @@ export const servicePages: ServicePage[] = [
       { q: "We're pre-revenue — is it too early to invest in brand?", a: "It depends on what you need brand for. If you're raising a seed round or hiring your first 10 people, a strong brand opens doors. If you're still validating the core product, a lightweight brand is fine until you've found product-market fit." },
       { q: "Can we scale the brand later without starting over?", a: "We design startup brand systems to scale — the foundations are built to support expansion into new products, markets, and sub-brands without requiring a full rebrand every time." },
     ],
-    heroImage: `${BURO}/f2b46a.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/projects/404/3ac091217373107.Y3JvcCwyNDI0LDE4OTYsMCww.jpg",
     parentService: "brand-identity",
     industryName: "Startups",
   },
@@ -318,7 +316,7 @@ export const servicePages: ServicePage[] = [
     faqs: [
       { q: "Do you build for regulatory compliance (GDPR, accessibility)?", a: "Yes. We build to WCAG 2.1 AA accessibility standards, implement GDPR-compliant analytics and cookie consent, and advise on financial services advertising compliance." },
     ],
-    heroImage: `${BURO}/4c3e36.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/5d3dd9219754455.67b727e3c2ada.jpg",
     parentService: "digital-experience",
     industryName: "Fintech",
   },
@@ -343,7 +341,7 @@ export const servicePages: ServicePage[] = [
     faqs: [
       { q: "Can you help us show the product without screenshots?", a: "Yes. We often design illustrated or diagrammatic product representations that convey the value and experience without requiring access to production screens." },
     ],
-    heroImage: `${BURO}/a91312.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/projects/404/512e32236000279.Y3JvcCw4NjQxLDY3NTksMCww.png",
     parentService: "digital-experience",
     industryName: "SaaS",
   },
@@ -368,7 +366,7 @@ export const servicePages: ServicePage[] = [
     faqs: [
       { q: "Which e-commerce platforms do you design for?", a: "We design for Shopify, WooCommerce, and custom builds. Platform choice depends on the project's complexity and requirements — we advise based on what's right for your scale and budget." },
     ],
-    heroImage: `${BURO}/3517ac.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/projects/404/d14e93239267949.Y3JvcCwyMDQ4LDE2MDEsMCw0MjU.png",
     parentService: "digital-experience",
     industryName: "E-commerce",
   },
@@ -393,7 +391,7 @@ export const servicePages: ServicePage[] = [
     faqs: [
       { q: "Should we do brand strategy before or after product-market fit?", a: "After. Brand strategy is most powerful when it's anchoring something real — a product with a clear value proposition and early customer proof. Before PMF, a lightweight positioning hypothesis is sufficient." },
     ],
-    heroImage: `${BURO}/f2b46a.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/projects/404/3ac091217373107.Y3JvcCwyNDI0LDE4OTYsMCww.jpg",
     parentService: "brand-strategy",
     industryName: "Startups",
   },
@@ -418,7 +416,7 @@ export const servicePages: ServicePage[] = [
     faqs: [
       { q: "Do you handle PLG (product-led growth) strategies?", a: "Yes. We understand the specific dynamics of PLG — where the product is the primary growth mechanism — and design brand and content strategies that complement rather than compete with the product's self-serve model." },
     ],
-    heroImage: `${BURO}/508c65.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/projects/original/edd03e218139349.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg",
     parentService: "growth-marketing",
     industryName: "SaaS",
   },
@@ -443,7 +441,7 @@ export const servicePages: ServicePage[] = [
     faqs: [
       { q: "Do you understand FDA/CE marking and regulatory constraints?", a: "We understand the general landscape of healthcare marketing regulation and factor it into the brand guidelines. We always recommend working with your regulatory team to review specific applications." },
     ],
-    heroImage: `${BURO}/b6e13c.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/projects/404/2f1078243332203.Y3JvcCwyMDg1LDE2MzAsMCwxOTY.jpg",
     parentService: "brand-identity",
     industryName: "Healthcare",
   },
@@ -468,7 +466,7 @@ export const servicePages: ServicePage[] = [
     faqs: [
       { q: "Can you integrate wallet connection and on-chain data?", a: "Yes. We work with web3 engineers to design and implement wallet connection flows, on-chain data display, and smart contract interaction UX." },
     ],
-    heroImage: `${BURO}/8e0717.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/projects/404/51d8b3235725883.Y3JvcCwzMjAwLDI1MDIsMCww.png",
     parentService: "digital-experience",
     industryName: "Web3",
   },
@@ -493,7 +491,7 @@ export const servicePages: ServicePage[] = [
     faqs: [
       { q: "Can you help with App Store marketing for fintech apps?", a: "Yes. App Store optimisation, app preview design, and mobile acquisition creative are all within our remit — factoring in the specific review guidelines for financial applications." },
     ],
-    heroImage: `${BURO}/65b7c1.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/5d3dd9219754455.67b727e3c2ada.jpg",
     parentService: "growth-marketing",
     industryName: "Fintech",
   },
@@ -518,7 +516,7 @@ export const servicePages: ServicePage[] = [
     faqs: [
       { q: "Do you design product packaging?", a: "We provide packaging design direction — the visual brief and brand guidelines that a specialist packaging studio or manufacturer can execute. For brands with significant packaging needs, we can co-produce with specialist packaging partners." },
     ],
-    heroImage: `${BURO}/9c0f2e.auto`,
+    heroImage: "https://mir-s3-cdn-cf.behance.net/projects/404/d14e93239267949.Y3JvcCwyMDQ4LDE2MDEsMCw0MjU.png",
     parentService: "brand-identity",
     industryName: "E-commerce",
   },

@@ -7,23 +7,22 @@ import SplitType from "split-type";
 gsap.registerPlugin(ScrollTrigger);
 
 // ── Asset URLs ──────────────────────────────────────────────────────────────
-const CDN = "https://images.prismic.io/rejouice-2024";
 const VCDN = "https://rejouice-2024.cdn.prismic.io/rejouice-2024";
 
 const ASSETS = {
   portfolioVideo: `${VCDN}/Z2BbT5bqstJ98kk6_REJOUICE-PORTFOLIO-LOOP-PROJECTS.mp4`,
-  guillaume: `${CDN}/aFwilXfc4bHWiuKK_Z1xCSpbqstJ98euH_test-gui-1-.avif`,
-  jack: `${CDN}/Z0dOD5bqstJ971U2_jack.jpg`,
-  gabriel: `${CDN}/Z0dODpbqstJ971U1_gabriel.jpg`,
-  jeffrey: `${CDN}/Z0dOEZbqstJ971U4_jeffrey.jpg`,
-  clement: `${CDN}/Z0dODZbqstJ971U0_clement.jpg`,
-  jeanmichel: `${CDN}/Z0dOEJbqstJ971U3_jeanmichel.jpg`,
-  office: `${CDN}/Z2GNNpbqstJ98mqU_6384a19b-fa1c-4ad1-aae0-e29e127ebeef_san-diego-office.jpg.jpg`,
-  mask1: `${CDN}/Z0eQrZbqstJ971-J_Maskgroup-1.jpg`,
-  mask2: `${CDN}/Z0eQrpbqstJ971-K_Maskgroup-2.jpg`,
-  mask3: `${CDN}/Z0eQr5bqstJ971-L_Maskgroup-3.jpg`,
-  mask4: `${CDN}/Z0eQsJbqstJ971-M_Maskgroup-4.jpg`,
-  mask5: `${CDN}/Z0eQsZbqstJ971-N_Maskgroup.jpg`,
+  guillaume:   "https://mir-s3-cdn-cf.behance.net/projects/404/332bd9247049289.Y3JvcCw0MTYwLDMyNTMsMCw5Mg.jpg",
+  jack:        "https://mir-s3-cdn-cf.behance.net/projects/404/e7a39d240055097.Y3JvcCwzODM1LDMwMDAsMTgwLDA.jpg",
+  gabriel:     "https://mir-s3-cdn-cf.behance.net/projects/404/aeeb2894949381.Y3JvcCwzMDAwLDIzNDYsMCwyOQ.jpg",
+  jeffrey:     "https://mir-s3-cdn-cf.behance.net/projects/404/c55abe212384375.Y3JvcCwxMjc4LDEwMDAsMTA3LDA.jpg",
+  clement:     "https://mir-s3-cdn-cf.behance.net/projects/404/aec9b8187144685.Y3JvcCwxMzgwLDEwODAsMCww.png",
+  jeanmichel:  "https://mir-s3-cdn-cf.behance.net/projects/404/5542c1244023205.Y3JvcCw4MDgsNjMyLDAsMA.png",
+  office:      "https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/57e75e148373615.62d4db168e712.jpg",
+  mask1:       "https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/57e75e148373615.62d4db168e712.jpg",
+  mask2:       "https://mir-s3-cdn-cf.behance.net/projects/original/edd03e218139349.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg",
+  mask3:       "https://mir-s3-cdn-cf.behance.net/projects/404/3ac091217373107.Y3JvcCwyNDI0LDE4OTYsMCww.jpg",
+  mask4:       "https://mir-s3-cdn-cf.behance.net/projects/404/07caed248673979.Y3JvcCwyNDI0LDE4OTYsMCww.png",
+  mask5:       "https://mir-s3-cdn-cf.behance.net/projects/404/3ac091217373107.Y3JvcCwyNDI0LDE4OTYsMCww.jpg",
 };
 
 const partners = [
@@ -377,7 +376,7 @@ export default function AboutPage() {
           <div className="office-img overflow-hidden rounded-sm aspect-[4/3] bg-[#e8e8e8]">
             <img
               src={ASSETS.office}
-              alt="San Diego office"
+              alt="Beyond studio"
               className="w-full h-full object-cover"
               loading="lazy"
             />

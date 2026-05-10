@@ -7,13 +7,10 @@ import { projects } from "../data/projects";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const BURO = "https://www.burocratik.com/_nuxt/image";
-
-// ── Asset map — Beyond/burocratik imagery only ────────────────────────────────
+// ── Asset map ─────────────────────────────────────────────────────────────────
 const ASSETS = {
-  // Engagement model thumbnails
-  teamShot: `${BURO}/665f58.auto`,   // Floema — clean workspace feel
-  portrait: `${BURO}/c40aba.auto`,   // Phive — bold portrait
+  teamShot: "https://mir-s3-cdn-cf.behance.net/projects/original/edd03e218139349.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg",
+  portrait: "https://mir-s3-cdn-cf.behance.net/projects/404/332bd9247049289.Y3JvcCw0MTYwLDMyNTMsMCw5Mg.jpg",
 };
 
 // ── Data ─────────────────────────────────────────────────────────────────────
@@ -25,7 +22,7 @@ const services = [
     tagline: "Clarity before creation.",
     desc: "We diagnose where your brand stands and chart the path to where it needs to go. Sharp positioning, a differentiated narrative, and a roadmap to lead your category.",
     items: ["Brand Audit", "Qualitative Research", "Quantitative Research", "Discovery Workshop", "Positioning", "Brand Architecture", "Naming", "Messaging Framework"],
-    img: `${BURO}/482d5f.auto`,
+    img: "https://mir-s3-cdn-cf.behance.net/projects/404/c5843a220845201.Y3JvcCwxNzA1LDEzMzQsMTQ3LDA.png",
     caseStudy: { name: "Clear Street", tag: "Rebranding & Website", id: "clear-street" },
   },
   {
@@ -35,7 +32,7 @@ const services = [
     tagline: "Identity that earns attention.",
     desc: "We design brands that stand apart. Visual identity, typography, motion, and tone — every element purpose-built to make your brand unmistakable and unforgettable.",
     items: ["Visual Identity", "Logo Design", "Typography System", "Color System", "Brand Guidelines", "Art Direction", "Motion Identity", "Verbal Identity"],
-    img: `${BURO}/7ead07.auto`,
+    img: "https://mir-s3-cdn-cf.behance.net/projects/404/5542c1244023205.Y3JvcCw4MDgsNjMyLDAsMA.png",
     caseStudy: { name: "MultiversX", tag: "Naming, Rebranding & Website", id: "multiversx" },
   },
   {
@@ -45,7 +42,7 @@ const services = [
     tagline: "Websites that convert and inspire.",
     desc: "We design and build digital products that feel as premium as the brands they represent. From landing pages to full product platforms — performance and craft in equal measure.",
     items: ["Web Design", "Web Development", "Product Design", "Motion Design & 3D", "Campaign Creative", "UX Strategy", "Interaction Design", "No-code Platforms"],
-    img: `${BURO}/455aa5.auto`,
+    img: "https://mir-s3-cdn-cf.behance.net/projects/404/07caed248673979.Y3JvcCwyNDI0LDE4OTYsMCww.png",
     caseStudy: { name: "Remote", tag: "Website", id: "remote" },
   },
   {
@@ -55,7 +52,7 @@ const services = [
     tagline: "Brand-led growth that compounds.",
     desc: "We build the systems and content that turn your brand into a growth engine. Strategy, creative, and distribution — aligned to drive results that last beyond any single campaign.",
     items: ["Growth Strategy", "Performance Creative", "SEO & Content Strategy", "Analytics & Attribution", "Paid Media Creative", "Email Marketing", "Social Strategy", "Go-To-Market"],
-    img: `${BURO}/278ec4.auto`,
+    img: "https://mir-s3-cdn-cf.behance.net/projects/404/3877bf243467103.Y3JvcCwxMTkyLDkzMywxMDMsMA.png",
     caseStudy: { name: "Phive", tag: "Rebrand & Website", id: "phive" },
   },
   {
@@ -65,7 +62,7 @@ const services = [
     tagline: "Content that earns its place.",
     desc: "We produce content that doesn't feel like content — photography, video, copy, and creative assets that carry your brand forward across every touchpoint and channel.",
     items: ["Brand Photography", "Video Production", "Copywriting", "Social Content", "Campaign Production", "CGI & 3D Visualization", "Editorial Design", "Podcast & Audio"],
-    img: `${BURO}/dc758e.auto`,
+    img: "https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/10190a217782349.6796a530a3cec.png",
     caseStudy: { name: "Floema", tag: "Rebrand & Website", id: "floema" },
   },
 ];
@@ -104,7 +101,6 @@ function ServiceRow({
   s: typeof services[0];
   isOpen: boolean;
   onToggle: () => void;
-  // slug is on s
 }) {
   const bodyRef = useRef<HTMLDivElement>(null);
 
@@ -297,7 +293,7 @@ export default function ServicesPage() {
         {/* Hero image strip */}
         <div className="mt-16 w-full aspect-[21/6] overflow-hidden rounded-sm bg-[#111]">
           <img
-            src={`${BURO}/508c65.auto`}
+            src="https://mir-s3-cdn-cf.behance.net/projects/original/edd03e218139349.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg"
             alt="Beyond studio work"
             className="w-full h-full object-cover object-center"
           />
@@ -427,7 +423,7 @@ export default function ServicesPage() {
       {/* ══ 6. OFFICE IMAGE ════════════════════════════════════════════════ */}
       <div className="w-full aspect-[16/5] md:aspect-[16/5] aspect-[4/3] overflow-hidden">
         <img
-          src={`${BURO}/508c65.auto`}
+          src="https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/57e75e148373615.62d4db168e712.jpg"
           alt="Beyond studio"
           className="w-full h-full object-cover object-center"
         />

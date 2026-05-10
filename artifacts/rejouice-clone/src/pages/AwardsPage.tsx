@@ -7,8 +7,6 @@ import { projects } from "@/data/projects";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const BURO = "https://www.burocratik.com/_nuxt/image";
-
 type AwardEntry = { award: string; project: string; projectId: string; year: string; img: string };
 
 const awardsData: AwardEntry[] = projects
@@ -34,25 +32,25 @@ const bodies = [
     name: "Awwwards",
     desc: "The global benchmark for web design excellence — judged by an international jury of leading designers and developers.",
     count: awardsData.filter((a) => a.award.startsWith("Awwwards")).length,
-    img: `${BURO}/482d5f.auto`,
+    img: "https://mir-s3-cdn-cf.behance.net/projects/404/c5843a220845201.Y3JvcCwxNzA1LDEzMzQsMTQ3LDA.png",
   },
   {
     name: "The FWA",
     desc: "Founded in 2000, The FWA recognises innovation in interactive design and development across the globe.",
     count: awardsData.filter((a) => a.award.startsWith("The FWA")).length,
-    img: `${BURO}/7ead07.auto`,
+    img: "https://mir-s3-cdn-cf.behance.net/projects/404/5542c1244023205.Y3JvcCw4MDgsNjMyLDAsMA.png",
   },
   {
     name: "CSS Design Awards",
     desc: "International recognition for exceptional web design, UX, and UI craft — awarded daily by a global panel.",
     count: awardsData.filter((a) => a.award.startsWith("CSS Design Awards")).length,
-    img: `${BURO}/dc758e.auto`,
+    img: "https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/10190a217782349.6796a530a3cec.png",
   },
   {
     name: "LogoLounge",
     desc: "The world's most respected logo design research publication — featuring the most significant logo design trends annually.",
     count: awardsData.filter((a) => a.award.startsWith("LogoLounge")).length,
-    img: `${BURO}/b6e13c.auto`,
+    img: "https://mir-s3-cdn-cf.behance.net/projects/404/2f1078243332203.Y3JvcCwyMDg1LDE2MzAsMCwxOTY.jpg",
   },
 ];
 

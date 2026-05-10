@@ -6,8 +6,6 @@ import { useSeoMeta } from "@/hooks/useSeoMeta";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const BURO = "https://www.burocratik.com/_nuxt/image";
-
 const factors = [
   {
     label: "Scope",
@@ -39,7 +37,7 @@ const engagements = [
       "You're at a growth inflection point (funding, launch, pivot)",
       "You want to validate the relationship before a longer engagement",
     ],
-    img: `${BURO}/665f58.auto`,
+    img: "https://mir-s3-cdn-cf.behance.net/projects/original/edd03e218139349.Y3JvcCwxMzQyLDEwNTAsMjksMA.jpg",
   },
   {
     num: "02",
@@ -52,7 +50,7 @@ const engagements = [
       "You want direct access to senior creative leadership at all times",
       "You're building a category-leading brand over the long term",
     ],
-    img: `${BURO}/c40aba.auto`,
+    img: "https://mir-s3-cdn-cf.behance.net/projects/404/332bd9247049289.Y3JvcCw0MTYwLDMyNTMsMCw5Mg.jpg",
   },
 ];
 
