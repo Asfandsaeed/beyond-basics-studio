@@ -89,9 +89,19 @@ export default function ResourcePage() {
           >
             {resource.title}
           </h1>
-          <p className="font-sans text-base md:text-xl font-light text-[#0A0A0A]/50 leading-relaxed">
+          <p className="font-sans text-base md:text-xl font-light text-[#0A0A0A]/50 leading-relaxed mb-8">
             {resource.subtitle}
           </p>
+          <a
+            href={resource.downloadUrl}
+            download
+            className="inline-flex items-center gap-3 bg-[#0A0A0A] text-white font-sans text-[11px] uppercase tracking-widest px-7 py-3.5 hover:bg-[#0A0A0A]/80 transition-colors duration-300"
+          >
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <span>Download PDF</span>
+          </a>
         </div>
       </section>
 

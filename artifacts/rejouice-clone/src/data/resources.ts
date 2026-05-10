@@ -9,6 +9,7 @@ export interface ResourceGuide {
   sections: { heading: string; content: string; items?: string[] }[];
   relatedSlugs: string[];
   heroImage: string;
+  downloadUrl: string;
 }
 
 export const resources: ResourceGuide[] = [
@@ -108,6 +109,7 @@ export const resources: ResourceGuide[] = [
     ],
     relatedSlugs: ["how-to-choose-a-brand-agency", "brand-audit-guide", "brand-brief-template"],
     heroImage: "https://cdn.sanity.io/images/zksivtxz/production/a5b674fefa860f0864baaf56bfbc2bb526b263fb-1180x720.jpg",
+    downloadUrl: "/downloads/rebranding-checklist.pdf",
   },
 
   {
@@ -198,6 +200,7 @@ export const resources: ResourceGuide[] = [
     ],
     relatedSlugs: ["how-to-choose-a-brand-agency", "rebranding-checklist", "brand-audit-guide"],
     heroImage: "https://cdn.sanity.io/images/zksivtxz/production/195dabd5e5757919b90b5d5102a477117981912e-1180x720.jpg",
+    downloadUrl: "/downloads/brand-brief-template.pdf",
   },
 
   {
@@ -254,6 +257,7 @@ export const resources: ResourceGuide[] = [
     ],
     relatedSlugs: ["brand-brief-template", "rebranding-checklist", "brand-audit-guide"],
     heroImage: "https://cdn.sanity.io/images/zksivtxz/production/51d9e034ae6b13b267034a18f3b0a3d8815d27ef-1180x720.jpg",
+    downloadUrl: "/downloads/how-to-choose-a-brand-agency.pdf",
   },
 
   {
@@ -321,6 +325,7 @@ export const resources: ResourceGuide[] = [
     ],
     relatedSlugs: ["rebranding-checklist", "brand-brief-template", "how-to-choose-a-brand-agency"],
     heroImage: "https://cdn.sanity.io/images/zksivtxz/production/2405f85e088f3e9b8a28f8c364fa64a88c75bff5-1180x720.jpg",
+    downloadUrl: "/downloads/brand-audit-guide.pdf",
   },
 
   {
@@ -386,6 +391,7 @@ export const resources: ResourceGuide[] = [
     ],
     relatedSlugs: ["brand-brief-template", "rebranding-checklist", "how-to-choose-a-brand-agency"],
     heroImage: "https://cdn.sanity.io/images/zksivtxz/production/43d9fe391c3de48c4f41dee41fd3a8c97f6540fa-1180x720.jpg",
+    downloadUrl: "/downloads/naming-guide.pdf",
   },
 
   {
@@ -466,6 +472,7 @@ export const resources: ResourceGuide[] = [
     ],
     relatedSlugs: ["brand-brief-template", "how-to-choose-a-brand-agency", "rebranding-checklist"],
     heroImage: "https://cdn.sanity.io/images/zksivtxz/production/28820f9c8e82e134dc7dd7d7e403da3559edcb62-1080x1080.jpg",
+    downloadUrl: "/downloads/website-brief-template.pdf",
   },
 ];
 
