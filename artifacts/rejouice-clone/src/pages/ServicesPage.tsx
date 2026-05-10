@@ -436,8 +436,8 @@ export default function ServicesPage() {
             </Link>
             <p className="font-sans text-[11px] text-white/30 tracking-wide">
               Or email us at{" "}
-              <a href="mailto:hello@beyond.com" className="text-white/50 hover:text-white transition-colors underline underline-offset-4">
-                hello@beyond.com
+              <a href="mailto:hello@beyondbasics.studio" className="text-white/50 hover:text-white transition-colors underline underline-offset-4">
+                hello@beyondbasics.studio
               </a>
             </p>
           </div>

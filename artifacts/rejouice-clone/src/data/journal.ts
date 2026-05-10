@@ -159,7 +159,7 @@ export const posts: JournalPost[] = [
       { type: "heading", text: "The challenge: make industrial feel inevitable" },
       { type: "paragraph", text: "Most companies in the sustainable energy space lean heavily on green imagery — leaves, solar panels, wind turbines. It's visually legible but entirely undifferentiated. Moxion needed to look like what it actually is: a technology company that happens to have figured out mobile energy. Bold, precise, built for scale." },
       { type: "image", src: `${IMG}/Z22KFpbqstJ981ua_IMG_87781.png?auto=format,compress&w=2400`, alt: "Moxion Power on location", caption: "The MP-75 in the field — powering a major film production in Los Angeles." },
-      { type: "quote", text: "Moxion Power is thrilled with our partnership with REJOUICE. A heartfelt thank you for the exceptional work.", author: "Alex Meek, Co-Founder & President at Moxion Power" },
+      { type: "quote", text: "Moxion Power is thrilled with our partnership with Beyond. A heartfelt thank you for the exceptional work.", author: "Alex Meek, Co-Founder & President at Moxion Power" },
       { type: "heading", text: "A brand system built for the field" },
       { type: "paragraph", text: "The Moxion brand system had to work in two very different contexts simultaneously: the corporate world of investor decks and partner meetings, and the physical world of construction sites and film sets. Every element had to read clearly in both environments." },
       { type: "list", items: ["5 Awwwards wins including Site of the Day", "FWA Award of the Day", "CSSDA Site of the Day", "Deployed on 3 continents within 12 months of launch"] },

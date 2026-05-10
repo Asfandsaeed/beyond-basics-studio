@@ -362,10 +362,10 @@ export default function AboutPage() {
               We match your project with the right experts
             </p>
             <a
-              href="mailto:jobs@beyond.com"
+              href="mailto:jobs@beyondbasics.studio"
               className="inline-flex items-center gap-2 mt-10 font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/50 border-b border-[#0A0A0A]/20 pb-px hover:text-[#0A0A0A] hover:border-[#0A0A0A]/60 transition-colors"
             >
-              jobs@beyond.com — Join our team ↗
+              jobs@beyondbasics.studio — Join our team ↗
             </a>
           </div>
           <div className="office-img overflow-hidden rounded-sm aspect-[4/3] bg-[#e8e8e8]">
@@ -410,7 +410,7 @@ export default function AboutPage() {
             We're always looking for<br />exceptional people.
           </p>
           <a
-            href="mailto:jobs@beyond.com"
+            href="mailto:jobs@beyondbasics.studio"
             className="shrink-0 inline-flex items-center gap-3 font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A] border border-[#0A0A0A]/20 px-10 py-5 hover:bg-[#0A0A0A] hover:text-white transition-all duration-300"
           >
             <span>Join our team</span>

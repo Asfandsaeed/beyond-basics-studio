@@ -722,11 +722,11 @@ export default function Home() {
             <div className="reveal grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-14">
               <div>
                 <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/30 mb-3">New Business</p>
-                <a href="mailto:hello@beyond.com" className="font-sans text-base font-light text-white/75 hover:text-white transition-colors duration-200">hello@beyond.com</a>
+                <a href="mailto:hello@beyondbasics.studio" className="font-sans text-base font-light text-white/75 hover:text-white transition-colors duration-200">hello@beyondbasics.studio</a>
               </div>
               <div>
                 <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/30 mb-3">Careers</p>
-                <a href="mailto:jobs@beyond.com" className="font-sans text-base font-light text-white/75 hover:text-white transition-colors duration-200">jobs@beyond.com</a>
+                <a href="mailto:jobs@beyondbasics.studio" className="font-sans text-base font-light text-white/75 hover:text-white transition-colors duration-200">jobs@beyondbasics.studio</a>
               </div>
               <div>
                 <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/30 mb-3">Offices</p>

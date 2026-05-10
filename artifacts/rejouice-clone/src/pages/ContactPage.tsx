@@ -58,11 +58,11 @@ export default function ContactPage() {
                 Get in touch
               </p>
               <a
-                href="mailto:hello@beyond.com"
+                href="mailto:hello@beyondbasics.studio"
                 className="font-sans text-lg font-light text-white/80 hover:text-white transition-colors duration-200"
                 data-testid="link-email-general"
               >
-                hello@beyond.com
+                hello@beyondbasics.studio
               </a>
             </div>
 
@@ -71,11 +71,11 @@ export default function ContactPage() {
                 New Business.
               </p>
               <a
-                href="mailto:hello@beyond.com"
+                href="mailto:hello@beyondbasics.studio"
                 className="font-sans text-lg font-light text-white/80 hover:text-white transition-colors duration-200"
                 data-testid="link-email-business"
               >
-                hello@beyond.com
+                hello@beyondbasics.studio
               </a>
             </div>
 
@@ -84,11 +84,11 @@ export default function ContactPage() {
                 Join the Team.
               </p>
               <a
-                href="mailto:jobs@beyond.com"
+                href="mailto:jobs@beyondbasics.studio"
                 className="font-sans text-lg font-light text-white/80 hover:text-white transition-colors duration-200"
                 data-testid="link-email-jobs"
               >
-                jobs@beyond.com
+                jobs@beyondbasics.studio
               </a>
             </div>
           </div>

@@ -342,7 +342,7 @@ export default function IndustryPage() {
               <span>↗</span>
             </Link>
             <p className="font-sans text-[11px] text-white/25 text-center">
-              or email us at hello@beyond.com
+              or email us at hello@beyondbasics.studio
             </p>
           </div>
         </div>

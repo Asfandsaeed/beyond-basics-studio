@@ -72,10 +72,10 @@ export default function NotFound() {
             Tomorrow's Brands, Today.™
           </span>
           <a
-            href="mailto:hello@beyond.com"
+            href="mailto:hello@beyondbasics.studio"
             className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/40 hover:text-white transition-colors"
           >
-            hello@beyond.com
+            hello@beyondbasics.studio
           </a>
         </div>
       </div>
