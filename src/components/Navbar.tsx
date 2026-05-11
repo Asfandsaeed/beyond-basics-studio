@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "wouter";
-import { getGsap } from "@/lib/gsap";
 import { ChevronDown } from "lucide-react";
 
 
@@ -37,54 +36,14 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropOpen, setDropOpen] = useState(false);
   const [servDropOpen, setServDropOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const dropRef = useRef<HTMLDivElement>(null);
   const servDropRef = useRef<HTMLDivElement>(null);
 
-  const isHomePage = location === "/";
+  const textColor = "text-[#0A0A0A]";
+  const mutedColor = "text-[#0A0A0A]/55";
+  const hoverColor = "hover:text-[#0A0A0A]";
+  const bgClass = "bg-white/95 backdrop-blur-sm border-b border-[#0A0A0A]/8";
 
-  const isDarkPage =
-    location === "/work" ||
-    location.startsWith("/work/") ||
-    location === "/about" ||
-    location === "/contact";
-
-  useEffect(() => {
-    if (!isHomePage) { setScrolled(false); return; }
-    setScrolled(false);
-
-    let cancelled = false;
-    let st: { kill: () => void } | null = null;
-    let removeScrollListener: (() => void) | null = null;
-
-    const rafId = requestAnimationFrame(() => {
-      const showreel = document.querySelector('[data-testid="showreel-section"]');
-      if (!showreel) {
-        const onScroll = () => setScrolled(window.scrollY > 50);
-        window.addEventListener("scroll", onScroll, { passive: true });
-        removeScrollListener = () => window.removeEventListener("scroll", onScroll);
-        return;
-      }
-      getGsap().then(({ ScrollTrigger }) => {
-        if (cancelled) return;
-        st = ScrollTrigger.create({
-          trigger: showreel,
-          start: "top top",
-          onEnter: () => setScrolled(true),
-          onLeaveBack: () => setScrolled(false),
-        });
-      });
-    });
-
-    return () => {
-      cancelled = true;
-      cancelAnimationFrame(rafId);
-      st?.kill();
-      removeScrollListener?.();
-    };
-  }, [isHomePage]);
-
-  // Close dropdowns on outside click
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (dropRef.current && !dropRef.current.contains(e.target as Node)) setDropOpen(false);
@@ -94,22 +53,7 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
-  // Close dropdowns on route change
   useEffect(() => { setDropOpen(false); setServDropOpen(false); setMenuOpen(false); }, [location]);
-
-  const isLight = (isHomePage && !scrolled) || (isDarkPage && !scrolled);
-  const textColor = isLight ? "text-white" : "text-[#0A0A0A]";
-  const mutedColor = isLight ? "text-white/60" : "text-[#0A0A0A]/60";
-  const hoverColor = isLight ? "hover:text-white" : "hover:text-[#0A0A0A]";
-
-  let bgClass: string;
-  if (isDarkPage) {
-    bgClass = "bg-[#0A0A0A]/60 backdrop-blur-md border-b border-white/8";
-  } else if (scrolled) {
-    bgClass = "bg-white/90 backdrop-blur-md border-b border-[#0A0A0A]/8";
-  } else {
-    bgClass = "bg-transparent";
-  }
 
   const isServicesActive = serviceLinks.some((l) => location === l.href);
   const isCompanyActive = companyLinks.some((l) => location === l.href);
@@ -118,12 +62,12 @@ export default function Navbar() {
     <>
       <header
         ref={navRef}
-        className={`nav-entrance fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-6 md:px-10 md:py-7 transition-all duration-300 ${bgClass}`}
+        className={`nav-entrance fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-6 md:px-10 md:py-7 ${bgClass}`}
       >
         {/* Logo */}
         <Link
           href="/"
-          className={`font-sans text-sm font-medium tracking-tight transition-colors duration-300 ${textColor}`}
+          className={`font-sans text-sm font-medium tracking-tight ${textColor}`}
           data-testid="link-home"
         >
           beyond
@@ -140,7 +84,7 @@ export default function Navbar() {
                   <button
                     onClick={() => setServDropOpen((v) => !v)}
                     data-testid="link-services"
-                    className={`flex items-center gap-1.5 font-sans text-sm transition-all duration-200 ${textColor} ${
+                    className={`flex items-center gap-1.5 font-sans text-sm ${textColor} ${
                       isServicesActive ? "opacity-100" : `${mutedColor} ${hoverColor}`
                     }`}
                   >
@@ -175,7 +119,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 data-testid={`link-${link.label.toLowerCase()}`}
-                className={`font-sans text-sm transition-all duration-200 ${textColor} ${
+                className={`font-sans text-sm ${textColor} ${
                   isActive ? "opacity-100" : `${mutedColor} ${hoverColor}`
                 }`}
               >
@@ -188,7 +132,7 @@ export default function Navbar() {
           <div ref={dropRef} className="relative">
             <button
               onClick={() => setDropOpen((v) => !v)}
-              className={`flex items-center gap-1.5 font-sans text-sm transition-all duration-200 ${textColor} ${
+              className={`flex items-center gap-1.5 font-sans text-sm ${textColor} ${
                 isCompanyActive ? "opacity-100" : `${mutedColor} ${hoverColor}`
               }`}
               data-testid="nav-company-dropdown"
@@ -223,7 +167,7 @@ export default function Navbar() {
         <Link
           href="/contact"
           data-testid="btn-contact"
-          className={`hidden md:flex items-center gap-1 font-sans text-sm font-medium transition-all duration-200 ${textColor} hover:opacity-70`}
+          className={`hidden md:flex items-center gap-1 font-sans text-sm font-medium ${textColor} hover:opacity-70`}
         >
           <span>Let's talk</span>
           <span>↗</span>
@@ -236,9 +180,9 @@ export default function Navbar() {
           data-testid="btn-menu"
           aria-label="Toggle menu"
         >
-          <span className={`block w-6 h-px transition-all duration-300 ${isLight ? "bg-white" : "bg-foreground"} ${menuOpen ? "translate-y-2 rotate-45" : ""}`} />
-          <span className={`block w-6 h-px transition-all duration-300 ${isLight ? "bg-white" : "bg-foreground"} ${menuOpen ? "opacity-0" : ""}`} />
-          <span className={`block w-6 h-px transition-all duration-300 ${isLight ? "bg-white" : "bg-foreground"} ${menuOpen ? "-translate-y-2 -rotate-45" : ""}`} />
+          <span className={`block w-6 h-px bg-[#0A0A0A] transition-all duration-300 ${menuOpen ? "translate-y-2 rotate-45" : ""}`} />
+          <span className={`block w-6 h-px bg-[#0A0A0A] transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
+          <span className={`block w-6 h-px bg-[#0A0A0A] transition-all duration-300 ${menuOpen ? "-translate-y-2 -rotate-45" : ""}`} />
         </button>
       </header>
 
@@ -252,9 +196,7 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
                 data-testid={`mobile-link-${link.label.toLowerCase().replace(/\s/g, "-")}`}
-                className={`font-sans font-light py-3.5 border-b border-[#0A0A0A]/6 transition-colors duration-150 hover:text-[#0A0A0A]/50 ${
-                  location === link.href ? "text-[#0A0A0A]" : "text-[#0A0A0A]"
-                }`}
+                className={`font-sans font-light py-3.5 border-b border-[#0A0A0A]/6 transition-colors duration-150 hover:text-[#0A0A0A]/50 text-[#0A0A0A]`}
                 style={{ fontSize: "clamp(1.5rem, 5vw, 2.25rem)", letterSpacing: "-0.02em" }}
               >
                 {link.label}
