@@ -13,11 +13,20 @@ export default function JournalPostPage() {
   const heroRef  = useRef<HTMLDivElement>(null);
 
   const post = posts.find((p) => p.id === id);
+
+  // Related: explicit list first, then fall back to tag-based similarity
   const related = post
-    ? posts.filter((p) => p.id !== post.id && p.tags.some((t) => post.tags.includes(t))).slice(0, 2)
+    ? post.relatedPosts
+      ? post.relatedPosts
+          .map((rid) => posts.find((p) => p.id === rid))
+          .filter((p): p is NonNullable<typeof p> => p !== undefined)
+          .slice(0, 2)
+      : posts
+          .filter((p) => p.id !== post.id && p.tags.some((t) => post.tags.includes(t)))
+          .slice(0, 2)
     : [];
 
-  // Convert "March 2025" → ISO 8601 (first of month) for schema date fields
+  // Convert "March 2025" → ISO 8601 for schema date fields
   const isoDate = post ? (() => {
     const d = new Date(`${post.date} 1`);
     return isNaN(d.getTime()) ? undefined : d.toISOString().slice(0, 10);
@@ -25,45 +34,48 @@ export default function JournalPostPage() {
 
   useSeoMeta({
     title: post ? `${post.title} | Beyond® Journal` : "Journal | Beyond®",
-    description: post ? post.subtitle.slice(0, 155) : "Long-form thinking on brand strategy and design craft from Beyond Creative Growth Agency.",
+    description: post
+      ? post.subtitle.slice(0, 155)
+      : "Long-form thinking on brand strategy and design craft from Beyond Creative Growth Agency.",
     path: `/journal/${id}`,
     ogImage: post?.coverImage,
     ogType: post ? "article" : "website",
     datePublished: isoDate,
     dateModified: isoDate,
-    breadcrumbs: post ? [
-      { name: "Home", path: "/" },
-      { name: "Journal", path: "/journal" },
-      { name: post.title, path: `/journal/${post.id}` },
-    ] : undefined,
-    schema: post ? {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      headline: post.title,
-      description: post.subtitle,
-      image: post.coverImage,
-      datePublished: isoDate,
-      dateModified: isoDate,
-      articleSection: post.category,
-      keywords: post.tags.join(", "),
-      author: {
-        "@type": "Organization",
-        name: "Beyond®",
-        url: "https://beyondbasics.studio",
-      },
-      publisher: {
-        "@type": "Organization",
-        name: "Beyond®",
-        logo: {
-          "@type": "ImageObject",
-          url: "https://beyondbasics.studio/favicon.svg",
-        },
-      },
-      mainEntityOfPage: {
-        "@type": "WebPage",
-        "@id": `https://beyondbasics.studio/journal/${post.id}`,
-      },
-    } : undefined,
+    breadcrumbs: post
+      ? [
+          { name: "Home", path: "/" },
+          { name: "Journal", path: "/journal" },
+          { name: post.title, path: `/journal/${post.id}` },
+        ]
+      : undefined,
+    schema: post
+      ? {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: post.title,
+          description: post.subtitle,
+          image: post.coverImage,
+          datePublished: isoDate,
+          dateModified: isoDate,
+          articleSection: post.category,
+          keywords: post.tags.join(", "),
+          author: {
+            "@type": "Organization",
+            name: "Beyond®",
+            url: "https://beyondbasics.studio",
+          },
+          publisher: {
+            "@type": "Organization",
+            name: "Beyond®",
+            logo: { "@type": "ImageObject", url: "https://beyondbasics.studio/favicon.svg" },
+          },
+          mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": `https://beyondbasics.studio/journal/${post.id}`,
+          },
+        }
+      : undefined,
   });
 
   useEffect(() => {
@@ -156,31 +168,23 @@ export default function JournalPostPage() {
         {/* Tags */}
         <div className="hero-anim flex flex-wrap gap-2 mt-4">
           {post.tags.map((tag) => (
-            <span key={tag} className="font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/35 border border-[#0A0A0A]/10 px-2.5 py-1">
+            <span
+              key={tag}
+              className="font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/35 border border-[#0A0A0A]/10 px-2.5 py-1"
+            >
               {tag}
             </span>
           ))}
         </div>
       </section>
 
-      {/* ══ 2. COVER IMAGE / VIDEO ════════════════════════════════════════════ */}
+      {/* ══ 2. COVER IMAGE ════════════════════════════════════════════════════ */}
       <div className="w-full aspect-[4/3] md:aspect-[21/9] overflow-hidden bg-[#111]">
-        {post.coverVideo ? (
-          <video
-            src={post.coverVideo}
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full h-full object-cover object-center"
-          />
-        ) : (
-          <img
-            src={post.coverImage}
-            alt={post.title}
-            className="w-full h-full object-cover object-center"
-          />
-        )}
+        <img
+          src={post.coverImage}
+          alt={post.title}
+          className="w-full h-full object-cover object-center"
+        />
       </div>
 
       {/* ══ 3. BODY ══════════════════════════════════════════════════════════ */}
@@ -188,6 +192,7 @@ export default function JournalPostPage() {
         <div className="max-w-[680px] mx-auto flex flex-col gap-8">
           {post.body.map((block, i) => {
             switch (block.type) {
+
               case "paragraph":
                 return (
                   <p key={i} className="body-block font-sans text-base text-[#0A0A0A]/70 leading-[1.75]">
@@ -208,12 +213,11 @@ export default function JournalPostPage() {
 
               case "quote":
                 return (
-                  <blockquote
-                    key={i}
-                    className="body-block border-l-2 border-[#0A0A0A]/15 pl-6 py-2"
-                  >
-                    <p className="font-sans font-light text-[#0A0A0A] leading-[1.4] tracking-[-0.01em]"
-                      style={{ fontSize: "clamp(1.1rem, 2vw, 1.5rem)" }}>
+                  <blockquote key={i} className="body-block border-l-2 border-[#0A0A0A]/15 pl-6 py-2">
+                    <p
+                      className="font-sans font-light text-[#0A0A0A] leading-[1.4] tracking-[-0.01em]"
+                      style={{ fontSize: "clamp(1.1rem, 2vw, 1.5rem)" }}
+                    >
                       "{block.text}"
                     </p>
                     {block.author && (
@@ -243,27 +247,6 @@ export default function JournalPostPage() {
                   </figure>
                 );
 
-              case "video":
-                return (
-                  <figure key={i} className="body-block -mx-6 md:-mx-24 xl:-mx-40">
-                    <div className="overflow-hidden rounded-sm bg-[#111]">
-                      <video
-                        src={block.src}
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        className="w-full object-cover"
-                      />
-                    </div>
-                    {block.caption && (
-                      <figcaption className="font-sans text-[11px] text-[#0A0A0A]/35 mt-3 px-6 md:px-24 xl:px-40">
-                        {block.caption}
-                      </figcaption>
-                    )}
-                  </figure>
-                );
-
               case "list":
                 return (
                   <ul key={i} className="body-block flex flex-col gap-3">
@@ -275,6 +258,37 @@ export default function JournalPostPage() {
                     ))}
                   </ul>
                 );
+
+              case "internalLink": {
+                const isExternal = block.href.startsWith("/work/");
+                const contextColor = isExternal
+                  ? "text-[#0A0A0A]/40"
+                  : block.href.startsWith("/journal/")
+                  ? "text-[#0A0A0A]/40"
+                  : block.href.startsWith("/glossary/")
+                  ? "text-[#0A0A0A]/30"
+                  : "text-[#0A0A0A]/30";
+
+                return (
+                  <Link
+                    key={i}
+                    href={block.href}
+                    className="body-block group flex items-center justify-between border border-[#0A0A0A]/10 px-6 py-5 rounded-sm hover:border-[#0A0A0A]/30 hover:bg-[#0A0A0A]/[0.02] transition-all duration-200"
+                  >
+                    <div className="min-w-0">
+                      <p className={`font-sans text-[10px] uppercase tracking-[0.14em] ${contextColor} mb-1.5`}>
+                        {block.context}
+                      </p>
+                      <p className="font-sans font-light text-[#0A0A0A] text-sm leading-snug group-hover:opacity-60 transition-opacity truncate">
+                        {block.label}
+                      </p>
+                    </div>
+                    <span className="font-sans text-[#0A0A0A]/25 group-hover:text-[#0A0A0A]/60 transition-colors text-base ml-4 shrink-0">
+                      →
+                    </span>
+                  </Link>
+                );
+              }
 
               default:
                 return null;
