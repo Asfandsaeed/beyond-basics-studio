@@ -170,18 +170,32 @@ export default function Navbar() {
                     />
                   </button>
                   {servDropOpen && (
-                    <div className="absolute top-full left-0 mt-3 w-52 bg-white border border-[#0A0A0A]/8 rounded-sm shadow-lg overflow-hidden z-50">
-                      {serviceLinks.map((sl) => (
-                        <Link
-                          key={sl.href}
-                          href={sl.href}
-                          className={`block px-5 py-3.5 font-sans text-sm transition-colors duration-150 hover:bg-[#F5F4F0] ${
-                            location === sl.href ? "text-[#0A0A0A]" : "text-[#0A0A0A]/55"
-                          }${sl.href === "/services" ? " border-b border-[#0A0A0A]/8 font-normal" : ""}`}
-                        >
-                          {sl.label}
-                        </Link>
-                      ))}
+                    <div
+                      className="absolute top-full left-0 mt-4 w-64 bg-[#0F0F0F] overflow-hidden z-50"
+                      style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.22)" }}
+                    >
+                      <div className="px-6 pt-5 pb-3 border-b border-white/[0.06]">
+                        <p className="font-sans text-[9px] uppercase tracking-[0.24em] text-white/30">Our Services</p>
+                      </div>
+                      <div className="py-2">
+                        {serviceLinks.map((sl, i) => (
+                          <Link
+                            key={sl.href}
+                            href={sl.href}
+                            className={`group flex items-center justify-between px-6 py-3 transition-colors duration-150 ${
+                              location === sl.href ? "text-white" : "text-white/45 hover:text-white"
+                            }`}
+                          >
+                            <div className="flex items-center gap-3.5">
+                              <span className="font-sans text-[10px] tabular-nums text-[#FF3C00]">
+                                {String(i + 1).padStart(2, "0")}
+                              </span>
+                              <span className="font-sans text-sm">{sl.label}</span>
+                            </div>
+                            <span className="text-white/25 opacity-0 group-hover:opacity-100 transition-opacity duration-150 text-xs">↗</span>
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   )}
                 </div>
@@ -220,18 +234,32 @@ export default function Navbar() {
             </button>
 
             {dropOpen && (
-              <div className="absolute top-full right-0 mt-3 w-56 bg-white border border-[#0A0A0A]/8 rounded-sm shadow-lg overflow-hidden z-50">
-                {companyLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={`block px-5 py-3.5 font-sans text-sm transition-colors duration-150 hover:bg-[#F5F4F0] ${
-                      location === link.href ? "text-[#0A0A0A]" : "text-[#0A0A0A]/55"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+              <div
+                className="absolute top-full right-0 mt-4 w-64 bg-[#0F0F0F] overflow-hidden z-50"
+                style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.22)" }}
+              >
+                <div className="px-6 pt-5 pb-3 border-b border-white/[0.06]">
+                  <p className="font-sans text-[9px] uppercase tracking-[0.24em] text-white/30">Company</p>
+                </div>
+                <div className="py-2">
+                  {companyLinks.map((link, i) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className={`group flex items-center justify-between px-6 py-3 transition-colors duration-150 ${
+                        location === link.href ? "text-white" : "text-white/45 hover:text-white"
+                      }`}
+                    >
+                      <div className="flex items-center gap-3.5">
+                        <span className="font-sans text-[10px] tabular-nums text-[#FF3C00]">
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                        <span className="font-sans text-sm">{link.label}</span>
+                      </div>
+                      <span className="text-white/25 opacity-0 group-hover:opacity-100 transition-opacity duration-150 text-xs">↗</span>
+                    </Link>
+                  ))}
+                </div>
               </div>
             )}
           </div>
