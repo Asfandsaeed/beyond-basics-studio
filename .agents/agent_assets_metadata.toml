@@ -24,3 +24,9 @@ id = "Vwv_WwnM58P2ClHPyoKxU"
 uri = "file://artifacts/rejouice-clone/src/assets/images/lumis.png"
 type = "image"
 title = "Brand photography lumis"
+
+[[generated]]
+id = "XeaGQraLyfL_kh7slx0Xu"
+uri = "file://artifacts/beyond-company-profile/public/cover-hero.png"
+type = "image"
+title = "generated_image"
