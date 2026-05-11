@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beyond® — Creative Growth Agency</title>
+    <meta name="description" content="Beyond® partners with ambitious companies to become category leaders. Brand strategy, identity, web design, motion, 3D & WebGL. Tomorrow's brands, today." />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0A0A0A" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://beyondbasics.studio/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Beyond®" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Beyond® — Creative Growth Agency" />
+    <meta property="og:description" content="Beyond® partners with ambitious companies to become category leaders. Brand strategy, identity, web design, motion, 3D & WebGL. Tomorrow's brands, today." />
+    <meta property="og:url" content="https://beyondbasics.studio/" />
+    <meta property="og:image" content="https://beyondbasics.studio/opengraph.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Beyond® — Creative Growth Agency" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@beyondbasics" />
+    <meta name="twitter:title" content="Beyond® — Creative Growth Agency" />
+    <meta name="twitter:description" content="Beyond® partners with ambitious companies to become category leaders. Brand strategy, identity, web design, motion, 3D & WebGL." />
+    <meta name="twitter:image" content="https://beyondbasics.studio/opengraph.jpg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Beyond®" />
+    <meta name="application-name" content="Beyond®" />
+    <meta name="msapplication-TileColor" content="#FF3C00" />
+    <meta name="msapplication-TileImage" content="/icons/icon-192.png" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <!-- Prevent white flash before React mounts — hero is dark -->
+    <style>html,body{background:#0A0A0A}</style>
+
+    <!-- Fonts: async load to avoid render-blocking -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" />
+    </noscript>
+
+    <!-- JSON-LD: Organization + WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://beyondbasics.studio/#organization",
+          "name": "Beyond®",
+          "alternateName": "Beyond Creative Growth Agency",
+          "url": "https://beyondbasics.studio",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://beyondbasics.studio/favicon.svg"
+          },
+          "description": "Creative growth agency that partners with ambitious companies to transform them into category leaders.",
+          "email": "hello@beyondbasics.studio",
+          "foundingDate": "2020",
+          "founder": {
+            "@type": "Person",
+            "name": "Guillaume Hamon",
+            "jobTitle": "Founding Partner",
+            "sameAs": "https://www.linkedin.com/in/guillaumehamon/"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/beyondbasics"
+          ],
+          "areaServed": "Worldwide",
+          "knowsAbout": [
+            "Brand Strategy",
+            "Brand Identity",
+            "Web Design",
+            "Web Development",
+            "Motion Design",
+            "3D Visualization",
+            "WebGL",
+            "UI/UX Design"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://beyondbasics.studio/#website",
+          "url": "https://beyondbasics.studio",
+          "name": "Beyond®",
+          "description": "Creative Growth Agency — Tomorrow's brands, today.",
+          "publisher": {
+            "@id": "https://beyondbasics.studio/#organization"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://beyondbasics.studio/work?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
