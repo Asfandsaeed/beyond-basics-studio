@@ -85,6 +85,10 @@
   Cache-Control: public, max-age=86400
   Content-Type: text/plain; charset=utf-8
 
+/humans.txt
+  Cache-Control: public, max-age=86400
+  Content-Type: text/plain; charset=utf-8
+
 # ── Downloads (long cache, force download) ───────────────────────────────────
 /downloads/*
   Cache-Control: public, max-age=604800
