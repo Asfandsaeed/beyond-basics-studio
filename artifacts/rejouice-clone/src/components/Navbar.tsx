@@ -1,9 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "wouter";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ChevronDown } from "lucide-react";
-
+import { ChevronDown, X } from "lucide-react";
 
 const primaryLinks = [
   { label: "Work", href: "/work" },
@@ -32,57 +29,85 @@ const companyLinks = [
   { label: "Partners", href: "/partners" },
 ];
 
+const mobileMenuSections = [
+  {
+    heading: "Work",
+    links: [
+      { label: "Selected Work", href: "/work" },
+      { label: "Industries", href: "/industries" },
+      { label: "Our Process", href: "/process" },
+      { label: "Awards", href: "/awards" },
+      { label: "Partners", href: "/partners" },
+    ],
+  },
+  {
+    heading: "Services",
+    links: [
+      { label: "All Services", href: "/services" },
+      { label: "Brand Strategy", href: "/services/brand-strategy" },
+      { label: "Brand Identity", href: "/services/brand-identity" },
+      { label: "Digital Experience", href: "/services/digital-experience" },
+      { label: "Growth Marketing", href: "/services/growth-marketing" },
+      { label: "Content & Creative", href: "/services/content-creative" },
+    ],
+  },
+  {
+    heading: "Company",
+    links: [
+      { label: "About", href: "/about" },
+      { label: "Careers", href: "/careers" },
+      { label: "Design for Good", href: "/design-for-good" },
+      { label: "Accreditations", href: "/accreditations" },
+      { label: "Press & Media", href: "/press" },
+      { label: "FAQ", href: "/faq" },
+    ],
+  },
+  {
+    heading: "Resources",
+    links: [
+      { label: "Journal", href: "/journal" },
+      { label: "Resources & Guides", href: "/resources" },
+      { label: "Newsletter", href: "/newsletter" },
+      { label: "Pricing", href: "/pricing" },
+      { label: "Contact", href: "/contact" },
+      { label: "Sitemap", href: "/sitemap" },
+    ],
+  },
+];
+
+const mobileBottomSections = [
+  {
+    heading: "Connect",
+    links: [
+      { label: "Instagram ↗", href: "https://instagram.com/beyondbasicsstudio", external: true },
+      { label: "LinkedIn ↗", href: "https://linkedin.com/company/beyondbasicsstudio", external: true },
+      { label: "Twitter / X ↗", href: "https://x.com/beyondbasics", external: true },
+    ],
+  },
+  {
+    heading: "Legal",
+    links: [
+      { label: "Privacy Policy", href: "/privacy-policy", external: false },
+      { label: "Terms & Conditions", href: "/terms", external: false },
+      { label: "Refund Policy", href: "/refunds", external: false },
+    ],
+  },
+];
+
 export default function Navbar() {
   const navRef = useRef<HTMLElement>(null);
   const [location] = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropOpen, setDropOpen] = useState(false);
   const [servDropOpen, setServDropOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const dropRef = useRef<HTMLDivElement>(null);
   const servDropRef = useRef<HTMLDivElement>(null);
 
-  const isHomePage = location === "/";
+  const textColor = "text-[#0A0A0A]";
+  const mutedColor = "text-[#0A0A0A]/55";
+  const hoverColor = "hover:text-[#0A0A0A]";
+  const bgClass = "bg-white/95 backdrop-blur-sm border-b border-[#0A0A0A]/8";
 
-  // Pages with dark hero backgrounds — navbar needs white text + dark bg
-  const isDarkPage =
-    location === "/work" ||
-    location.startsWith("/work/") ||
-    location === "/about" ||
-    location === "/contact";
-
-  useEffect(() => {
-    // Animate in once on mount — no delay on non-home pages
-    const delay = isHomePage ? 1.6 : 0.1;
-    gsap.fromTo(
-      navRef.current,
-      { y: -10, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.7, delay, ease: "power3.out" }
-    );
-  }, [isHomePage]);
-
-  useEffect(() => {
-    if (!isHomePage) { setScrolled(false); return; }
-    setScrolled(false);
-    const raf = requestAnimationFrame(() => {
-      const showreel = document.querySelector('[data-testid="showreel-section"]');
-      if (!showreel) {
-        const onScroll = () => setScrolled(window.scrollY > 50);
-        window.addEventListener("scroll", onScroll, { passive: true });
-        return () => window.removeEventListener("scroll", onScroll);
-      }
-      const st = ScrollTrigger.create({
-        trigger: showreel,
-        start: "top top",
-        onEnter: () => setScrolled(true),
-        onLeaveBack: () => setScrolled(false),
-      });
-      return () => st.kill();
-    });
-    return () => cancelAnimationFrame(raf);
-  }, [isHomePage]);
-
-  // Close dropdowns on outside click
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (dropRef.current && !dropRef.current.contains(e.target as Node)) setDropOpen(false);
@@ -92,26 +117,16 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
-  // Close dropdowns on route change
-  useEffect(() => { setDropOpen(false); setServDropOpen(false); setMenuOpen(false); }, [location]);
+  useEffect(() => {
+    setDropOpen(false);
+    setServDropOpen(false);
+    setMenuOpen(false);
+  }, [location]);
 
-  // On dark pages: always white text, dark blurred background
-  // On home page before scroll: white text, transparent background
-  // On home page after scroll / other light pages: dark text, light background
-  const isLight = (isHomePage && !scrolled) || (isDarkPage && !scrolled);
-  const textColor = isLight ? "text-white" : "text-[#0A0A0A]";
-  const mutedColor = isLight ? "text-white/60" : "text-[#0A0A0A]/60";
-  const hoverColor = isLight ? "hover:text-white" : "hover:text-[#0A0A0A]";
-
-  let bgClass: string;
-  if (isDarkPage) {
-    // Dark pages: always a dark semi-transparent bar so text is always legible
-    bgClass = "bg-[#0A0A0A]/60 backdrop-blur-md border-b border-white/8";
-  } else if (scrolled) {
-    bgClass = "bg-white/90 backdrop-blur-md border-b border-[#0A0A0A]/8";
-  } else {
-    bgClass = "bg-transparent";
-  }
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [menuOpen]);
 
   const isServicesActive = serviceLinks.some((l) => location === l.href);
   const isCompanyActive = companyLinks.some((l) => location === l.href);
@@ -120,13 +135,12 @@ export default function Navbar() {
     <>
       <header
         ref={navRef}
-        style={{ opacity: 0 }}
-        className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-6 md:px-10 md:py-7 transition-all duration-300 ${bgClass}`}
+        className={`nav-entrance fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-6 md:px-10 md:py-7 ${bgClass}`}
       >
         {/* Logo */}
         <Link
           href="/"
-          className={`font-sans text-sm font-medium tracking-tight transition-colors duration-300 ${textColor}`}
+          className={`font-sans text-sm font-medium tracking-tight ${textColor}`}
           data-testid="link-home"
         >
           beyond
@@ -143,7 +157,7 @@ export default function Navbar() {
                   <button
                     onClick={() => setServDropOpen((v) => !v)}
                     data-testid="link-services"
-                    className={`flex items-center gap-1.5 font-sans text-sm transition-all duration-200 ${textColor} ${
+                    className={`flex items-center gap-1.5 font-sans text-sm ${textColor} ${
                       isServicesActive ? "opacity-100" : `${mutedColor} ${hoverColor}`
                     }`}
                   >
@@ -178,7 +192,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 data-testid={`link-${link.label.toLowerCase()}`}
-                className={`font-sans text-sm transition-all duration-200 ${textColor} ${
+                className={`font-sans text-sm ${textColor} ${
                   isActive ? "opacity-100" : `${mutedColor} ${hoverColor}`
                 }`}
               >
@@ -191,7 +205,7 @@ export default function Navbar() {
           <div ref={dropRef} className="relative">
             <button
               onClick={() => setDropOpen((v) => !v)}
-              className={`flex items-center gap-1.5 font-sans text-sm transition-all duration-200 ${textColor} ${
+              className={`flex items-center gap-1.5 font-sans text-sm ${textColor} ${
                 isCompanyActive ? "opacity-100" : `${mutedColor} ${hoverColor}`
               }`}
               data-testid="nav-company-dropdown"
@@ -226,47 +240,113 @@ export default function Navbar() {
         <Link
           href="/contact"
           data-testid="btn-contact"
-          className={`hidden md:flex items-center gap-1 font-sans text-sm font-medium transition-all duration-200 ${textColor} hover:opacity-70`}
+          className={`hidden md:flex items-center gap-1 font-sans text-sm font-medium ${textColor} hover:opacity-70`}
         >
           <span>Let's talk</span>
           <span>↗</span>
         </Link>
 
-        {/* Mobile hamburger */}
+        {/* Mobile hamburger / close */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-1"
+          className="md:hidden flex items-center justify-center w-8 h-8 -mr-1"
           onClick={() => setMenuOpen(!menuOpen)}
           data-testid="btn-menu"
           aria-label="Toggle menu"
         >
-          <span className={`block w-6 h-px transition-all duration-300 ${isLight ? "bg-white" : "bg-foreground"} ${menuOpen ? "translate-y-2 rotate-45" : ""}`} />
-          <span className={`block w-6 h-px transition-all duration-300 ${isLight ? "bg-white" : "bg-foreground"} ${menuOpen ? "opacity-0" : ""}`} />
-          <span className={`block w-6 h-px transition-all duration-300 ${isLight ? "bg-white" : "bg-foreground"} ${menuOpen ? "-translate-y-2 -rotate-45" : ""}`} />
+          {menuOpen ? (
+            <X size={18} strokeWidth={1.5} className="text-[#0A0A0A]" />
+          ) : (
+            <div className="flex flex-col gap-[5px]">
+              <span className="block w-5 h-px bg-[#0A0A0A]" />
+              <span className="block w-5 h-px bg-[#0A0A0A]" />
+            </div>
+          )}
         </button>
       </header>
 
-      {/* Mobile overlay */}
+      {/* ── Mobile full-screen menu ─────────────────────────────────── */}
       {menuOpen && (
-        <div className="fixed inset-0 z-40 bg-background overflow-y-auto flex flex-col px-8 pt-24 pb-12 gap-0 md:hidden">
-          <div className="flex flex-col gap-1">
-            {[...primaryLinks, ...companyLinks, { label: "Contact", href: "/contact" }].map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMenuOpen(false)}
-                data-testid={`mobile-link-${link.label.toLowerCase().replace(/\s/g, "-")}`}
-                className={`font-sans font-light py-3.5 border-b border-[#0A0A0A]/6 transition-colors duration-150 hover:text-[#0A0A0A]/50 ${
-                  location === link.href ? "text-[#0A0A0A]" : "text-[#0A0A0A]"
-                }`}
-                style={{ fontSize: "clamp(1.5rem, 5vw, 2.25rem)", letterSpacing: "-0.02em" }}
-              >
-                {link.label}
-              </Link>
+        <div
+          className="fixed inset-0 z-40 bg-white overflow-y-auto md:hidden"
+          style={{ paddingTop: "72px" }}
+        >
+          {/* Main grid — 2 columns */}
+          <div className="px-6 pt-8 pb-6 grid grid-cols-2 gap-x-5 gap-y-8 border-b border-[#0A0A0A]/8">
+            {mobileMenuSections.map((section) => (
+              <div key={section.heading}>
+                <p className="font-sans text-[9px] uppercase tracking-[0.22em] text-[#0A0A0A]/35 mb-3">
+                  {section.heading}
+                </p>
+                <div className="flex flex-col gap-[10px]">
+                  {section.links.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setMenuOpen(false)}
+                      className={`font-sans text-[13px] leading-snug transition-colors duration-150 ${
+                        location === link.href
+                          ? "text-[#0A0A0A]"
+                          : "text-[#0A0A0A]/50 hover:text-[#0A0A0A]"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
-          <div className="mt-10 flex flex-col gap-2">
-            <a href="mailto:hello@beyondbasics.studio" className="font-sans text-sm text-[#0A0A0A]/60">hello@beyondbasics.studio</a>
-            <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/55">beyondbasics.studio</span>
+
+          {/* Bottom grid — Connect + Legal */}
+          <div className="px-6 pt-6 pb-6 grid grid-cols-2 gap-x-5 border-b border-[#0A0A0A]/8">
+            {mobileBottomSections.map((section) => (
+              <div key={section.heading}>
+                <p className="font-sans text-[9px] uppercase tracking-[0.22em] text-[#0A0A0A]/35 mb-3">
+                  {section.heading}
+                </p>
+                <div className="flex flex-col gap-[10px]">
+                  {section.links.map((link) =>
+                    link.external ? (
+                      <a
+                        key={link.label}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-sans text-[13px] text-[#0A0A0A]/50 hover:text-[#0A0A0A] transition-colors duration-150"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setMenuOpen(false)}
+                        className={`font-sans text-[13px] transition-colors duration-150 ${
+                          location === link.href
+                            ? "text-[#0A0A0A]"
+                            : "text-[#0A0A0A]/50 hover:text-[#0A0A0A]"
+                        }`}
+                      >
+                        {link.label}
+                      </Link>
+                    )
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Footer strip */}
+          <div className="px-6 py-5 flex flex-col gap-1">
+            <a
+              href="mailto:hello@beyondbasics.studio"
+              className="font-sans text-[12px] text-[#0A0A0A]/50 hover:text-[#0A0A0A] transition-colors duration-150"
+            >
+              hello@beyondbasics.studio
+            </a>
+            <span className="font-sans text-[9px] uppercase tracking-[0.18em] text-[#0A0A0A]/30">
+              Tomorrow's Brands, Today.™
+            </span>
           </div>
         </div>
       )}
