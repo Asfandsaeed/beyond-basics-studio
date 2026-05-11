@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -35,8 +35,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: |
-          pnpm --filter @workspace/rejouice-clone run build 2>&1
+        run: pnpm --filter @workspace/rejouice-clone run build 2>&1
         env:
           PORT: "3000"
           BASE_PATH: "/"
