@@ -247,10 +247,10 @@ export default function Home() {
           className="relative w-full min-h-[100svh] flex flex-col bg-[#0A0A0A] text-white overflow-hidden"
           data-testid="hero-section"
         >
-          <div className="flex-1 flex flex-col justify-center overflow-hidden px-6 md:px-10">
+          <div className="flex-1 flex flex-col justify-center overflow-hidden">
             <h1
-              className="hero-word font-display font-bold lowercase text-white select-none leading-none"
-              style={{ fontSize: "clamp(64px, 20vw, 440px)", letterSpacing: "-0.03em", lineHeight: 0.88 }}
+              className="hero-word font-display font-bold lowercase text-white select-none leading-none w-full"
+              style={{ fontSize: "clamp(56px, 22.5vw, 1200px)", letterSpacing: "-0.04em", lineHeight: 0.85 }}
               data-testid="hero-wordmark"
             >
               beyond
