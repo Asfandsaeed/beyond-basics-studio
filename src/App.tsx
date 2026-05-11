@@ -74,6 +74,16 @@ function ScrollToTop() {
     getGsap().then(({ ScrollTrigger }) => { ScrollTrigger.killAll(); });
   }, [location]);
 
+  useEffect(() => {
+    // Fire GA4 page_view on every SPA route change
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "page_view", {
+        page_path: location,
+        page_location: window.location.href,
+      });
+    }
+  }, [location]);
+
   return null;
 }
 
