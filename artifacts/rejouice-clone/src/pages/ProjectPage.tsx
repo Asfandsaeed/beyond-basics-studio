@@ -27,10 +27,8 @@ const SERVICE_SLUG_MAP: Record<string, string> = {
 };
 import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { getProjectById, getNextProject, type GalleryItem } from "@/data/projects";
 
-gsap.registerPlugin(ScrollTrigger);
 
 // ─── Media item (image or video) ──────────────────────────────────────────────
 function MediaItem({ item, className = "" }: { item: GalleryItem; className?: string }) {

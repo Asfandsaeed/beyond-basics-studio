@@ -1,10 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 
-gsap.registerPlugin(ScrollTrigger);
 
 // ── Asset URLs ──────────────────────────────────────────────────────────────
 const VCDN = "https://rejouice-2024.cdn.prismic.io/rejouice-2024";

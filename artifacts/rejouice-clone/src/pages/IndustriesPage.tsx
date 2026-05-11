@@ -1,11 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "wouter";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { industries, industryCategories, getIndustriesByCategory } from "@/data/industries";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
 
-gsap.registerPlugin(ScrollTrigger);
 
 function IndustryCard({ industry }: { industry: typeof industries[0] }) {
   return (

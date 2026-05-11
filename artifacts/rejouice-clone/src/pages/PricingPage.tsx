@@ -1,10 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "wouter";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const factors = [
   {

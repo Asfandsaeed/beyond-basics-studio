@@ -1,11 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "wouter";
 import { ArrowUpRight } from "lucide-react";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const phases = [
   {

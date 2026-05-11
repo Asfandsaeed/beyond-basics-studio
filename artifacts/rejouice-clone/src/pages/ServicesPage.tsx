@@ -1,11 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "wouter";
 import { projects } from "../data/projects";
 
-gsap.registerPlugin(ScrollTrigger);
 
 // ── Asset map ─────────────────────────────────────────────────────────────────
 const ASSETS = {

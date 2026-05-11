@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState, useCallback } from "react";
 import { Link } from "wouter";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import useEmblaCarousel from "embla-carousel-react";
 import {
   Target, Gem, Monitor, TrendingUp, PenTool,
@@ -13,7 +12,6 @@ import { posts } from "@/data/journal";
 import { industries } from "@/data/industries";
 import Loader from "@/components/Loader";
 
-gsap.registerPlugin(ScrollTrigger);
 
 // ─── Asset URLs ────────────────────────────────────────────────────────────
 

@@ -1,11 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { glossaryTerms, glossaryCategories } from "@/data/glossary";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const categoryColors: Record<string, string> = {
   "Brand Strategy": "bg-[#0A0A0A]/6 text-[#0A0A0A]/55",

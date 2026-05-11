@@ -1,11 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "wouter";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { projects } from "@/data/projects";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const testimonials = projects
   .filter((p) => p.testimonial)

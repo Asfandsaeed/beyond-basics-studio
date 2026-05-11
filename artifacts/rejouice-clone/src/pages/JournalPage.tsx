@@ -2,10 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { posts, categories } from "@/data/journal";
 
-gsap.registerPlugin(ScrollTrigger);
 
 function PostCard({ post, large = false }: { post: typeof posts[0]; large?: boolean }) {
   const [hovered, setHovered] = useState(false);

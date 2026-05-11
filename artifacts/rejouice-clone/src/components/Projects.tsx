@@ -1,9 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Link } from "wouter";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const VCDN = "https://rejouice-2024.cdn.prismic.io/rejouice-2024";
 

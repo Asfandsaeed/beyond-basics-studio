@@ -1,10 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 import { Link } from "wouter";
 
-gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
   const containerRef = useRef<HTMLElement>(null);

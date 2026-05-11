@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import { Link, useParams } from "wouter";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { industries } from "@/data/industries";
 import { servicePages } from "@/data/servicePages";
 
@@ -23,7 +22,6 @@ const INDUSTRY_SERVICE_SUFFIX: Record<string, string> = {
   "dtc-brands": "ecommerce",
 };
 
-gsap.registerPlugin(ScrollTrigger);
 
 export default function IndustryPage() {
   const { id }  = useParams<{ id: string }>();

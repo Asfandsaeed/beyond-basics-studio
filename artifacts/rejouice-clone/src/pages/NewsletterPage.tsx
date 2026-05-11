@@ -1,10 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const HERO_IMG = "https://cdn.sanity.io/images/zksivtxz/production/28820f9c8e82e134dc7dd7d7e403da3559edcb62-1080x1080.jpg";
 

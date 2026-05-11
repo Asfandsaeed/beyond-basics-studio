@@ -2,10 +2,8 @@ import React, { useEffect, useRef } from "react";
 import { Link, useParams } from "wouter";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { posts } from "@/data/journal";
 
-gsap.registerPlugin(ScrollTrigger);
 
 export default function JournalPostPage() {
   const { id } = useParams<{ id: string }>();

@@ -61,9 +61,6 @@ export default defineConfig({
       output: {
         manualChunks: {
           "vendor-react": ["react", "react-dom"],
-          "vendor-gsap": ["gsap"],
-          "vendor-ui": ["lucide-react", "embla-carousel-react"],
-          "vendor-query": ["@tanstack/react-query"],
         },
       },
     },

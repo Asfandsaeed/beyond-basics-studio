@@ -2,10 +2,8 @@ import React, { useEffect, useRef } from "react";
 import { useLocation } from "wouter";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { projects } from "@/data/projects";
 
-gsap.registerPlugin(ScrollTrigger);
 
 export default function WorkPage() {
   useSeoMeta({

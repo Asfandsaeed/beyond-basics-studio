@@ -1,10 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight, MapPin, Clock, Zap, Globe, Heart, TrendingUp, BookOpen, Shield, Sun } from "lucide-react";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const roles = [
   { title: "Senior Brand Strategist",      location: "San Francisco / Remote", type: "Full-time", dept: "Strategy" },

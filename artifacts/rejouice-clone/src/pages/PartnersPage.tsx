@@ -1,10 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight, Check, DollarSign, Share2, Handshake, Star } from "lucide-react";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const partnerTypes = [
   {

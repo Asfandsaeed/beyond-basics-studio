@@ -1,10 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ExternalLink } from "lucide-react";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
 
-gsap.registerPlugin(ScrollTrigger);
 
 type Org = { name: string; url: string; desc: string };
 type Category = { label: string; orgs: Org[] };

@@ -1,12 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import { Link, useParams } from "wouter";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { getServicePage, coreServices, industryServices, getRelatedProjects } from "@/data/servicePages";
 import { projects } from "@/data/projects";
 
-gsap.registerPlugin(ScrollTrigger);
 
 function NotFoundService() {
   return (

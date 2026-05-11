@@ -1,11 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "wouter";
 import { Plus, Minus, ArrowUpRight } from "lucide-react";
 
-gsap.registerPlugin(ScrollTrigger);
 
 type FAQ = { q: string; a: string };
 type Section = { label: string; faqs: FAQ[] };

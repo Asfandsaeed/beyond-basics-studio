@@ -1,10 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "wouter";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const DOMAIN = "beyondbasics.studio";
 const COMPANY = "Beyond Creative Studio Ltd";

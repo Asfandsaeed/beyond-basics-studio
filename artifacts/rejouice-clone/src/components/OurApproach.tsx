@@ -1,9 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import vertexImg from "@/assets/images/vertex.png";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const approaches = [
   {

@@ -1,10 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight, Leaf, Users, BookOpen, Globe } from "lucide-react";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const pillars = [
   {

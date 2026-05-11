@@ -1,8 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
 
 export default function Showreel() {
   const sectionRef = useRef<HTMLElement>(null);

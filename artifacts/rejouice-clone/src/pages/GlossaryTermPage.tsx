@@ -1,12 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import { Link, useParams } from "wouter";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { getTermById, glossaryTerms } from "@/data/glossary";
 import { projects } from "@/data/projects";
 
-gsap.registerPlugin(ScrollTrigger);
 
 export default function GlossaryTermPage() {
   const { id } = useParams<{ id: string }>();

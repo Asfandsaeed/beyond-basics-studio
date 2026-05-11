@@ -1,10 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight, Download } from "lucide-react";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const coverage = [
   { pub: "Fast Company", title: "The 10 Most Innovative Agencies of 2024", date: "March 2024", url: "#" },
