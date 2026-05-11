@@ -171,8 +171,8 @@ export default function Navbar() {
                   </button>
                   {servDropOpen && (
                     <div
-                      className="absolute top-full left-0 mt-4 w-64 bg-[#0F0F0F] overflow-hidden z-50"
-                      style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.22)" }}
+                      className="dropdown-enter absolute top-full left-0 mt-4 w-64 bg-[#0F0F0F] rounded-xl overflow-hidden z-50"
+                      style={{ boxShadow: "0 24px 64px rgba(0,0,0,0.28), 0 0 0 1px rgba(255,255,255,0.06)" }}
                     >
                       <div className="px-6 pt-5 pb-3 border-b border-white/[0.06]">
                         <p className="font-sans text-[9px] uppercase tracking-[0.24em] text-white/30">Our Services</p>
@@ -235,8 +235,8 @@ export default function Navbar() {
 
             {dropOpen && (
               <div
-                className="absolute top-full right-0 mt-4 w-64 bg-[#0F0F0F] overflow-hidden z-50"
-                style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.22)" }}
+                className="dropdown-enter absolute top-full right-0 mt-4 w-64 bg-[#0F0F0F] rounded-xl overflow-hidden z-50"
+                style={{ boxShadow: "0 24px 64px rgba(0,0,0,0.28), 0 0 0 1px rgba(255,255,255,0.06)" }}
               >
                 <div className="px-6 pt-5 pb-3 border-b border-white/[0.06]">
                   <p className="font-sans text-[9px] uppercase tracking-[0.24em] text-white/30">Company</p>
