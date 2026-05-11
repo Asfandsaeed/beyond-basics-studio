@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import { Link } from "wouter";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
-import { gsap } from "gsap";
+import { getGsap } from "@/lib/gsap";
 import useEmblaCarousel from "embla-carousel-react";
 import {
   Target, Gem, Monitor, TrendingUp, PenTool,
@@ -10,7 +10,6 @@ import {
 import { projects } from "@/data/projects";
 import { posts } from "@/data/journal";
 import { industries } from "@/data/industries";
-import Loader from "@/components/Loader";
 
 
 // ─── Asset URLs ────────────────────────────────────────────────────────────
@@ -214,29 +213,31 @@ export default function Home() {
       sameAs: ["https://www.linkedin.com/company/beyondbasics"],
     },
   });
-  const [loaded, setLoaded] = useState(false);
   const pageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!loaded) return;
-    const ctx = gsap.context(() => {
-      gsap.utils.toArray<Element>(".reveal").forEach((el) => {
-        gsap.fromTo(el,
-          { opacity: 0, y: 28 },
-          { opacity: 1, y: 0, duration: 1, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 88%" } }
-        );
-      });
-      gsap.from(".hero-word", { y: 100, opacity: 0, duration: 1.6, ease: "power4.out", delay: 0.1 });
-      gsap.from(".hero-meta > *", { opacity: 0, y: 12, stagger: 0.1, duration: 1, ease: "power3.out", delay: 1.1 });
-    }, pageRef);
-    return () => ctx.revert();
-  }, [loaded]);
+    let ctx: { revert: () => void } | null = null;
+    let cancelled = false;
+    getGsap().then(({ gsap }) => {
+      if (cancelled || !pageRef.current) return;
+      ctx = gsap.context(() => {
+        gsap.utils.toArray<Element>(".reveal").forEach((el) => {
+          gsap.fromTo(el,
+            { opacity: 0, y: 28 },
+            { opacity: 1, y: 0, duration: 1, ease: "power3.out", scrollTrigger: { trigger: el, start: "top 88%" } }
+          );
+        });
+        gsap.from(".hero-meta > *", { opacity: 0, y: 12, stagger: 0.1, duration: 1, ease: "power3.out", delay: 0.5 });
+      }, pageRef);
+    });
+    return () => {
+      cancelled = true;
+      ctx?.revert();
+    };
+  }, []);
 
   return (
     <div ref={pageRef} className="bg-white text-[#0A0A0A]">
-      {!loaded && <Loader onComplete={() => setLoaded(true)} />}
-
-      <div className={`transition-opacity duration-1000 ${loaded ? "opacity-100" : "opacity-0"}`}>
 
         {/* ══════════════════════════════════════════════════════════════════
             § 1  HERO
@@ -246,10 +247,10 @@ export default function Home() {
           className="relative w-full min-h-[100svh] flex flex-col bg-[#0A0A0A] text-white overflow-hidden"
           data-testid="hero-section"
         >
-          <div className="flex-1 flex flex-col justify-center overflow-hidden px-6 md:px-10">
+          <div className="flex-1 flex flex-col justify-center overflow-hidden">
             <h1
-              className="hero-word font-display font-bold lowercase text-white select-none leading-none"
-              style={{ fontSize: "clamp(64px, 20vw, 440px)", letterSpacing: "-0.03em", lineHeight: 0.88 }}
+              className="hero-word font-display font-bold lowercase text-white select-none leading-none w-full whitespace-nowrap"
+              style={{ fontSize: "24.5vw", letterSpacing: "-0.02em", lineHeight: 0.85 }}
               data-testid="hero-wordmark"
             >
               beyond
@@ -788,7 +789,6 @@ export default function Home() {
           </div>
         </section>
 
-      </div>
     </div>
   );
 }
