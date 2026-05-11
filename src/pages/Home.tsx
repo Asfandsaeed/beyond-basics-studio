@@ -249,8 +249,8 @@ export default function Home() {
         >
           <div className="flex-1 flex flex-col justify-center overflow-hidden">
             <h1
-              className="hero-word font-display font-bold lowercase text-white select-none leading-none w-full"
-              style={{ fontSize: "clamp(56px, 22.5vw, 1200px)", letterSpacing: "-0.04em", lineHeight: 0.85 }}
+              className="hero-word font-display font-bold lowercase text-white select-none leading-none w-full whitespace-nowrap"
+              style={{ fontSize: "24.5vw", letterSpacing: "-0.02em", lineHeight: 0.85 }}
               data-testid="hero-wordmark"
             >
               beyond
