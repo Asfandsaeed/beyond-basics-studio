@@ -114,13 +114,11 @@ export default function Navbar() {
   const isServicesActive = serviceLinks.some((l) => location === l.href);
   const isCompanyActive = companyLinks.some((l) => location === l.href);
 
-  const entranceDelay = isHomePage ? "nav-delay-home" : "nav-delay-fast";
-
   return (
     <>
       <header
         ref={navRef}
-        className={`nav-entrance ${entranceDelay} fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-6 md:px-10 md:py-7 transition-all duration-300 ${bgClass}`}
+        className={`nav-entrance fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-6 md:px-10 md:py-7 transition-all duration-300 ${bgClass}`}
       >
         {/* Logo */}
         <Link
