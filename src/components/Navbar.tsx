@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "wouter";
-import { ChevronDown } from "lucide-react";
-
+import { ChevronDown, X } from "lucide-react";
 
 const primaryLinks = [
   { label: "Work", href: "/work" },
@@ -30,6 +29,71 @@ const companyLinks = [
   { label: "Partners", href: "/partners" },
 ];
 
+const mobileMenuSections = [
+  {
+    heading: "Work",
+    links: [
+      { label: "Selected Work", href: "/work" },
+      { label: "Industries", href: "/industries" },
+      { label: "Our Process", href: "/process" },
+      { label: "Awards", href: "/awards" },
+      { label: "Partners", href: "/partners" },
+    ],
+  },
+  {
+    heading: "Services",
+    links: [
+      { label: "All Services", href: "/services" },
+      { label: "Brand Strategy", href: "/services/brand-strategy" },
+      { label: "Brand Identity", href: "/services/brand-identity" },
+      { label: "Digital Experience", href: "/services/digital-experience" },
+      { label: "Growth Marketing", href: "/services/growth-marketing" },
+      { label: "Content & Creative", href: "/services/content-creative" },
+    ],
+  },
+  {
+    heading: "Company",
+    links: [
+      { label: "About", href: "/about" },
+      { label: "Careers", href: "/careers" },
+      { label: "Design for Good", href: "/design-for-good" },
+      { label: "Accreditations", href: "/accreditations" },
+      { label: "Press & Media", href: "/press" },
+      { label: "FAQ", href: "/faq" },
+    ],
+  },
+  {
+    heading: "Resources",
+    links: [
+      { label: "Journal", href: "/journal" },
+      { label: "Resources & Guides", href: "/resources" },
+      { label: "Newsletter", href: "/newsletter" },
+      { label: "Pricing", href: "/pricing" },
+      { label: "Contact", href: "/contact" },
+      { label: "Sitemap", href: "/sitemap" },
+    ],
+  },
+];
+
+const mobileBottomSections = [
+  {
+    heading: "Connect",
+    links: [
+      { label: "Instagram ↗", href: "https://instagram.com/beyondbasicsstudio", external: true },
+      { label: "LinkedIn ↗", href: "https://linkedin.com/company/beyondbasicsstudio", external: true },
+      { label: "Twitter / X ↗", href: "https://x.com/beyondbasics", external: true },
+    ],
+  },
+  {
+    heading: "Legal",
+    links: [
+      { label: "Privacy Policy", href: "/privacy-policy", external: false },
+      { label: "Terms & Conditions", href: "/terms", external: false },
+      { label: "Refund Policy", href: "/refunds", external: false },
+    ],
+  },
+];
+
 export default function Navbar() {
   const navRef = useRef<HTMLElement>(null);
   const [location] = useLocation();
@@ -53,7 +117,16 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
-  useEffect(() => { setDropOpen(false); setServDropOpen(false); setMenuOpen(false); }, [location]);
+  useEffect(() => {
+    setDropOpen(false);
+    setServDropOpen(false);
+    setMenuOpen(false);
+  }, [location]);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [menuOpen]);
 
   const isServicesActive = serviceLinks.some((l) => location === l.href);
   const isCompanyActive = companyLinks.some((l) => location === l.href);
@@ -173,39 +246,107 @@ export default function Navbar() {
           <span>↗</span>
         </Link>
 
-        {/* Mobile hamburger */}
+        {/* Mobile hamburger / close */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-1"
+          className="md:hidden flex items-center justify-center w-8 h-8 -mr-1"
           onClick={() => setMenuOpen(!menuOpen)}
           data-testid="btn-menu"
           aria-label="Toggle menu"
         >
-          <span className={`block w-6 h-px bg-[#0A0A0A] transition-all duration-300 ${menuOpen ? "translate-y-2 rotate-45" : ""}`} />
-          <span className={`block w-6 h-px bg-[#0A0A0A] transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
-          <span className={`block w-6 h-px bg-[#0A0A0A] transition-all duration-300 ${menuOpen ? "-translate-y-2 -rotate-45" : ""}`} />
+          {menuOpen ? (
+            <X size={18} strokeWidth={1.5} className="text-[#0A0A0A]" />
+          ) : (
+            <div className="flex flex-col gap-[5px]">
+              <span className="block w-5 h-px bg-[#0A0A0A]" />
+              <span className="block w-5 h-px bg-[#0A0A0A]" />
+            </div>
+          )}
         </button>
       </header>
 
-      {/* Mobile overlay */}
+      {/* ── Mobile full-screen menu ─────────────────────────────────── */}
       {menuOpen && (
-        <div className="fixed inset-0 z-40 bg-background overflow-y-auto flex flex-col px-8 pt-24 pb-12 gap-0 md:hidden">
-          <div className="flex flex-col gap-1">
-            {[...primaryLinks, ...companyLinks, { label: "Contact", href: "/contact" }].map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMenuOpen(false)}
-                data-testid={`mobile-link-${link.label.toLowerCase().replace(/\s/g, "-")}`}
-                className={`font-sans font-light py-3.5 border-b border-[#0A0A0A]/6 transition-colors duration-150 hover:text-[#0A0A0A]/50 text-[#0A0A0A]`}
-                style={{ fontSize: "clamp(1.5rem, 5vw, 2.25rem)", letterSpacing: "-0.02em" }}
-              >
-                {link.label}
-              </Link>
+        <div
+          className="fixed inset-0 z-40 bg-white overflow-y-auto md:hidden"
+          style={{ paddingTop: "72px" }}
+        >
+          {/* Main grid — 2 columns */}
+          <div className="px-6 pt-8 pb-6 grid grid-cols-2 gap-x-5 gap-y-8 border-b border-[#0A0A0A]/8">
+            {mobileMenuSections.map((section) => (
+              <div key={section.heading}>
+                <p className="font-sans text-[9px] uppercase tracking-[0.22em] text-[#0A0A0A]/35 mb-3">
+                  {section.heading}
+                </p>
+                <div className="flex flex-col gap-[10px]">
+                  {section.links.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setMenuOpen(false)}
+                      className={`font-sans text-[13px] leading-snug transition-colors duration-150 ${
+                        location === link.href
+                          ? "text-[#0A0A0A]"
+                          : "text-[#0A0A0A]/50 hover:text-[#0A0A0A]"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
-          <div className="mt-10 flex flex-col gap-2">
-            <a href="mailto:hello@beyondbasics.studio" className="font-sans text-sm text-[#0A0A0A]/60">hello@beyondbasics.studio</a>
-            <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/55">beyondbasics.studio</span>
+
+          {/* Bottom grid — Connect + Legal */}
+          <div className="px-6 pt-6 pb-6 grid grid-cols-2 gap-x-5 border-b border-[#0A0A0A]/8">
+            {mobileBottomSections.map((section) => (
+              <div key={section.heading}>
+                <p className="font-sans text-[9px] uppercase tracking-[0.22em] text-[#0A0A0A]/35 mb-3">
+                  {section.heading}
+                </p>
+                <div className="flex flex-col gap-[10px]">
+                  {section.links.map((link) =>
+                    link.external ? (
+                      <a
+                        key={link.label}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-sans text-[13px] text-[#0A0A0A]/50 hover:text-[#0A0A0A] transition-colors duration-150"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setMenuOpen(false)}
+                        className={`font-sans text-[13px] transition-colors duration-150 ${
+                          location === link.href
+                            ? "text-[#0A0A0A]"
+                            : "text-[#0A0A0A]/50 hover:text-[#0A0A0A]"
+                        }`}
+                      >
+                        {link.label}
+                      </Link>
+                    )
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Footer strip */}
+          <div className="px-6 py-5 flex flex-col gap-1">
+            <a
+              href="mailto:hello@beyondbasics.studio"
+              className="font-sans text-[12px] text-[#0A0A0A]/50 hover:text-[#0A0A0A] transition-colors duration-150"
+            >
+              hello@beyondbasics.studio
+            </a>
+            <span className="font-sans text-[9px] uppercase tracking-[0.18em] text-[#0A0A0A]/30">
+              Tomorrow's Brands, Today.™
+            </span>
           </div>
         </div>
       )}
