@@ -8,7 +8,6 @@ export default function ContactPage() {
     title: "Contact | Beyond®",
     description: "Start a conversation about your brand. Reach us at hello@beyondbasics.studio or fill in the brief — we respond within 24 hours.",
     path: "/contact",
-    ogImage: "/og/og-contact.jpg",
     breadcrumbs: [
       { name: "Home", path: "/" },
       { name: "Contact", path: "/contact" },

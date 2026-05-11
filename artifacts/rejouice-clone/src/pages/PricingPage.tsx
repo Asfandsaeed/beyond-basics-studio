@@ -119,7 +119,6 @@ export default function PricingPage() {
     title: "Pricing | Beyond®",
     description: "How Beyond structures and prices creative engagements — two models (Sprint and Partnership), transparent process, no day rates. Request a proposal for your project.",
     path: "/pricing",
-    ogImage: "/og/og-pricing.jpg",
     breadcrumbs: [
       { name: "Home", path: "/" },
       { name: "Pricing", path: "/pricing" },

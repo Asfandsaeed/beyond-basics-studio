@@ -78,7 +78,6 @@ export default function DesignForGoodPage() {
     title: "Design for Good | Beyond®",
     description: "Beyond's pro-bono and impact program. We partner with nonprofits and social enterprises to deliver world-class brand and digital work.",
     path: "/design-for-good",
-    ogImage: "/og/og-design-for-good.jpg",
     breadcrumbs: [
       { name: "Home", path: "/" },
       { name: "Design for Good", path: "/design-for-good" },

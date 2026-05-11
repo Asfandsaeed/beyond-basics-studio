@@ -36,7 +36,6 @@ export default function PressPage() {
     title: "Press | Beyond®",
     description: "Press resources, coverage, and media kit for Beyond Creative Growth Agency. Contact press@beyondbasics.studio for inquiries.",
     path: "/press",
-    ogImage: "/og/og-press.jpg",
     breadcrumbs: [
       { name: "Home", path: "/" },
       { name: "Press", path: "/press" },

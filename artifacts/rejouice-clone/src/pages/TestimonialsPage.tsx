@@ -39,7 +39,6 @@ export default function TestimonialsPage() {
     title: "Client Testimonials | Beyond®",
     description: "What clients say about working with Beyond® — real testimonials from brands we've helped transform, from fintech to Web3 to e-commerce.",
     path: "/testimonials",
-    ogImage: "/og/og-testimonials.jpg",
     breadcrumbs: [
       { name: "Home", path: "/" },
       { name: "Testimonials", path: "/testimonials" },

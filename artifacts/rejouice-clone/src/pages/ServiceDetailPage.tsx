@@ -29,7 +29,6 @@ export default function ServiceDetailPage() {
     title: page ? `${page.name} — ${page.tagline} | Beyond®` : "Service | Beyond®",
     description: page ? page.intro.slice(0, 160) : "Beyond® creative growth agency services.",
     path: `/services/${slug}`,
-    ogImage: page?.heroImage,
     breadcrumbs: page ? [
       { name: "Home", path: "/" },
       { name: "Services", path: "/services" },

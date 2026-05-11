@@ -92,7 +92,6 @@ export default function JournalPage() {
     title: "Journal | Beyond®",
     description: "Long-form thinking on brand strategy, design craft, creative growth, and the work that shapes tomorrow's category leaders.",
     path: "/journal",
-    ogImage: "/og/og-journal.jpg",
     breadcrumbs: [
       { name: "Home", path: "/" },
       { name: "Journal", path: "/journal" },

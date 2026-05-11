@@ -68,7 +68,6 @@ export default function ProcessPage() {
     title: "Our Process | Beyond®",
     description: "How Beyond works: strategy-first, deeply collaborative, with full accountability. From discovery to launch and beyond.",
     path: "/process",
-    ogImage: "/og/og-process.jpg",
     breadcrumbs: [
       { name: "Home", path: "/" },
       { name: "Process", path: "/process" },

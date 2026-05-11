@@ -36,7 +36,6 @@ export default function JournalPostPage() {
       ? post.subtitle.slice(0, 155)
       : "Long-form thinking on brand strategy and design craft from Beyond Creative Growth Agency.",
     path: `/journal/${id}`,
-    ogImage: post?.coverImage,
     ogType: post ? "article" : "website",
     datePublished: isoDate,
     dateModified: isoDate,

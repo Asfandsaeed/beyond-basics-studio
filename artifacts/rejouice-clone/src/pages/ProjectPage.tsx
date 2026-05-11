@@ -114,7 +114,6 @@ export default function ProjectPage() {
       ? project.description.slice(0, 155) + "…"
       : "Award-winning brand and web project by Beyond Creative Growth Agency.",
     path: `/work/${id}`,
-    ogImage: project?.heroImage,
     breadcrumbs: project ? [
       { name: "Home", path: "/" },
       { name: "Work", path: "/work" },

@@ -21,7 +21,6 @@ export default function ResourcePage() {
     title: resource ? `${resource.title} | Beyond® Resources` : "Resources | Beyond®",
     description: resource ? resource.subtitle.slice(0, 160) : "Brand strategy guides from Beyond®.",
     path: `/resources/${slug}`,
-    ogImage: resource?.heroImage,
     ogType: resource ? "article" : "website",
     datePublished: resource?.publishDate,
     dateModified: resource?.publishDate,
