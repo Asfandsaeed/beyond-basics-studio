@@ -3,27 +3,12 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
+const isBuild = process.argv.includes("build");
+
 const rawPort = process.env.PORT;
+const port = rawPort ? Number(rawPort) : 5173;
 
-if (!rawPort) {
-  throw new Error(
-    "PORT environment variable is required but was not provided.",
-  );
-}
-
-const port = Number(rawPort);
-
-if (Number.isNaN(port) || port <= 0) {
-  throw new Error(`Invalid PORT value: "${rawPort}"`);
-}
-
-const basePath = process.env.BASE_PATH;
-
-if (!basePath) {
-  throw new Error(
-    "BASE_PATH environment variable is required but was not provided.",
-  );
-}
+const basePath = process.env.BASE_PATH ?? "/";
 
 export default defineConfig({
   base: basePath,
@@ -35,11 +20,11 @@ export default defineConfig({
           await import("@replit/vite-plugin-runtime-error-modal").then(
             (m) => m.default(),
           ),
-          ...(process.env.NODE_ENV !== "production"
+          ...(!isBuild
             ? [
                 await import("@replit/vite-plugin-cartographer").then((m) =>
                   m.cartographer({
-                    root: path.resolve(import.meta.dirname, ".."),
+                    root: path.resolve(import.meta.dirname),
                   }),
                 ),
                 await import("@replit/vite-plugin-dev-banner").then((m) =>
@@ -55,7 +40,6 @@ export default defineConfig({
       "@": path.resolve(import.meta.dirname, "src"),
       "@assets": path.resolve(import.meta.dirname, "..", "..", "attached_assets"),
     },
-    dedupe: ["react", "react-dom"],
   },
   root: path.resolve(import.meta.dirname),
   build: {
@@ -64,7 +48,6 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          "vendor-react": ["react", "react-dom"],
           "vendor-gsap": ["gsap", "lenis"],
           "vendor-ui": ["lucide-react", "embla-carousel-react"],
           "vendor-query": ["@tanstack/react-query"],
@@ -108,6 +91,9 @@ export default defineConfig({
     allowedHosts: true,
     fs: {
       strict: true,
+    },
+    watch: {
+      ignored: ["**/public/og/**", "**/dist/**", "**/.git/**"],
     },
   },
   preview: {
