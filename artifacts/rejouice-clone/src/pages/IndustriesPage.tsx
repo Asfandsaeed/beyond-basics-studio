@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { industries, industryCategories, getIndustriesByCategory } from "@/data/industries";
+import { useSeoMeta } from "@/hooks/useSeoMeta";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,6 +42,15 @@ function IndustryCard({ industry }: { industry: typeof industries[0] }) {
 }
 
 export default function IndustriesPage() {
+  useSeoMeta({
+    title: "Industries We Serve | Beyond®",
+    description: "Beyond® delivers brand strategy, identity, and web design across 49 industries — from SaaS and fintech to hospitality, healthcare, and e-commerce. Find your sector.",
+    path: "/industries",
+    breadcrumbs: [
+      { name: "Home", path: "/" },
+      { name: "Industries", path: "/industries" },
+    ],
+  });
   const pageRef  = useRef<HTMLDivElement>(null);
   const heroRef  = useRef<HTMLDivElement>(null);
   const grouped  = getIndustriesByCategory();

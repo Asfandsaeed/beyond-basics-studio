@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ExternalLink } from "lucide-react";
+import { useSeoMeta } from "@/hooks/useSeoMeta";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -101,6 +102,15 @@ const categories: Category[] = [
 const FILTER_ALL = "All";
 
 export default function AccreditationsPage() {
+  useSeoMeta({
+    title: "Industry Accreditations & Memberships | Beyond®",
+    description: "Beyond® is affiliated with leading bodies in marketing, design, digital, and business — including AIGA, AMA, IAB, and the Design Management Institute.",
+    path: "/accreditations",
+    breadcrumbs: [
+      { name: "Home", path: "/" },
+      { name: "Accreditations", path: "/accreditations" },
+    ],
+  });
   const pageRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(FILTER_ALL);
   const filters = [FILTER_ALL, ...categories.map((c) => c.label)];

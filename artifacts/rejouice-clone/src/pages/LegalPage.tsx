@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "wouter";
+import { useSeoMeta } from "@/hooks/useSeoMeta";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,6 +44,12 @@ function LegalLayout({ title, category, children }: { title: string; category: s
 // ─── Privacy Policy ─────────────────────────────────────────────────────────
 
 export function PrivacyPolicyPage() {
+  useSeoMeta({
+    title: "Privacy Policy | Beyond®",
+    description: "How Beyond Creative Studio Ltd collects, uses, and protects your personal data. GDPR-compliant. Contact legal@beyondbasics.studio with any questions.",
+    path: "/privacy-policy",
+    robots: "index, follow",
+  });
   return (
     <LegalLayout title="Privacy Policy" category="Legal">
       <p>This Privacy Policy explains how {COMPANY} ("Beyond", "we", "us", or "our"), operating at {DOMAIN}, collects, uses, and protects your personal information. By using our website or services, you agree to the practices described below.</p>
@@ -96,6 +103,12 @@ export function PrivacyPolicyPage() {
 // ─── Terms & Conditions ─────────────────────────────────────────────────────
 
 export function TermsPage() {
+  useSeoMeta({
+    title: "Terms & Conditions | Beyond®",
+    description: "Terms governing the use of beyondbasics.studio and all creative services provided by Beyond Creative Studio Ltd — including IP, payment, revisions, and cancellation.",
+    path: "/terms",
+    robots: "index, follow",
+  });
   return (
     <LegalLayout title="Terms & Conditions" category="Legal">
       <p>These Terms and Conditions govern your use of the website at {DOMAIN} and any services provided by {COMPANY} ("Beyond"). By accessing our website or engaging our services, you agree to these terms in full.</p>
@@ -139,6 +152,12 @@ export function TermsPage() {
 // ─── Refund Policy ──────────────────────────────────────────────────────────
 
 export function RefundsPage() {
+  useSeoMeta({
+    title: "Refund Policy | Beyond®",
+    description: "Beyond®'s fair and transparent refund policy — covering project deposits, phase billing, client-initiated cancellations, retainers, and sprint engagements.",
+    path: "/refunds",
+    robots: "index, follow",
+  });
   return (
     <LegalLayout title="Refund Policy" category="Legal">
       <p>This Refund Policy applies to all services provided by {COMPANY} ("Beyond") and is incorporated into our Terms and Conditions. We are committed to fair and transparent commercial practices.</p>
@@ -197,6 +216,11 @@ function SitemapSection({ label, links }: { label: string; links: { label: strin
 }
 
 export function SitemapPage() {
+  useSeoMeta({
+    title: "Sitemap | Beyond®",
+    description: "A complete index of every page on beyondbasics.studio — work, services, industries, journal, glossary, resources, and company pages.",
+    path: "/sitemap",
+  });
   const pageRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     window.scrollTo(0, 0);

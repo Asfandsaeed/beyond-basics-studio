@@ -1,8 +1,15 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "wouter";
 import { gsap } from "gsap";
+import { useSeoMeta } from "@/hooks/useSeoMeta";
 
 export default function NotFound() {
+  useSeoMeta({
+    title: "Page Not Found | Beyond®",
+    description: "The page you're looking for doesn't exist or has moved. Head back to beyondbasics.studio to explore our work, services, and journal.",
+    path: "/404",
+    robots: "noindex, follow",
+  });
   const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
