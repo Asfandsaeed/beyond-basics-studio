@@ -140,10 +140,10 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className={`inline-flex items-center gap-1.5 font-sans text-sm font-medium tracking-tight ${textColor}`}
+          className={`inline-flex items-center gap-2 font-sans text-base font-medium tracking-tight ${textColor}`}
           data-testid="link-home"
         >
-          <img src="/favicon.png" alt="" aria-hidden="true" className="w-[18px] h-[18px] object-cover rounded-sm flex-shrink-0" />
+          <img src="/favicon.png" alt="" aria-hidden="true" className="w-[22px] h-[22px] object-cover rounded-sm flex-shrink-0" />
           beyond
         </Link>
 
