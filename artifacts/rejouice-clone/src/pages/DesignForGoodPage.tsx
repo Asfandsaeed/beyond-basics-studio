@@ -123,7 +123,7 @@ export default function DesignForGoodPage() {
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-10 pt-16 pb-24 md:pt-24 md:pb-32">
-        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-8">Social Responsibility</p>
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-8">Social Responsibility</p>
         <h1
           className="page-hero-h font-sans font-light tracking-[-0.03em] leading-[1.02] text-[#0A0A0A] mb-8"
           style={{ fontSize: "clamp(3rem, 8vw, 8rem)" }}
@@ -160,17 +160,17 @@ export default function DesignForGoodPage() {
       {/* ── Four pillars ─────────────────────────────────────────────────── */}
       <section className="bg-white py-24 md:py-32">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10 reveal">Four pillars</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-10 reveal">Four pillars</p>
           <div className="reveal grid grid-cols-1 md:grid-cols-2 gap-3">
             {pillars.map(({ Icon, title, body, stat, statLabel }) => (
               <div key={title} className="group p-10 bg-[#F5F4F0] hover:bg-[#EEEDE9] transition-colors duration-250 rounded-sm flex flex-col gap-8">
                 <div className="flex items-start justify-between">
-                  <div className="w-10 h-10 flex items-center justify-center text-[#0A0A0A]/35 group-hover:text-[#0A0A0A]/70 transition-colors duration-250">
+                  <div className="w-10 h-10 flex items-center justify-center text-[#0A0A0A]/60 group-hover:text-[#0A0A0A]/70 transition-colors duration-250">
                     <Icon size={20} strokeWidth={1.25} />
                   </div>
                   <div className="text-right">
                     <span className="font-sans font-light text-[#0A0A0A] leading-none block" style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)" }}>{stat}</span>
-                    <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-[#0A0A0A]/40 mt-1 block">{statLabel}</span>
+                    <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mt-1 block">{statLabel}</span>
                   </div>
                 </div>
                 <div>
@@ -186,7 +186,7 @@ export default function DesignForGoodPage() {
       {/* ── Active initiatives ───────────────────────────────────────────── */}
       <section className="bg-[#F5F4F0] py-24 md:py-32">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10 reveal">Active initiatives</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-10 reveal">Active initiatives</p>
           <h2
             className="reveal font-sans font-light tracking-[-0.025em] leading-[1.07] text-[#0A0A0A] mb-14"
             style={{ fontSize: "clamp(2rem, 4vw, 4.5rem)", maxWidth: "20ch" }}
@@ -198,7 +198,7 @@ export default function DesignForGoodPage() {
               <div key={name} className="flex flex-col md:flex-row gap-6 md:gap-12 py-8 border-t border-[#0A0A0A]/8">
                 <div className="md:w-1/3 shrink-0">
                   <h3 className="font-sans font-light text-[#0A0A0A] text-lg md:text-xl tracking-[-0.015em] mb-2">{name}</h3>
-                  <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-[#0A0A0A]/35">{status}</span>
+                  <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-[#0A0A0A]/60">{status}</span>
                 </div>
                 <p className="font-sans text-sm md:text-[15px] font-light text-[#0A0A0A]/55 leading-[1.75] max-w-lg">{desc}</p>
               </div>
@@ -210,14 +210,14 @@ export default function DesignForGoodPage() {
       {/* ── Impact report CTA ────────────────────────────────────────────── */}
       <section className="bg-[#0A0A0A] text-white py-28 md:py-40">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/35 mb-8 reveal">Transparency</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-8 reveal">Transparency</p>
           <h2
             className="reveal font-sans font-light tracking-[-0.03em] leading-[1.02] text-white mb-8"
             style={{ fontSize: "clamp(2.5rem, 6vw, 6.5rem)", maxWidth: "18ch" }}
           >
             Read our annual impact report.
           </h2>
-          <p className="reveal font-sans text-base font-light text-white/45 max-w-lg leading-relaxed mb-10">
+          <p className="reveal font-sans text-base font-light text-white/65 max-w-lg leading-relaxed mb-10">
             Every number, every hour, every dollar — disclosed in full. Because accountability is only meaningful when it's legible.
           </p>
           <a

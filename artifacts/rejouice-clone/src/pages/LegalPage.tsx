@@ -26,11 +26,11 @@ function LegalLayout({ title, category, children }: { title: string; category: s
   return (
     <div ref={pageRef} className="bg-white text-[#0A0A0A] pt-24">
       <section className="max-w-[820px] mx-auto px-6 md:px-10 pt-16 pb-12 md:pt-24">
-        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-6">{category}</p>
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-6">{category}</p>
         <h1 className="page-hero-h font-sans font-light tracking-[-0.025em] leading-[1.07] text-[#0A0A0A] mb-4" style={{ fontSize: "clamp(2.5rem, 5vw, 5rem)" }}>
           {title}
         </h1>
-        <p className="font-sans text-sm text-[#0A0A0A]/35">Last updated: {UPDATED}</p>
+        <p className="font-sans text-sm text-[#0A0A0A]/60">Last updated: {UPDATED}</p>
       </section>
       <section className="max-w-[820px] mx-auto px-6 md:px-10 pb-28 md:pb-40">
         <div className="prose prose-sm max-w-none font-sans font-light leading-[1.8] text-[#0A0A0A]/65 [&_h2]:font-sans [&_h2]:font-light [&_h2]:text-[#0A0A0A] [&_h2]:text-xl [&_h2]:tracking-[-0.01em] [&_h2]:mt-12 [&_h2]:mb-4 [&_p]:mb-5 [&_ul]:pl-5 [&_ul]:mb-5 [&_li]:mb-2 [&_a]:text-[#0A0A0A] [&_a]:underline [&_a]:underline-offset-4">
@@ -199,13 +199,13 @@ export function RefundsPage() {
 function SitemapSection({ label, links }: { label: string; links: { label: string; href: string }[] }) {
   return (
     <div>
-      <p className="font-sans text-[10px] uppercase tracking-[0.2em] text-[#0A0A0A]/35 mb-5 pb-3 border-b border-[#0A0A0A]/10">{label}</p>
+      <p className="font-sans text-[10px] uppercase tracking-[0.2em] text-[#0A0A0A]/60 mb-5 pb-3 border-b border-[#0A0A0A]/10">{label}</p>
       <div className="flex flex-col gap-2.5">
         {links.map((l) => (
           <Link
             key={l.href}
             href={l.href}
-            className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/45 transition-colors duration-200 leading-snug"
+            className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/65 transition-colors duration-200 leading-snug"
           >
             {l.label}
           </Link>
@@ -230,11 +230,11 @@ export function SitemapPage() {
   return (
     <div ref={pageRef} className="bg-white text-[#0A0A0A] pt-24">
       <section className="max-w-[1400px] mx-auto px-6 md:px-10 pt-16 pb-12 md:pt-24">
-        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-8">Sitemap</p>
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-8">Sitemap</p>
         <h1 className="page-hero-h font-sans font-light tracking-[-0.03em] leading-[1.02] text-[#0A0A0A] mb-4" style={{ fontSize: "clamp(3rem, 8vw, 8rem)" }}>
           All pages.
         </h1>
-        <p className="font-sans text-sm font-light text-[#0A0A0A]/45 mb-20">
+        <p className="font-sans text-sm font-light text-[#0A0A0A]/65 mb-20">
           Every page on beyondbasics.studio — indexed for humans.
         </p>
       </section>
@@ -279,7 +279,7 @@ export function SitemapPage() {
 
       {/* ── Work / Projects ── */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-10 py-16 border-b border-[#0A0A0A]/08">
-        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10">Work — 17 projects</p>
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-10">Work — 17 projects</p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-10 gap-y-2.5">
           {[
             { label: "Clear Street", href: "/work/clear-street" },
@@ -300,7 +300,7 @@ export function SitemapPage() {
             { label: "Speedy", href: "/work/speedy" },
             { label: "Care to Beauty", href: "/work/care-to-beauty" },
           ].map((l) => (
-            <Link key={l.href} href={l.href} className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/45 transition-colors duration-200">
+            <Link key={l.href} href={l.href} className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/65 transition-colors duration-200">
               {l.label}
             </Link>
           ))}
@@ -311,7 +311,7 @@ export function SitemapPage() {
       <section className="max-w-[1400px] mx-auto px-6 md:px-10 py-16 border-b border-[#0A0A0A]/08">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div>
-            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10">Core Services — 5 pages</p>
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-10">Core Services — 5 pages</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2.5">
               {[
                 { label: "Brand Strategy", href: "/services/brand-strategy" },
@@ -320,14 +320,14 @@ export function SitemapPage() {
                 { label: "Growth Marketing", href: "/services/growth-marketing" },
                 { label: "Content & Creative", href: "/services/content-creative" },
               ].map((l) => (
-                <Link key={l.href} href={l.href} className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/45 transition-colors duration-200">
+                <Link key={l.href} href={l.href} className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/65 transition-colors duration-200">
                   {l.label}
                 </Link>
               ))}
             </div>
           </div>
           <div>
-            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10">Service × Industry — 14 pages</p>
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-10">Service × Industry — 14 pages</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2.5">
               {[
                 { label: "Brand Strategy for Fintech", href: "/services/brand-strategy-for-fintech" },
@@ -345,7 +345,7 @@ export function SitemapPage() {
                 { label: "Growth Marketing for SaaS", href: "/services/growth-marketing-for-saas" },
                 { label: "Growth Marketing for Fintech", href: "/services/growth-marketing-for-fintech" },
               ].map((l) => (
-                <Link key={l.href} href={l.href} className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/45 transition-colors duration-200">
+                <Link key={l.href} href={l.href} className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/65 transition-colors duration-200">
                   {l.label}
                 </Link>
               ))}
@@ -356,7 +356,7 @@ export function SitemapPage() {
 
       {/* ── Industries ── */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-10 py-16 border-b border-[#0A0A0A]/08">
-        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10">Industries — 51 pages</p>
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-10">Industries — 51 pages</p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-10 gap-y-2.5">
           {[
             { label: "SaaS", href: "/industries/saas" },
@@ -410,7 +410,7 @@ export function SitemapPage() {
             { label: "Interior Designers", href: "/industries/interior-designers" },
             { label: "Architects", href: "/industries/architects" },
           ].map((l) => (
-            <Link key={l.href} href={l.href} className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/45 transition-colors duration-200">
+            <Link key={l.href} href={l.href} className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/65 transition-colors duration-200">
               {l.label}
             </Link>
           ))}
@@ -419,7 +419,7 @@ export function SitemapPage() {
 
       {/* ── Journal ── */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-10 py-16 border-b border-[#0A0A0A]/08">
-        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10">Journal — 8 articles</p>
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-10">Journal — 8 articles</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-2.5">
           {[
             { label: "How We Built the MultiversX Brand in 90 Days", href: "/journal/tensor-brand-90-days" },
@@ -431,7 +431,7 @@ export function SitemapPage() {
             { label: "Photography as Brand Language", href: "/journal/photography-as-brand-language" },
             { label: "Brand as Expansion Engine: How Phive Built a Multi-Location Presence", href: "/journal/pre-launch-brand-building" },
           ].map((l) => (
-            <Link key={l.href} href={l.href} className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/45 transition-colors duration-200 leading-snug">
+            <Link key={l.href} href={l.href} className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/65 transition-colors duration-200 leading-snug">
               {l.label}
             </Link>
           ))}
@@ -442,7 +442,7 @@ export function SitemapPage() {
       <section className="max-w-[1400px] mx-auto px-6 md:px-10 py-16 border-b border-[#0A0A0A]/08">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div>
-            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10">Brand Glossary — 25 terms</p>
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-10">Brand Glossary — 25 terms</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2.5">
               {[
                 { label: "Brand Identity", href: "/glossary/brand-identity" },
@@ -471,14 +471,14 @@ export function SitemapPage() {
                 { label: "Go-to-Market", href: "/glossary/go-to-market" },
                 { label: "Digital Experience", href: "/glossary/digital-experience" },
               ].map((l) => (
-                <Link key={l.href} href={l.href} className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/45 transition-colors duration-200">
+                <Link key={l.href} href={l.href} className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/65 transition-colors duration-200">
                   {l.label}
                 </Link>
               ))}
             </div>
           </div>
           <div>
-            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10">Guides & Resources — 6 guides</p>
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-10">Guides & Resources — 6 guides</p>
             <div className="flex flex-col gap-2.5">
               {[
                 { label: "The Complete Rebranding Checklist", href: "/resources/rebranding-checklist" },
@@ -488,7 +488,7 @@ export function SitemapPage() {
                 { label: "The Startup Naming Guide", href: "/resources/naming-guide" },
                 { label: "How to Write a Website Brief", href: "/resources/website-brief-template" },
               ].map((l) => (
-                <Link key={l.href} href={l.href} className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/45 transition-colors duration-200 leading-snug">
+                <Link key={l.href} href={l.href} className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/65 transition-colors duration-200 leading-snug">
                   {l.label}
                 </Link>
               ))}
@@ -499,12 +499,12 @@ export function SitemapPage() {
 
       {/* ── Newsletter issues ── */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-10 py-16 pb-32">
-        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10">Newsletter</p>
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-10">Newsletter</p>
         <div className="flex flex-col gap-2.5 max-w-md">
-          <Link href="/newsletter" className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/45 transition-colors duration-200">
+          <Link href="/newsletter" className="font-sans text-[13px] font-light text-[#0A0A0A] hover:text-[#0A0A0A]/65 transition-colors duration-200">
             Newsletter — Subscribe & Archive
           </Link>
-          <p className="font-sans text-[12px] text-[#0A0A0A]/35 font-light leading-snug mt-1">
+          <p className="font-sans text-[12px] text-[#0A0A0A]/60 font-light leading-snug mt-1">
             Monthly dispatches on brand strategy, identity, and the business of creativity. Issues are available at /newsletter after subscribing.
           </p>
         </div>

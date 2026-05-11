@@ -133,7 +133,7 @@ export default function AwardsPage() {
 
       {/* ── Hero ──────────────────────────────────────────────────────────────── */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-10 pt-16 pb-24 md:pt-24 md:pb-32">
-        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-8">Awards & Recognition</p>
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-8">Awards & Recognition</p>
         <h1
           className="page-hero-h font-sans font-light tracking-[-0.03em] leading-[1.02] text-[#0A0A0A] mb-8"
           style={{ fontSize: "clamp(3rem, 8vw, 8rem)" }}
@@ -148,7 +148,7 @@ export default function AwardsPage() {
       {/* ── Awarding bodies ───────────────────────────────────────────────────── */}
       <section className="bodies-section bg-[#F5F4F0] py-24 md:py-32">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-12">Awarding bodies</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-12">Awarding bodies</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {bodies.map((b) => (
               <div key={b.name} className="body-card bg-white rounded-sm overflow-hidden">
@@ -165,7 +165,7 @@ export default function AwardsPage() {
                       {b.count}
                     </span>
                   </div>
-                  <p className="font-sans text-xs text-[#0A0A0A]/45 leading-relaxed">{b.desc}</p>
+                  <p className="font-sans text-xs text-[#0A0A0A]/65 leading-relaxed">{b.desc}</p>
                 </div>
               </div>
             ))}
@@ -176,7 +176,7 @@ export default function AwardsPage() {
       {/* ── Full award list ───────────────────────────────────────────────────── */}
       <section className="awards-list-section py-24 md:py-32 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-12 reveal">Complete record</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-12 reveal">Complete record</p>
           <div>
             {awardsData.map((a, i) => (
               <Link
@@ -184,11 +184,11 @@ export default function AwardsPage() {
                 href={`/work/${a.projectId}`}
                 className="award-row group grid grid-cols-[auto_1fr_auto_auto] md:grid-cols-[auto_1fr_1fr_auto_auto] items-center gap-4 md:gap-6 py-5 border-t border-[#0A0A0A]/8 last:border-b hover:bg-[#F5F4F0] transition-colors duration-200 px-2 -mx-2 rounded-sm"
               >
-                <span className="font-sans text-[11px] text-[#0A0A0A]/25 w-7 shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                <span className="font-sans text-[11px] text-[#0A0A0A]/55 w-7 shrink-0">{String(i + 1).padStart(2, "0")}</span>
                 <span className="font-sans font-light text-[#0A0A0A] text-sm md:text-base leading-snug group-hover:text-[#0A0A0A]/70 transition-colors">{a.project}</span>
-                <span className="hidden md:block font-sans text-sm text-[#0A0A0A]/40 leading-snug">{getAwardBody(a.award)}</span>
-                <span className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/40 bg-[#F5F4F0] group-hover:bg-white px-2.5 py-1 transition-colors duration-200 shrink-0">{getShortAward(a.award)}</span>
-                <span className="font-sans text-xs text-[#0A0A0A]/30 shrink-0">{a.year}</span>
+                <span className="hidden md:block font-sans text-sm text-[#0A0A0A]/60 leading-snug">{getAwardBody(a.award)}</span>
+                <span className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/60 bg-[#F5F4F0] group-hover:bg-white px-2.5 py-1 transition-colors duration-200 shrink-0">{getShortAward(a.award)}</span>
+                <span className="font-sans text-xs text-[#0A0A0A]/55 shrink-0">{a.year}</span>
               </Link>
             ))}
           </div>
@@ -198,7 +198,7 @@ export default function AwardsPage() {
       {/* ── CTA ───────────────────────────────────────────────────────────────── */}
       <section className="bg-[#0A0A0A] text-white py-28 md:py-36">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/30 mb-8 reveal">See the work</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-8 reveal">See the work</p>
           <h2
             className="reveal font-sans font-light tracking-[-0.025em] leading-[1.07] text-white mb-10"
             style={{ fontSize: "clamp(2.5rem, 6vw, 6rem)", maxWidth: "18ch" }}

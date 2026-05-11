@@ -82,7 +82,7 @@ export default function Hero() {
             <Link
               key={link.href}
               href={link.href}
-              className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/35 hover:text-white transition-colors duration-200"
+              className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 hover:text-white transition-colors duration-200"
             >
               {link.label} ↗
             </Link>

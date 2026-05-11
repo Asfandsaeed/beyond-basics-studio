@@ -98,7 +98,7 @@ export default function CareersPage() {
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-10 pt-16 pb-24 md:pt-24 md:pb-32">
-        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-8">Careers at Beyond</p>
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-8">Careers at Beyond</p>
         <h1
           className="page-hero-h font-sans font-light tracking-[-0.03em] leading-[1.02] text-[#0A0A0A] mb-8"
           style={{ fontSize: "clamp(3rem, 8vw, 8rem)" }}
@@ -113,7 +113,7 @@ export default function CareersPage() {
       {/* ── Why Beyond ───────────────────────────────────────────────────── */}
       <section className="bg-[#F5F4F0] py-24 md:py-32">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10 reveal">Why Beyond</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-10 reveal">Why Beyond</p>
           <h2
             className="reveal font-sans font-light tracking-[-0.025em] leading-[1.07] text-[#0A0A0A] mb-16"
             style={{ fontSize: "clamp(2rem, 4vw, 4.5rem)", maxWidth: "20ch" }}
@@ -137,7 +137,7 @@ export default function CareersPage() {
       {/* ── Benefits ─────────────────────────────────────────────────────── */}
       <section className="bg-white py-24 md:py-32">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10 reveal">What you get</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-10 reveal">What you get</p>
           <h2
             className="reveal font-sans font-light tracking-[-0.025em] leading-[1.07] text-[#0A0A0A] mb-14"
             style={{ fontSize: "clamp(2rem, 4vw, 4.5rem)", maxWidth: "22ch" }}
@@ -147,7 +147,7 @@ export default function CareersPage() {
           <div className="reveal grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {benefits.map(({ Icon, label, body }) => (
               <div key={label} className="group p-8 bg-[#F5F4F0] hover:bg-[#EEEDE9] transition-colors duration-250 rounded-sm flex flex-col gap-5">
-                <div className="w-9 h-9 flex items-center justify-center text-[#0A0A0A]/35 group-hover:text-[#0A0A0A]/70 transition-colors duration-250">
+                <div className="w-9 h-9 flex items-center justify-center text-[#0A0A0A]/60 group-hover:text-[#0A0A0A]/70 transition-colors duration-250">
                   <Icon size={18} strokeWidth={1.25} />
                 </div>
                 <div>
@@ -163,7 +163,7 @@ export default function CareersPage() {
       {/* ── Open Roles ───────────────────────────────────────────────────── */}
       <section className="bg-[#F5F4F0] py-24 md:py-32">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10 reveal">Open Positions</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-10 reveal">Open Positions</p>
           <h2
             className="reveal font-sans font-light tracking-[-0.025em] leading-[1.07] text-[#0A0A0A] mb-14"
             style={{ fontSize: "clamp(2rem, 4vw, 4.5rem)", maxWidth: "22ch" }}
@@ -185,24 +185,24 @@ export default function CareersPage() {
                   >
                     {role.title}
                   </span>
-                  <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-[#0A0A0A]/40 bg-white px-3 py-1.5 rounded-sm w-fit">
+                  <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 bg-white px-3 py-1.5 rounded-sm w-fit">
                     {role.dept}
                   </span>
                 </div>
                 <div className="flex items-center gap-6 shrink-0">
-                  <span className="flex items-center gap-1.5 font-sans text-xs text-[#0A0A0A]/40">
+                  <span className="flex items-center gap-1.5 font-sans text-xs text-[#0A0A0A]/60">
                     <MapPin size={12} strokeWidth={1.5} />{role.location}
                   </span>
-                  <span className="flex items-center gap-1.5 font-sans text-xs text-[#0A0A0A]/40">
+                  <span className="flex items-center gap-1.5 font-sans text-xs text-[#0A0A0A]/60">
                     <Clock size={12} strokeWidth={1.5} />{role.type}
                   </span>
-                  <ArrowUpRight size={16} strokeWidth={1.5} className="text-[#0A0A0A]/25 group-hover:text-[#0A0A0A] transition-colors duration-200" />
+                  <ArrowUpRight size={16} strokeWidth={1.5} className="text-[#0A0A0A]/55 group-hover:text-[#0A0A0A] transition-colors duration-200" />
                 </div>
               </div>
             ))}
           </div>
 
-          <p className="reveal mt-12 font-sans text-sm font-light text-[#0A0A0A]/40 max-w-lg leading-relaxed">
+          <p className="reveal mt-12 font-sans text-sm font-light text-[#0A0A0A]/60 max-w-lg leading-relaxed">
             Don't see your role? We're always interested in exceptional people.{" "}
             <a href="mailto:jobs@beyondbasics.studio" className="text-[#0A0A0A] underline underline-offset-4">
               Introduce yourself →
@@ -214,7 +214,7 @@ export default function CareersPage() {
       {/* ── Hiring process ───────────────────────────────────────────────── */}
       <section className="bg-white py-24 md:py-32">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10 reveal">How we hire</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-10 reveal">How we hire</p>
           <div className="reveal grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               { num: "01", step: "Apply", desc: "Send us your CV and a short note about what drives your best work. No cover letter templates." },
@@ -223,7 +223,7 @@ export default function CareersPage() {
               { num: "04", step: "Team meet", desc: "Meet two or three colleagues you'd work with closely. Then we make a decision — no prolonged waiting." },
             ].map(({ num, step, desc }) => (
               <div key={num} className="flex flex-col gap-4">
-                <span className="font-sans text-[11px] text-[#0A0A0A]/30">{num}</span>
+                <span className="font-sans text-[11px] text-[#0A0A0A]/55">{num}</span>
                 <h3 className="font-sans text-xl font-light text-[#0A0A0A]">{step}</h3>
                 <p className="font-sans text-sm font-light text-[#0A0A0A]/50 leading-relaxed">{desc}</p>
               </div>
@@ -235,7 +235,7 @@ export default function CareersPage() {
       {/* ── CTA ──────────────────────────────────────────────────────────── */}
       <section className="bg-[#0A0A0A] text-white py-28 md:py-40">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/35 mb-8 reveal">Ready to apply?</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-8 reveal">Ready to apply?</p>
           <h2
             className="reveal font-sans font-light tracking-[-0.03em] leading-[1.02] text-white mb-10"
             style={{ fontSize: "clamp(2.5rem, 6vw, 6.5rem)", maxWidth: "18ch" }}

@@ -103,7 +103,7 @@ export default function JournalPostPage() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <p className="font-sans text-[#0A0A0A]/40 mb-4">Post not found.</p>
+          <p className="font-sans text-[#0A0A0A]/60 mb-4">Post not found.</p>
           <Link href="/journal" className="font-sans text-sm underline">← Back to Journal</Link>
         </div>
       </div>
@@ -119,12 +119,12 @@ export default function JournalPostPage() {
         <div className="hero-anim flex items-center gap-2 mb-10">
           <Link
             href="/journal"
-            className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/35 hover:text-[#0A0A0A] transition-colors"
+            className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/60 hover:text-[#0A0A0A] transition-colors"
           >
             Journal
           </Link>
           <span className="font-sans text-[11px] text-[#0A0A0A]/20">/</span>
-          <span className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/35">
+          <span className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/60">
             {post.category}
           </span>
         </div>
@@ -145,16 +145,16 @@ export default function JournalPostPage() {
         {/* Meta row */}
         <div className="hero-anim flex flex-wrap items-center gap-6 mt-8 pt-8 border-t border-[#0A0A0A]/10">
           <div className="flex items-center gap-2">
-            <span className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/35">By</span>
+            <span className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/60">By</span>
             <span className="font-sans text-[11px] text-[#0A0A0A]/60">Beyond Team</span>
           </div>
-          <span className="font-sans text-[11px] text-[#0A0A0A]/25">·</span>
-          <span className="font-sans text-[11px] text-[#0A0A0A]/40">{post.date}</span>
-          <span className="font-sans text-[11px] text-[#0A0A0A]/25">·</span>
-          <span className="font-sans text-[11px] text-[#0A0A0A]/40">{post.readTime}</span>
+          <span className="font-sans text-[11px] text-[#0A0A0A]/55">·</span>
+          <span className="font-sans text-[11px] text-[#0A0A0A]/60">{post.date}</span>
+          <span className="font-sans text-[11px] text-[#0A0A0A]/55">·</span>
+          <span className="font-sans text-[11px] text-[#0A0A0A]/60">{post.readTime}</span>
           {post.relatedProject && (
             <>
-              <span className="font-sans text-[11px] text-[#0A0A0A]/25">·</span>
+              <span className="font-sans text-[11px] text-[#0A0A0A]/55">·</span>
               <Link
                 href={`/work/${post.relatedProject}`}
                 className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/50 border-b border-[#0A0A0A]/20 pb-px hover:text-[#0A0A0A] hover:border-[#0A0A0A]/60 transition-colors"
@@ -170,7 +170,7 @@ export default function JournalPostPage() {
           {post.tags.map((tag) => (
             <span
               key={tag}
-              className="font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/35 border border-[#0A0A0A]/10 px-2.5 py-1"
+              className="font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/60 border border-[#0A0A0A]/10 px-2.5 py-1"
             >
               {tag}
             </span>
@@ -221,7 +221,7 @@ export default function JournalPostPage() {
                       "{block.text}"
                     </p>
                     {block.author && (
-                      <p className="font-sans text-[11px] text-[#0A0A0A]/40 uppercase tracking-widest mt-3">
+                      <p className="font-sans text-[11px] text-[#0A0A0A]/60 uppercase tracking-widest mt-3">
                         — {block.author}
                       </p>
                     )}
@@ -240,7 +240,7 @@ export default function JournalPostPage() {
                       />
                     </div>
                     {block.caption && (
-                      <figcaption className="font-sans text-[11px] text-[#0A0A0A]/35 mt-3 px-6 md:px-24 xl:px-40">
+                      <figcaption className="font-sans text-[11px] text-[#0A0A0A]/60 mt-3 px-6 md:px-24 xl:px-40">
                         {block.caption}
                       </figcaption>
                     )}
@@ -252,7 +252,7 @@ export default function JournalPostPage() {
                   <ul key={i} className="body-block flex flex-col gap-3">
                     {block.items.map((item, j) => (
                       <li key={j} className="flex items-start gap-3">
-                        <span className="font-sans text-[11px] text-[#0A0A0A]/30 mt-1 shrink-0">—</span>
+                        <span className="font-sans text-[11px] text-[#0A0A0A]/55 mt-1 shrink-0">—</span>
                         <span className="font-sans text-base text-[#0A0A0A]/70 leading-[1.6]">{item}</span>
                       </li>
                     ))}
@@ -262,12 +262,12 @@ export default function JournalPostPage() {
               case "internalLink": {
                 const isExternal = block.href.startsWith("/work/");
                 const contextColor = isExternal
-                  ? "text-[#0A0A0A]/40"
+                  ? "text-[#0A0A0A]/60"
                   : block.href.startsWith("/journal/")
-                  ? "text-[#0A0A0A]/40"
+                  ? "text-[#0A0A0A]/60"
                   : block.href.startsWith("/glossary/")
-                  ? "text-[#0A0A0A]/30"
-                  : "text-[#0A0A0A]/30";
+                  ? "text-[#0A0A0A]/55"
+                  : "text-[#0A0A0A]/55";
 
                 return (
                   <Link
@@ -283,7 +283,7 @@ export default function JournalPostPage() {
                         {block.label}
                       </p>
                     </div>
-                    <span className="font-sans text-[#0A0A0A]/25 group-hover:text-[#0A0A0A]/60 transition-colors text-base ml-4 shrink-0">
+                    <span className="font-sans text-[#0A0A0A]/55 group-hover:text-[#0A0A0A]/60 transition-colors text-base ml-4 shrink-0">
                       →
                     </span>
                   </Link>
@@ -302,7 +302,7 @@ export default function JournalPostPage() {
         <section className="px-6 md:px-10 py-16 bg-[#F5F4F0]">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
-              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40 mb-3">
+              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-3">
                 Featured case study
               </p>
               <h3
@@ -327,12 +327,12 @@ export default function JournalPostPage() {
       {related.length > 0 && (
         <section className="related-section px-6 md:px-10 py-20">
           <div className="flex items-baseline justify-between mb-12">
-            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40">
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60">
               Keep reading
             </p>
             <Link
               href="/journal"
-              className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/40 border-b border-[#0A0A0A]/20 pb-px hover:text-[#0A0A0A] transition-colors"
+              className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/60 border-b border-[#0A0A0A]/20 pb-px hover:text-[#0A0A0A] transition-colors"
             >
               All posts ↗
             </Link>
@@ -353,13 +353,13 @@ export default function JournalPostPage() {
                   />
                 </div>
                 <div className="mt-4">
-                  <span className="font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/35">
+                  <span className="font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/60">
                     {p.category}
                   </span>
                   <h3 className="font-sans font-light text-[#0A0A0A] text-lg leading-[1.2] tracking-[-0.015em] mt-2 group-hover:opacity-60 transition-opacity">
                     {p.title}
                   </h3>
-                  <p className="font-sans text-[11px] text-[#0A0A0A]/35 mt-2">{p.date} · {p.readTime}</p>
+                  <p className="font-sans text-[11px] text-[#0A0A0A]/60 mt-2">{p.date} · {p.readTime}</p>
                 </div>
               </Link>
             ))}
@@ -371,7 +371,7 @@ export default function JournalPostPage() {
       <div className="px-6 md:px-10 py-10 border-t border-[#0A0A0A]/10">
         <Link
           href="/journal"
-          className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/40 hover:text-[#0A0A0A] transition-colors"
+          className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/60 hover:text-[#0A0A0A] transition-colors"
         >
           <span>←</span>
           <span>Back to Journal</span>

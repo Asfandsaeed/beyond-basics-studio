@@ -109,11 +109,11 @@ export default function OurApproach() {
                 className="w-full h-full object-cover opacity-60"
               />
               <div className="absolute inset-0 p-6 flex flex-col justify-between">
-                <span className="font-sans text-[11px] text-white/40 uppercase tracking-[0.18em]">
+                <span className="font-sans text-[11px] text-white/60 uppercase tracking-[0.18em]">
                   Featured
                 </span>
                 <div>
-                  <p className="font-sans text-[11px] text-white/40 uppercase tracking-[0.18em] mb-1">
+                  <p className="font-sans text-[11px] text-white/60 uppercase tracking-[0.18em] mb-1">
                     Brand Identity
                   </p>
                   <p className="font-sans text-2xl font-light tracking-[-0.02em] text-white">

@@ -111,7 +111,7 @@ export default function ProcessPage() {
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-10 pt-16 pb-24 md:pt-24 md:pb-32">
-        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-8">How We Work</p>
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-8">How We Work</p>
         <h1
           className="page-hero-h font-sans font-light tracking-[-0.03em] leading-[1.02] text-[#0A0A0A] mb-8"
           style={{ fontSize: "clamp(3rem, 8vw, 8rem)" }}
@@ -129,18 +129,18 @@ export default function ProcessPage() {
           {phases.map((p, i) => (
             <div key={p.num} className="reveal grid grid-cols-1 md:grid-cols-[80px_1fr_1.2fr] gap-6 md:gap-12 py-12 md:py-16 border-t border-[#0A0A0A]/8">
               <div className="flex flex-col gap-1">
-                <span className="font-sans text-[11px] text-[#0A0A0A]/30">{p.num}</span>
-                <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-[#0A0A0A]/25 mt-1">{p.duration}</span>
+                <span className="font-sans text-[11px] text-[#0A0A0A]/55">{p.num}</span>
+                <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-[#0A0A0A]/55 mt-1">{p.duration}</span>
               </div>
               <div>
                 <h2 className="font-sans font-light text-[#0A0A0A] tracking-[-0.02em] mb-2" style={{ fontSize: "clamp(1.75rem, 3vw, 3rem)" }}>
                   {p.name}
                 </h2>
-                <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-6">{p.tagline}</p>
+                <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-6">{p.tagline}</p>
                 <p className="font-sans text-sm md:text-[15px] font-light text-[#0A0A0A]/55 leading-[1.75] max-w-md">{p.desc}</p>
               </div>
               <div className="flex flex-col gap-2.5 self-start">
-                <p className="font-sans text-[10px] uppercase tracking-[0.18em] text-[#0A0A0A]/30 mb-2">Deliverables</p>
+                <p className="font-sans text-[10px] uppercase tracking-[0.18em] text-[#0A0A0A]/55 mb-2">Deliverables</p>
                 {p.deliverables.map((d) => (
                   <span key={d} className="font-sans text-[12px] font-light text-[#0A0A0A]/55 bg-white px-3.5 py-2 rounded-sm w-fit">{d}</span>
                 ))}
@@ -153,7 +153,7 @@ export default function ProcessPage() {
       {/* ── Working principles ───────────────────────────────────────────── */}
       <section className="bg-white py-24 md:py-32">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10 reveal">Our working principles</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-10 reveal">Our working principles</p>
           <div className="reveal grid grid-cols-1 md:grid-cols-2 gap-3">
             {principles.map(({ label, body }) => (
               <div key={label} className="p-9 bg-[#F5F4F0] hover:bg-[#EEEDE9] transition-colors duration-250 rounded-sm flex flex-col gap-4">
@@ -168,7 +168,7 @@ export default function ProcessPage() {
       {/* ── CTA ──────────────────────────────────────────────────────────── */}
       <section className="bg-[#0A0A0A] text-white py-28 md:py-40">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/35 mb-8 reveal">Ready?</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-8 reveal">Ready?</p>
           <h2
             className="reveal font-sans font-light tracking-[-0.03em] leading-[1.02] text-white mb-10"
             style={{ fontSize: "clamp(2.5rem, 6vw, 6.5rem)", maxWidth: "18ch" }}

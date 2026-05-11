@@ -119,7 +119,7 @@ export default function PartnersPage() {
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-10 pt-16 pb-24 md:pt-24 md:pb-32">
-        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-8">Partners & Affiliates</p>
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-8">Partners & Affiliates</p>
         <h1
           className="page-hero-h font-sans font-light tracking-[-0.03em] leading-[1.02] text-[#0A0A0A] mb-8"
           style={{ fontSize: "clamp(3rem, 8vw, 8rem)" }}
@@ -156,7 +156,7 @@ export default function PartnersPage() {
       {/* ── Partner types ─────────────────────────────────────────────────── */}
       <section className="bg-white py-24 md:py-32">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10 reveal">Partnership types</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-10 reveal">Partnership types</p>
           <h2
             className="reveal font-sans font-light tracking-[-0.025em] leading-[1.07] text-[#0A0A0A] mb-14"
             style={{ fontSize: "clamp(2rem, 4vw, 4.5rem)", maxWidth: "20ch" }}
@@ -167,7 +167,7 @@ export default function PartnersPage() {
             {partnerTypes.map(({ Icon, type, audience, commission, recurring, desc, perks }) => (
               <div key={type} className="group flex flex-col gap-7 p-10 bg-[#F5F4F0] hover:bg-[#EEEDE9] transition-colors duration-250 rounded-sm">
                 <div className="flex flex-col gap-4">
-                  <div className="w-9 h-9 flex items-center justify-center text-[#0A0A0A]/35 group-hover:text-[#0A0A0A]/70 transition-colors duration-250">
+                  <div className="w-9 h-9 flex items-center justify-center text-[#0A0A0A]/60 group-hover:text-[#0A0A0A]/70 transition-colors duration-250">
                     <Icon size={18} strokeWidth={1.25} />
                   </div>
                   <div className="flex items-start justify-between gap-3">
@@ -175,10 +175,10 @@ export default function PartnersPage() {
                       <h3 className="font-sans font-light text-[#0A0A0A] tracking-[-0.02em] mb-1" style={{ fontSize: "clamp(1.25rem, 2vw, 1.75rem)" }}>
                         {type}
                       </h3>
-                      <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35">{audience}</p>
+                      <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60">{audience}</p>
                     </div>
                     <div className="text-right shrink-0">
-                      <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 bg-white px-3 py-1.5 rounded-sm block max-w-[9rem] text-right leading-snug">
+                      <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 bg-white px-3 py-1.5 rounded-sm block max-w-[9rem] text-right leading-snug">
                         {commission}
                       </span>
                       {recurring && (
@@ -191,7 +191,7 @@ export default function PartnersPage() {
                 <div className="flex flex-col gap-2">
                   {perks.map((perk) => (
                     <div key={perk} className="flex items-center gap-2.5">
-                      <Check size={12} strokeWidth={2} className="text-[#0A0A0A]/40 shrink-0" />
+                      <Check size={12} strokeWidth={2} className="text-[#0A0A0A]/60 shrink-0" />
                       <span className="font-sans text-[12px] text-[#0A0A0A]/55">{perk}</span>
                     </div>
                   ))}
@@ -205,11 +205,11 @@ export default function PartnersPage() {
       {/* ── How it works ─────────────────────────────────────────────────── */}
       <section className="bg-[#F5F4F0] py-24 md:py-32">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10 reveal">How it works</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-10 reveal">How it works</p>
           <div className="reveal grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map(({ num, title, desc }) => (
               <div key={num} className="flex flex-col gap-5">
-                <span className="font-sans text-[11px] text-[#0A0A0A]/30">{num}</span>
+                <span className="font-sans text-[11px] text-[#0A0A0A]/55">{num}</span>
                 <h3 className="font-sans font-light text-[#0A0A0A] text-xl md:text-2xl tracking-[-0.015em]">{title}</h3>
                 <p className="font-sans text-[13px] font-light text-[#0A0A0A]/50 leading-relaxed">{desc}</p>
               </div>
@@ -225,7 +225,7 @@ export default function PartnersPage() {
 
             {/* Left copy */}
             <div>
-              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-8 reveal">Apply now</p>
+              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-8 reveal">Apply now</p>
               <h2
                 className="reveal font-sans font-light tracking-[-0.025em] leading-[1.07] text-[#0A0A0A] mb-8"
                 style={{ fontSize: "clamp(2rem, 4vw, 4.5rem)", maxWidth: "18ch" }}
@@ -263,7 +263,7 @@ export default function PartnersPage() {
                     { id: "audience", label: "Audience size (if KOL/influencer)", type: "text", required: false, value: form.audience, handler: set("audience") },
                   ].map(({ id, label, type, required, value, handler }) => (
                     <div key={id} className="flex flex-col gap-2">
-                      <label htmlFor={id} className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/45">
+                      <label htmlFor={id} className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/65">
                         {label}{required && " *"}
                       </label>
                       <input
@@ -272,14 +272,14 @@ export default function PartnersPage() {
                         required={required}
                         value={value}
                         onChange={handler as React.ChangeEventHandler<HTMLInputElement>}
-                        className="font-sans text-sm text-[#0A0A0A] bg-transparent border-b border-[#0A0A0A]/15 pb-3 outline-none focus:border-[#0A0A0A]/40 transition-colors duration-200 placeholder:text-[#0A0A0A]/25"
+                        className="font-sans text-sm text-[#0A0A0A] bg-transparent border-b border-[#0A0A0A]/15 pb-3 outline-none focus:border-[#0A0A0A]/40 transition-colors duration-200 placeholder:text-[#0A0A0A]/55"
                         placeholder={`Enter your ${label.toLowerCase()}`}
                       />
                     </div>
                   ))}
 
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="type" className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/45">
+                    <label htmlFor="type" className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/65">
                       Partnership type *
                     </label>
                     <select
@@ -297,7 +297,7 @@ export default function PartnersPage() {
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="message" className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/45">
+                    <label htmlFor="message" className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/65">
                       Why do you want to partner with Beyond? *
                     </label>
                     <textarea
@@ -306,7 +306,7 @@ export default function PartnersPage() {
                       rows={4}
                       value={form.message}
                       onChange={set("message")}
-                      className="font-sans text-sm text-[#0A0A0A] bg-transparent border-b border-[#0A0A0A]/15 pb-3 outline-none focus:border-[#0A0A0A]/40 transition-colors duration-200 resize-none placeholder:text-[#0A0A0A]/25"
+                      className="font-sans text-sm text-[#0A0A0A] bg-transparent border-b border-[#0A0A0A]/15 pb-3 outline-none focus:border-[#0A0A0A]/40 transition-colors duration-200 resize-none placeholder:text-[#0A0A0A]/55"
                       placeholder="Tell us about your audience, your network, and what you're hoping to build together..."
                     />
                   </div>
@@ -318,7 +318,7 @@ export default function PartnersPage() {
                     Submit application <ArrowUpRight size={12} strokeWidth={1.5} />
                   </button>
 
-                  <p className="font-sans text-[11px] text-[#0A0A0A]/30 leading-relaxed">
+                  <p className="font-sans text-[11px] text-[#0A0A0A]/55 leading-relaxed">
                     By submitting you agree to be contacted by the Beyond partnerships team. We do not share your data with third parties.
                   </p>
                 </form>

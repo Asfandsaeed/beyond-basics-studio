@@ -106,7 +106,7 @@ export default function Footer() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="your@email.com"
-                    className="flex-1 bg-transparent font-sans text-sm text-white placeholder:text-white/40 outline-none"
+                    className="flex-1 bg-transparent font-sans text-sm text-white placeholder:text-white/60 outline-none"
                     data-testid="footer-newsletter-input"
                   />
                   <button

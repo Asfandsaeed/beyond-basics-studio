@@ -56,7 +56,7 @@ export default function GlossaryTermPage() {
     return (
       <div className="min-h-screen flex items-center justify-center px-6 pt-32">
         <div className="text-center">
-          <p className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/40 mb-4">Not Found</p>
+          <p className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/60 mb-4">Not Found</p>
           <h1 className="font-sans font-light text-[#0A0A0A] text-4xl mb-6">Term not found</h1>
           <Link href="/glossary" className="font-sans text-sm text-[#0A0A0A]/50 underline underline-offset-4 hover:text-[#0A0A0A]">
             Back to Glossary
@@ -80,7 +80,7 @@ export default function GlossaryTermPage() {
       {/* ── Hero ──────────────────────────────────────────────────────────────── */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-10 pt-16 pb-24 md:pt-24 md:pb-32">
         {/* Breadcrumb */}
-        <div className="flex items-center gap-2 mb-8 font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35">
+        <div className="flex items-center gap-2 mb-8 font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60">
           <Link href="/glossary" className="hover:text-[#0A0A0A] transition-colors">Glossary</Link>
           <span>/</span>
           <span className="text-[#0A0A0A]/60">{term.category}</span>
@@ -88,7 +88,7 @@ export default function GlossaryTermPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-16">
           <div>
-            <span className="inline-block font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/40 border border-[#0A0A0A]/20 px-3 py-1.5 mb-6">
+            <span className="inline-block font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/60 border border-[#0A0A0A]/20 px-3 py-1.5 mb-6">
               {term.category}
             </span>
             <h1
@@ -122,7 +122,7 @@ export default function GlossaryTermPage() {
       {relatedProjects.length > 0 && (
         <section className="py-24 md:py-32 bg-white">
           <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-12 reveal">
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-12 reveal">
               See {term.term} in action
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
@@ -142,9 +142,9 @@ export default function GlossaryTermPage() {
                   <div className="flex items-center justify-between px-5 py-4 bg-[#0A0A0A]">
                     <div>
                       <p className="font-sans font-light text-white text-base">{p.title}</p>
-                      <p className="font-sans text-xs text-white/40 mt-0.5">{p.category}</p>
+                      <p className="font-sans text-xs text-white/60 mt-0.5">{p.category}</p>
                     </div>
-                    <span className="text-white/30 text-lg group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300">↗</span>
+                    <span className="text-white/55 text-lg group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300">↗</span>
                   </div>
                 </Link>
               ))}
@@ -157,7 +157,7 @@ export default function GlossaryTermPage() {
       {relatedTerms.length > 0 && (
         <section className="bg-[#F5F4F0] py-24 md:py-32">
           <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10 reveal">Related terms</p>
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-10 reveal">Related terms</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {relatedTerms.map((t) => t && (
                 <Link
@@ -165,16 +165,16 @@ export default function GlossaryTermPage() {
                   href={`/glossary/${t.id}`}
                   className="reveal group bg-white p-6 hover:bg-[#EEEDE9] transition-colors duration-250 rounded-sm"
                 >
-                  <span className="font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/30 block mb-2">{t.category}</span>
+                  <span className="font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/55 block mb-2">{t.category}</span>
                   <p className="font-sans font-light text-[#0A0A0A] text-lg group-hover:opacity-60 transition-opacity mb-2">{t.term}</p>
-                  <p className="font-sans text-xs text-[#0A0A0A]/40 leading-relaxed">{t.summary.slice(0, 80)}…</p>
+                  <p className="font-sans text-xs text-[#0A0A0A]/60 leading-relaxed">{t.summary.slice(0, 80)}…</p>
                 </Link>
               ))}
             </div>
             <div className="mt-10 reveal">
               <Link
                 href="/glossary"
-                className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/40 border-b border-[#0A0A0A]/20 pb-px hover:text-[#0A0A0A] hover:border-[#0A0A0A]/60 transition-colors"
+                className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/60 border-b border-[#0A0A0A]/20 pb-px hover:text-[#0A0A0A] hover:border-[#0A0A0A]/60 transition-colors"
               >
                 View all {glossaryTerms.length} glossary terms ↗
               </Link>
@@ -186,7 +186,7 @@ export default function GlossaryTermPage() {
       {/* ── CTA ───────────────────────────────────────────────────────────────── */}
       <section className="bg-[#0A0A0A] text-white py-28 md:py-36">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/30 mb-8 reveal">Work with us</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-8 reveal">Work with us</p>
           <h2
             className="reveal font-sans font-light tracking-[-0.025em] leading-[1.07] text-white mb-10"
             style={{ fontSize: "clamp(2.5rem, 6vw, 6rem)", maxWidth: "18ch" }}

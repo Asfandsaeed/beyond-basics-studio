@@ -147,7 +147,7 @@ function IndustriesSlider() {
               key={label}
               onClick={fn}
               aria-label={label}
-              className="w-9 h-9 flex items-center justify-center text-[#0A0A0A]/35 hover:text-[#0A0A0A] hover:bg-[#EEEDE9] rounded-sm transition-all duration-200"
+              className="w-9 h-9 flex items-center justify-center text-[#0A0A0A]/60 hover:text-[#0A0A0A] hover:bg-[#EEEDE9] rounded-sm transition-all duration-200"
             >
               <Icon size={15} strokeWidth={1.5} />
             </button>
@@ -171,12 +171,12 @@ function IndustriesSlider() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute inset-0 p-6 flex flex-col justify-between">
-                <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-white/45">{ind.category}</span>
+                <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-white/65">{ind.category}</span>
                 <div>
                   <h3 className="font-sans font-light text-white tracking-[-0.02em] leading-[1.1] mb-1.5" style={{ fontSize: "clamp(1.3rem, 2vw, 1.85rem)" }}>
                     {ind.name}
                   </h3>
-                  <p className="font-sans text-[11px] text-white/45 leading-snug line-clamp-2">{ind.tagline}</p>
+                  <p className="font-sans text-[11px] text-white/65 leading-snug line-clamp-2">{ind.tagline}</p>
                 </div>
               </div>
               <div className="absolute top-5 right-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -344,7 +344,7 @@ export default function Home() {
           <div className="max-w-[1400px] mx-auto px-6 md:px-10">
             <div className="reveal flex flex-col md:flex-row md:items-center gap-8 md:gap-0 md:justify-between">
               <div>
-                <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-2">
+                <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-2">
                   Industry Recognition
                 </p>
                 <p className="font-sans font-light text-[#0A0A0A] tracking-[-0.02em]" style={{ fontSize: "clamp(2rem, 4vw, 4rem)" }}>
@@ -355,7 +355,7 @@ export default function Home() {
                 {awards.map(({ count, body }) => (
                   <div key={body} className="flex flex-col">
                     <span className="font-sans text-xl font-light text-[#0A0A0A] leading-none">{count}</span>
-                    <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mt-1">{body}</span>
+                    <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mt-1">{body}</span>
                   </div>
                 ))}
               </div>
@@ -413,7 +413,7 @@ export default function Home() {
                       <ArrowUpRight
                         size={26}
                         strokeWidth={1}
-                        className="text-white/35 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 shrink-0"
+                        className="text-white/55 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 shrink-0"
                       />
                     </div>
                   </div>
@@ -448,7 +448,7 @@ export default function Home() {
                   href={`/services/${slug}`}
                   className={`group flex flex-col gap-7 p-9 md:p-10 hover:bg-[#F5F4F0] transition-colors duration-250 rounded-sm ${idx === 4 ? "sm:col-span-2 lg:col-span-1" : ""}`}
                 >
-                  <div className="w-10 h-10 flex items-center justify-center text-[#0A0A0A]/35 group-hover:text-[#0A0A0A]/70 transition-colors duration-250">
+                  <div className="w-10 h-10 flex items-center justify-center text-[#0A0A0A]/60 group-hover:text-[#0A0A0A]/70 transition-colors duration-250">
                     <Icon size={20} strokeWidth={1.25} />
                   </div>
                   <div>
@@ -458,11 +458,11 @@ export default function Home() {
                     >
                       {name}
                     </h3>
-                    <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35">{tagline}</p>
+                    <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60">{tagline}</p>
                   </div>
                   <div className="flex flex-wrap gap-2 mt-auto">
                     {deliverables.map((d) => (
-                      <span key={d} className="font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/35 bg-[#0A0A0A]/[0.04] px-2.5 py-1.5 rounded-sm">
+                      <span key={d} className="font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/60 bg-[#0A0A0A]/[0.04] px-2.5 py-1.5 rounded-sm">
                         {d}
                       </span>
                     ))}
@@ -496,7 +496,7 @@ export default function Home() {
                     <p className="font-sans text-sm font-light text-[#0A0A0A]/50 leading-relaxed">{m.desc}</p>
                     <div className="flex flex-wrap gap-2">
                       {m.deliverables.map((d) => (
-                        <span key={d} className="font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/35 px-2.5 py-1.5 bg-white rounded-sm">
+                        <span key={d} className="font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/60 px-2.5 py-1.5 bg-white rounded-sm">
                           {d}
                         </span>
                       ))}

@@ -75,7 +75,7 @@ export default function GlossaryPage() {
 
       {/* ── Hero ──────────────────────────────────────────────────────────────── */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-10 pt-16 pb-24 md:pt-24 md:pb-32">
-        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-8">Glossary</p>
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-8">Glossary</p>
         <h1
           className="page-hero-h font-sans font-light tracking-[-0.03em] leading-[1.02] text-[#0A0A0A] mb-8"
           style={{ fontSize: "clamp(3rem, 8vw, 8rem)" }}
@@ -134,10 +134,10 @@ export default function GlossaryPage() {
                   </span>
                   <div>
                     <p className="font-sans font-light text-[#0A0A0A] text-lg md:text-xl group-hover:opacity-60 transition-opacity">{term.term}</p>
-                    <p className="font-sans text-sm text-[#0A0A0A]/45 leading-snug mt-1 max-w-xl hidden sm:block">{term.summary.slice(0, 90)}…</p>
+                    <p className="font-sans text-sm text-[#0A0A0A]/65 leading-snug mt-1 max-w-xl hidden sm:block">{term.summary.slice(0, 90)}…</p>
                   </div>
                 </div>
-                <span className="font-sans text-[#0A0A0A]/30 text-lg group-hover:text-[#0A0A0A] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 shrink-0 ml-auto sm:ml-0">
+                <span className="font-sans text-[#0A0A0A]/55 text-lg group-hover:text-[#0A0A0A] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 shrink-0 ml-auto sm:ml-0">
                   ↗
                 </span>
               </Link>
@@ -149,7 +149,7 @@ export default function GlossaryPage() {
       {/* ── Services crosslink ────────────────────────────────────────────────── */}
       <section className="bg-[#0A0A0A] text-white py-24 md:py-32">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/30 mb-8 reveal">Put it into practice</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-8 reveal">Put it into practice</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-end reveal">
             <h2
               className="font-sans font-light tracking-[-0.025em] leading-[1.07] text-white"

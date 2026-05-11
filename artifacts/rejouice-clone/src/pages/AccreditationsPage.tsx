@@ -131,7 +131,7 @@ export default function AccreditationsPage() {
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-10 pt-16 pb-24 md:pt-24 md:pb-32">
-        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-8">Memberships & Accreditations</p>
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-8">Memberships & Accreditations</p>
         <h1
           className="page-hero-h font-sans font-light tracking-[-0.03em] leading-[1.02] text-[#0A0A0A] mb-8"
           style={{ fontSize: "clamp(3rem, 8vw, 8rem)" }}
@@ -141,7 +141,7 @@ export default function AccreditationsPage() {
         <p className="font-sans text-base md:text-lg font-light text-[#0A0A0A]/50 max-w-xl leading-relaxed mb-4">
           Beyond is an active member of {totalOrgs} of the world's most respected professional design, marketing, and business organisations — spanning eight categories and four continents.
         </p>
-        <p className="font-sans text-sm font-light text-[#0A0A0A]/35">
+        <p className="font-sans text-sm font-light text-[#0A0A0A]/60">
           Membership is how we stay current, stay accountable, and stay connected to the industry we love.
         </p>
       </section>
@@ -157,7 +157,7 @@ export default function AccreditationsPage() {
           ].map(({ value, label }) => (
             <div key={label}>
               <span className="font-sans font-light text-[#0A0A0A] leading-none block" style={{ fontSize: "clamp(2rem, 4vw, 4rem)" }}>{value}</span>
-              <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40 mt-2 block">{label}</span>
+              <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mt-2 block">{label}</span>
             </div>
           ))}
         </div>
@@ -187,7 +187,7 @@ export default function AccreditationsPage() {
           {/* Categories */}
           {visible.map((cat) => (
             <div key={cat.label} className="mb-16">
-              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-6 border-b border-[#0A0A0A]/8 pb-4">
+              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-6 border-b border-[#0A0A0A]/8 pb-4">
                 {cat.label}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -203,11 +203,11 @@ export default function AccreditationsPage() {
                       <h3 className="font-sans font-light text-[#0A0A0A] tracking-[-0.01em] leading-snug" style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.1rem)" }}>
                         {org.name}
                       </h3>
-                      <ExternalLink size={14} strokeWidth={1.5} className="text-[#0A0A0A]/25 group-hover:text-[#0A0A0A]/70 shrink-0 mt-0.5 transition-colors duration-200" />
+                      <ExternalLink size={14} strokeWidth={1.5} className="text-[#0A0A0A]/55 group-hover:text-[#0A0A0A]/70 shrink-0 mt-0.5 transition-colors duration-200" />
                     </div>
                     <div>
                       <p className="font-sans text-[13px] font-light text-[#0A0A0A]/50 leading-relaxed mb-3">{org.desc}</p>
-                      <span className="font-sans text-[10px] text-[#0A0A0A]/30">{org.url}</span>
+                      <span className="font-sans text-[10px] text-[#0A0A0A]/55">{org.url}</span>
                     </div>
                   </a>
                 ))}

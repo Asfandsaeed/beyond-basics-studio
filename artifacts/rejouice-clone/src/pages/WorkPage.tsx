@@ -95,15 +95,15 @@ export default function WorkPage() {
         </div>
 
         <div className="relative z-10 max-w-[1400px] mx-auto w-full">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/40 mb-8">
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/60 mb-8">
             Selected Work
           </p>
           <h1 className="font-sans font-light text-white leading-[1.08] tracking-[-0.025em] max-w-5xl"
               style={{ fontSize: "clamp(2.4rem, 6vw, 7rem)" }}>
             Working to shape the future of your industry?{" "}
-            <span className="text-white/40">We bring that ambition to life.</span>
+            <span className="text-white/60">We bring that ambition to life.</span>
           </h1>
-          <div className="mt-10 flex items-center gap-3 text-white/30 text-[11px] uppercase tracking-[0.18em] font-sans">
+          <div className="mt-10 flex items-center gap-3 text-white/55 text-[11px] uppercase tracking-[0.18em] font-sans">
             <span className="w-8 h-px bg-white/30 inline-block" />
             {projects.length} projects
           </div>

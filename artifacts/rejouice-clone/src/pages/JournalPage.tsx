@@ -71,16 +71,16 @@ function PostCard({ post, large = false }: { post: typeof posts[0]; large?: bool
           )}
         </div>
         <div className={`flex items-center gap-3 mt-3 ${large ? "md:mt-0 md:flex-col md:items-end md:gap-1.5" : ""}`}>
-          <span className="font-sans text-[11px] text-[#0A0A0A]/35 tracking-wide">{post.date}</span>
-          <span className="font-sans text-[11px] text-[#0A0A0A]/25">·</span>
-          <span className="font-sans text-[11px] text-[#0A0A0A]/35 tracking-wide">{post.readTime}</span>
+          <span className="font-sans text-[11px] text-[#0A0A0A]/60 tracking-wide">{post.date}</span>
+          <span className="font-sans text-[11px] text-[#0A0A0A]/55">·</span>
+          <span className="font-sans text-[11px] text-[#0A0A0A]/60 tracking-wide">{post.readTime}</span>
         </div>
       </div>
 
       {/* Tags */}
       <div className="flex flex-wrap gap-1.5 mt-3">
         {post.tags.slice(0, 3).map((tag) => (
-          <span key={tag} className="font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/35 border border-[#0A0A0A]/10 px-2 py-1">
+          <span key={tag} className="font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/60 border border-[#0A0A0A]/10 px-2 py-1">
             {tag}
           </span>
         ))}
@@ -150,7 +150,7 @@ export default function JournalPage() {
 
       {/* ══ 1. HERO ══════════════════════════════════════════════════════════ */}
       <section className="min-h-[60vh] flex flex-col justify-end px-6 md:px-10 pt-36 pb-16 overflow-hidden">
-        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40 mb-8">
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-8">
           Journal
         </p>
         <div className="float-left h-[1.2em]" style={{ width: "clamp(4rem, 18%, 14rem)" }} />
@@ -161,7 +161,7 @@ export default function JournalPage() {
         >
           Thinking out loud.
         </h1>
-        <p className="font-sans text-sm text-[#0A0A0A]/45 leading-relaxed mt-6 max-w-lg clear-both">
+        <p className="font-sans text-sm text-[#0A0A0A]/65 leading-relaxed mt-6 max-w-lg clear-both">
           Brand strategy, craft thinking, and case studies from the Beyond team.
         </p>
       </section>
@@ -171,7 +171,7 @@ export default function JournalPage() {
       {/* ══ 2. FEATURED POST ═════════════════════════════════════════════════ */}
       <section className="featured-post px-6 md:px-10 py-16">
         <div className="mb-4">
-          <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40">
+          <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60">
             Featured
           </span>
         </div>
@@ -208,7 +208,7 @@ export default function JournalPage() {
       <section className="px-6 md:px-10 py-20 bg-[#0A0A0A]">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-10">
           <div>
-            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/35 mb-6">
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-6">
               Stay sharp
             </p>
             <h2
@@ -223,13 +223,13 @@ export default function JournalPage() {
               <input
                 type="email"
                 placeholder="your@email.com"
-                className="font-sans text-sm text-white bg-transparent border border-white/20 px-5 py-4 flex-1 md:flex-none md:w-64 placeholder:text-white/25 focus:outline-none focus:border-white/50 transition-colors"
+                className="font-sans text-sm text-white bg-transparent border border-white/20 px-5 py-4 flex-1 md:flex-none md:w-64 placeholder:text-white/55 focus:outline-none focus:border-white/50 transition-colors"
               />
               <button className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A] bg-white px-6 py-4 hover:bg-white/90 transition-colors shrink-0">
                 Subscribe
               </button>
             </div>
-            <p className="font-sans text-[11px] text-white/25">
+            <p className="font-sans text-[11px] text-white/55">
               No spam. Monthly, at most.
             </p>
           </div>

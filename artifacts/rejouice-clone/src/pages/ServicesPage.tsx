@@ -120,7 +120,7 @@ function ServiceRow({
         onClick={onToggle}
         aria-expanded={isOpen}
       >
-        <span className="font-sans text-[11px] text-[#0A0A0A]/35 tracking-widest w-8 shrink-0">
+        <span className="font-sans text-[11px] text-[#0A0A0A]/60 tracking-widest w-8 shrink-0">
           {s.num}
         </span>
         <span
@@ -129,11 +129,11 @@ function ServiceRow({
         >
           {s.name}
         </span>
-        <span className="font-sans text-sm text-[#0A0A0A]/40 hidden md:block max-w-[240px] text-right leading-snug">
+        <span className="font-sans text-sm text-[#0A0A0A]/60 hidden md:block max-w-[240px] text-right leading-snug">
           {s.tagline}
         </span>
         <span
-          className="text-[#0A0A0A]/40 text-lg transition-transform duration-300 shrink-0"
+          className="text-[#0A0A0A]/60 text-lg transition-transform duration-300 shrink-0"
           style={{ transform: isOpen ? "rotate(45deg)" : "rotate(0deg)" }}
         >
           +
@@ -211,9 +211,9 @@ function CaseCard({ c }: { c: CaseEntry }) {
       <div className="flex items-center justify-between px-5 py-4">
         <div>
           <p className="font-sans font-light text-white text-base">{c.name}</p>
-          <p className="font-sans text-xs text-white/40 mt-0.5">{c.tag}</p>
+          <p className="font-sans text-xs text-white/60 mt-0.5">{c.tag}</p>
         </div>
-        <span className="font-sans text-white/30 text-lg group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300">
+        <span className="font-sans text-white/55 text-lg group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300">
           ↗
         </span>
       </div>
@@ -294,7 +294,7 @@ export default function ServicesPage() {
 
       {/* ══ 1. HERO ═══════════════════════════════════════════════════════════ */}
       <section className="min-h-screen flex flex-col justify-end px-6 md:px-10 pt-32 pb-16 overflow-hidden">
-        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40 mb-10">
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-10">
           Services
         </p>
         {/* Float spacer — first-line indent */}
@@ -322,7 +322,7 @@ export default function ServicesPage() {
       {/* ══ 2. SERVICES ACCORDION ════════════════════════════════════════════ */}
       <section className="services-list px-6 md:px-10 py-16">
         <div className="mb-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40">
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60">
             What we do
           </p>
         </div>
@@ -343,7 +343,7 @@ export default function ServicesPage() {
 
       {/* ══ 3. ENGAGEMENT MODELS ════════════════════════════════════════════ */}
       <section className="models-section px-6 md:px-10 py-20">
-        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40 mb-12">
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-12">
           How we work
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -364,8 +364,8 @@ export default function ServicesPage() {
               {/* Content */}
               <div className="p-8 md:p-10">
                 <div className="flex items-baseline justify-between mb-6">
-                  <span className="font-sans text-[11px] text-[#0A0A0A]/35 tracking-widest">{m.num}</span>
-                  <span className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/35 border border-[#0A0A0A]/15 px-2.5 py-1">
+                  <span className="font-sans text-[11px] text-[#0A0A0A]/60 tracking-widest">{m.num}</span>
+                  <span className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/60 border border-[#0A0A0A]/15 px-2.5 py-1">
                     {m.duration}
                   </span>
                 </div>
@@ -380,7 +380,7 @@ export default function ServicesPage() {
                 </p>
                 <div className="border-t border-[#0A0A0A]/10 pt-6 flex flex-col gap-2.5">
                   {m.deliverables.map((d) => (
-                    <span key={d} className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/40">
+                    <span key={d} className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/60">
                       — {d}
                     </span>
                   ))}
@@ -396,12 +396,12 @@ export default function ServicesPage() {
       {/* ══ 4. SELECTED WORK ════════════════════════════════════════════════ */}
       <section className="cases-section px-6 md:px-10 py-20 bg-[#0A0A0A]">
         <div className="flex items-baseline justify-between mb-12">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/40">
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/60">
             Selected work
           </p>
           <Link
             href="/work"
-            className="font-sans text-[11px] uppercase tracking-widest text-white/40 border-b border-white/20 pb-px hover:text-white hover:border-white/60 transition-colors"
+            className="font-sans text-[11px] uppercase tracking-widest text-white/60 border-b border-white/20 pb-px hover:text-white hover:border-white/60 transition-colors"
           >
             All projects ↗
           </Link>
@@ -429,7 +429,7 @@ export default function ServicesPage() {
               >
                 {s.num}
               </span>
-              <span className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/40">
+              <span className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/60">
                 {s.label}
               </span>
             </div>
@@ -450,7 +450,7 @@ export default function ServicesPage() {
       <section className="cta-section px-6 md:px-10 py-28 bg-[#0A0A0A]">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-12">
           <div className="cta-text">
-            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/35 mb-8">
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-8">
               Let's work together
             </p>
             <h2
@@ -468,7 +468,7 @@ export default function ServicesPage() {
               <span>Start a project</span>
               <span>↗</span>
             </Link>
-            <p className="font-sans text-[11px] text-white/30 tracking-wide">
+            <p className="font-sans text-[11px] text-white/55 tracking-wide">
               Or email us at{" "}
               <a href="mailto:hello@beyondbasics.studio" className="text-white/50 hover:text-white transition-colors underline underline-offset-4">
                 hello@beyondbasics.studio

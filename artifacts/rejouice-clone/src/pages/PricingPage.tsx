@@ -103,7 +103,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
       >
         <span className="font-sans font-light text-[#0A0A0A] text-base md:text-lg leading-snug">{q}</span>
         <span
-          className="text-[#0A0A0A]/40 text-lg shrink-0 transition-transform duration-300"
+          className="text-[#0A0A0A]/60 text-lg shrink-0 transition-transform duration-300"
           style={{ transform: open ? "rotate(45deg)" : "rotate(0deg)" }}
         >
           +
@@ -170,7 +170,7 @@ export default function PricingPage() {
 
       {/* ── Hero ──────────────────────────────────────────────────────────────── */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-10 pt-16 pb-24 md:pt-24 md:pb-32">
-        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-8">Pricing</p>
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-8">Pricing</p>
         <h1
           className="page-hero-h font-sans font-light tracking-[-0.03em] leading-[1.02] text-[#0A0A0A] mb-8"
           style={{ fontSize: "clamp(3rem, 8vw, 8rem)" }}
@@ -185,7 +185,7 @@ export default function PricingPage() {
       {/* ── What drives the price ──────────────────────────────────────────────── */}
       <section className="bg-[#F5F4F0] py-24 md:py-32">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10 reveal">How pricing works</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-10 reveal">How pricing works</p>
           <h2
             className="reveal font-sans font-light tracking-[-0.025em] leading-[1.07] text-[#0A0A0A] mb-16"
             style={{ fontSize: "clamp(2rem, 4vw, 4.5rem)", maxWidth: "22ch" }}
@@ -211,7 +211,7 @@ export default function PricingPage() {
       {/* ── Engagement models ──────────────────────────────────────────────────── */}
       <section className="py-24 md:py-32 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10 reveal">Engagement models</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-10 reveal">Engagement models</p>
           <h2
             className="reveal font-sans font-light tracking-[-0.025em] leading-[1.07] text-[#0A0A0A] mb-16"
             style={{ fontSize: "clamp(2rem, 4vw, 4.5rem)", maxWidth: "22ch" }}
@@ -228,17 +228,17 @@ export default function PricingPage() {
                 <div className="p-8 md:p-10">
                   <div className="flex items-start justify-between mb-6">
                     <div>
-                      <p className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/35 mb-1">{e.num}</p>
+                      <p className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/60 mb-1">{e.num}</p>
                       <h3 className="font-sans font-light text-[#0A0A0A] text-3xl md:text-4xl tracking-tight">{e.name}</h3>
                     </div>
-                    <span className="font-sans text-xs text-[#0A0A0A]/40 uppercase tracking-widest mt-2">{e.duration}</span>
+                    <span className="font-sans text-xs text-[#0A0A0A]/60 uppercase tracking-widest mt-2">{e.duration}</span>
                   </div>
                   <p className="font-sans text-sm text-[#0A0A0A]/60 leading-relaxed mb-8 max-w-sm">{e.desc}</p>
-                  <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-[#0A0A0A]/40 mb-4">Right for you if</p>
+                  <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-[#0A0A0A]/60 mb-4">Right for you if</p>
                   <ul className="space-y-2">
                     {e.right.map((r) => (
                       <li key={r} className="flex items-start gap-3">
-                        <span className="text-[#0A0A0A]/30 shrink-0 mt-0.5">—</span>
+                        <span className="text-[#0A0A0A]/55 shrink-0 mt-0.5">—</span>
                         <span className="font-sans text-sm text-[#0A0A0A]/60 leading-snug">{r}</span>
                       </li>
                     ))}
@@ -253,7 +253,7 @@ export default function PricingPage() {
       {/* ── FAQ ──────────────────────────────────────────────────────────────────── */}
       <section className="bg-[#0A0A0A] text-white py-24 md:py-32">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/30 mb-10 reveal">Common questions</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-10 reveal">Common questions</p>
           <h2
             className="reveal font-sans font-light tracking-[-0.025em] leading-[1.07] text-white mb-16"
             style={{ fontSize: "clamp(2rem, 4vw, 4.5rem)", maxWidth: "24ch" }}
@@ -276,7 +276,7 @@ export default function PricingPage() {
                   }}
                 >
                   <span className="font-sans font-light text-white text-base md:text-lg leading-snug">{item.q}</span>
-                  <span className="text-white/40 text-lg shrink-0 transition-transform duration-300">+</span>
+                  <span className="text-white/60 text-lg shrink-0 transition-transform duration-300">+</span>
                 </button>
                 <div style={{ height: 0, overflow: "hidden", opacity: 0 }}>
                   <p className="font-sans text-sm text-white/50 leading-relaxed pb-6 max-w-2xl">{item.a}</p>
@@ -290,7 +290,7 @@ export default function PricingPage() {
       {/* ── CTA ───────────────────────────────────────────────────────────────────── */}
       <section className="bg-white py-28 md:py-36">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-8 reveal">Get a proposal</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-8 reveal">Get a proposal</p>
           <h2
             className="reveal font-sans font-light tracking-[-0.025em] leading-[1.07] text-[#0A0A0A] mb-10"
             style={{ fontSize: "clamp(2.5rem, 6vw, 6rem)", maxWidth: "18ch" }}

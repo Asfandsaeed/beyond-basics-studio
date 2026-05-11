@@ -134,7 +134,7 @@ function ProjectCard({
           </h3>
         </div>
         <span
-          className={`font-sans text-white/40 text-sm transition-transform duration-300 ${
+          className={`font-sans text-white/60 text-sm transition-transform duration-300 ${
             hovered ? "translate-x-1 -translate-y-1" : ""
           }`}
         >

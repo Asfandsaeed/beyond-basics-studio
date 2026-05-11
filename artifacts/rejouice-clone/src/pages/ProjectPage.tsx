@@ -226,7 +226,7 @@ export default function ProjectPage() {
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-[1fr_380px] gap-16 md:gap-24">
           {/* Description */}
           <div>
-            <p className="font-sans text-xs text-[#0A0A0A]/40 uppercase tracking-[0.18em] mb-8">
+            <p className="font-sans text-xs text-[#0A0A0A]/60 uppercase tracking-[0.18em] mb-8">
               Overview
             </p>
             <p className="font-sans text-[#0A0A0A] text-2xl md:text-3xl font-light leading-snug tracking-[-0.015em] max-w-2xl">
@@ -246,7 +246,7 @@ export default function ProjectPage() {
 
           {/* Services */}
           <div>
-            <p className="font-sans text-xs text-[#0A0A0A]/40 uppercase tracking-[0.18em] mb-8">
+            <p className="font-sans text-xs text-[#0A0A0A]/60 uppercase tracking-[0.18em] mb-8">
               Services
             </p>
             <ul className="flex flex-col gap-3">
@@ -282,7 +282,7 @@ export default function ProjectPage() {
       {project.testimonial && (
         <section className="reveal-up bg-[#F5F4F0] text-[#0A0A0A] px-6 md:px-10 py-20 md:py-32">
           <div className="max-w-[900px] mx-auto">
-            <p className="font-sans text-xs text-[#0A0A0A]/40 uppercase tracking-[0.18em] mb-12">
+            <p className="font-sans text-xs text-[#0A0A0A]/60 uppercase tracking-[0.18em] mb-12">
               Testimonial
             </p>
             <blockquote className="font-sans text-2xl md:text-3xl lg:text-4xl font-light leading-snug tracking-[-0.02em] text-[#0A0A0A] mb-10">
@@ -307,7 +307,7 @@ export default function ProjectPage() {
       {project.awards && project.awards.length > 0 && (
         <section className="reveal-up px-6 md:px-10 py-16 border-t border-[#0A0A0A]/10">
           <div className="max-w-[1400px] mx-auto">
-            <p className="font-sans text-xs text-[#0A0A0A]/40 uppercase tracking-[0.18em] mb-10">
+            <p className="font-sans text-xs text-[#0A0A0A]/60 uppercase tracking-[0.18em] mb-10">
               Awards & Recognitions
             </p>
             <div className="flex flex-wrap gap-3">
@@ -348,7 +348,7 @@ export default function ProjectPage() {
             >
               {next.title}
             </h2>
-            <p className="font-sans text-white/40 text-sm mt-4">See project ↗</p>
+            <p className="font-sans text-white/60 text-sm mt-4">See project ↗</p>
           </div>
         </section>
       )}

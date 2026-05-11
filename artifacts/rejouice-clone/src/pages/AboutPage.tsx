@@ -161,7 +161,7 @@ export default function AboutPage() {
       <section className="principles-section px-6 md:px-10 py-24">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-[1fr_1.6fr] gap-12 md:gap-24">
           <div>
-            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40 leading-relaxed max-w-[220px]">
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 leading-relaxed max-w-[220px]">
               We operate on simple principles
             </p>
           </div>
@@ -176,12 +176,12 @@ export default function AboutPage() {
                   key={p.num}
                   className="principle-item flex items-baseline gap-6 py-5 border-b border-[#0A0A0A]/10 first:border-t"
                 >
-                  <span className="font-sans text-[11px] text-[#0A0A0A]/30 w-10 shrink-0">{p.num}</span>
+                  <span className="font-sans text-[11px] text-[#0A0A0A]/55 w-10 shrink-0">{p.num}</span>
                   <span className="font-sans text-2xl md:text-3xl font-light tracking-[-0.01em]">{p.label}</span>
                 </li>
               ))}
             </ul>
-            <p className="font-sans text-sm text-[#0A0A0A]/40 leading-relaxed mt-8 max-w-xl">
+            <p className="font-sans text-sm text-[#0A0A0A]/60 leading-relaxed mt-8 max-w-xl">
               These three principles have earned us numerous awards. While we don't chase accolades, they are proof of our dedication to impact, quality, and innovation.
             </p>
           </div>
@@ -192,7 +192,7 @@ export default function AboutPage() {
       <section className="awards-section border-t border-[#0A0A0A]/10">
         {/* Giant "Awards" word with (x90) top-right */}
         <div className="relative px-6 md:px-10 pt-8 pb-4 border-b border-[#0A0A0A]/10">
-          <span className="absolute top-6 right-6 md:top-8 md:right-10 font-sans text-[11px] text-[#0A0A0A]/40 tracking-[0.18em]">
+          <span className="absolute top-6 right-6 md:top-8 md:right-10 font-sans text-[11px] text-[#0A0A0A]/60 tracking-[0.18em]">
             (x90)
           </span>
           <h2
@@ -206,7 +206,7 @@ export default function AboutPage() {
 
         {/* Award counts grid */}
         <div className="px-6 md:px-10 py-12 grid grid-cols-1 md:grid-cols-[1fr_1.6fr] gap-8 md:gap-24">
-          <p className="awards-left font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40">
+          <p className="awards-left font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60">
             Awards for digital innovation
           </p>
           <div className="awards-right font-sans text-base md:text-lg font-light text-[#0A0A0A]/70 leading-relaxed">
@@ -214,7 +214,7 @@ export default function AboutPage() {
             <p>19 × FWA</p>
             <p>34 × CSS Design</p>
             <p>02 × Webby</p>
-            <p className="text-[#0A0A0A]/30 mt-2">...and more.</p>
+            <p className="text-[#0A0A0A]/55 mt-2">...and more.</p>
           </div>
         </div>
       </section>
@@ -282,7 +282,7 @@ export default function AboutPage() {
                 </a>
               </div>
             </div>
-            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40">One Founder</p>
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60">One Founder</p>
           </div>
         </div>
 
@@ -301,7 +301,7 @@ export default function AboutPage() {
               LinkedIn ↗
             </a>
           </div>
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40 mt-2">One Founder</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mt-2">One Founder</p>
         </div>
       </section>
 
@@ -320,14 +320,14 @@ export default function AboutPage() {
               </div>
               <div className="pt-3">
                 <p className="font-sans font-medium text-[#0A0A0A] text-sm">{p.name}</p>
-                <p className="font-sans text-xs text-[#0A0A0A]/40 mt-1">{p.role}</p>
+                <p className="font-sans text-xs text-[#0A0A0A]/60 mt-1">{p.role}</p>
               </div>
             </div>
           ))}
         </div>
 
         <div className="mt-8">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40">
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60">
             +6 partners
           </p>
         </div>
@@ -353,7 +353,7 @@ export default function AboutPage() {
               <h3 className="font-sans font-light text-white text-base mb-3 tracking-[-0.01em]">
                 One Team, Global Talent
               </h3>
-              <p className="font-sans text-[13px] text-white/45 leading-relaxed">
+              <p className="font-sans text-[13px] text-white/65 leading-relaxed">
                 We curate the best talent from all corners of the world. This enables us to leverage diverse perspectives, knowledge, and expertise to deliver fresh and tailored solutions for our clients.
               </p>
             </div>
@@ -362,7 +362,7 @@ export default function AboutPage() {
               <h3 className="font-sans font-light text-white text-base mb-3 tracking-[-0.01em]">
                 Strategic Simplicity
               </h3>
-              <p className="font-sans text-[13px] text-white/45 leading-relaxed">
+              <p className="font-sans text-[13px] text-white/65 leading-relaxed">
                 For us, simplicity is the ultimate sophistication. Our best work emerges from tackling complexity head-on and distilling it collaboratively with partners who value the time needed to build a high-performing brand.
               </p>
             </div>

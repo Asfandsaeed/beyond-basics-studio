@@ -1,41 +1,33 @@
 import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 interface LoaderProps {
   onComplete: () => void;
 }
 
 export default function Loader({ onComplete }: LoaderProps) {
-  const [isVisible, setIsVisible] = useState(true);
+  const [fading, setFading] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(false);
-      setTimeout(onComplete, 800); // Wait for exit animation
-    }, 1500);
-
-    return () => clearTimeout(timer);
+    const show = setTimeout(() => setFading(true), 400);
+    const done = setTimeout(onComplete, 700);
+    return () => {
+      clearTimeout(show);
+      clearTimeout(done);
+    };
   }, [onComplete]);
 
   return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.div
-          initial={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="fixed inset-0 z-[1000] flex items-center justify-center bg-white text-[#0A0A0A]"
-        >
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="font-sans text-sm tracking-[0.1em] uppercase font-medium"
-          >
-            Tomorrow's Brands, Today.™
-          </motion.div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+    <div
+      className="fixed inset-0 z-[1000] flex items-center justify-center bg-white text-[#0A0A0A]"
+      style={{
+        opacity: fading ? 0 : 1,
+        transition: "opacity 300ms ease-in-out",
+        pointerEvents: fading ? "none" : "auto",
+      }}
+    >
+      <p className="font-sans text-sm tracking-[0.1em] uppercase font-medium">
+        Tomorrow's Brands, Today.™
+      </p>
+    </div>
   );
 }

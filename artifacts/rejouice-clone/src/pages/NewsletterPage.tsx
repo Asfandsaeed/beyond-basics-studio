@@ -113,7 +113,7 @@ export default function NewsletterPage() {
 
       {/* ── Hero + signup ─────────────────────────────────────────────────────── */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-10 pt-16 pb-0 md:pt-24">
-        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-8">The Beyond Newsletter</p>
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-8">The Beyond Newsletter</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 pb-24 md:pb-32">
           <div>
             <h1
@@ -129,11 +129,11 @@ export default function NewsletterPage() {
             {subscribed ? (
               <div className="bg-[#F5F4F0] p-6 rounded-sm max-w-md">
                 <p className="font-sans text-sm text-[#0A0A0A]">You're subscribed. First issue hits your inbox next month.</p>
-                <p className="font-sans text-xs text-[#0A0A0A]/40 mt-2">Check your spam folder if you don't see it.</p>
+                <p className="font-sans text-xs text-[#0A0A0A]/60 mt-2">Check your spam folder if you don't see it.</p>
               </div>
             ) : (
               <form onSubmit={handleSubscribe} className="max-w-md">
-                <label className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 block mb-4">
+                <label className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 block mb-4">
                   Subscribe — no spam, unsubscribe anytime
                 </label>
                 <div className="flex items-center gap-0 border border-[#0A0A0A]/15 focus-within:border-[#0A0A0A]/50 transition-colors duration-200">
@@ -143,7 +143,7 @@ export default function NewsletterPage() {
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="your@email.com"
                     required
-                    className="flex-1 bg-transparent font-sans text-sm text-[#0A0A0A] placeholder:text-[#0A0A0A]/25 outline-none px-4 py-3.5"
+                    className="flex-1 bg-transparent font-sans text-sm text-[#0A0A0A] placeholder:text-[#0A0A0A]/55 outline-none px-4 py-3.5"
                   />
                   <button
                     type="submit"
@@ -152,7 +152,7 @@ export default function NewsletterPage() {
                     Subscribe →
                   </button>
                 </div>
-                <p className="font-sans text-[11px] text-[#0A0A0A]/30 mt-3">
+                <p className="font-sans text-[11px] text-[#0A0A0A]/55 mt-3">
                   Joining {" "}
                   <span className="text-[#0A0A0A]/50">founders, CMOs, and designers</span>
                   {" "} who read it every month.
@@ -162,10 +162,10 @@ export default function NewsletterPage() {
           </div>
 
           <div className="flex flex-col gap-4">
-            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-2">What to expect</p>
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-2">What to expect</p>
             {whatToExpect.map(({ label, value }) => (
               <div key={label} className="flex gap-6 py-4 border-t border-[#0A0A0A]/8 first:border-0 first:pt-0">
-                <span className="font-sans text-xs uppercase tracking-[0.15em] text-[#0A0A0A]/30 w-24 shrink-0 pt-0.5">{label}</span>
+                <span className="font-sans text-xs uppercase tracking-[0.15em] text-[#0A0A0A]/55 w-24 shrink-0 pt-0.5">{label}</span>
                 <span className="font-sans text-sm text-[#0A0A0A]/70 leading-relaxed">{value}</span>
               </div>
             ))}
@@ -187,12 +187,12 @@ export default function NewsletterPage() {
       {/* ── Past issues ───────────────────────────────────────────────────────── */}
       <section className="issues-section py-24 md:py-32 bg-[#F5F4F0]">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-12">Past issues</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-12">Past issues</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {issues.map((issue) => (
               <div key={issue.num} className="issue-card bg-white p-8 flex flex-col gap-5 rounded-sm group hover:bg-[#F5F4F0] transition-colors duration-300">
                 <div className="flex items-center justify-between">
-                  <span className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/25">Issue {issue.num}</span>
+                  <span className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/55">Issue {issue.num}</span>
                   <span className={`font-sans text-[10px] uppercase tracking-widest px-2 py-1 rounded-full ${tagColors[issue.tag] || tagColors["Strategy"]}`}>
                     {issue.tag}
                   </span>
@@ -201,18 +201,18 @@ export default function NewsletterPage() {
                   <h3 className="font-sans font-light text-[#0A0A0A] leading-snug mb-3" style={{ fontSize: "clamp(1rem, 1.5vw, 1.15rem)" }}>
                     {issue.title}
                   </h3>
-                  <p className="font-sans text-sm text-[#0A0A0A]/45 leading-relaxed">{issue.teaser}</p>
+                  <p className="font-sans text-sm text-[#0A0A0A]/65 leading-relaxed">{issue.teaser}</p>
                 </div>
                 <div className="flex items-center justify-between pt-4 border-t border-[#0A0A0A]/8">
-                  <span className="font-sans text-xs text-[#0A0A0A]/30">{issue.date}</span>
-                  <span className="font-sans text-xs text-[#0A0A0A]/30 group-hover:text-[#0A0A0A]/60 transition-colors">
+                  <span className="font-sans text-xs text-[#0A0A0A]/55">{issue.date}</span>
+                  <span className="font-sans text-xs text-[#0A0A0A]/55 group-hover:text-[#0A0A0A]/60 transition-colors">
                     Subscribers only ↗
                   </span>
                 </div>
               </div>
             ))}
           </div>
-          <p className="font-sans text-xs text-[#0A0A0A]/35 mt-6 text-center">
+          <p className="font-sans text-xs text-[#0A0A0A]/60 mt-6 text-center">
             Past issues are exclusive to subscribers. Subscribe above to get the archive link.
           </p>
         </div>
@@ -221,7 +221,7 @@ export default function NewsletterPage() {
       {/* ── Journal crosslink ─────────────────────────────────────────────────── */}
       <section className="bg-white py-24 md:py-32">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-8 reveal">Also worth reading</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-8 reveal">Also worth reading</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-end">
             <h2
               className="reveal font-sans font-light tracking-[-0.025em] leading-[1.07] text-[#0A0A0A]"

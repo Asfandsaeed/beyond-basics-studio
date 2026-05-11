@@ -109,7 +109,7 @@ function FAQItem({ q, a }: FAQ) {
         <span className="font-sans font-light text-[#0A0A0A] tracking-[-0.01em] leading-snug" style={{ fontSize: "clamp(0.95rem, 1.4vw, 1.2rem)" }}>
           {q}
         </span>
-        <span className="shrink-0 mt-1 text-[#0A0A0A]/35 group-hover:text-[#0A0A0A] transition-colors duration-200">
+        <span className="shrink-0 mt-1 text-[#0A0A0A]/60 group-hover:text-[#0A0A0A] transition-colors duration-200">
           {open ? <Minus size={18} strokeWidth={1.5} /> : <Plus size={18} strokeWidth={1.5} />}
         </span>
       </button>
@@ -155,7 +155,7 @@ export default function FAQPage() {
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-10 pt-16 pb-24 md:pt-24 md:pb-32">
-        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-8">Frequently Asked Questions</p>
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-8">Frequently Asked Questions</p>
         <h1
           className="page-hero-h font-sans font-light tracking-[-0.03em] leading-[1.02] text-[#0A0A0A] mb-8"
           style={{ fontSize: "clamp(3rem, 8vw, 8rem)" }}
@@ -173,7 +173,7 @@ export default function FAQPage() {
         <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex flex-col gap-16">
           {sections.map((section) => (
             <div key={section.label} className="reveal">
-              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-8">{section.label}</p>
+              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-8">{section.label}</p>
               <div>
                 {section.faqs.map((faq) => (
                   <FAQItem key={faq.q} {...faq} />
@@ -187,7 +187,7 @@ export default function FAQPage() {
       {/* ── Still have questions ─────────────────────────────────────────── */}
       <section className="bg-[#0A0A0A] text-white py-28 md:py-36">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/35 mb-8 reveal">Still unsure?</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-8 reveal">Still unsure?</p>
           <h2
             className="reveal font-sans font-light tracking-[-0.03em] leading-[1.02] text-white mb-8"
             style={{ fontSize: "clamp(2.5rem, 5vw, 5.5rem)", maxWidth: "20ch" }}
@@ -203,7 +203,7 @@ export default function FAQPage() {
             </Link>
             <a
               href="mailto:hello@beyondbasics.studio"
-              className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.18em] text-white/35 border border-white/6 px-6 py-3.5 rounded-sm hover:bg-white/4 hover:text-white/65 transition-all duration-250"
+              className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 border border-white/6 px-6 py-3.5 rounded-sm hover:bg-white/4 hover:text-white/65 transition-all duration-250"
             >
               hello@beyondbasics.studio
             </a>

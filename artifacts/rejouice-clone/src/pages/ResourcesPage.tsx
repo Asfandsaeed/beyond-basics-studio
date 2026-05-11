@@ -70,7 +70,7 @@ export default function ResourcesPage() {
 
       {/* ── Hero ──────────────────────────────────────────────────────────────── */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-10 pt-16 pb-24 md:pt-24 md:pb-32">
-        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-8">Resources & Guides</p>
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-8">Resources & Guides</p>
         <h1
           className="page-hero-h font-sans font-light tracking-[-0.03em] leading-[1.02] text-[#0A0A0A] mb-8"
           style={{ fontSize: "clamp(3rem, 8vw, 8rem)" }}
@@ -102,7 +102,7 @@ export default function ResourcesPage() {
                   <span className={`font-sans text-[10px] uppercase tracking-widest px-2 py-1 rounded-full ${categoryColors[featured.category]}`}>
                     {featured.category}
                   </span>
-                  <span className="font-sans text-[11px] text-[#0A0A0A]/30">{featured.readTime}</span>
+                  <span className="font-sans text-[11px] text-[#0A0A0A]/55">{featured.readTime}</span>
                 </div>
                 <h2
                   className="font-sans font-light text-[#0A0A0A] leading-snug tracking-tight mb-4 group-hover:opacity-70 transition-opacity"
@@ -112,7 +112,7 @@ export default function ResourcesPage() {
                 </h2>
                 <p className="font-sans text-sm text-[#0A0A0A]/50 leading-relaxed max-w-sm">{featured.subtitle}</p>
               </div>
-              <div className="flex items-center gap-2 font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/40 group-hover:text-[#0A0A0A] transition-colors duration-200 mt-8">
+              <div className="flex items-center gap-2 font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/60 group-hover:text-[#0A0A0A] transition-colors duration-200 mt-8">
                 <span>Read guide</span>
                 <span className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200">↗</span>
               </div>
@@ -124,7 +124,7 @@ export default function ResourcesPage() {
       {/* ── Resources grid ────────────────────────────────────────────────────── */}
       <section className="resources-grid py-24 md:py-32 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-12 reveal">All guides</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-12 reveal">All guides</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {resources.map((resource) => (
               <Link
@@ -144,7 +144,7 @@ export default function ResourcesPage() {
                     <span className={`font-sans text-[10px] uppercase tracking-widest px-2 py-1 rounded-full ${categoryColors[resource.category]}`}>
                       {resource.category}
                     </span>
-                    <span className="font-sans text-[11px] text-[#0A0A0A]/30">{resource.readTime}</span>
+                    <span className="font-sans text-[11px] text-[#0A0A0A]/55">{resource.readTime}</span>
                   </div>
                   <h3
                     className="font-sans font-light text-[#0A0A0A] leading-snug flex-1 group-hover:opacity-70 transition-opacity"
@@ -152,8 +152,8 @@ export default function ResourcesPage() {
                   >
                     {resource.title}
                   </h3>
-                  <p className="font-sans text-xs text-[#0A0A0A]/40 leading-relaxed">{resource.subtitle.slice(0, 80)}…</p>
-                  <span className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/35 group-hover:text-[#0A0A0A] transition-colors duration-200 flex items-center gap-1">
+                  <p className="font-sans text-xs text-[#0A0A0A]/60 leading-relaxed">{resource.subtitle.slice(0, 80)}…</p>
+                  <span className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/60 group-hover:text-[#0A0A0A] transition-colors duration-200 flex items-center gap-1">
                     Read guide <span className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200">↗</span>
                   </span>
                 </div>
@@ -167,7 +167,7 @@ export default function ResourcesPage() {
       <section className="bg-[#0A0A0A] text-white py-24 md:py-32">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="reveal">
-            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/30 mb-6">Also useful</p>
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-6">Also useful</p>
             <h2
               className="font-sans font-light tracking-[-0.025em] leading-[1.07] text-white mb-4"
               style={{ fontSize: "clamp(2rem, 4vw, 4rem)", maxWidth: "24ch" }}

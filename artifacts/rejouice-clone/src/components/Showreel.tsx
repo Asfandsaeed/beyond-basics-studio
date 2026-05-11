@@ -84,7 +84,7 @@ export default function Showreel() {
               </svg>
             )}
           </div>
-          <span className="font-sans text-xs uppercase tracking-[0.15em] text-white/40">
+          <span className="font-sans text-xs uppercase tracking-[0.15em] text-white/60">
             ↗ Full screen
           </span>
         </div>

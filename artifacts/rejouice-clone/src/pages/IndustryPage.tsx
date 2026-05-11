@@ -105,7 +105,7 @@ export default function IndustryPage() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <p className="font-sans text-[#0A0A0A]/40 mb-4">Industry not found.</p>
+          <p className="font-sans text-[#0A0A0A]/60 mb-4">Industry not found.</p>
           <Link href="/industries" className="font-sans text-sm underline">← Back to Industries</Link>
         </div>
       </div>
@@ -121,12 +121,12 @@ export default function IndustryPage() {
         <div className="hero-anim flex items-center gap-2 mb-10">
           <Link
             href="/industries"
-            className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/35 hover:text-[#0A0A0A] transition-colors"
+            className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/60 hover:text-[#0A0A0A] transition-colors"
           >
             Industries
           </Link>
           <span className="font-sans text-[11px] text-[#0A0A0A]/20">/</span>
-          <span className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/35">
+          <span className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/60">
             {industry.category}
           </span>
         </div>
@@ -155,7 +155,7 @@ export default function IndustryPage() {
               <span>Start a project</span>
               <span>↗</span>
             </Link>
-            <p className="font-sans text-[11px] text-[#0A0A0A]/30">Free consultation included</p>
+            <p className="font-sans text-[11px] text-[#0A0A0A]/55">Free consultation included</p>
           </div>
         </div>
       </section>
@@ -180,7 +180,7 @@ export default function IndustryPage() {
               >
                 {stat.value}
               </p>
-              <p className="font-sans text-[11px] text-[#0A0A0A]/40 leading-snug mt-2 max-w-[160px]">
+              <p className="font-sans text-[11px] text-[#0A0A0A]/60 leading-snug mt-2 max-w-[160px]">
                 {stat.label}
               </p>
             </div>
@@ -192,7 +192,7 @@ export default function IndustryPage() {
       <section className="px-6 md:px-10 py-20">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 items-start">
           <div>
-            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40">
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60">
               The challenge
             </p>
           </div>
@@ -213,7 +213,7 @@ export default function IndustryPage() {
       {/* ── 5. EXPERTISE ────────────────────────────────────────────────────── */}
       <section className="expertise-section px-6 md:px-10 py-20 bg-[#F5F4F0]">
         <div className="mb-12">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40 mb-4">
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-4">
             Our expertise
           </p>
           <h2
@@ -227,7 +227,7 @@ export default function IndustryPage() {
           {industry.expertise.map((item, i) => (
             <div key={i} className="expertise-card bg-white p-8 flex flex-col gap-3">
               <div className="flex items-baseline gap-3">
-                <span className="font-sans text-[11px] text-[#0A0A0A]/25 uppercase tracking-widest">
+                <span className="font-sans text-[11px] text-[#0A0A0A]/55 uppercase tracking-widest">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <h3 className="font-sans text-[#0A0A0A] leading-snug tracking-[-0.01em]"
@@ -246,7 +246,7 @@ export default function IndustryPage() {
       {/* ── 6. PROCESS ──────────────────────────────────────────────────────── */}
       <section className="process-section px-6 md:px-10 py-20 border-t border-[#0A0A0A]/10">
         <div className="mb-12">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40 mb-4">
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-4">
             How we work
           </p>
           <h2
@@ -259,7 +259,7 @@ export default function IndustryPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {industry.process.map((step, i) => (
             <div key={i} className="process-step flex flex-col gap-4 pt-6 border-t-2 border-[#0A0A0A]/10">
-              <span className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/30">
+              <span className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/55">
                 {step.step}
               </span>
               <h3 className="font-sans text-[#0A0A0A] leading-snug tracking-[-0.01em]"
@@ -277,7 +277,7 @@ export default function IndustryPage() {
       {/* ── 7. SERVICES ─────────────────────────────────────────────────────── */}
       <section className="services-section px-6 md:px-10 py-16 bg-[#0A0A0A]">
         <div className="mb-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/30 mb-4">
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-4">
             Services
           </p>
           <h2
@@ -305,7 +305,7 @@ export default function IndustryPage() {
           if (!specialistPages.length) return null;
           return (
             <div>
-              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/30 mb-6">
+              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-6">
                 Specialist service pages for {industry.name}
               </p>
               <div className="flex flex-wrap gap-3">
@@ -330,7 +330,7 @@ export default function IndustryPage() {
         <section className="px-6 md:px-10 py-16 border-t border-[#0A0A0A]/10">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
-              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40 mb-3">
+              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-3">
                 Featured case study
               </p>
               <h3
@@ -339,7 +339,7 @@ export default function IndustryPage() {
               >
                 {industry.caseStudyName}
               </h3>
-              <p className="font-sans text-sm text-[#0A0A0A]/45 mt-2">
+              <p className="font-sans text-sm text-[#0A0A0A]/65 mt-2">
                 See how we applied this expertise in a real project.
               </p>
             </div>
@@ -358,12 +358,12 @@ export default function IndustryPage() {
       {related.length > 0 && (
         <section className="related-section px-6 md:px-10 py-20 border-t border-[#0A0A0A]/10">
           <div className="flex items-baseline justify-between mb-10">
-            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40">
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60">
               Related industries
             </p>
             <Link
               href="/industries"
-              className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/40 border-b border-[#0A0A0A]/20 pb-px hover:text-[#0A0A0A] transition-colors"
+              className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/60 border-b border-[#0A0A0A]/20 pb-px hover:text-[#0A0A0A] transition-colors"
             >
               All industries ↗
             </Link>
@@ -387,7 +387,7 @@ export default function IndustryPage() {
                   <h3 className="font-sans font-light text-[#0A0A0A] text-base tracking-[-0.01em] group-hover:opacity-60 transition-opacity">
                     {ind.name}
                   </h3>
-                  <p className="font-sans text-[11px] text-[#0A0A0A]/40 mt-1.5">{ind.tagline}</p>
+                  <p className="font-sans text-[11px] text-[#0A0A0A]/60 mt-1.5">{ind.tagline}</p>
                 </div>
               </Link>
             ))}
@@ -399,7 +399,7 @@ export default function IndustryPage() {
       <section className="px-6 md:px-10 py-24 bg-[#0A0A0A]">
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-10">
           <div>
-            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/30 mb-6">
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-6">
               Ready to grow your {industry.name.toLowerCase()} brand?
             </p>
             <h2
@@ -417,7 +417,7 @@ export default function IndustryPage() {
               <span>Start a project</span>
               <span>↗</span>
             </Link>
-            <p className="font-sans text-[11px] text-white/25 text-center">
+            <p className="font-sans text-[11px] text-white/55 text-center">
               or email us at hello@beyondbasics.studio
             </p>
           </div>
@@ -428,7 +428,7 @@ export default function IndustryPage() {
       <div className="px-6 md:px-10 py-10 border-t border-[#0A0A0A]/10">
         <Link
           href="/industries"
-          className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/40 hover:text-[#0A0A0A] transition-colors"
+          className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/60 hover:text-[#0A0A0A] transition-colors"
         >
           <span>←</span>
           <span>All industries</span>

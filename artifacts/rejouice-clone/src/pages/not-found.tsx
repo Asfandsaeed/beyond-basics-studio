@@ -36,7 +36,7 @@ export default function NotFound() {
         className="flex-1 flex flex-col justify-end px-6 md:px-10 pt-36 pb-20"
       >
         <div className="max-w-[1400px] mx-auto w-full">
-          <p className="anim font-sans text-[11px] uppercase tracking-[0.18em] text-white/40 mb-10">
+          <p className="anim font-sans text-[11px] uppercase tracking-[0.18em] text-white/60 mb-10">
             Error 404
           </p>
           <div
@@ -50,7 +50,7 @@ export default function NotFound() {
             This page wandered off the map.
           </h1>
 
-          <p className="anim clear-both font-sans text-base text-white/45 leading-relaxed mt-8 max-w-lg">
+          <p className="anim clear-both font-sans text-base text-white/65 leading-relaxed mt-8 max-w-lg">
             The page you're looking for doesn't exist, has moved, or never made it past the strategy deck. Let's get you back to something useful.
           </p>
 
@@ -75,12 +75,12 @@ export default function NotFound() {
 
       <div className="px-6 md:px-10 py-10 border-t border-white/10">
         <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between gap-4">
-          <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/30">
+          <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55">
             Tomorrow's Brands, Today.™
           </span>
           <a
             href="mailto:hello@beyondbasics.studio"
-            className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/40 hover:text-white transition-colors"
+            className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/60 hover:text-white transition-colors"
           >
             hello@beyondbasics.studio
           </a>

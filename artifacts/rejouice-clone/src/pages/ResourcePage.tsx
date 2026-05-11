@@ -73,7 +73,7 @@ export default function ResourcePage() {
     return (
       <div className="min-h-screen flex items-center justify-center px-6 pt-32">
         <div className="text-center">
-          <p className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/40 mb-4">Not Found</p>
+          <p className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/60 mb-4">Not Found</p>
           <h1 className="font-sans font-light text-[#0A0A0A] text-4xl mb-6">Guide not found</h1>
           <Link href="/resources" className="font-sans text-sm text-[#0A0A0A]/50 underline underline-offset-4 hover:text-[#0A0A0A]">
             Back to Resources
@@ -98,7 +98,7 @@ export default function ResourcePage() {
       {/* ── Hero ──────────────────────────────────────────────────────────────── */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-10 pt-16 pb-16 md:pt-24 md:pb-20">
         {/* Breadcrumb */}
-        <div className="flex items-center gap-2 mb-8 font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35">
+        <div className="flex items-center gap-2 mb-8 font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60">
           <Link href="/resources" className="hover:text-[#0A0A0A] transition-colors">Resources</Link>
           <span>/</span>
           <span className="text-[#0A0A0A]/60">{resource.category}</span>
@@ -109,8 +109,8 @@ export default function ResourcePage() {
             <span className={`font-sans text-[10px] uppercase tracking-widest px-2.5 py-1.5 rounded-full ${categoryColors[resource.category]}`}>
               {resource.category}
             </span>
-            <span className="font-sans text-[11px] text-[#0A0A0A]/30">{resource.readTime}</span>
-            <span className="font-sans text-[11px] text-[#0A0A0A]/30">{publishDateFormatted}</span>
+            <span className="font-sans text-[11px] text-[#0A0A0A]/55">{resource.readTime}</span>
+            <span className="font-sans text-[11px] text-[#0A0A0A]/55">{publishDateFormatted}</span>
           </div>
           <h1
             className="page-hero-h font-sans font-light tracking-[-0.03em] leading-[1.06] text-[#0A0A0A] mb-6"
@@ -168,7 +168,7 @@ export default function ResourcePage() {
                   <ul className="space-y-3">
                     {items.map((item, j) => (
                       <li key={j} className="flex items-start gap-3">
-                        <span className="font-sans text-[#0A0A0A]/25 shrink-0 mt-1 text-xs">✓</span>
+                        <span className="font-sans text-[#0A0A0A]/55 shrink-0 mt-1 text-xs">✓</span>
                         <span className="font-sans text-[15px] text-[#0A0A0A]/60 leading-relaxed">{item}</span>
                       </li>
                     ))}
@@ -184,7 +184,7 @@ export default function ResourcePage() {
       {relatedResources.length > 0 && (
         <section className="py-24 md:py-32 bg-white">
           <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-10 reveal">Related guides</p>
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-10 reveal">Related guides</p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {relatedResources.map((r) => r && (
                 <Link
@@ -192,11 +192,11 @@ export default function ResourcePage() {
                   href={`/resources/${r.slug}`}
                   className="reveal group bg-[#F5F4F0] p-6 hover:bg-[#EEEDE9] transition-colors duration-250 rounded-sm"
                 >
-                  <span className="font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/30 block mb-3">{r.readTime}</span>
+                  <span className="font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/55 block mb-3">{r.readTime}</span>
                   <p className="font-sans font-light text-[#0A0A0A] leading-snug mb-2 group-hover:opacity-70 transition-opacity" style={{ fontSize: "clamp(1rem, 1.3vw, 1.1rem)" }}>
                     {r.title}
                   </p>
-                  <span className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/30 group-hover:text-[#0A0A0A]/60 transition-colors flex items-center gap-1">
+                  <span className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/55 group-hover:text-[#0A0A0A]/60 transition-colors flex items-center gap-1">
                     Read ↗
                   </span>
                 </Link>
@@ -205,7 +205,7 @@ export default function ResourcePage() {
             <div className="mt-8 reveal">
               <Link
                 href="/resources"
-                className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/40 border-b border-[#0A0A0A]/20 pb-px hover:text-[#0A0A0A] hover:border-[#0A0A0A]/60 transition-colors"
+                className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/60 border-b border-[#0A0A0A]/20 pb-px hover:text-[#0A0A0A] hover:border-[#0A0A0A]/60 transition-colors"
               >
                 All guides ↗
               </Link>
@@ -217,14 +217,14 @@ export default function ResourcePage() {
       {/* ── CTA ───────────────────────────────────────────────────────────────── */}
       <section className="bg-[#0A0A0A] text-white py-28 md:py-36">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/30 mb-8 reveal">Work with us</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-8 reveal">Work with us</p>
           <h2
             className="reveal font-sans font-light tracking-[-0.025em] leading-[1.07] text-white mb-10"
             style={{ fontSize: "clamp(2.5rem, 6vw, 6rem)", maxWidth: "18ch" }}
           >
             Ready to put this into practice?
           </h2>
-          <p className="reveal font-sans text-base text-white/40 font-light leading-relaxed max-w-md mb-10">
+          <p className="reveal font-sans text-base text-white/60 font-light leading-relaxed max-w-md mb-10">
             We've helped 17+ companies apply exactly this thinking to build category-leading brands. Let's talk about yours.
           </p>
           <Link

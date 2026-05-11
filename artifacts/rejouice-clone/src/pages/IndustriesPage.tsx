@@ -29,11 +29,11 @@ function IndustryCard({ industry }: { industry: typeof industries[0] }) {
           <h3 className="font-sans font-light text-[#0A0A0A] text-lg leading-[1.2] tracking-[-0.015em] group-hover:opacity-60 transition-opacity duration-300">
             {industry.name}
           </h3>
-          <span className="font-sans text-[18px] text-[#0A0A0A]/25 group-hover:text-[#0A0A0A] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 shrink-0 mt-0.5">
+          <span className="font-sans text-[18px] text-[#0A0A0A]/55 group-hover:text-[#0A0A0A] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 shrink-0 mt-0.5">
             ↗
           </span>
         </div>
-        <p className="font-sans text-xs text-[#0A0A0A]/45 leading-relaxed">
+        <p className="font-sans text-xs text-[#0A0A0A]/65 leading-relaxed">
           {industry.tagline}
         </p>
       </div>
@@ -76,7 +76,7 @@ export default function IndustriesPage() {
 
       {/* ── 1. HERO ─────────────────────────────────────────────────────────── */}
       <section ref={heroRef} className="min-h-[65vh] flex flex-col justify-end px-6 md:px-10 pt-36 pb-16">
-        <p className="hero-anim font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40 mb-8">
+        <p className="hero-anim font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-8">
           Industries
         </p>
         <div className="float-left h-[1.2em]" style={{ width: "clamp(4rem, 16%, 12rem)" }} />
@@ -87,7 +87,7 @@ export default function IndustriesPage() {
           Built for every<br className="hidden md:block" /> industry that grows.
         </h1>
         <div className="hero-anim clear-both flex flex-col md:flex-row md:items-end justify-between gap-6 mt-8">
-          <p className="font-sans text-sm text-[#0A0A0A]/45 leading-relaxed max-w-lg">
+          <p className="font-sans text-sm text-[#0A0A0A]/65 leading-relaxed max-w-lg">
             From AI startups to local HVAC companies — every industry has a brand problem we've solved. Here's how we think about each one.
           </p>
           <div className="flex items-center gap-6">
@@ -95,14 +95,14 @@ export default function IndustriesPage() {
               <p className="font-sans font-light text-[#0A0A0A] leading-none" style={{ fontSize: "clamp(1.8rem, 3vw, 3rem)" }}>
                 {industries.length}+
               </p>
-              <p className="font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/35 mt-1">Industries</p>
+              <p className="font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/60 mt-1">Industries</p>
             </div>
             <div className="w-px h-10 bg-[#0A0A0A]/15" />
             <div className="text-center">
               <p className="font-sans font-light text-[#0A0A0A] leading-none" style={{ fontSize: "clamp(1.8rem, 3vw, 3rem)" }}>
                 100+
               </p>
-              <p className="font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/35 mt-1">Brands built</p>
+              <p className="font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/60 mt-1">Brands built</p>
             </div>
           </div>
         </div>
@@ -140,7 +140,7 @@ export default function IndustriesPage() {
               {/* Category header */}
               <div className="flex items-baseline justify-between mb-10">
                 <div className="flex items-baseline gap-4">
-                  <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/30">
+                  <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/55">
                     {String(ci + 1).padStart(2, "0")}
                   </span>
                   <h2 className="font-sans font-light text-[#0A0A0A] leading-[1.1] tracking-[-0.02em]"
@@ -148,7 +148,7 @@ export default function IndustriesPage() {
                     {cat}
                   </h2>
                 </div>
-                <span className="font-sans text-[11px] text-[#0A0A0A]/30 uppercase tracking-widest">
+                <span className="font-sans text-[11px] text-[#0A0A0A]/55 uppercase tracking-widest">
                   {list.length} {list.length === 1 ? "industry" : "industries"}
                 </span>
               </div>
@@ -168,7 +168,7 @@ export default function IndustriesPage() {
       <section className="px-6 md:px-10 py-24 bg-[#0A0A0A]">
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-10">
           <div>
-            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/30 mb-6">
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-6">
               Don't see your industry?
             </p>
             <h2
@@ -177,7 +177,7 @@ export default function IndustriesPage() {
             >
               Every brand problem<br className="hidden md:block" /> has a solution.
             </h2>
-            <p className="font-sans text-sm text-white/40 leading-relaxed mt-5 max-w-md">
+            <p className="font-sans text-sm text-white/60 leading-relaxed mt-5 max-w-md">
               We've worked across virtually every vertical. If your industry isn't listed, we'd love to hear about your specific challenge.
             </p>
           </div>
@@ -189,7 +189,7 @@ export default function IndustriesPage() {
               <span>Start a conversation</span>
               <span>↗</span>
             </Link>
-            <p className="font-sans text-[11px] text-white/25 text-center">
+            <p className="font-sans text-[11px] text-white/55 text-center">
               No commitment. We'll reply within 24 hours.
             </p>
           </div>

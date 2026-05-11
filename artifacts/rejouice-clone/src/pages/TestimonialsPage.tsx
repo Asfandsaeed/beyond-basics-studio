@@ -85,7 +85,7 @@ export default function TestimonialsPage() {
 
       {/* ── Hero ──────────────────────────────────────────────────────────────── */}
       <section className="max-w-[1400px] mx-auto px-6 md:px-10 pt-16 pb-24 md:pt-24 md:pb-32">
-        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-8">Client testimonials</p>
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-8">Client testimonials</p>
         <h1
           className="page-hero-h font-sans font-light tracking-[-0.03em] leading-[1.02] text-[#0A0A0A] mb-8"
           style={{ fontSize: "clamp(3rem, 8vw, 8rem)" }}
@@ -109,7 +109,7 @@ export default function TestimonialsPage() {
                 >
                   {value}
                 </p>
-                <p className="font-sans text-xs uppercase tracking-[0.15em] text-white/35">{label}</p>
+                <p className="font-sans text-xs uppercase tracking-[0.15em] text-white/55">{label}</p>
               </div>
             ))}
           </div>
@@ -120,7 +120,7 @@ export default function TestimonialsPage() {
       {testimonials.length > 0 && (
         <section className="py-24 md:py-32 bg-[#F5F4F0]">
           <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-12 reveal">From clients</p>
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-12 reveal">From clients</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {testimonials.map((t) => (
                 <div key={t.project} className="reveal bg-white p-8 md:p-10 flex flex-col justify-between gap-10 rounded-sm">
@@ -130,11 +130,11 @@ export default function TestimonialsPage() {
                   <div className="flex items-end justify-between gap-4">
                     <div>
                       <p className="font-sans text-sm font-light text-[#0A0A0A]">{t.name}</p>
-                      <p className="font-sans text-xs text-[#0A0A0A]/45 mt-0.5">{t.role}</p>
+                      <p className="font-sans text-xs text-[#0A0A0A]/65 mt-0.5">{t.role}</p>
                     </div>
                     <Link
                       href={`/work/${t.projectId}`}
-                      className="group flex items-center gap-1.5 font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/35 hover:text-[#0A0A0A] transition-colors duration-200 shrink-0"
+                      className="group flex items-center gap-1.5 font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/60 hover:text-[#0A0A0A] transition-colors duration-200 shrink-0"
                     >
                       <span>View project</span>
                       <span className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200">↗</span>
@@ -150,14 +150,14 @@ export default function TestimonialsPage() {
       {/* ── Press recognition ─────────────────────────────────────────────────── */}
       <section className="py-24 md:py-32 bg-white">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-12 reveal">Recognised by</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-12 reveal">Recognised by</p>
           <div className="space-y-0">
             {pressQuotes.map(({ quote, source }) => (
               <div key={source} className="reveal grid grid-cols-1 md:grid-cols-[1fr_auto] gap-4 py-10 border-t border-[#0A0A0A]/8 last:border-b items-center">
                 <blockquote className="font-sans font-light text-[#0A0A0A] leading-[1.5] max-w-2xl" style={{ fontSize: "clamp(1.1rem, 2vw, 1.4rem)" }}>
                   "{quote}"
                 </blockquote>
-                <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 md:text-right">{source}</p>
+                <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 md:text-right">{source}</p>
               </div>
             ))}
           </div>
@@ -167,7 +167,7 @@ export default function TestimonialsPage() {
       {/* ── Work showcase strip ───────────────────────────────────────────────── */}
       <section className="bg-[#0A0A0A] py-24 md:py-32">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/30 mb-12 reveal">The work behind the words</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-12 reveal">The work behind the words</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {[
               { id: "clear-street", title: "Clear Street", img: "https://cdn.sanity.io/images/zksivtxz/production/a5b674fefa860f0864baaf56bfbc2bb526b263fb-1180x720.jpg" },
@@ -193,7 +193,7 @@ export default function TestimonialsPage() {
           <div className="mt-10 text-center reveal">
             <Link
               href="/work"
-              className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-widest text-white/40 border border-white/20 px-8 py-3.5 hover:text-white hover:border-white/60 transition-colors duration-300"
+              className="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-widest text-white/60 border border-white/20 px-8 py-3.5 hover:text-white hover:border-white/60 transition-colors duration-300"
             >
               <span>View all 17 projects</span>
               <span>↗</span>
@@ -205,7 +205,7 @@ export default function TestimonialsPage() {
       {/* ── CTA ───────────────────────────────────────────────────────────────── */}
       <section className="bg-white py-28 md:py-36">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-8 reveal">Start your project</p>
+          <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-8 reveal">Start your project</p>
           <h2
             className="reveal font-sans font-light tracking-[-0.025em] leading-[1.07] text-[#0A0A0A] mb-10"
             style={{ fontSize: "clamp(2.5rem, 6vw, 6rem)", maxWidth: "18ch" }}
