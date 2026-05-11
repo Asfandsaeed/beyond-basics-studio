@@ -143,7 +143,7 @@ export default function Navbar() {
           className={`flex items-center gap-1.5 font-sans text-sm font-medium tracking-tight ${textColor}`}
           data-testid="link-home"
         >
-          <img src="/favicon.png" alt="" aria-hidden="true" className="w-[18px] h-[18px] object-cover rounded-sm" />
+          <img src="/favicon.png" alt="" aria-hidden="true" className="w-[14px] h-[14px] object-cover rounded-[2px] flex-shrink-0" />
           beyond
         </Link>
 
