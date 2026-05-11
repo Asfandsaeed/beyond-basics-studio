@@ -123,7 +123,7 @@ export default function JournalPostPage() {
           >
             Journal
           </Link>
-          <span className="font-sans text-[11px] text-[#0A0A0A]/20">/</span>
+          <span className="font-sans text-[11px] text-[#0A0A0A]/55">/</span>
           <span className="font-sans text-[11px] uppercase tracking-widest text-[#0A0A0A]/60">
             {post.category}
           </span>

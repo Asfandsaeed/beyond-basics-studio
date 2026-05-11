@@ -783,7 +783,7 @@ export default function Home() {
 
             <div className="reveal flex items-center gap-4">
               <Cta href="/contact" light testId="home-cta-contact">Start a project</Cta>
-              <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/20">
+              <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55">
                 Tomorrow's Brands, Today.™
               </span>
             </div>
