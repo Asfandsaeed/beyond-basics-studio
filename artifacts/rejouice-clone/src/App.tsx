@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, Suspense } from "react";
+import React, { useEffect, useLayoutEffect, Suspense } from "react";
 import { Switch, Route, Router as WouterRouter, useLocation } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { getGsap } from "@/lib/gsap";
 
 const Toaster = React.lazy(() =>
   import("@/components/ui/toaster").then((m) => ({ default: m.Toaster }))
@@ -9,11 +10,6 @@ const Toaster = React.lazy(() =>
 import CustomCursor from "@/components/CustomCursor";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Lenis from "lenis";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 // Home is critical path — eager load
 import Home from "@/pages/Home";
@@ -61,21 +57,30 @@ const SitemapPage = React.lazy(() =>
 const queryClient = new QueryClient();
 
 // Shared lenis instance so ScrollToTop can reset it
-let lenisInstance: Lenis | null = null;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+let lenisInstance: any = null;
 
-// Resets scroll to top on every route change
 function ScrollToTop() {
   const [location] = useLocation();
 
-  useEffect(() => {
-    // Kill all active ScrollTriggers so they don't interfere on the new page
-    ScrollTrigger.killAll();
-
-    // Immediately jump to top — no smooth scroll
+  useLayoutEffect(() => {
+    // Scroll before browser paints — prevents footer flash
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
     if (lenisInstance) {
       lenisInstance.scrollTo(0, { immediate: true });
-    } else {
-      window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
+    }
+    // Kill stale ScrollTriggers after scroll resets
+    getGsap().then(({ ScrollTrigger }) => { ScrollTrigger.killAll(); });
+  }, [location]);
+
+  useEffect(() => {
+    // Fire GA4 page_view on every SPA route change
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "page_view", {
+        page_path: location,
+        page_location: window.location.href,
+      });
     }
   }, [location]);
 
@@ -135,7 +140,7 @@ function AppLayout() {
     <>
       <ScrollToTop />
       <Navbar />
-      <main>
+      <main style={{ minHeight: "100vh" }}>
         <Suspense fallback={null}>
           <Router />
         </Suspense>
@@ -146,32 +151,31 @@ function AppLayout() {
 }
 
 function App() {
-  const lenisRef = useRef<Lenis | null>(null);
-
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: "vertical",
-      gestureOrientation: "vertical",
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 2,
-    });
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let lenis: any = null;
 
-    lenisRef.current = lenis;
-    lenisInstance = lenis;
+    Promise.all([import("lenis"), getGsap()]).then(
+      ([{ default: Lenis }, { gsap, ScrollTrigger }]) => {
+        lenis = new Lenis({
+          duration: 1.2,
+          easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          orientation: "vertical",
+          gestureOrientation: "vertical",
+          smoothWheel: true,
+          wheelMultiplier: 1,
+          touchMultiplier: 2,
+        });
 
-    lenis.on("scroll", ScrollTrigger.update);
-
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
-
-    gsap.ticker.lagSmoothing(0);
+        lenisInstance = lenis;
+        lenis.on("scroll", ScrollTrigger.update);
+        gsap.ticker.add((time: number) => { lenis.raf(time * 1000); });
+        gsap.ticker.lagSmoothing(0);
+      }
+    );
 
     return () => {
-      lenis.destroy();
+      lenis?.destroy();
       lenisInstance = null;
     };
   }, []);
