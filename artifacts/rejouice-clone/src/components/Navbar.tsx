@@ -101,7 +101,7 @@ export default function Navbar() {
   // On home page after scroll / other light pages: dark text, light background
   const isLight = (isHomePage && !scrolled) || (isDarkPage && !scrolled);
   const textColor = isLight ? "text-white" : "text-[#0A0A0A]";
-  const mutedColor = isLight ? "text-white/50" : "text-[#0A0A0A]/40";
+  const mutedColor = isLight ? "text-white/60" : "text-[#0A0A0A]/60";
   const hoverColor = isLight ? "hover:text-white" : "hover:text-[#0A0A0A]";
 
   let bgClass: string;
@@ -266,8 +266,8 @@ export default function Navbar() {
             ))}
           </div>
           <div className="mt-10 flex flex-col gap-2">
-            <a href="mailto:hello@beyondbasics.studio" className="font-sans text-sm text-[#0A0A0A]/40">hello@beyondbasics.studio</a>
-            <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/25">beyondbasics.studio</span>
+            <a href="mailto:hello@beyondbasics.studio" className="font-sans text-sm text-[#0A0A0A]/60">hello@beyondbasics.studio</a>
+            <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/55">beyondbasics.studio</span>
           </div>
         </div>
       )}

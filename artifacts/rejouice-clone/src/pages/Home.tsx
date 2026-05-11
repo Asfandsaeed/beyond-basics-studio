@@ -93,7 +93,7 @@ const FOUNDER_IMG = `${P}/aFwilXfc4bHWiuKK_Z1xCSpbqstJ98euH_test-gui-1-.avif?aut
 
 function Label({ children, light }: { children: React.ReactNode; light?: boolean }) {
   return (
-    <p className={`font-sans text-[11px] uppercase tracking-[0.18em] mb-6 ${light ? "text-white/40" : "text-[#0A0A0A]/35"}`}>
+    <p className={`font-sans text-[11px] uppercase tracking-[0.18em] mb-6 ${light ? "text-white/60" : "text-[#0A0A0A]/60"}`}>
       {children}
     </p>
   );
@@ -121,7 +121,7 @@ function Cta({ href, children, light, testId }: { href: string; children: React.
       className={`inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.18em] px-6 py-3.5 rounded-sm transition-all duration-250 ${
         light
           ? "text-white/65 border border-white/12 hover:bg-white/8 hover:text-white"
-          : "text-[#0A0A0A]/55 border border-[#0A0A0A]/10 hover:bg-[#EEEDE9] hover:text-[#0A0A0A] hover:border-[#0A0A0A]/18"
+          : "text-[#0A0A0A]/70 border border-[#0A0A0A]/10 hover:bg-[#EEEDE9] hover:text-[#0A0A0A] hover:border-[#0A0A0A]/18"
       }`}
     >
       {children}
@@ -140,7 +140,7 @@ function IndustriesSlider() {
   return (
     <div>
       <div className="flex items-center justify-between mb-5">
-        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/30">Drag to explore</p>
+        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/55">Drag to explore</p>
         <div className="flex gap-1.5">
           {[{ fn: prev, Icon: ChevronLeft, label: "Previous" }, { fn: next, Icon: ChevronRight, label: "Next" }].map(({ fn, Icon, label }) => (
             <button
@@ -260,10 +260,10 @@ export default function Home() {
 
           <div className="hero-meta px-6 md:px-10 py-6 md:py-8 flex flex-col gap-5 md:flex-row md:items-center md:justify-between bg-white/[0.03] border-t border-white/[0.06]">
             <div>
-              <p className="font-sans text-sm md:text-lg font-light text-white/55 max-w-md leading-snug">
+              <p className="font-sans text-sm md:text-lg font-light text-white/80 max-w-md leading-snug">
                 Creative growth agency for tomorrow's most ambitious brands.
               </p>
-              <p className="font-sans text-[10px] uppercase tracking-[0.18em] text-white/25 mt-1.5">
+              <p className="font-sans text-[10px] uppercase tracking-[0.18em] text-white/55 mt-1.5">
                 Tomorrow's Brands, Today.™
               </p>
             </div>
@@ -271,7 +271,7 @@ export default function Home() {
               {[["90+","Projects"],["31","People"],["2019","Founded"]].map(([v,l]) => (
                 <div key={l} className="flex flex-col gap-0.5">
                   <span className="font-sans text-xl md:text-2xl font-light text-white leading-none">{v}</span>
-                  <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-white/30">{l}</span>
+                  <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-white/55">{l}</span>
                 </div>
               ))}
             </div>
@@ -467,7 +467,7 @@ export default function Home() {
                       </span>
                     ))}
                   </div>
-                  <span className="font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/25 group-hover:text-[#0A0A0A]/60 transition-colors mt-auto">
+                  <span className="font-sans text-[10px] uppercase tracking-widest text-[#0A0A0A]/55 group-hover:text-[#0A0A0A]/80 transition-colors mt-auto">
                     Explore service ↗
                   </span>
                 </Link>
@@ -476,7 +476,7 @@ export default function Home() {
 
             {/* Engagement models */}
             <div className="reveal pt-10 border-t border-[#0A0A0A]/8">
-              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-8">
+              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-8">
                 How we work together
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3 w-full">
@@ -484,12 +484,12 @@ export default function Home() {
                   <div key={m.num} className="group w-full p-9 bg-[#F5F4F0] hover:bg-[#EEEDE9] transition-colors duration-250 rounded-sm flex flex-col gap-5">
                     <div className="flex items-start justify-between">
                       <div>
-                        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/30 mb-1">{m.num}</p>
+                        <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/55 mb-1">{m.num}</p>
                         <h3 className="font-sans font-light text-[#0A0A0A] tracking-[-0.02em]" style={{ fontSize: "clamp(1.5rem, 2vw, 2.25rem)" }}>
                           {m.name}
                         </h3>
                       </div>
-                      <span className="font-sans text-xs uppercase tracking-[0.15em] text-[#0A0A0A]/40 bg-white px-3 py-1.5 rounded-sm shrink-0 ml-4">
+                      <span className="font-sans text-xs uppercase tracking-[0.15em] text-[#0A0A0A]/60 bg-white px-3 py-1.5 rounded-sm shrink-0 ml-4">
                         {m.duration}
                       </span>
                     </div>
@@ -525,12 +525,12 @@ export default function Home() {
                 <div className="flex flex-col gap-0">
                   {principles.map(({ num, label }) => (
                     <div key={num} className="flex items-center gap-5 py-5 first:pt-0">
-                      <span className="font-sans text-[11px] text-[#0A0A0A]/30 w-8 shrink-0">{num}</span>
+                      <span className="font-sans text-[11px] text-[#0A0A0A]/55 w-8 shrink-0">{num}</span>
                       <span className="font-sans text-xl md:text-2xl font-light tracking-[-0.015em] text-[#0A0A0A]">{label}</span>
                     </div>
                   ))}
                 </div>
-                <p className="font-sans text-sm text-[#0A0A0A]/40 leading-relaxed mt-8 max-w-sm">
+                <p className="font-sans text-sm text-[#0A0A0A]/60 leading-relaxed mt-8 max-w-sm">
                   These principles have earned us 90 industry awards. We don't chase accolades — but we care deeply about impact, quality, and doing things right.
                 </p>
               </div>
@@ -543,7 +543,7 @@ export default function Home() {
                     {philosophy.map(({ title, body }) => (
                       <div key={title}>
                         <h3 className="font-sans text-base font-light text-[#0A0A0A] tracking-[-0.01em] mb-2">{title}</h3>
-                        <p className="font-sans text-sm text-[#0A0A0A]/45 leading-relaxed">{body}</p>
+                        <p className="font-sans text-sm text-[#0A0A0A]/65 leading-relaxed">{body}</p>
                       </div>
                     ))}
                   </div>
@@ -567,7 +567,7 @@ export default function Home() {
                 </blockquote>
                 <div>
                   <p className="font-sans text-sm font-light text-white">Guillaume Hamon</p>
-                  <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/35 mt-0.5">Founding Partner</p>
+                  <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/60 mt-0.5">Founding Partner</p>
                 </div>
               </div>
             </div>
@@ -641,13 +641,13 @@ export default function Home() {
                       <span className="font-sans font-light text-[#0A0A0A] leading-none block" style={{ fontSize: "clamp(1.75rem, 3vw, 2.75rem)" }}>
                         {value}
                       </span>
-                      <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/40 mt-1.5 block">{label}</span>
+                      <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mt-1.5 block">{label}</span>
                     </div>
                   ))}
                 </div>
 
                 <div>
-                  <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/35 mb-4">
+                  <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-[#0A0A0A]/60 mb-4">
                     Leadership
                   </p>
                   <div className="flex flex-wrap gap-3">
@@ -658,7 +658,7 @@ export default function Home() {
                         </div>
                         <div>
                           <p className="font-sans text-xs font-light text-[#0A0A0A] leading-none">{p.name}</p>
-                          <p className="font-sans text-[10px] text-[#0A0A0A]/35 leading-none mt-0.5">{p.role}</p>
+                          <p className="font-sans text-[10px] text-[#0A0A0A]/60 leading-none mt-0.5">{p.role}</p>
                         </div>
                       </div>
                     ))}
@@ -710,16 +710,16 @@ export default function Home() {
                   </div>
                   <div className="bg-white/[0.04] hover:bg-white/[0.07] transition-colors duration-250 p-7 flex flex-col gap-4 flex-1">
                     <div className="flex items-start justify-between gap-2">
-                      <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-white/35">{post.category}</span>
-                      <ArrowUpRight size={13} strokeWidth={1.5} className="text-white/25 group-hover:text-white/70 shrink-0 transition-colors duration-250" />
+                      <span className="font-sans text-[10px] uppercase tracking-[0.2em] text-white/60">{post.category}</span>
+                      <ArrowUpRight size={13} strokeWidth={1.5} className="text-white/55 group-hover:text-white/90 shrink-0 transition-colors duration-250" />
                     </div>
                     <h3 className="font-sans font-light text-white tracking-[-0.015em] leading-[1.2] flex-1" style={{ fontSize: "clamp(0.95rem, 1.3vw, 1.25rem)" }}>
                       {post.title}
                     </h3>
-                    <p className="font-sans text-[11px] text-white/30 leading-relaxed line-clamp-2">{post.subtitle}</p>
+                    <p className="font-sans text-[11px] text-white/60 leading-relaxed line-clamp-2">{post.subtitle}</p>
                     <div className="flex items-center justify-between pt-4 mt-auto">
-                      <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-white/25">{post.date}</span>
-                      <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-white/25">{post.readTime}</span>
+                      <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-white/55">{post.date}</span>
+                      <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-white/55">{post.readTime}</span>
                     </div>
                   </div>
                 </Link>
@@ -743,22 +743,22 @@ export default function Home() {
               Partnering with global brands, founders, and VCs to build tomorrow's brands, today.
             </h2>
 
-            <p className="reveal font-sans text-base font-light text-white/40 max-w-lg leading-relaxed mb-14">
+            <p className="reveal font-sans text-base font-light text-white/65 max-w-lg leading-relaxed mb-14">
               Tell us what you're building. We'll tell you if we're the right team for it — and if we are, we'll show you exactly how we'd approach it.
             </p>
 
             {/* Contact grid */}
             <div className="reveal grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-14">
               <div>
-                <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/30 mb-3">New Business</p>
+                <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-3">New Business</p>
                 <a href="mailto:hello@beyondbasics.studio" className="font-sans text-base font-light text-white/75 hover:text-white transition-colors duration-200">hello@beyondbasics.studio</a>
               </div>
               <div>
-                <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/30 mb-3">Careers</p>
+                <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-3">Careers</p>
                 <a href="mailto:jobs@beyondbasics.studio" className="font-sans text-base font-light text-white/75 hover:text-white transition-colors duration-200">jobs@beyondbasics.studio</a>
               </div>
               <div>
-                <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/30 mb-3">Offices</p>
+                <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-3">Offices</p>
                 <div className="flex flex-col gap-1">
                   {["San Francisco", "New York", "London"].map((city) => (
                     <span key={city} className="font-sans text-base font-light text-white/50">{city}</span>
@@ -766,7 +766,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/30 mb-3">Follow</p>
+                <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-3">Follow</p>
                 <div className="flex flex-col gap-1">
                   {[
                     { label: "LinkedIn", href: "#" },

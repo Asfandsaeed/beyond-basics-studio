@@ -1,36 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, Suspense } from "react";
 import { Switch, Route, Router as WouterRouter, useLocation } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/not-found";
-import Home from "@/pages/Home";
-import WorkPage from "@/pages/WorkPage";
-import ProjectPage from "@/pages/ProjectPage";
-import AboutPage from "@/pages/AboutPage";
-import ServicesPage from "@/pages/ServicesPage";
-import ContactPage from "@/pages/ContactPage";
-import JournalPage from "@/pages/JournalPage";
-import JournalPostPage from "@/pages/JournalPostPage";
-import IndustriesPage from "@/pages/IndustriesPage";
-import IndustryPage from "@/pages/IndustryPage";
-import CareersPage from "@/pages/CareersPage";
-import DesignForGoodPage from "@/pages/DesignForGoodPage";
-import AccreditationsPage from "@/pages/AccreditationsPage";
-import PartnersPage from "@/pages/PartnersPage";
-import ProcessPage from "@/pages/ProcessPage";
-import FAQPage from "@/pages/FAQPage";
-import PressPage from "@/pages/PressPage";
-import { PrivacyPolicyPage, TermsPage, RefundsPage, SitemapPage } from "@/pages/LegalPage";
-import PricingPage from "@/pages/PricingPage";
-import TestimonialsPage from "@/pages/TestimonialsPage";
-import AwardsPage from "@/pages/AwardsPage";
-import NewsletterPage from "@/pages/NewsletterPage";
-import ServiceDetailPage from "@/pages/ServiceDetailPage";
-import GlossaryPage from "@/pages/GlossaryPage";
-import GlossaryTermPage from "@/pages/GlossaryTermPage";
-import ResourcesPage from "@/pages/ResourcesPage";
-import ResourcePage from "@/pages/ResourcePage";
 import CustomCursor from "@/components/CustomCursor";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -39,6 +11,49 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
+
+// Home is critical path — eager load
+import Home from "@/pages/Home";
+
+// All other pages lazy-loaded to reduce initial bundle
+const NotFound        = React.lazy(() => import("@/pages/not-found"));
+const WorkPage        = React.lazy(() => import("@/pages/WorkPage"));
+const ProjectPage     = React.lazy(() => import("@/pages/ProjectPage"));
+const AboutPage       = React.lazy(() => import("@/pages/AboutPage"));
+const ServicesPage    = React.lazy(() => import("@/pages/ServicesPage"));
+const ContactPage     = React.lazy(() => import("@/pages/ContactPage"));
+const JournalPage     = React.lazy(() => import("@/pages/JournalPage"));
+const JournalPostPage = React.lazy(() => import("@/pages/JournalPostPage"));
+const IndustriesPage  = React.lazy(() => import("@/pages/IndustriesPage"));
+const IndustryPage    = React.lazy(() => import("@/pages/IndustryPage"));
+const CareersPage     = React.lazy(() => import("@/pages/CareersPage"));
+const DesignForGoodPage   = React.lazy(() => import("@/pages/DesignForGoodPage"));
+const AccreditationsPage  = React.lazy(() => import("@/pages/AccreditationsPage"));
+const PartnersPage    = React.lazy(() => import("@/pages/PartnersPage"));
+const ProcessPage     = React.lazy(() => import("@/pages/ProcessPage"));
+const FAQPage         = React.lazy(() => import("@/pages/FAQPage"));
+const PressPage       = React.lazy(() => import("@/pages/PressPage"));
+const PricingPage     = React.lazy(() => import("@/pages/PricingPage"));
+const TestimonialsPage = React.lazy(() => import("@/pages/TestimonialsPage"));
+const AwardsPage      = React.lazy(() => import("@/pages/AwardsPage"));
+const NewsletterPage  = React.lazy(() => import("@/pages/NewsletterPage"));
+const ServiceDetailPage = React.lazy(() => import("@/pages/ServiceDetailPage"));
+const GlossaryPage    = React.lazy(() => import("@/pages/GlossaryPage"));
+const GlossaryTermPage = React.lazy(() => import("@/pages/GlossaryTermPage"));
+const ResourcesPage   = React.lazy(() => import("@/pages/ResourcesPage"));
+const ResourcePage    = React.lazy(() => import("@/pages/ResourcePage"));
+const PrivacyPolicyPage = React.lazy(() =>
+  import("@/pages/LegalPage").then((m) => ({ default: m.PrivacyPolicyPage }))
+);
+const TermsPage = React.lazy(() =>
+  import("@/pages/LegalPage").then((m) => ({ default: m.TermsPage }))
+);
+const RefundsPage = React.lazy(() =>
+  import("@/pages/LegalPage").then((m) => ({ default: m.RefundsPage }))
+);
+const SitemapPage = React.lazy(() =>
+  import("@/pages/LegalPage").then((m) => ({ default: m.SitemapPage }))
+);
 
 const queryClient = new QueryClient();
 
@@ -117,7 +132,11 @@ function AppLayout() {
     <>
       <ScrollToTop />
       <Navbar />
-      <Router />
+      <main>
+        <Suspense fallback={null}>
+          <Router />
+        </Suspense>
+      </main>
       <Footer />
     </>
   );

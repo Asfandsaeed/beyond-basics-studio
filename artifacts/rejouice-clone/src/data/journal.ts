@@ -8,6 +8,7 @@ export interface JournalPost {
   date: string;
   readTime: string;
   coverImage: string;
+  coverVideo?: string;
   featured?: boolean;
   body: BodyBlock[];
   relatedProject?: string;

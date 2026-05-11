@@ -68,14 +68,14 @@ export default function Footer() {
             >
               Do it once.<br />Do it right.
             </h2>
-            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/25">
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/50">
               Tomorrow's Brands, Today.™ &nbsp;·&nbsp; beyondbasics.studio
             </p>
           </div>
 
           <div className="flex flex-col gap-5 shrink-0 md:max-w-xs w-full md:w-auto">
             <div>
-              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/35 mb-2">New Business</p>
+              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-2">New Business</p>
               <a
                 href="mailto:hello@beyondbasics.studio"
                 className="font-sans text-sm text-white hover:text-white/60 transition-colors duration-200"
@@ -85,19 +85,19 @@ export default function Footer() {
               </a>
             </div>
             <div>
-              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/35 mb-2">Careers</p>
+              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-2">Careers</p>
               <a
                 href="mailto:jobs@beyondbasics.studio"
-                className="font-sans text-sm text-white/60 hover:text-white transition-colors duration-200"
+                className="font-sans text-sm text-white/70 hover:text-white transition-colors duration-200"
               >
                 jobs@beyondbasics.studio
               </a>
             </div>
             {subscribed ? (
-              <p className="font-sans text-sm text-white/40">You're subscribed. ✓</p>
+              <p className="font-sans text-sm text-white/60">You're subscribed. ✓</p>
             ) : (
               <form onSubmit={handleNewsletter} className="flex flex-col gap-2">
-                <label className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/35">
+                <label className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55">
                   Newsletter — no spam
                 </label>
                 <div className="flex items-center gap-4 border-b border-white/15 pb-3">
@@ -106,12 +106,12 @@ export default function Footer() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="your@email.com"
-                    className="flex-1 bg-transparent font-sans text-sm text-white placeholder:text-white/25 outline-none"
+                    className="flex-1 bg-transparent font-sans text-sm text-white placeholder:text-white/40 outline-none"
                     data-testid="footer-newsletter-input"
                   />
                   <button
                     type="submit"
-                    className="text-white/40 hover:text-white transition-colors duration-200 text-base shrink-0"
+                    className="text-white/60 hover:text-white transition-colors duration-200 text-base shrink-0"
                     data-testid="footer-newsletter-submit"
                   >
                     →
@@ -128,7 +128,7 @@ export default function Footer() {
           {/* Nav link groups */}
           {Object.entries(footerNav).map(([group, links]) => (
             <div key={group}>
-              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/30 mb-5">{group}</p>
+              <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-5">{group}</p>
               <div className="flex flex-col gap-3">
                 {links.map((link) => (
                   <Link
@@ -136,7 +136,7 @@ export default function Footer() {
                     href={link.href}
                     data-testid={`footer-link-${link.label.toLowerCase().replace(/\s|&/g, "-")}`}
                     className={`font-sans text-sm transition-colors duration-200 ${
-                      location === link.href ? "text-white" : "text-white/40 hover:text-white"
+                      location === link.href ? "text-white" : "text-white/55 hover:text-white"
                     }`}
                   >
                     {link.label}
@@ -148,7 +148,7 @@ export default function Footer() {
 
           {/* Connect column */}
           <div>
-            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/30 mb-5">Connect</p>
+            <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-5">Connect</p>
             <div className="flex flex-col gap-3">
               {[
                 { label: "Instagram", href: "https://instagram.com/beyondbasicsstudio" },
@@ -160,7 +160,7 @@ export default function Footer() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1 font-sans text-sm text-white/40 hover:text-white transition-colors duration-200"
+                  className="flex items-center gap-1 font-sans text-sm text-white/55 hover:text-white transition-colors duration-200"
                 >
                   <span>{label}</span>
                   <span className="text-[10px]">↗</span>
@@ -175,15 +175,15 @@ export default function Footer() {
       <div className="px-6 md:px-10 py-5 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-t border-white/8">
         <div className="flex flex-wrap gap-x-6 gap-y-1">
           {["San Francisco", "New York", "London"].map((city) => (
-            <span key={city} className="font-sans text-xs text-white/25">{city}</span>
+            <span key={city} className="font-sans text-xs text-white/50">{city}</span>
           ))}
         </div>
         <div className="flex items-center gap-8">
-          <span className="font-sans text-xs text-white/20">© 2019–2026 Beyond Creative Studio Ltd</span>
-          <Link href="/privacy-policy" className="font-sans text-xs text-white/25 hover:text-white/50 transition-colors">
+          <span className="font-sans text-xs text-white/50">© 2019–2026 Beyond Creative Studio Ltd</span>
+          <Link href="/privacy-policy" className="font-sans text-xs text-white/50 hover:text-white/80 transition-colors">
             Privacy
           </Link>
-          <Link href="/terms" className="font-sans text-xs text-white/25 hover:text-white/50 transition-colors">
+          <Link href="/terms" className="font-sans text-xs text-white/50 hover:text-white/80 transition-colors">
             Terms
           </Link>
         </div>
