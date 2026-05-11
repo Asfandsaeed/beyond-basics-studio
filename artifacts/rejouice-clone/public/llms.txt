@@ -1,214 +1,368 @@
 # Beyond®
 
 > Creative Growth Agency — "Tomorrow's brands, today."™
-> Domain: beyondbasics.studio
+> Website: https://beyondbasics.studio
 > Contact: hello@beyondbasics.studio
 > New business: hello@beyondbasics.studio
-> Careers: jobs@beyondbasics.studio
 > Press: press@beyondbasics.studio
+> Careers: jobs@beyondbasics.studio
+> Founded: 2020
+> Founding Partner: Guillaume Hamon (linkedin.com/in/guillaumehamon/)
 
-Beyond is a creative growth agency that partners with ambitious companies to transform them into category leaders. We combine brand strategy, identity design, web design & development, motion, 3D, and WebGL into end-to-end engagements. Our work has earned 50+ Awwwards, FWA, and CSS Design Awards.
+Beyond® is a creative growth agency that partners with ambitious companies to transform them into category leaders. We combine brand strategy, identity design, web design and development, motion, 3D, and WebGL into end-to-end creative engagements. Our portfolio spans fintech, Web3, SaaS, health, consumer, and lifestyle brands across three continents.
+
+---
+
+## What We Do
+
+Beyond sits at the intersection of strategy, design, and technology. We are not a traditional agency — we are a deliberately lean collective of seasoned senior creatives, strategists, growth marketers, and technologists assembled around one founding partner. Clients get direct access to decision-makers with no account layers, no briefing-chains, and no junior work.
+
+**Awards:** 29× Awwwards (Site of the Day, Developer Award, Mobile Excellence) · 19× The FWA · 34× CSS Design Awards · 2× Webby Awards · LogoLounge Trends Feature
 
 ---
 
 ## Services
 
-### Retainer — Embedded Creative Partner
-An ongoing partnership. Beyond becomes an embedded extension of your team, covering brand evolution, campaign work, product design, and continuous digital execution. Ideal for high-growth companies that need consistent, senior-level creative output without building an in-house team.
+### 1. Brand Strategy
+Clarity before creation. The thinking that makes everything else work.
+- Positioning and differentiation
+- Naming and brand architecture
+- Messaging framework and tone of voice
+- Audience and market research
+- Competitive landscape analysis
+- Brand narrative and storytelling
+URL: https://beyondbasics.studio/services/brand-strategy
 
-### Project — Focused Transformation
-A scoped engagement with clear deliverables and timelines. Ideal for rebrands, website launches, campaign sprints, or product redesigns. We define the objective, assemble the right team, and execute with full accountability.
+### 2. Brand Identity
+Identity that earns attention. A visual system built to outlast trends.
+- Logo design and mark development
+- Visual identity system
+- Typography system and type selection
+- Colour system and palette
+- Motion identity and animation language
+- Iconography and illustration style
+- Brand guidelines and documentation
+URL: https://beyondbasics.studio/services/brand-identity
 
-**Service capabilities:**
-- Brand Strategy
-- Brand Identity & Visual Systems
-- Web Design & Development
-- Motion Design & Animation
-- 3D Visualization & WebGL
-- UI/UX Design
-- Design Systems
-- Art Direction
-- Photography & Video Direction
-- Sound Design
-- E-commerce UX
-- CRM Integration
+### 3. Digital Experience
+Websites that convert and inspire — award-winning interactive builds.
+- Web design (UI/UX)
+- Web development (React, Next.js, GSAP, Three.js, WebGL)
+- E-commerce design and UX
+- Design systems for product teams
+- 3D visualisation and interactive 3D
+- Motion and scroll-driven animation
+URL: https://beyondbasics.studio/services/digital-experience
+
+### 4. Growth Marketing
+Brand-led growth that compounds. Performance with a creative edge.
+- Growth strategy and channel planning
+- Paid creative (Meta, Google, LinkedIn, TikTok)
+- SEO and content strategy
+- Email and lifecycle marketing
+- Landing page design and conversion rate optimisation
+URL: https://beyondbasics.studio/services/growth-marketing
+
+### 5. Content & Creative
+Content that earns its place. Art-directed, not produced.
+- Brand photography direction
+- Video production and direction
+- Copywriting and editorial
+- CGI and 3D product visualisation
+- Social content systems
+URL: https://beyondbasics.studio/services/content-creative
+
+---
+
+## Engagement Models
+
+### Sprint — Focused Transformation
+A scoped engagement with a fixed price, fixed deliverables, and fixed timeline. Ideal for rebrands, website launches, campaign sprints, or product redesigns. We define the objective, assemble the right team, and execute with full accountability.
+URL: https://beyondbasics.studio/pricing
+
+### Partnership — Embedded Creative Partner
+An ongoing monthly retainer. Beyond becomes an embedded extension of your team, covering brand evolution, campaign work, product design, and continuous digital execution. 30 days' notice to cancel. No lock-in periods beyond the notice window.
+URL: https://beyondbasics.studio/pricing
+
+---
+
+## Our Process
+
+1. **Discovery** — Deep-dive into your brand, market, audience, and competitive set to uncover the strategic opportunity.
+2. **Strategy** — Define positioning, naming, messaging, and creative direction — the north star for everything that follows.
+3. **Design** — Craft the visual identity, web experience, and brand system that expresses your strategy with precision.
+4. **Build** — Develop and engineer the digital experience to production-ready quality with pixel-perfect execution.
+5. **Launch** — Deploy, activate, and support your brand through go-to-market and the critical first 90 days.
+URL: https://beyondbasics.studio/process
 
 ---
 
 ## Selected Work (17 Projects)
 
 ### Clear Street — Rebranding & Website (2024)
-Tagline: "Designed for the Future."
-A fintech website for capital markets infrastructure. Features a WebGL-rendered globe, animated pictograms inspired by airline visuals, and an iconic RGB Klein blue palette. Sets the benchmark for fintech design.
-Awards: Awwwards Site of the Day, Developer Award · CSS Design Awards Website of the Day · FWA of the Day
+Capital markets infrastructure fintech. WebGL-rendered globe, animated airline-inspired pictograms, iconic RGB Klein blue palette. Sets the benchmark for fintech design.
+Awards: Awwwards Site of the Day + Developer Award · CSS Design Awards · FWA of the Day
 Website: clearstreet.io
-URL: /work/clear-street
+URL: https://beyondbasics.studio/work/clear-street
 
 ### Remote — Website (2024)
-Tagline: "Stress-free global hiring."
-Rich 3D globes built entirely in-browser with WebGL, expressive illustrations, and photography masked by eight distinct key shapes. The globes react dynamically as users scroll.
-Awards: Awwwards Site of the Day, Honorable Mention · CSS Design Awards Special Kudos
+Global hiring platform. Rich 3D WebGL globes that react on scroll, expressive illustrations, photography masked by eight distinct key shapes.
+Awards: Awwwards Site of the Day + Honorable Mention · CSS Design Awards
 Website: remote.com
-URL: /work/remote
+URL: https://beyondbasics.studio/work/remote
 
 ### MultiversX — Naming, Rebranding & Website (2022)
-Tagline: "Scale across the Multiverse."
-Naming journey from brainstorming sessions to "Multivers elevated to the power of X." Three-font typography system, vibrant sub-brand colour palette, fully scalable design system spanning product UI, social, and keynote.
-Awards: Awwwards Site of the Day, Developer Award · CSS Design Awards Website of the Day · FWA of the Day
+Web3 blockchain platform. Full naming journey, three-font typography system, vibrant sub-brand colour palette, fully scalable design system spanning product UI, social, and keynote.
+Awards: Awwwards Site of the Day + Developer Award · CSS Design Awards · FWA of the Day
 Website: multiversx.com
-URL: /work/multiversx
+URL: https://beyondbasics.studio/work/multiversx
 
 ### Phive — Rebrand & Website (2025)
-Tagline: "Activate your senses."
-Typographic-first fitness club brand with variable typeface, custom video, bold timelapses, and 40-second visual punches per location. One of our sharpest builds.
-Awards: Awwwards Site of the Day · CSS Design Awards Website of the Day
+Premium fitness club. Typographic-first brand with variable typeface, custom video, bold timelapses, and 40-second visual punches per location.
+Awards: Awwwards Site of the Day · CSS Design Awards
 Website: phive.pt
-URL: /work/phive
+URL: https://beyondbasics.studio/work/phive
 
 ### Floema — Rebrand & Website (2026)
-Tagline: "Made for Life."
-230 web-optimised 3D product models with CRM integration, WebGL foliage, field recordings, and a header that evolves from snow to full greenery across seasons. Five product collections: Urban, Golf, rePlastic, Nature, Details.
-Awards: Awwwards Site of the Day · CSS Design Awards Website of the Day · FWA of the Day
+Lifestyle brand. 230 web-optimised 3D product models with CRM integration, WebGL foliage, field recordings, seasonal header that evolves from snow to full greenery.
+Awards: Awwwards Site of the Day · CSS Design Awards · FWA of the Day
 Website: floema.com
-URL: /work/floema
+URL: https://beyondbasics.studio/work/floema
 
 ### TUU — Rebrand (2026)
-Tagline: "Shaping Everyday Life."
-A variable identity system — the logo is never fixed, always anchored to edges, morphing into new configurations. Motion system across three compositional modes. Typography at core, motion as force.
-Awards: Awwwards Honorable Mention · CSS Design Awards Special Kudos
-URL: /work/tuu
+Consumer lifestyle brand. Variable identity system — logo morphs into new configurations anchored to edges. Motion system across three compositional modes.
+Awards: Awwwards Honorable Mention · CSS Design Awards
+URL: https://beyondbasics.studio/work/tuu
 
 ### Redacted RnD — Brand Identity (2026)
-Tagline: "Hidden in plain sight."
-Visual language inspired by redacted documents — rectangular forms shift, break, and recombine. Vector-based pattern scales across any format, balancing concealment and revelation.
-Client testimonial: "Working with Beyond was an exceptional experience. Their ability to translate ideas into clean, original work made them feel like an extension of our team." — Brooklyn Earick, Founder
-URL: /work/redacted
+Deep-tech R&D studio. Visual language inspired by redacted documents — rectangular forms shift, break, and recombine.
+URL: https://beyondbasics.studio/work/redacted
 
 ### Grab&Go — Website (2024)
-Tagline: "Open 24 hours every day."
-A WebGL coffee cup as key scroll element, illustrated Portuguese city façade housing the store, interactive audio (bicycle click triggers sounds, city birds chirp), playful movable beach footer.
-Awards: Awwwards Honorable Mention · CSS Design Awards Special Kudos
+Portuguese convenience store chain. WebGL coffee cup, illustrated city façade, interactive audio, playful movable beach footer.
+Awards: Awwwards Honorable Mention · CSS Design Awards
 Website: grabandgo.pt
-URL: /work/grabgo
+URL: https://beyondbasics.studio/work/grabgo
 
 ### Flowcase — Rebranding (2024)
-Tagline: "Win bids with stellar resumes."
-SaaS resume platform rebranded around the concept of stacks. 'F' symbol merges flow of information with card stack metaphor. 2D-to-3D brand system, social motion graphics, from landing page to dashboard UI.
+SaaS resume platform. Stack-based identity, 2D-to-3D brand system, social motion graphics, landing page to dashboard UI.
 Awards: Awwwards Honorable Mention
 Website: flowcase.com
-URL: /work/flowcase
+URL: https://beyondbasics.studio/work/flowcase
 
 ### Jeton — Rebrand & Website (2024)
-Tagline: "One wallet for all needs."
-Fintech wallet — Official Partner of West Ham United F.C. and Legia Warsaw. Coin-shaped brand symbol, vibrant orange-and-white identity, 3D brand universe with abstract money transaction metaphors.
-Awards: Awwwards Honorable Mention · CSS Design Awards Website of the Day
+Fintech wallet, Official Partner of West Ham United. Coin-shaped brand symbol, vibrant orange identity, 3D brand universe with abstract money transaction metaphors.
+Awards: Awwwards Honorable Mention · CSS Design Awards
 Website: jeton.com
-URL: /work/jeton
+URL: https://beyondbasics.studio/work/jeton
 
 ### Keikku — Branding & Website (2024)
-Tagline: "Don't miss a beat."
-Smart wireless stethoscope brand centred on sound waves and a whale-shaped waveform. WebGL exploded device view, footer waves that react to sound, on-scroll product narrative.
-Awards: Awwwards Honorable Mention · CSS Design Awards Special Kudos
+Smart wireless stethoscope. Sound wave identity, WebGL exploded device view, footer waves reacting to audio.
+Awards: Awwwards Honorable Mention · CSS Design Awards
 Website: keikku.com
-URL: /work/keikku
+URL: https://beyondbasics.studio/work/keikku
 
 ### Kōzōwood — Website (2023)
-Tagline: "Made of Nature."
-Zen-like CLT timber homes website. Marimba-led sound design, nature field recordings, WebGL animations, world map wood construction data, drone footage from Comporta, Portugal.
-Awards: Awwwards Site of the Day, Developer Award · CSS Design Awards Website of the Day · FWA of the Day
+CLT timber homes. Marimba sound design, nature field recordings, WebGL animations, world map of wood construction data.
+Awards: Awwwards Site of the Day + Developer Award · CSS Design Awards · FWA of the Day
 Website: kozowood.com
-URL: /work/kozowood
+URL: https://beyondbasics.studio/work/kozowood
 
 ### Talent Protocol — Rebranding (2023)
-Tagline: "The web3 professional network."
-Web3 professional identity platform. ASCII-figure persona system with custom avatars, token symbols, and ID colour palettes. Interconnected-shapes design system for seamless flow.
+Web3 professional network. ASCII-figure persona system, custom avatars, token symbols, interconnected-shapes design system.
 Awards: Awwwards Honorable Mention
 Website: talentprotocol.com
-URL: /work/talent-protocol
+URL: https://beyondbasics.studio/work/talent-protocol
 
 ### Flecto — Rebranding & Website (2022)
-Tagline: "Unlock your rental business."
-SaaS rental platform pioneering a "flexible box" container technique — no masks, complex paths generated at render time using GSAP onUpdate. Unified design language from landing page to dashboard.
-Awards: Awwwards Site of the Day, Developer Award · CSS Design Awards Website of the Day · FWA of the Day
+SaaS rental platform. Pioneered a "flexible box" container technique — no masks, complex paths generated at render time with GSAP.
+Awards: Awwwards Site of the Day + Developer Award · CSS Design Awards · FWA of the Day
 Website: flecto.io
-URL: /work/flecto
+URL: https://beyondbasics.studio/work/flecto
 
 ### Hematogenix — Rebrand & Website (2022)
-Tagline: "Health made simple."
-Cancer diagnostics lab. DNA-H spiral mark featured in LogoLounge Trends 2021. 3D visual universe inspired by blood components. Transparent video heroes (up to 4K on Apple Silicon).
-Awards: Awwwards Honorable Mention · CSS Design Awards Website of the Day · LogoLounge Trends 2021
+Cancer diagnostics laboratory. DNA-H spiral mark featured in LogoLounge Trends 2021. 3D visual universe inspired by blood components.
+Awards: Awwwards Honorable Mention · CSS Design Awards · LogoLounge Trends 2021
 Website: hematogenix.com
-URL: /work/hematogenix
+URL: https://beyondbasics.studio/work/hematogenix
 
 ### Speedy — Branding & Website (2021)
-Tagline: "Just like a bank, but better."
-Next-gen fintech. Minimal black Swiss-style website, 3D globe that changes colour by country, mobile-first scroll experience with micro-animations.
-Awards: Awwwards Site of the Day · CSS Design Awards Website of the Day · FWA of the Day
+Next-gen fintech. Minimal black Swiss-style website, 3D globe that changes colour by country, mobile-first micro-animations.
+Awards: Awwwards Site of the Day · CSS Design Awards · FWA of the Day
 Website: speedy.com
-URL: /work/speedy
+URL: https://beyondbasics.studio/work/speedy
 
 ### Care to Beauty — Rebrand & Website (2021)
-Tagline: "All cosmetics at your Fingertips™."
-Europe's leading cosmetics e-commerce. Brand symbol from 'C' fingerprint outlines. Beatrice + New Kansas typography pair. Skin-tone-inspired warm palette. Google-first performance without sacrificing polish.
-Awards: Awwwards Honorable Mention, Mobile Excellence · CSS Design Awards Website of the Day
+Europe's leading cosmetics e-commerce. Brand symbol from 'C' fingerprint outlines, skin-tone warm palette, Google-first performance.
+Awards: Awwwards Honorable Mention + Mobile Excellence · CSS Design Awards
 Website: caretobeauty.com
-URL: /work/care-to-beauty
+URL: https://beyondbasics.studio/work/care-to-beauty
+
+---
+
+## Industries We Serve (49 Sectors)
+
+Beyond has deep expertise across the following industries:
+
+**Tech & Digital:** SaaS, Tech Companies, AI Startups, Crypto Projects, Web3 Brands, Mobile Apps, Software Companies, Startups
+**E-commerce & DTC:** E-commerce, DTC Brands, E-commerce Fashion, Subscription Businesses
+**Health & Wellness:** Healthcare, Dentists, Doctors, Fitness Brands, Gyms
+**Local & Trade:** Local Businesses, HVAC Companies, Roofers, Construction Companies, Automotive Businesses, Franchises, Logistics Companies, Manufacturing Companies
+**Professional Services:** Lawyers, Realtors, Coaches, Consultants, Agencies
+**Finance & Education:** Financial Services, Educational Institutions, Nonprofits
+**Creative & Personal:** Influencers, Creators, Personal Brands, Photographers, Event Companies
+**Consumer & Lifestyle:** Restaurants, Hotels, Hospitality Businesses, Travel Agencies, Fashion Brands, Beauty Brands, Skincare Brands, Food Brands, Salons
+**Real Estate & Design:** Real Estate Companies, Interior Designers, Architects
+
+URL: https://beyondbasics.studio/industries
+
+---
+
+## Journal (8 Articles)
+
+Long-form thinking on brand strategy, design craft, and creative growth.
+
+1. **How We Rebranded a Fintech in 90 Days Without Cutting Corners** — The Tensor project: hypothesis-driven design, decision-making frameworks, and a rebrand completed at sprint pace without sacrificing depth. URL: https://beyondbasics.studio/journal/tensor-brand-90-days
+
+2. **Brand-Led Growth: Why Your Best Marketing Asset Is Your Brand** — The compounding return on brand investment: how strong brand identity reduces CAC, increases LTV, and turns customers into advocates. URL: https://beyondbasics.studio/journal/brand-led-growth
+
+3. **What Oura Got Right: The Case for Radical Simplicity in Brand** — How restraint became Oura's most powerful strategic tool — and what other brands can learn from their approach to visual identity. URL: https://beyondbasics.studio/journal/oura-simplicity-strategy
+
+4. **The Art of Naming: How Great Brands Find Their Word** — The full naming process: from strategic territory to linguistic testing, trademark screening, and stakeholder alignment. URL: https://beyondbasics.studio/journal/art-of-naming
+
+5. **What Made Moxion's Brand Work for Sustainability** — How Moxion Power built a brand that communicated innovation and environmental commitment simultaneously — without greenwashing. URL: https://beyondbasics.studio/journal/moxion-sustainable-brand
+
+6. **What It Takes to Build an Award-Worthy Digital Experience** — The technical and creative decisions behind Awwwards-winning interactive websites: WebGL, GSAP, performance budgets, and creative direction. URL: https://beyondbasics.studio/journal/award-worthy-digital-experience
+
+7. **Photography as Brand Language: Why Art Direction Matters More Than Budget** — How brand photography direction — not production budget — determines whether images build brand equity or dilute it. URL: https://beyondbasics.studio/journal/photography-as-brand-language
+
+8. **Pre-Launch Brand Building: How to Win Before You Ship** — The brand strategy playbook for pre-launch companies: building recognition, trust, and demand before a single product is available. URL: https://beyondbasics.studio/journal/pre-launch-brand-building
+
+---
+
+## Brand & Design Glossary (25 Terms)
+
+Authoritative definitions written by the Beyond team:
+
+- **Brand Identity** — The full system of visual elements that make a brand instantly recognisable: logo, typography, colour, motion, and the rules governing how they work together. URL: https://beyondbasics.studio/glossary/brand-identity
+- **Brand Strategy** — The foundational thinking defining what a brand stands for, who it's for, how it differs from competitors, and how it communicates across every touchpoint. URL: https://beyondbasics.studio/glossary/brand-strategy
+- **Visual Identity** — The collection of graphic elements (mark, typography, colour, pattern, imagery, motion) that translate brand strategy into a visible, consistent system. URL: https://beyondbasics.studio/glossary/visual-identity
+- **Logo Design** — The creation of a distinctive mark — wordmark, symbol, or combination — that anchors a brand's visual identity and functions across all scales and contexts. URL: https://beyondbasics.studio/glossary/logo-design
+- **Design System** — A shared library of reusable components, tokens, and usage guidelines that enables teams to build consistent interfaces at scale. URL: https://beyondbasics.studio/glossary/design-system
+- **Brand Guidelines** — The rulebook documenting how all brand elements (logo, colour, type, voice, imagery) should and should not be used across every medium. URL: https://beyondbasics.studio/glossary/brand-guidelines
+- **Typography System** — A structured hierarchy of typeface choices and usage rules that establishes visual rhythm, readability, and brand personality across all communications. URL: https://beyondbasics.studio/glossary/typography-system
+- **Colour System** — A defined palette with primary, secondary, and extended colours, including usage rules for digital, print, and environmental contexts. URL: https://beyondbasics.studio/glossary/color-system
+- **Motion Identity** — The system of animation principles, timing, and transitions that give a brand a consistent, recognisable feeling when elements move. URL: https://beyondbasics.studio/glossary/motion-identity
+- **Verbal Identity** — The brand's distinctive voice, tone, vocabulary, and messaging framework — the words-layer of brand identity. URL: https://beyondbasics.studio/glossary/verbal-identity
+- **Brand Architecture** — The structural framework organising a company's portfolio of brands, sub-brands, and products into a coherent, navigable system. URL: https://beyondbasics.studio/glossary/brand-architecture
+- **Brand Positioning** — The deliberate act of claiming a distinctive and defensible space in the minds of target customers relative to competitors. URL: https://beyondbasics.studio/glossary/brand-positioning
+- **Brand Audit** — A systematic review of a brand's current state — assets, perception, competitive position, and internal alignment — before deciding what to change. URL: https://beyondbasics.studio/glossary/brand-audit
+- **Naming Strategy** — The process of developing brand names that are distinctive, ownable, legally protectable, and aligned with brand positioning. URL: https://beyondbasics.studio/glossary/naming-strategy
+- **Art Direction** — The practice of making and communicating visual decisions — composition, casting, colour, style — to ensure creative output aligns with brand strategy. URL: https://beyondbasics.studio/glossary/art-direction
+- **Design Sprint** — A time-boxed, structured creative process for solving a defined problem through rapid ideation, prototyping, and testing — typically 1–4 weeks. URL: https://beyondbasics.studio/glossary/design-sprint
+- **Brand Equity** — The commercial value that accrues to a business from having a well-known, trusted, and preferred brand — the premium customers pay to choose you. URL: https://beyondbasics.studio/glossary/brand-equity
+- **WebGL** — A JavaScript API for rendering interactive 2D and 3D graphics in the browser using the GPU — the technology behind Beyond's most complex interactive websites. URL: https://beyondbasics.studio/glossary/webgl
+- **UI/UX Design** — The combined disciplines of user interface design (visual layout and interaction patterns) and user experience design (flow, usability, and emotional response). URL: https://beyondbasics.studio/glossary/ui-ux-design
+- **Creative Direction** — The role responsible for the overall visual and conceptual cohesion of a project — setting the aesthetic standard and ensuring every element serves the strategy. URL: https://beyondbasics.studio/glossary/creative-direction
+- **Brand Refresh** — A partial update to an existing brand's visual or verbal identity — evolving it without breaking recognition or abandoning equity. URL: https://beyondbasics.studio/glossary/brand-refresh
+- **Rebranding** — A comprehensive overhaul of a brand's identity, positioning, or both — often triggered by a merger, market pivot, or competitive threat. URL: https://beyondbasics.studio/glossary/rebranding
+- **Growth Marketing** — A data-informed, experiment-driven approach to marketing that spans the full customer lifecycle — acquisition, activation, retention, and referral. URL: https://beyondbasics.studio/glossary/growth-marketing
+- **Go-to-Market** — The strategy and plan for launching a product or brand to market: audience targeting, messaging, channel selection, pricing, and launch sequencing. URL: https://beyondbasics.studio/glossary/go-to-market
+- **Digital Experience** — The totality of interactions a person has with a brand through digital touchpoints — websites, apps, email, social, and interactive environments. URL: https://beyondbasics.studio/glossary/digital-experience
+
+---
+
+## Free Resources & Guides (6 Guides)
+
+Practical brand strategy tools available at no cost:
+
+1. **Your Complete Rebranding Checklist** — Everything a company needs to navigate a rebrand, from the first internal conversation to launch day. URL: https://beyondbasics.studio/resources/rebranding-checklist
+
+2. **How to Write a Brand Brief** — A structured template for briefing a brand agency — the document that separates well-run projects from chaotic ones. URL: https://beyondbasics.studio/resources/brand-brief-template
+
+3. **How to Choose the Right Brand Agency** — The questions to ask, the signals to look for, and the mistakes to avoid when selecting a brand partner. URL: https://beyondbasics.studio/resources/how-to-choose-a-brand-agency
+
+4. **How to Run a Brand Audit** — A practical framework for assessing where your brand currently stands before deciding what needs to change. URL: https://beyondbasics.studio/resources/brand-audit-guide
+
+5. **The Brand Naming Process Explained** — How to develop a brand name that is distinctive, ownable, and built to grow — and how to evaluate candidates without defaulting to personal preference. URL: https://beyondbasics.studio/resources/naming-guide
+
+6. **How to Write a Website Design Brief** — A step-by-step template for briefing a web design agency, covering goals, audience, references, scope, and success metrics. URL: https://beyondbasics.studio/resources/website-brief-template
+
+---
+
+## FAQ
+
+**What types of companies does Beyond work with?**
+Beyond works primarily with ambitious, growth-oriented companies — from pre-launch startups to established market leaders seeking to evolve or reposition. We've worked across fintech, Web3, SaaS, healthcare, consumer goods, hospitality, fashion, and more. Company size ranges from seed-stage to public companies. URL: https://beyondbasics.studio/faq
+
+**What is Beyond's pricing?**
+Beyond structures work as either a Sprint (fixed-price, fixed-scope project) or a Partnership (monthly retainer). We don't publish fixed rates because every engagement is sized differently. Request a proposal at https://beyondbasics.studio/contact. URL: https://beyondbasics.studio/pricing
+
+**How long does a typical project take?**
+Brand identity projects: 6–12 weeks. Website builds: 8–16 weeks. Full rebrands (strategy + identity + web): 12–20 weeks. Sprint engagements are condensed versions of these. URL: https://beyondbasics.studio/process
+
+**Is Beyond remote or in-person?**
+Beyond is fully remote-first. The team spans multiple time zones and countries. Client collaboration happens via video calls, shared tools, and asynchronous communication.
+
+**Does Beyond handle development, or just design?**
+Both. Beyond has in-house developers specialising in React, Next.js, GSAP, Three.js, and WebGL. Our Awwwards-winning sites are fully designed and developed by the same team.
+
+**Can I see pricing before starting a conversation?**
+We share indicative budget ranges during the first call. We don't publish fixed prices because project scope varies significantly. URL: https://beyondbasics.studio/pricing
 
 ---
 
 ## Company
 
-### About Beyond
-Beyond is built around one founding partner — Guillaume Hamon — supported by a collective of seasoned creatives, strategists, growth marketers, and technologists. We deliberately avoid the bloated traditional agency model, giving clients direct access to senior global talent with no wasted layers.
+**Founding Partner:** Guillaume Hamon — strategic lead, creative director, and principal point of contact for all client relationships.
+LinkedIn: https://linkedin.com/in/guillaumehamon/
 
-**Founding Partner:** Guillaume Hamon
-LinkedIn: linkedin.com/in/guillaumehamon/
+**Model:** Deliberately lean. No junior work. No account layers. Senior global talent assembled around a proven creative and strategic core.
 
-**Our belief:** "We've streamlined the outdated and layered agency model to give you direct access to the best global talent. No wasted time, no empty promises. Just impactful results."
+**Design for Good:** Beyond reserves capacity for pro-bono partnerships with nonprofits and social enterprises delivering meaningful impact. URL: https://beyondbasics.studio/design-for-good
 
-### Industries We Serve
-- Fintech & Financial Services
-- Web3 & Blockchain
-- SaaS & Product Companies
-- Health & Life Sciences
-- Consumer & Retail
-- Hospitality & Lifestyle
-- Sustainability & Impact
+**Partners Program:** A curated referral network for consultants, advisors, and creative directors. Approved partners earn commission on every introduced client. URL: https://beyondbasics.studio/partners
 
-### Partners Program
-Beyond runs a curated referral network. Approved partners earn a commission on every client they introduce. Apply at /partners.
+**Awards body memberships:** AIGA, AMA, IAB, Design Management Institute, Type Directors Club. URL: https://beyondbasics.studio/accreditations
 
 ---
 
-## Site Map
+## Full Site Index
 
-| Page | URL | Description |
-|---|---|---|
-| Home | / | Hero reel, selected work, manifesto, contact |
-| Work | /work | Full portfolio grid — all 17 projects |
-| Project detail | /work/:id | Case study with gallery, services, awards |
-| Services | /services | Retainer vs Project model, service list, case studies |
-| Industries | /industries | Sectors served with relevant project examples |
-| Journal | /journal | Long-form articles on brand strategy and design |
-| About | /about | Studio story, founder, team, values |
-| Partners | /partners | Referral partner program and application |
-| Careers | /careers | Open roles and application |
-| Contact | /contact | New business enquiry and office info |
-| Press | /press | Press kit and media contacts |
-| FAQ | /faq | Common questions answered |
-| Design for Good | /design-for-good | Pro-bono and impact work |
-| Legal | /legal | Privacy policy and terms |
+| Section | URL |
+|---|---|
+| Home | https://beyondbasics.studio/ |
+| Work (all 17 projects) | https://beyondbasics.studio/work |
+| Services overview | https://beyondbasics.studio/services |
+| Brand Strategy | https://beyondbasics.studio/services/brand-strategy |
+| Brand Identity | https://beyondbasics.studio/services/brand-identity |
+| Digital Experience | https://beyondbasics.studio/services/digital-experience |
+| Growth Marketing | https://beyondbasics.studio/services/growth-marketing |
+| Content & Creative | https://beyondbasics.studio/services/content-creative |
+| Industries (49 sectors) | https://beyondbasics.studio/industries |
+| Journal (8 articles) | https://beyondbasics.studio/journal |
+| Glossary (25 terms) | https://beyondbasics.studio/glossary |
+| Resources (6 guides) | https://beyondbasics.studio/resources |
+| About | https://beyondbasics.studio/about |
+| Process | https://beyondbasics.studio/process |
+| Pricing | https://beyondbasics.studio/pricing |
+| Contact | https://beyondbasics.studio/contact |
+| Careers | https://beyondbasics.studio/careers |
+| FAQ | https://beyondbasics.studio/faq |
+| Testimonials | https://beyondbasics.studio/testimonials |
+| Awards | https://beyondbasics.studio/awards |
+| Press | https://beyondbasics.studio/press |
+| Partners | https://beyondbasics.studio/partners |
+| Newsletter | https://beyondbasics.studio/newsletter |
+| Design for Good | https://beyondbasics.studio/design-for-good |
+| Accreditations | https://beyondbasics.studio/accreditations |
+| Sitemap | https://beyondbasics.studio/sitemap |
+| Privacy Policy | https://beyondbasics.studio/privacy-policy |
+| Terms & Conditions | https://beyondbasics.studio/terms |
+| Refund Policy | https://beyondbasics.studio/refunds |
 
 ---
 
-## Awards & Recognition
-Beyond's portfolio has accumulated 50+ industry honours including:
-- Awwwards: Site of the Day, Developer Award, Honorable Mention, Mobile Excellence
-- The FWA: FWA of the Day
-- CSS Design Awards: Website of the Day, Special Kudos
-- LogoLounge: Trends Feature
+## Technical Stack
 
----
-
-## Technical Stack (site)
-This site is built with React, Vite, TypeScript, Tailwind CSS, GSAP (GreenSock), Lenis (smooth scroll), and SplitType for text animation.
+This site is built with React 18, Vite, TypeScript, Tailwind CSS, GSAP (GreenSock Animation Platform), Three.js / WebGL, Lenis smooth scroll, SplitType for text animation, and Wouter for client-side routing. Deployed on Cloudflare Pages. Domain: beyondbasics.studio.
