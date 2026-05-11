@@ -35,7 +35,8 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: pnpm --filter @workspace/rejouice-clone run build
+        run: |
+          pnpm --filter @workspace/rejouice-clone run build 2>&1
         env:
           PORT: "3000"
           BASE_PATH: "/"
