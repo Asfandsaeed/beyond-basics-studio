@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense } from "react";
+import React, { useEffect, useLayoutEffect, Suspense } from "react";
 import { Switch, Route, Router as WouterRouter, useLocation } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -63,16 +63,15 @@ let lenisInstance: any = null;
 function ScrollToTop() {
   const [location] = useLocation();
 
-  useEffect(() => {
-    getGsap().then(({ ScrollTrigger }) => {
-      ScrollTrigger.killAll();
-    });
-
+  useLayoutEffect(() => {
+    // Scroll before browser paints — prevents footer flash
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
     if (lenisInstance) {
       lenisInstance.scrollTo(0, { immediate: true });
-    } else {
-      window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
     }
+    // Kill stale ScrollTriggers after scroll resets
+    getGsap().then(({ ScrollTrigger }) => { ScrollTrigger.killAll(); });
   }, [location]);
 
   return null;
@@ -131,7 +130,7 @@ function AppLayout() {
     <>
       <ScrollToTop />
       <Navbar />
-      <main>
+      <main style={{ minHeight: "100vh" }}>
         <Suspense fallback={null}>
           <Router />
         </Suspense>
