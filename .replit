@@ -34,3 +34,9 @@ externalPort = 3001
 [[ports]]
 localPort = 18481
 externalPort = 80
+
+[userenv]
+
+[userenv.shared]
+CLOUDFLARE_API_TOKEN = "REDACTED"
+CLOUDFLARE_ACCOUNT_ID = "REDACTED_ACCOUNT_ID"
