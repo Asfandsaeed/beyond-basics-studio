@@ -1,0 +1,46 @@
+/* TEAM */
+
+Founding Partner & Creative Director: Guillaume Hamon
+Location: Remote — worldwide
+LinkedIn: linkedin.com/in/guillaumehamon/
+Contact: hello@beyondbasics.studio
+
+/* STUDIO */
+
+Beyond® — Creative Growth Agency
+"Tomorrow's brands, today."™
+
+We are a deliberately lean collective of seasoned senior creatives,
+strategists, growth marketers, and technologists. No junior work.
+No account layers. Direct access to senior global talent.
+
+Awards:
+  29× Awwwards (Site of the Day, Developer Award, Mobile Excellence)
+  19× The FWA
+  34× CSS Design Awards
+  2× Webby Awards
+  LogoLounge Trends Feature
+
+New business: hello@beyondbasics.studio
+Press: press@beyondbasics.studio
+Careers: jobs@beyondbasics.studio
+Website: https://beyondbasics.studio
+
+/* SITE */
+
+Language: English
+Doctype: HTML5
+Technology: React 18, TypeScript, Vite, Tailwind CSS
+Animation: GSAP (GreenSock Animation Platform), Lenis, SplitType
+3D & WebGL: Three.js
+Routing: Wouter
+Hosting: Cloudflare Pages
+Domain: beyondbasics.studio
+
+Last updated: 2026-05-11
+Standards: WCAG 2.1 AA, Core Web Vitals, PWA
+
+/* COLOPHON */
+
+Designed and built with obsessive attention to detail.
+Every pixel intentional. Every millisecond earned.

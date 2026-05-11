@@ -1,0 +1,13 @@
+# Security Policy for Beyond® (beyondbasics.studio)
+# RFC 9116 — https://www.rfc-editor.org/rfc/rfc9116
+
+Contact: mailto:hello@beyondbasics.studio
+Expires: 2027-05-11T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://beyondbasics.studio/.well-known/security.txt
+
+Policy: https://beyondbasics.studio/privacy-policy
+
+Acknowledgments: https://beyondbasics.studio/security-thanks
+
+Hiring: https://beyondbasics.studio/careers
