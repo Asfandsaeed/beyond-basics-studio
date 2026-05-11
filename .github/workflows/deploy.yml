@@ -34,8 +34,18 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build
-        run: pnpm --filter @workspace/rejouice-clone run build 2>&1
+      - name: Build (capture output for debugging)
+        run: |
+          pnpm --filter @workspace/rejouice-clone run build > /tmp/build.log 2>&1
+          BUILD_EXIT=$?
+          if [ $BUILD_EXIT -ne 0 ]; then
+            echo "::error::BUILD FAILED (exit $BUILD_EXIT) — last 60 lines:"
+            tail -60 /tmp/build.log | while IFS= read -r line; do
+              echo "::error::$line"
+            done
+            exit $BUILD_EXIT
+          fi
+          cat /tmp/build.log
         env:
           PORT: "3000"
           BASE_PATH: "/"
