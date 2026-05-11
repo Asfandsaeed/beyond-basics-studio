@@ -10,6 +10,7 @@ export default function WorkPage() {
     title: "Work | Beyond®",
     description: "17 award-winning brand and web projects across fintech, web3, SaaS, health, and lifestyle. 50+ Awwwards, FWA, and CSS Design Awards.",
     path: "/work",
+    ogImage: "/og/og-work.jpg",
     breadcrumbs: [
       { name: "Home", path: "/" },
       { name: "Work", path: "/work" },

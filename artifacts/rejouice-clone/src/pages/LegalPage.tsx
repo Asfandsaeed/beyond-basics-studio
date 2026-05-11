@@ -46,6 +46,7 @@ export function PrivacyPolicyPage() {
     title: "Privacy Policy | Beyond®",
     description: "How Beyond Creative Studio Ltd collects, uses, and protects your personal data. GDPR-compliant. Contact legal@beyondbasics.studio with any questions.",
     path: "/privacy-policy",
+    ogImage: "/og/og-privacy-policy.jpg",
     robots: "index, follow",
   });
   return (
@@ -105,6 +106,7 @@ export function TermsPage() {
     title: "Terms & Conditions | Beyond®",
     description: "Terms governing the use of beyondbasics.studio and all creative services provided by Beyond Creative Studio Ltd — including IP, payment, revisions, and cancellation.",
     path: "/terms",
+    ogImage: "/og/og-terms.jpg",
     robots: "index, follow",
   });
   return (
@@ -154,6 +156,7 @@ export function RefundsPage() {
     title: "Refund Policy | Beyond®",
     description: "Beyond®'s fair and transparent refund policy — covering project deposits, phase billing, client-initiated cancellations, retainers, and sprint engagements.",
     path: "/refunds",
+    ogImage: "/og/og-refunds.jpg",
     robots: "index, follow",
   });
   return (
@@ -218,6 +221,7 @@ export function SitemapPage() {
     title: "Sitemap | Beyond®",
     description: "A complete index of every page on beyondbasics.studio — work, services, industries, journal, glossary, resources, and company pages.",
     path: "/sitemap",
+    ogImage: "/og/og-sitemap.jpg",
   });
   const pageRef = useRef<HTMLDivElement>(null);
   useEffect(() => {

@@ -44,6 +44,7 @@ export default function IndustriesPage() {
     title: "Industries We Serve | Beyond®",
     description: "Beyond® delivers brand strategy, identity, and web design across 49 industries — from SaaS and fintech to hospitality, healthcare, and e-commerce. Find your sector.",
     path: "/industries",
+    ogImage: "/og/og-industries.jpg",
     breadcrumbs: [
       { name: "Home", path: "/" },
       { name: "Industries", path: "/industries" },

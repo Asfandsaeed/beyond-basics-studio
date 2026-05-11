@@ -126,6 +126,7 @@ export default function FAQPage() {
     title: "FAQ | Beyond®",
     description: "Common questions about working with Beyond — our process, pricing models, timelines, and what to expect from a Retainer or Project engagement.",
     path: "/faq",
+    ogImage: "/og/og-faq.jpg",
     breadcrumbs: [
       { name: "Home", path: "/" },
       { name: "FAQ", path: "/faq" },

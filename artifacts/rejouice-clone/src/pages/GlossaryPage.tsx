@@ -17,6 +17,7 @@ export default function GlossaryPage() {
     title: "Brand & Design Glossary | Beyond®",
     description: "25 brand strategy, visual identity, and digital design terms explained — from brand equity to WebGL, written by the team behind 17 category-leading brands.",
     path: "/glossary",
+    ogImage: "/og/og-glossary.jpg",
     breadcrumbs: [
       { name: "Home", path: "/" },
       { name: "Glossary", path: "/glossary" },

@@ -81,6 +81,7 @@ export default function PartnersPage() {
     title: "Partners | Beyond®",
     description: "Join the Beyond referral network. Earn commission on every client you introduce. Designed for consultants, advisors, and creative directors.",
     path: "/partners",
+    ogImage: "/og/og-partners.jpg",
     breadcrumbs: [
       { name: "Home", path: "/" },
       { name: "Partners", path: "/partners" },

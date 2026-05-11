@@ -83,6 +83,7 @@ export default function AwardsPage() {
     title: "Awards & Recognition | Beyond®",
     description: "50+ international design awards from Awwwards, The FWA, CSS Design Awards, and LogoLounge. Consistently recognised as one of the world's leading creative studios.",
     path: "/awards",
+    ogImage: "/og/og-awards.jpg",
     breadcrumbs: [
       { name: "Home", path: "/" },
       { name: "Awards", path: "/awards" },

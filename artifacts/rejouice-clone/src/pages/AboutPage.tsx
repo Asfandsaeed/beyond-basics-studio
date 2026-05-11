@@ -49,6 +49,7 @@ export default function AboutPage() {
     title: "About | Beyond®",
     description: "A collective of seasoned creatives, strategists, growth marketers, and technologists. One founding partner: Guillaume Hamon. Direct access, no wasted layers.",
     path: "/about",
+    ogImage: "/og/og-about.jpg",
     breadcrumbs: [
       { name: "Home", path: "/" },
       { name: "About", path: "/about" },

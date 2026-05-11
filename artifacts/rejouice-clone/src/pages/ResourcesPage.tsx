@@ -17,6 +17,7 @@ export default function ResourcesPage() {
     title: "Resources & Guides | Beyond®",
     description: "Free brand strategy and design guides from Beyond® — rebranding checklists, brand brief templates, how to choose an agency, and more.",
     path: "/resources",
+    ogImage: "/og/og-resources.jpg",
     breadcrumbs: [
       { name: "Home", path: "/" },
       { name: "Resources", path: "/resources" },

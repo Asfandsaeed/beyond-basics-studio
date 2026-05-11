@@ -49,6 +49,7 @@ export default function CareersPage() {
     title: "Careers | Beyond®",
     description: "Join a collective of world-class creatives. Remote-first, senior-level, deeply collaborative. Open roles in design, strategy, and development.",
     path: "/careers",
+    ogImage: "/og/og-careers.jpg",
     breadcrumbs: [
       { name: "Home", path: "/" },
       { name: "Careers", path: "/careers" },

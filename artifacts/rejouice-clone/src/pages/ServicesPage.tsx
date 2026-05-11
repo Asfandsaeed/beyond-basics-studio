@@ -225,6 +225,7 @@ export default function ServicesPage() {
     title: "Services | Beyond®",
     description: "Two engagement models: Retainer (embedded creative partner) or Project (focused transformation). Brand strategy, identity, web design, motion, 3D & WebGL.",
     path: "/services",
+    ogImage: "/og/og-services.jpg",
     breadcrumbs: [
       { name: "Home", path: "/" },
       { name: "Services", path: "/services" },

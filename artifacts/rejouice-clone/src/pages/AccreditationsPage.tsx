@@ -104,6 +104,7 @@ export default function AccreditationsPage() {
     title: "Industry Accreditations & Memberships | Beyond®",
     description: "Beyond® is affiliated with leading bodies in marketing, design, digital, and business — including AIGA, AMA, IAB, and the Design Management Institute.",
     path: "/accreditations",
+    ogImage: "/og/og-accreditations.jpg",
     breadcrumbs: [
       { name: "Home", path: "/" },
       { name: "Accreditations", path: "/accreditations" },
