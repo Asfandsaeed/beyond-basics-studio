@@ -1,0 +1,31 @@
+kind = "slides"
+previewPath = "/beyond-company-profile/"
+title = "Beyond® Company Profile"
+version = "1.0.0"
+id = "artifacts/beyond-company-profile"
+router = "path"
+
+[[integratedSkills]]
+name = "slides"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/beyond-company-profile/" ]
+localPort = 23645
+
+[services.development]
+run = "pnpm --filter @workspace/beyond-company-profile run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/beyond-company-profile", "run", "build" ]
+publicDir = "artifacts/beyond-company-profile/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23645"
+BASE_PATH = "/beyond-company-profile/"
