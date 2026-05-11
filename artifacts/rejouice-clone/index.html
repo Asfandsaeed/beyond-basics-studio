@@ -31,7 +31,8 @@
     <meta name="twitter:image" content="https://beyondbasics.studio/opengraph.jpg" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
 
     <!-- PWA -->
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -45,6 +46,18 @@
     <meta name="msapplication-TileImage" content="/icons/icon-192.png" />
     <meta name="msapplication-config" content="/browserconfig.xml" />
     <meta name="msapplication-tap-highlight" content="no" />
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7LD5D0V87X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7LD5D0V87X', { send_page_view: false });
+    </script>
+
+    <!-- Prevent white flash before React mounts — hero is dark -->
+    <style>html,body{background:#0A0A0A}</style>
 
     <!-- Fonts: async load to avoid render-blocking -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
