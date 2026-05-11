@@ -247,14 +247,17 @@ export default function Home() {
           className="relative w-full min-h-[100svh] flex flex-col bg-[#0A0A0A] text-white overflow-hidden"
           data-testid="hero-section"
         >
-          <div className="flex-1 flex flex-col justify-center overflow-hidden">
-            <h1
-              className="hero-word font-display font-bold lowercase text-white select-none leading-none w-full whitespace-nowrap"
-              style={{ fontSize: "24.5vw", letterSpacing: "-0.02em", lineHeight: 0.85 }}
-              data-testid="hero-wordmark"
+          <div className="flex-1 relative overflow-hidden">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover"
+              data-testid="hero-video"
             >
-              beyond
-            </h1>
+              <source src="/reel.mp4" type="video/mp4" />
+            </video>
           </div>
 
           <div className="hero-meta px-6 md:px-10 py-6 md:py-8 flex flex-col gap-5 md:flex-row md:items-center md:justify-between bg-white/[0.03] border-t border-white/[0.06]">
