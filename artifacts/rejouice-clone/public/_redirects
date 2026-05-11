@@ -25,6 +25,9 @@ https://www.beyondbasics.studio/* https://beyondbasics.studio/:splat 301
 /newsletter/     /newsletter     301
 /sitemap/        /sitemap        301
 
+# ── Well-known shortcuts ────────────────────────────────────────────────────
+/security.txt   /.well-known/security.txt   301
+
 # ── Legacy / convenience redirects ─────────────────────────────────────────
 /blog            /journal        301
 /blog/*          /journal/:splat 301
