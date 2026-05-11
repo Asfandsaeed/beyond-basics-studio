@@ -135,7 +135,7 @@ export default function Navbar() {
     <>
       <header
         ref={navRef}
-        className={`nav-entrance fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-4 md:px-10 md:py-7 ${bgClass}`}
+        className={`nav-entrance fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-4 md:px-10 md:py-3.5 ${bgClass}`}
       >
         {/* Logo */}
         <Link
