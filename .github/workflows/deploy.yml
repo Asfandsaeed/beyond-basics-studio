@@ -34,22 +34,30 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build (capture output for debugging)
+      - name: Typecheck
+        run: pnpm --filter @workspace/rejouice-clone run typecheck 2>&1 || true
+        continue-on-error: true
+
+      - name: Build
         run: |
           pnpm --filter @workspace/rejouice-clone run build > /tmp/build.log 2>&1
-          BUILD_EXIT=$?
-          if [ $BUILD_EXIT -ne 0 ]; then
-            echo "::error::BUILD FAILED (exit $BUILD_EXIT) — last 60 lines:"
-            tail -60 /tmp/build.log | while IFS= read -r line; do
-              echo "::error::$line"
-            done
-            exit $BUILD_EXIT
-          fi
-          cat /tmp/build.log
+          echo "Build exit: $?" >> /tmp/build.log
+        continue-on-error: true
         env:
           PORT: "3000"
           BASE_PATH: "/"
           NODE_ENV: production
+
+      - name: Upload build log
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: build-log
+          path: /tmp/build.log
+
+      - name: Fail if build failed
+        run: |
+          grep -q "Build exit: 0" /tmp/build.log || (cat /tmp/build.log && exit 1)
 
       - name: Add CNAME for custom domain
         run: echo "beyondbasics.studio" > artifacts/rejouice-clone/dist/public/CNAME
