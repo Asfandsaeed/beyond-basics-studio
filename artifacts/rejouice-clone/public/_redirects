@@ -1,0 +1,43 @@
+# ── Cloudflare Pages Redirects ─────────────────────────────────────────────
+# https://developers.cloudflare.com/pages/configuration/redirects/
+
+# ── www → non-www (301 permanent) ──────────────────────────────────────────
+https://www.beyondbasics.studio/* https://beyondbasics.studio/:splat 301
+
+# ── Trailing-slash normalisation ────────────────────────────────────────────
+# Remove trailing slashes so /work/ → /work (keeps canonical URLs clean)
+/work/           /work           301
+/services/       /services       301
+/industries/     /industries     301
+/journal/        /journal        301
+/about/          /about          301
+/contact/        /contact        301
+/glossary/       /glossary       301
+/resources/      /resources      301
+/pricing/        /pricing        301
+/careers/        /careers        301
+/process/        /process        301
+/faq/            /faq            301
+/testimonials/   /testimonials   301
+/awards/         /awards         301
+/press/          /press          301
+/partners/       /partners       301
+/newsletter/     /newsletter     301
+/sitemap/        /sitemap        301
+
+# ── Legacy / convenience redirects ─────────────────────────────────────────
+/blog            /journal        301
+/blog/*          /journal/:splat 301
+/case-studies    /work           301
+/portfolio       /work           301
+/team            /about          301
+/hire-us         /contact        301
+/start           /contact        301
+/brief           /contact        301
+/get-started     /contact        301
+/legal           /privacy-policy 301
+
+# ── SPA catch-all — MUST be last ───────────────────────────────────────────
+# Serves index.html for every route that isn't a real static file,
+# preventing 404s on page refresh or direct navigation to any React route.
+/*  /index.html  200
