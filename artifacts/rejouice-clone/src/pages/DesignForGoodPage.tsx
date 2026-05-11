@@ -80,6 +80,27 @@ export default function DesignForGoodPage() {
     title: "Design for Good | Beyond®",
     description: "Beyond's pro-bono and impact program. We partner with nonprofits and social enterprises to deliver world-class brand and digital work.",
     path: "/design-for-good",
+    breadcrumbs: [
+      { name: "Home", path: "/" },
+      { name: "Design for Good", path: "/design-for-good" },
+    ],
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: "Design for Good — Beyond® Pro-Bono Program",
+      description: "Beyond® partners with nonprofits and social enterprises to deliver world-class brand strategy, identity, and web design at no cost.",
+      url: "https://beyondbasics.studio/design-for-good",
+      provider: {
+        "@type": "Organization",
+        name: "Beyond®",
+        url: "https://beyondbasics.studio",
+      },
+      audience: {
+        "@type": "Audience",
+        audienceType: "Nonprofits and Social Enterprises",
+      },
+      isAccessibleForFree: true,
+    },
   });
   const pageRef = useRef<HTMLDivElement>(null);
 

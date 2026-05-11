@@ -19,6 +19,27 @@ export default function ResourcesPage() {
     title: "Resources & Guides | Beyond®",
     description: "Free brand strategy and design guides from Beyond® — rebranding checklists, brand brief templates, how to choose an agency, and more.",
     path: "/resources",
+    breadcrumbs: [
+      { name: "Home", path: "/" },
+      { name: "Resources", path: "/resources" },
+    ],
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      name: "Resources & Guides | Beyond®",
+      description: "Free brand strategy and design guides from Beyond Creative Growth Agency.",
+      url: "https://beyondbasics.studio/resources",
+      mainEntity: {
+        "@type": "ItemList",
+        itemListElement: resources.map((r, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: r.title,
+          url: `https://beyondbasics.studio/resources/${r.slug}`,
+          description: r.subtitle,
+        })),
+      },
+    },
   });
 
   const pageRef = useRef<HTMLDivElement>(null);

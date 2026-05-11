@@ -121,6 +121,32 @@ export default function PricingPage() {
     title: "Pricing | Beyond®",
     description: "How Beyond structures and prices creative engagements — two models (Sprint and Partnership), transparent process, no day rates. Request a proposal for your project.",
     path: "/pricing",
+    breadcrumbs: [
+      { name: "Home", path: "/" },
+      { name: "Pricing", path: "/pricing" },
+    ],
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "Brand Sprint",
+        description: "A focused, fixed-scope brand transformation engagement delivered over a defined sprint period. Fixed price, no day rates.",
+        provider: { "@type": "Organization", name: "Beyond®", url: "https://beyondbasics.studio" },
+        url: "https://beyondbasics.studio/pricing",
+        serviceType: "Creative Brand Sprint",
+        areaServed: "Worldwide",
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "Brand Partnership",
+        description: "An ongoing retainer engagement — Beyond embedded as your creative growth partner. Monthly, cancel with 30 days notice.",
+        provider: { "@type": "Organization", name: "Beyond®", url: "https://beyondbasics.studio" },
+        url: "https://beyondbasics.studio/pricing",
+        serviceType: "Creative Growth Retainer",
+        areaServed: "Worldwide",
+      },
+    ],
   });
 
   const pageRef = useRef<HTMLDivElement>(null);

@@ -117,6 +117,25 @@ export default function ProjectPage() {
       : "Award-winning brand and web project by Beyond Creative Growth Agency.",
     path: `/work/${id}`,
     ogImage: project?.heroImage,
+    breadcrumbs: project ? [
+      { name: "Home", path: "/" },
+      { name: "Work", path: "/work" },
+      { name: project.title, path: `/work/${project.id}` },
+    ] : undefined,
+    schema: project ? {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      name: project.title,
+      description: project.description,
+      image: project.heroImage,
+      url: `https://beyondbasics.studio/work/${project.id}`,
+      genre: project.category,
+      creator: {
+        "@type": "Organization",
+        name: "Beyond®",
+        url: "https://beyondbasics.studio",
+      },
+    } : undefined,
   });
 
   useEffect(() => {

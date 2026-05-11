@@ -94,6 +94,31 @@ export default function JournalPage() {
     title: "Journal | Beyond®",
     description: "Long-form thinking on brand strategy, design craft, creative growth, and the work that shapes tomorrow's category leaders.",
     path: "/journal",
+    breadcrumbs: [
+      { name: "Home", path: "/" },
+      { name: "Journal", path: "/journal" },
+    ],
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      name: "Beyond® Journal",
+      description: "Long-form thinking on brand strategy, design craft, and creative growth from Beyond Creative Growth Agency.",
+      url: "https://beyondbasics.studio/journal",
+      publisher: {
+        "@type": "Organization",
+        name: "Beyond®",
+        logo: { "@type": "ImageObject", url: "https://beyondbasics.studio/favicon.svg" },
+      },
+      blogPost: posts.map((p) => ({
+        "@type": "BlogPosting",
+        headline: p.title,
+        description: p.subtitle,
+        image: p.coverImage,
+        url: `https://beyondbasics.studio/journal/${p.id}`,
+        datePublished: p.date,
+        articleSection: p.category,
+      })),
+    },
   });
   const pageRef   = useRef<HTMLDivElement>(null);
   const heroRef   = useRef<HTMLHeadingElement>(null);

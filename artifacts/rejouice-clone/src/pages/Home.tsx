@@ -197,6 +197,24 @@ export default function Home() {
     title: "Beyond® — Creative Growth Agency",
     description: "Beyond partners with ambitious companies to become category leaders. Brand strategy, identity, web design, motion, 3D & WebGL. Tomorrow's brands, today.",
     path: "/",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": "https://beyondbasics.studio/#business",
+      name: "Beyond®",
+      alternateName: "Beyond Creative Growth Agency",
+      url: "https://beyondbasics.studio",
+      logo: "https://beyondbasics.studio/favicon.svg",
+      image: "https://beyondbasics.studio/opengraph.jpg",
+      description: "Beyond® is a creative growth agency that partners with ambitious companies to become category leaders through brand strategy, identity, web design, motion, and 3D.",
+      email: "hello@beyondbasics.studio",
+      foundingDate: "2020",
+      areaServed: "Worldwide",
+      serviceType: ["Brand Strategy", "Brand Identity", "Web Design", "Growth Marketing", "Content & Creative"],
+      knowsAbout: ["Brand Strategy", "Visual Identity", "Web Design", "Motion Design", "3D & WebGL", "Growth Marketing"],
+      award: ["29x Awwwards", "19x FWA", "34x CSS Design Awards", "2x Webby Awards"],
+      sameAs: ["https://www.linkedin.com/company/beyondbasics"],
+    },
   });
   const [loaded, setLoaded] = useState(false);
   const pageRef = useRef<HTMLDivElement>(null);

@@ -85,6 +85,23 @@ export default function AwardsPage() {
     title: "Awards & Recognition | Beyond®",
     description: "50+ international design awards from Awwwards, The FWA, CSS Design Awards, and LogoLounge. Consistently recognised as one of the world's leading creative studios.",
     path: "/awards",
+    breadcrumbs: [
+      { name: "Home", path: "/" },
+      { name: "Awards", path: "/awards" },
+    ],
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "Beyond® Awards & Recognition",
+      description: "International design awards won by Beyond Creative Growth Agency.",
+      url: "https://beyondbasics.studio/awards",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "29× Awwwards — Site of the Day, SOTM & FWA", url: "https://www.awwwards.com" },
+        { "@type": "ListItem", position: 2, name: "19× The FWA — Site of the Day", url: "https://www.thefwa.com" },
+        { "@type": "ListItem", position: 3, name: "34× CSS Design Awards", url: "https://www.cssdesignawards.com" },
+        { "@type": "ListItem", position: 4, name: "2× Webby Awards", url: "https://www.webbyawards.com" },
+      ],
+    },
   });
 
   const pageRef = useRef<HTMLDivElement>(null);

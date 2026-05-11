@@ -70,6 +70,25 @@ export default function ProcessPage() {
     title: "Our Process | Beyond®",
     description: "How Beyond works: strategy-first, deeply collaborative, with full accountability. From discovery to launch and beyond.",
     path: "/process",
+    breadcrumbs: [
+      { name: "Home", path: "/" },
+      { name: "Process", path: "/process" },
+    ],
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      name: "How Beyond® Works: Our Creative Process",
+      description: "A strategy-first, deeply collaborative process from discovery through to launch and ongoing growth.",
+      url: "https://beyondbasics.studio/process",
+      estimatedCost: { "@type": "MonetaryAmount", currency: "USD", value: "Custom" },
+      step: [
+        { "@type": "HowToStep", position: 1, name: "Discovery", text: "Deep-dive into your brand, market, and audience to uncover the strategic opportunity." },
+        { "@type": "HowToStep", position: 2, name: "Strategy", text: "Define positioning, messaging, and creative direction — the north star for everything that follows." },
+        { "@type": "HowToStep", position: 3, name: "Design", text: "Craft the visual identity, web experience, and brand system that expresses your strategy." },
+        { "@type": "HowToStep", position: 4, name: "Build", text: "Develop and engineer the digital experience to production-ready quality." },
+        { "@type": "HowToStep", position: 5, name: "Launch", text: "Deploy, activate, and support your brand through go-to-market and beyond." },
+      ],
+    },
   });
   const pageRef = useRef<HTMLDivElement>(null);
 

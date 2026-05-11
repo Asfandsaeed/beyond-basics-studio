@@ -227,6 +227,23 @@ export default function ServicesPage() {
     title: "Services | Beyond®",
     description: "Two engagement models: Retainer (embedded creative partner) or Project (focused transformation). Brand strategy, identity, web design, motion, 3D & WebGL.",
     path: "/services",
+    breadcrumbs: [
+      { name: "Home", path: "/" },
+      { name: "Services", path: "/services" },
+    ],
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "Beyond® Creative Services",
+      url: "https://beyondbasics.studio/services",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Brand Strategy", url: "https://beyondbasics.studio/services/brand-strategy" },
+        { "@type": "ListItem", position: 2, name: "Brand Identity", url: "https://beyondbasics.studio/services/brand-identity" },
+        { "@type": "ListItem", position: 3, name: "Digital Experience", url: "https://beyondbasics.studio/services/digital-experience" },
+        { "@type": "ListItem", position: 4, name: "Growth Marketing", url: "https://beyondbasics.studio/services/growth-marketing" },
+        { "@type": "ListItem", position: 5, name: "Content & Creative", url: "https://beyondbasics.studio/services/content-creative" },
+      ],
+    },
   });
   const pageRef    = useRef<HTMLDivElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);

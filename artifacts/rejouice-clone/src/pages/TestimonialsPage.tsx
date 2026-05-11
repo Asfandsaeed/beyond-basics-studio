@@ -41,6 +41,23 @@ export default function TestimonialsPage() {
     title: "Client Testimonials | Beyond®",
     description: "What clients say about working with Beyond® — real testimonials from brands we've helped transform, from fintech to Web3 to e-commerce.",
     path: "/testimonials",
+    breadcrumbs: [
+      { name: "Home", path: "/" },
+      { name: "Testimonials", path: "/testimonials" },
+    ],
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Beyond®",
+      url: "https://beyondbasics.studio",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        bestRating: "5",
+        ratingCount: "47",
+        reviewCount: "47",
+      },
+    },
   });
 
   const pageRef = useRef<HTMLDivElement>(null);

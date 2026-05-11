@@ -83,6 +83,10 @@ export default function PartnersPage() {
     title: "Partners | Beyond®",
     description: "Join the Beyond referral network. Earn commission on every client you introduce. Designed for consultants, advisors, and creative directors.",
     path: "/partners",
+    breadcrumbs: [
+      { name: "Home", path: "/" },
+      { name: "Partners", path: "/partners" },
+    ],
   });
   const pageRef = useRef<HTMLDivElement>(null);
   const [form, setForm] = useState<FormData>({ name: "", email: "", company: "", type: "", audience: "", message: "" });

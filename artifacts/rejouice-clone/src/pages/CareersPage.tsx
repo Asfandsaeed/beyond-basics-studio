@@ -51,6 +51,30 @@ export default function CareersPage() {
     title: "Careers | Beyond®",
     description: "Join a collective of world-class creatives. Remote-first, senior-level, deeply collaborative. Open roles in design, strategy, and development.",
     path: "/careers",
+    breadcrumbs: [
+      { name: "Home", path: "/" },
+      { name: "Careers", path: "/careers" },
+    ],
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "JobPosting",
+      title: "Senior Creative (Design / Strategy / Development)",
+      description: "Join a collective of world-class creatives at Beyond®. Remote-first, senior-level, deeply collaborative work across brand strategy, identity, and web.",
+      hiringOrganization: {
+        "@type": "Organization",
+        name: "Beyond®",
+        sameAs: "https://beyondbasics.studio",
+        logo: "https://beyondbasics.studio/favicon.svg",
+      },
+      jobLocation: {
+        "@type": "Place",
+        address: { "@type": "PostalAddress", addressCountry: "US" },
+      },
+      jobLocationType: "TELECOMMUTE",
+      employmentType: "FULL_TIME",
+      url: "https://beyondbasics.studio/careers",
+      validThrough: "2027-01-01",
+    },
   });
   const pageRef = useRef<HTMLDivElement>(null);
   const [applied, setApplied] = useState<string | null>(null);

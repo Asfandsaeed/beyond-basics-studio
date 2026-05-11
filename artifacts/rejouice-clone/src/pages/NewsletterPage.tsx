@@ -73,6 +73,10 @@ export default function NewsletterPage() {
     title: "Newsletter | Beyond®",
     description: "The Beyond® newsletter — one original piece of thinking on brand strategy, identity, and growth. Monthly. No spam. Unsubscribe anytime.",
     path: "/newsletter",
+    breadcrumbs: [
+      { name: "Home", path: "/" },
+      { name: "Newsletter", path: "/newsletter" },
+    ],
   });
 
   const pageRef = useRef<HTMLDivElement>(null);

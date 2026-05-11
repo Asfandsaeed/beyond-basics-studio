@@ -43,6 +43,29 @@ export default function IndustryPage() {
       ? `Beyond partners with ${industry.name.toLowerCase()} companies on brand strategy, identity, and web design. Award-winning work across the sector.`
       : "Beyond serves fintech, web3, SaaS, health, consumer, and lifestyle brands.",
     path: `/industries/${id}`,
+    breadcrumbs: industry ? [
+      { name: "Home", path: "/" },
+      { name: "Industries", path: "/industries" },
+      { name: industry.name, path: `/industries/${industry.id}` },
+    ] : undefined,
+    schema: industry ? {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: `${industry.name} Branding & Web Design`,
+      description: `Beyond® delivers brand strategy, visual identity, and web design for ${industry.name.toLowerCase()} companies. Award-winning creative work built for category leaders.`,
+      url: `https://beyondbasics.studio/industries/${industry.id}`,
+      provider: {
+        "@type": "Organization",
+        name: "Beyond®",
+        url: "https://beyondbasics.studio",
+      },
+      areaServed: "Worldwide",
+      serviceType: "Brand Strategy & Web Design",
+      audience: {
+        "@type": "Audience",
+        audienceType: industry.name,
+      },
+    } : undefined,
   });
 
   useEffect(() => {

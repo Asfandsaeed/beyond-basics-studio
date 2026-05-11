@@ -19,6 +19,28 @@ export default function GlossaryPage() {
     title: "Brand & Design Glossary | Beyond®",
     description: "25 brand strategy, visual identity, and digital design terms explained — from brand equity to WebGL, written by the team behind 17 category-leading brands.",
     path: "/glossary",
+    breadcrumbs: [
+      { name: "Home", path: "/" },
+      { name: "Glossary", path: "/glossary" },
+    ],
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "DefinedTermSet",
+      name: "Beyond® Brand & Design Glossary",
+      description: "25 authoritative definitions of brand strategy, visual identity, and digital design terms — written by Beyond Creative Growth Agency.",
+      url: "https://beyondbasics.studio/glossary",
+      publisher: {
+        "@type": "Organization",
+        name: "Beyond®",
+        url: "https://beyondbasics.studio",
+      },
+      hasDefinedTerm: glossaryTerms.map((t) => ({
+        "@type": "DefinedTerm",
+        name: t.term,
+        description: t.summary,
+        url: `https://beyondbasics.studio/glossary/${t.id}`,
+      })),
+    },
   });
 
   const pageRef = useRef<HTMLDivElement>(null);

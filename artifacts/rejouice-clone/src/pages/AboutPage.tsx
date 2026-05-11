@@ -51,6 +51,33 @@ export default function AboutPage() {
     title: "About | Beyond®",
     description: "A collective of seasoned creatives, strategists, growth marketers, and technologists. One founding partner: Guillaume Hamon. Direct access, no wasted layers.",
     path: "/about",
+    breadcrumbs: [
+      { name: "Home", path: "/" },
+      { name: "About", path: "/about" },
+    ],
+    schema: [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: "Guillaume Hamon",
+        jobTitle: "Founding Partner",
+        worksFor: { "@type": "Organization", name: "Beyond®", url: "https://beyondbasics.studio" },
+        url: "https://beyondbasics.studio/about",
+        sameAs: "https://www.linkedin.com/in/guillaumehamon/",
+        knowsAbout: ["Brand Strategy", "Creative Direction", "Digital Experience", "Growth Marketing"],
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Beyond®",
+        url: "https://beyondbasics.studio",
+        foundingDate: "2020",
+        description: "A collective of seasoned creatives, strategists, growth marketers, and technologists building tomorrow's category leaders.",
+        email: "hello@beyondbasics.studio",
+        areaServed: "Worldwide",
+        numberOfEmployees: { "@type": "QuantitativeValue", minValue: 10, maxValue: 50 },
+      },
+    ],
   });
   const pageRef  = useRef<HTMLDivElement>(null);
   const heroRef  = useRef<HTMLHeadingElement>(null);

@@ -12,6 +12,26 @@ export default function WorkPage() {
     title: "Work | Beyond®",
     description: "17 award-winning brand and web projects across fintech, web3, SaaS, health, and lifestyle. 50+ Awwwards, FWA, and CSS Design Awards.",
     path: "/work",
+    breadcrumbs: [
+      { name: "Home", path: "/" },
+      { name: "Work", path: "/work" },
+    ],
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      name: "Work | Beyond®",
+      description: "17 award-winning brand and web projects by Beyond Creative Growth Agency.",
+      url: "https://beyondbasics.studio/work",
+      mainEntity: {
+        "@type": "ItemList",
+        itemListElement: projects.map((p, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: p.title,
+          url: `https://beyondbasics.studio/work/${p.id}`,
+        })),
+      },
+    },
   });
   const containerRef = useRef<HTMLDivElement>(null);
   const [, navigate] = useLocation();

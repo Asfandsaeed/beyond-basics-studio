@@ -8,6 +8,30 @@ export default function ContactPage() {
     title: "Contact | Beyond®",
     description: "Start a conversation about your brand. Reach us at hello@beyondbasics.studio or fill in the brief — we respond within 24 hours.",
     path: "/contact",
+    breadcrumbs: [
+      { name: "Home", path: "/" },
+      { name: "Contact", path: "/contact" },
+    ],
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      name: "Contact Beyond®",
+      description: "Get in touch with Beyond® Creative Growth Agency. We respond within 24 hours.",
+      url: "https://beyondbasics.studio/contact",
+      mainEntity: {
+        "@type": "Organization",
+        name: "Beyond®",
+        email: "hello@beyondbasics.studio",
+        url: "https://beyondbasics.studio",
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "customer service",
+          email: "hello@beyondbasics.studio",
+          availableLanguage: "English",
+          areaServed: "Worldwide",
+        },
+      },
+    },
   });
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const infoRef = useRef<HTMLDivElement>(null);
