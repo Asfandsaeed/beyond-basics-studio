@@ -15,65 +15,23 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10.26.1
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Typecheck
-        run: pnpm --filter @workspace/rejouice-clone run typecheck 2>&1 || true
-        continue-on-error: true
-
-      - name: Build
-        run: |
-          pnpm --filter @workspace/rejouice-clone run build > /tmp/build.log 2>&1
-          echo "Build exit: $?" >> /tmp/build.log
-        continue-on-error: true
-        env:
-          PORT: "3000"
-          BASE_PATH: "/"
-          NODE_ENV: production
-
-      - name: Upload build log
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: build-log
-          path: /tmp/build.log
-
-      - name: Fail if build failed
-        run: |
-          grep -q "Build exit: 0" /tmp/build.log || (cat /tmp/build.log && exit 1)
-
-      - name: Add CNAME for custom domain
-        run: echo "beyondbasics.studio" > artifacts/rejouice-clone/dist/public/CNAME
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: artifacts/rejouice-clone/dist/public
-
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Add CNAME for custom domain
+        run: echo "beyondbasics.studio" > artifacts/rejouice-clone/dist/public/CNAME
+
+      - name: Upload pre-built dist to Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: artifacts/rejouice-clone/dist/public
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
