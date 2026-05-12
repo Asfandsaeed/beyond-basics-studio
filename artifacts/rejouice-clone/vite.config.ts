@@ -773,6 +773,32 @@ const PAGE_META: Record<string, PageMeta> = {
 // canonical URLs (GitHub Pages 301-redirects no-slash to slash automatically).
 const SITEMAP_PATHS: string[] = Object.keys(PAGE_META);
 
+// ─── Journal post metadata for Article structured data ────────────────────────
+const SANITY = "https://cdn.sanity.io/images/zksivtxz/production";
+const JOURNAL_META: Record<string, { datePublished: string; image: string }> = {
+  "/journal/tensor-brand-90-days/":         { datePublished: "2025-03-01", image: `${SANITY}/195dabd5e5757919b90b5d5102a477117981912e-1180x720.jpg` },
+  "/journal/brand-led-growth/":             { datePublished: "2025-02-01", image: `${SANITY}/a5b674fefa860f0864baaf56bfbc2bb526b263fb-1180x720.jpg` },
+  "/journal/oura-simplicity-strategy/":     { datePublished: "2025-01-01", image: `${SANITY}/f51a7432999749c8d60de7d60a9212580451cc5d-1180x720.jpg` },
+  "/journal/art-of-naming/":                { datePublished: "2024-12-01", image: `${SANITY}/43d9fe391c3de48c4f41dee41fd3a8c97f6540fa-1180x720.jpg` },
+  "/journal/moxion-sustainable-brand/":     { datePublished: "2024-11-01", image: `${SANITY}/29070cd07ab93fc72b20f8ebbc129c4e4d6b7bb6-1180x720.jpg` },
+  "/journal/award-worthy-digital-experience/": { datePublished: "2024-10-01", image: `${SANITY}/a5b674fefa860f0864baaf56bfbc2bb526b263fb-1180x720.jpg` },
+  "/journal/photography-as-brand-language/":{ datePublished: "2024-09-01", image: `${SANITY}/644ae8d8c5615611ab907c19e78900ba1ebf3da6-1180x720.jpg` },
+  "/journal/pre-launch-brand-building/":    { datePublished: "2024-08-01", image: `${SANITY}/2405f85e088f3e9b8a28f8c364fa64a88c75bff5-1180x720.jpg` },
+};
+
+// ─── Human-readable labels for breadcrumb parent segments ─────────────────────
+const SECTION_LABELS: Record<string, string> = {
+  work: "Work", services: "Services", industries: "Industries",
+  journal: "Journal", glossary: "Glossary", resources: "Resources",
+  about: "About", careers: "Careers", contact: "Contact",
+  faq: "FAQ", pricing: "Pricing", press: "Press", awards: "Awards",
+  testimonials: "Testimonials", newsletter: "Newsletter", process: "Process",
+  partners: "Partners", "design-for-good": "Design for Good",
+  accreditations: "Accreditations", sitemap: "Sitemap",
+  "privacy-policy": "Privacy Policy", terms: "Terms & Conditions",
+  refunds: "Refund Policy",
+};
+
 // ─── Plugin: inject static SEO navigation ────────────────────────────────────
 // Injects a visually-hidden <nav> of static <a> links into the built index.html
 // so non-JS crawlers can discover all pages. Links use trailing-slash URLs so
@@ -811,6 +837,35 @@ const generateStaticRoutes: import("vite").Plugin = {
     const baseHtml = fs.readFileSync(src, "utf-8");
     const BASE_URL = "https://beyondbasics.studio";
 
+    // ── Helper: derive breadcrumb list from route path ──────────────────────
+    function buildBreadcrumbs(routePath: string): Array<{ name: string; item: string }> {
+      if (routePath === "/") return [];
+      const segments = routePath.split("/").filter(Boolean);
+      const crumbs: Array<{ name: string; item: string }> = [
+        { name: "Home", item: `${BASE_URL}/` },
+      ];
+      let accumulated = "/";
+      for (const seg of segments) {
+        accumulated += seg + "/";
+        const pageMeta = PAGE_META[accumulated];
+        let name: string;
+        if (pageMeta) {
+          name = pageMeta.title
+            .replace(/\s*[|—]\s*Beyond®.*$/i, "")
+            .replace(/\s*—\s*Beyond®.*$/i, "")
+            .trim();
+        } else {
+          name = SECTION_LABELS[seg] ?? seg.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+        }
+        crumbs.push({ name, item: `${BASE_URL}${accumulated}` });
+      }
+      return crumbs;
+    }
+
+    function esc(s: string): string {
+      return s.replace(/"/g, "&quot;").replace(/&(?!amp;|quot;|lt;|gt;)/g, "&amp;");
+    }
+
     function buildPageHtml(routePath: string): string {
       const meta = PAGE_META[routePath] ?? PAGE_META["/"];
       const canonicalUrl = `${BASE_URL}${routePath}`;
@@ -826,7 +881,7 @@ const generateStaticRoutes: import("vite").Plugin = {
       // 2. Unique <meta name="description">
       html = html.replace(
         /<meta name="description" content="[^"]*"\s*\/>/,
-        `<meta name="description" content="${meta.desc.replace(/"/g, "&quot;")}" />`
+        `<meta name="description" content="${esc(meta.desc)}" />`
       );
 
       // 3. Unique <link rel="canonical"> pointing to trailing-slash URL
@@ -835,16 +890,129 @@ const generateStaticRoutes: import("vite").Plugin = {
         `<link rel="canonical" href="${canonicalUrl}" />`
       );
 
-      // 4. Unique <meta property="og:url">
+      // 4. Unique og:url
       html = html.replace(
         /<meta property="og:url" content="[^"]*"\s*\/>/,
         `<meta property="og:url" content="${canonicalUrl}" />`
       );
 
-      // 5. Inject a visually-hidden <h1> so non-JS crawlers see a real heading.
-      //    Placed right after <body> — invisible to sighted users, visible to bots.
+      // 5. Unique og:title (was always showing homepage title on every page)
+      html = html.replace(
+        /<meta property="og:title" content="[^"]*"\s*\/>/,
+        `<meta property="og:title" content="${esc(meta.title)}" />`
+      );
+
+      // 6. Unique og:description
+      html = html.replace(
+        /<meta property="og:description" content="[^"]*"\s*\/>/,
+        `<meta property="og:description" content="${esc(meta.desc)}" />`
+      );
+
+      // 7. Unique og:image:alt
+      html = html.replace(
+        /<meta property="og:image:alt" content="[^"]*"\s*\/>/,
+        `<meta property="og:image:alt" content="${esc(meta.title)}" />`
+      );
+
+      // 8. og:type — article for journal posts
+      const isJournalPost = routePath.startsWith("/journal/") && routePath !== "/journal/";
+      if (isJournalPost) {
+        html = html.replace(
+          /<meta property="og:type" content="website"\s*\/>/,
+          `<meta property="og:type" content="article" />`
+        );
+      }
+
+      // 9. Unique twitter:title
+      html = html.replace(
+        /<meta name="twitter:title" content="[^"]*"\s*\/>/,
+        `<meta name="twitter:title" content="${esc(meta.title)}" />`
+      );
+
+      // 10. Unique twitter:description
+      const twitterDesc = meta.desc.length > 200 ? meta.desc.slice(0, 197) + "…" : meta.desc;
+      html = html.replace(
+        /<meta name="twitter:description" content="[^"]*"\s*\/>/,
+        `<meta name="twitter:description" content="${esc(twitterDesc)}" />`
+      );
+
+      // 11. Inject visually-hidden <h1> for non-JS crawlers
       const hiddenH1 = `<h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap">${meta.h1}</h1>`;
       html = html.replace("<body>", `<body>\n  ${hiddenH1}`);
+
+      // 12. Build per-page structured data blocks
+      const schemaBlocks: string[] = [];
+
+      // BreadcrumbList — on every non-root page
+      const breadcrumbs = buildBreadcrumbs(routePath);
+      if (breadcrumbs.length > 1) {
+        schemaBlocks.push(JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": breadcrumbs.map((b, i) => ({
+            "@type": "ListItem",
+            "position": i + 1,
+            "name": b.name,
+            "item": b.item,
+          })),
+        }));
+      }
+
+      // Article — journal posts
+      if (isJournalPost) {
+        const jm = JOURNAL_META[routePath];
+        const headlineClean = meta.title
+          .replace(/\s*[|—]\s*Beyond®.*$/i, "")
+          .replace(/\s*—\s*Beyond®.*$/i, "")
+          .trim();
+        const articleSchema: Record<string, unknown> = {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": headlineClean,
+          "description": meta.desc,
+          "url": canonicalUrl,
+          "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
+          "author": {
+            "@type": "Organization",
+            "name": "Beyond®",
+            "url": BASE_URL,
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Beyond®",
+            "logo": {
+              "@type": "ImageObject",
+              "url": `${BASE_URL}/icons/icon-512.png`,
+              "width": 512,
+              "height": 512,
+            },
+          },
+        };
+        if (jm) {
+          articleSchema["datePublished"] = jm.datePublished;
+          articleSchema["dateModified"] = jm.datePublished;
+          articleSchema["image"] = [jm.image];
+        }
+        schemaBlocks.push(JSON.stringify(articleSchema));
+      }
+
+      // WebPage — every page including root
+      schemaBlocks.push(JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": canonicalUrl,
+        "url": canonicalUrl,
+        "name": meta.title,
+        "description": meta.desc,
+        "isPartOf": { "@id": `${BASE_URL}/#website` },
+        "about": { "@id": `${BASE_URL}/#organization` },
+      }));
+
+      // Inject all schema blocks before </head>
+      const schemaHtml = schemaBlocks
+        .map((s) => `  <script type="application/ld+json">${s}</script>`)
+        .join("\n");
+      html = html.replace("</head>", `${schemaHtml}\n</head>`);
 
       return html;
     }
