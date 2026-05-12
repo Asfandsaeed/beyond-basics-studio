@@ -79,9 +79,9 @@ const mobileBottomSections = [
   {
     heading: "Connect",
     links: [
-      { label: "Instagram ↗", href: "https://instagram.com/beyondbasicsstudio", external: true },
-      { label: "LinkedIn ↗", href: "https://linkedin.com/company/beyondbasicsstudio", external: true },
-      { label: "Twitter / X ↗", href: "https://x.com/beyondbasics", external: true },
+      { label: "Instagram ↗", href: "https://www.instagram.com/beyondbasics.studio", external: true },
+      { label: "LinkedIn ↗", href: "https://www.linkedin.com/company/beyond-basic-studio/", external: true },
+      { label: "Twitter / X ↗", href: "https://x.com/beyond_b_studio", external: true },
     ],
   },
   {
