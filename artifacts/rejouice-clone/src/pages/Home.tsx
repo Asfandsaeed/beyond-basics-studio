@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import { Link } from "wouter";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
-import { getGsap } from "@/lib/gsap";
+import { getGsap } from "@/lib/gsap-loader";
 import useEmblaCarousel from "embla-carousel-react";
 import {
   Target, Gem, Monitor, TrendingUp, PenTool,

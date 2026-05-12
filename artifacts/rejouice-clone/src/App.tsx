@@ -2,7 +2,7 @@ import React, { useEffect, useLayoutEffect, Suspense } from "react";
 import { Switch, Route, Router as WouterRouter, useLocation } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { getGsap } from "@/lib/gsap";
+import { getGsap } from "@/lib/gsap-loader";
 
 const Toaster = React.lazy(() =>
   import("@/components/ui/toaster").then((m) => ({ default: m.Toaster }))

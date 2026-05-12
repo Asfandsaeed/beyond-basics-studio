@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import { getGsap } from "@/lib/gsap-loader";
 import vertexImg from "@/assets/images/vertex.png";
 
 
@@ -31,34 +31,41 @@ export default function OurApproach() {
   const headingRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(headingRef.current, {
-        opacity: 0,
-        y: 30,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: { trigger: headingRef.current, start: "top 85%" },
-      });
+    let ctx: { revert: () => void } | null = null;
+    let cancelled = false;
+    getGsap().then(({ gsap }) => {
+      if (cancelled || !sectionRef.current) return;
+      ctx = gsap.context(() => {
+        gsap.from(headingRef.current, {
+          opacity: 0,
+          y: 30,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: { trigger: headingRef.current, start: "top 85%" },
+        });
 
-      gsap.from(".approach-row", {
-        opacity: 0,
-        y: 20,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: "power3.out",
-        scrollTrigger: { trigger: ".approach-list", start: "top 80%" },
-      });
+        gsap.from(".approach-row", {
+          opacity: 0,
+          y: 20,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: "power3.out",
+          scrollTrigger: { trigger: ".approach-list", start: "top 80%" },
+        });
 
-      gsap.from(".approach-card", {
-        opacity: 0,
-        y: 30,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: { trigger: ".approach-card", start: "top 85%" },
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
+        gsap.from(".approach-card", {
+          opacity: 0,
+          y: 30,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: { trigger: ".approach-card", start: "top 85%" },
+        });
+      }, sectionRef);
+    });
+    return () => {
+      cancelled = true;
+      ctx?.revert();
+    };
   }, []);
 
   return (

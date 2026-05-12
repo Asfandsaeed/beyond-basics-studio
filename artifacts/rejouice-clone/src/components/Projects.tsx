@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Link } from "wouter";
-import { gsap } from "gsap";
+import { getGsap } from "@/lib/gsap-loader";
 
 
 const VCDN = "https://rejouice-2024.cdn.prismic.io/rejouice-2024";
@@ -50,7 +50,6 @@ const projects: Project[] = [
   },
 ];
 
-// ─── Individual card ─────────────────────────────────────────────────────────
 function ProjectCard({
   project,
   heightClass,
@@ -84,7 +83,6 @@ function ProjectCard({
       data-testid={`project-${project.id}`}
       data-cursor-hover
     >
-      {/* Static image */}
       <img
         src={project.image}
         alt={project.title}
@@ -94,7 +92,6 @@ function ProjectCard({
         loading="lazy"
       />
 
-      {/* Hover video — preload="none" keeps page load fast */}
       <video
         ref={videoRef}
         src={project.hoverVideo}
@@ -107,10 +104,8 @@ function ProjectCard({
         }`}
       />
 
-      {/* Dark gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50 pointer-events-none" />
 
-      {/* Centered logo */}
       {project.logo && (
         <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
           <img
@@ -121,7 +116,6 @@ function ProjectCard({
         </div>
       )}
 
-      {/* Bottom info row */}
       <div className="absolute bottom-0 left-0 right-0 px-6 md:px-8 py-6 z-10 flex justify-between items-end pointer-events-none">
         <div className="flex flex-col gap-0.5">
           <span className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/50">
@@ -143,31 +137,37 @@ function ProjectCard({
   );
 }
 
-// ─── Section ─────────────────────────────────────────────────────────────────
 export default function Projects() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.utils.toArray<Element>(".project-card").forEach((card) => {
-        gsap.fromTo(
-          card,
-          { opacity: 0, y: 40 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: card,
-              start: "top 88%",
-            },
-          }
-        );
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
+    let ctx: { revert: () => void } | null = null;
+    let cancelled = false;
+    getGsap().then(({ gsap }) => {
+      if (cancelled || !sectionRef.current) return;
+      ctx = gsap.context(() => {
+        gsap.utils.toArray<Element>(".project-card").forEach((card) => {
+          gsap.fromTo(
+            card,
+            { opacity: 0, y: 40 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 1,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: card,
+                start: "top 88%",
+              },
+            }
+          );
+        });
+      }, sectionRef);
+    });
+    return () => {
+      cancelled = true;
+      ctx?.revert();
+    };
   }, []);
 
   const wide = projects.filter((p) => p.layout === "wide");
@@ -175,7 +175,6 @@ export default function Projects() {
 
   return (
     <section ref={sectionRef} className="bg-background border-t border-border/40">
-      {/* Header row */}
       <div className="px-6 md:px-10 py-8 flex items-center justify-between border-b border-border/40">
         <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-foreground/40">
           Featured Work
@@ -189,17 +188,14 @@ export default function Projects() {
         </Link>
       </div>
 
-      {/* Row 1 — full-width Rivian */}
       <ProjectCard project={wide[0]} heightClass="w-full h-[60vh] md:h-[70vh] min-h-[420px]" />
 
-      {/* Row 2 — two portrait cards */}
       <div className="grid grid-cols-2">
         {portraits.map((p) => (
           <ProjectCard key={p.id} project={p} heightClass="h-[60vw] md:h-[80vh]" />
         ))}
       </div>
 
-      {/* Row 3 — second full-width */}
       {wide[1] && (
         <ProjectCard project={wide[1]} heightClass="w-full h-[60vh] md:h-[70vh] min-h-[420px]" />
       )}

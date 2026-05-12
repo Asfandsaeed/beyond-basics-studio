@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import { gsap } from "gsap";
+import { getGsap } from "@/lib/gsap-loader";
 
 
 export default function Showreel() {
@@ -9,19 +9,26 @@ export default function Showreel() {
   const [playing, setPlaying] = useState(true);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(sectionRef.current, {
-        opacity: 0,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 90%",
-        },
+    let ctx: { revert: () => void } | null = null;
+    let cancelled = false;
+    getGsap().then(({ gsap }) => {
+      if (cancelled || !sectionRef.current) return;
+      ctx = gsap.context(() => {
+        gsap.from(sectionRef.current, {
+          opacity: 0,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 90%",
+          },
+        });
       });
     });
-
-    return () => ctx.revert();
+    return () => {
+      cancelled = true;
+      ctx?.revert();
+    };
   }, []);
 
   const togglePlay = () => {

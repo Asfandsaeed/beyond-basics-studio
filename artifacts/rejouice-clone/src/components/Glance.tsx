@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import { getGsap } from "@/lib/gsap-loader";
 
 
 const stats = [
@@ -21,27 +21,34 @@ export default function Glance() {
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(".glance-stat", {
-        opacity: 0,
-        y: 30,
-        duration: 0.9,
-        stagger: 0.1,
-        ease: "power3.out",
-        scrollTrigger: { trigger: sectionRef.current, start: "top 80%" },
-      });
+    let ctx: { revert: () => void } | null = null;
+    let cancelled = false;
+    getGsap().then(({ gsap }) => {
+      if (cancelled || !sectionRef.current) return;
+      ctx = gsap.context(() => {
+        gsap.from(".glance-stat", {
+          opacity: 0,
+          y: 30,
+          duration: 0.9,
+          stagger: 0.1,
+          ease: "power3.out",
+          scrollTrigger: { trigger: sectionRef.current, start: "top 80%" },
+        });
 
-      gsap.from(".glance-fact", {
-        opacity: 0,
-        x: -12,
-        duration: 0.7,
-        stagger: 0.08,
-        ease: "power2.out",
-        scrollTrigger: { trigger: ".glance-facts", start: "top 85%" },
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
+        gsap.from(".glance-fact", {
+          opacity: 0,
+          x: -12,
+          duration: 0.7,
+          stagger: 0.08,
+          ease: "power2.out",
+          scrollTrigger: { trigger: ".glance-facts", start: "top 85%" },
+        });
+      }, sectionRef);
+    });
+    return () => {
+      cancelled = true;
+      ctx?.revert();
+    };
   }, []);
 
   return (

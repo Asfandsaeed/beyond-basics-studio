@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import SplitType from "split-type";
+import { getGsap } from "@/lib/gsap-loader";
 import { Link } from "wouter";
 
 
@@ -9,36 +8,43 @@ export default function About() {
   const textRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      if (textRef.current) {
-        const split = new SplitType(textRef.current, { types: "lines" });
-        gsap.from(split.lines, {
+    let ctx: { revert: () => void } | null = null;
+    let cancelled = false;
+    Promise.all([getGsap(), import("split-type")]).then(([{ gsap }, { default: SplitType }]) => {
+      if (cancelled || !containerRef.current) return;
+      ctx = gsap.context(() => {
+        if (textRef.current) {
+          const split = new SplitType(textRef.current, { types: "lines" });
+          gsap.from(split.lines, {
+            opacity: 0,
+            y: 24,
+            duration: 1,
+            stagger: 0.07,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: containerRef.current,
+              start: "top 75%",
+            },
+          });
+        }
+
+        gsap.from(".about-meta > *", {
           opacity: 0,
-          y: 24,
-          duration: 1,
-          stagger: 0.07,
+          y: 16,
+          duration: 0.9,
+          stagger: 0.1,
           ease: "power3.out",
           scrollTrigger: {
             trigger: containerRef.current,
             start: "top 75%",
           },
         });
-      }
-
-      gsap.from(".about-meta > *", {
-        opacity: 0,
-        y: 16,
-        duration: 0.9,
-        stagger: 0.1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 75%",
-        },
-      });
-    }, containerRef);
-
-    return () => ctx.revert();
+      }, containerRef);
+    });
+    return () => {
+      cancelled = true;
+      ctx?.revert();
+    };
   }, []);
 
   return (
