@@ -2,6 +2,21 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
+import fs from "fs";
+
+// Copies dist/public/index.html → dist/public/404.html after build so
+// GitHub Pages serves the React SPA for every unknown path (no redirect needed).
+const copyIndexAs404: import("vite").Plugin = {
+  name: "copy-index-as-404",
+  closeBundle() {
+    const outDir = path.resolve(import.meta.dirname, "dist/public");
+    const src = path.join(outDir, "index.html");
+    const dest = path.join(outDir, "404.html");
+    if (fs.existsSync(src)) {
+      fs.copyFileSync(src, dest);
+    }
+  },
+};
 
 const isBuild = process.argv.includes("build");
 
@@ -15,6 +30,7 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
+    copyIndexAs404,
     ...(process.env.REPL_ID !== undefined
       ? [
           await import("@replit/vite-plugin-runtime-error-modal").then(

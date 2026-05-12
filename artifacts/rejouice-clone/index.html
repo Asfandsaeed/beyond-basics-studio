@@ -128,17 +128,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <script>
-      // Restore path encoded by 404.html for GitHub Pages SPA routing
-      (function () {
-        var params = new URLSearchParams(window.location.search);
-        var p = params.get("p");
-        if (p) {
-          var h = params.get("h") || "";
-          window.history.replaceState(null, null, p + h);
-        }
-      })();
-    </script>
     <script type="module" src="/src/main.tsx"></script>
     <script>
       if ("serviceWorker" in navigator) {
