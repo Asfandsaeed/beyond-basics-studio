@@ -31,7 +31,7 @@ function LegalLayout({ title, category, children }: { title: string; category: s
         <p className="font-sans text-sm text-[#0A0A0A]/60">Last updated: {UPDATED}</p>
       </section>
       <section className="max-w-[820px] mx-auto px-6 md:px-10 pb-28 md:pb-40">
-        <div className="prose prose-sm max-w-none font-sans font-light leading-[1.8] text-[#0A0A0A]/65 [&_h2]:font-sans [&_h2]:font-light [&_h2]:text-[#0A0A0A] [&_h2]:text-xl [&_h2]:tracking-[-0.01em] [&_h2]:mt-12 [&_h2]:mb-4 [&_p]:mb-5 [&_ul]:pl-5 [&_ul]:mb-5 [&_li]:mb-2 [&_a]:text-[#0A0A0A] [&_a]:underline [&_a]:underline-offset-4">
+        <div className="text-sm max-w-none font-sans font-light leading-[1.8] text-[#0A0A0A]/65 [&_h2]:font-sans [&_h2]:font-light [&_h2]:text-[#0A0A0A] [&_h2]:text-xl [&_h2]:tracking-[-0.01em] [&_h2]:mt-12 [&_h2]:mb-4 [&_p]:mb-5 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:mb-5 [&_li]:mb-2 [&_a]:text-[#0A0A0A] [&_a]:underline [&_a]:underline-offset-4 [&_strong]:font-semibold">
           {children}
         </div>
       </section>
