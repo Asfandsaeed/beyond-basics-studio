@@ -3,13 +3,16 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 import fs from "fs";
+import { fileURLToPath } from "url";
+
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 // Copies dist/public/index.html → dist/public/404.html after build so
-// GitHub Pages serves the React SPA for every unknown path (no redirect needed).
+// GitHub Pages (and Cloudflare Pages) serves the React SPA for every unknown path.
 const copyIndexAs404: import("vite").Plugin = {
   name: "copy-index-as-404",
   closeBundle() {
-    const outDir = path.resolve(import.meta.dirname, "dist/public");
+    const outDir = path.resolve(__dirname, "dist/public");
     const src = path.join(outDir, "index.html");
     const dest = path.join(outDir, "404.html");
     if (fs.existsSync(src)) {
@@ -40,7 +43,7 @@ export default defineConfig({
             ? [
                 await import("@replit/vite-plugin-cartographer").then((m) =>
                   m.cartographer({
-                    root: path.resolve(import.meta.dirname),
+                    root: __dirname,
                   }),
                 ),
                 await import("@replit/vite-plugin-dev-banner").then((m) =>
@@ -53,13 +56,13 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": path.resolve(import.meta.dirname, "src"),
-      "@assets": path.resolve(import.meta.dirname, "..", "..", "attached_assets"),
+      "@": path.resolve(__dirname, "src"),
+      "@assets": path.resolve(__dirname, "..", "..", "attached_assets"),
     },
   },
-  root: path.resolve(import.meta.dirname),
+  root: path.resolve(__dirname),
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
     rollupOptions: {
       output: {
