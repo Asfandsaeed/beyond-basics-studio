@@ -55,6 +55,7 @@ export default defineConfig({
       : []),
   ],
   resolve: {
+    extensions: [".ts", ".tsx", ".mts", ".js", ".jsx", ".mjs", ".json"],
     alias: {
       "@": path.resolve(__dirname, "src"),
       "@assets": path.resolve(__dirname, "..", "..", "attached_assets"),
