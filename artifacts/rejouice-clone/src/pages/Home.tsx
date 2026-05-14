@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import { Link } from "wouter";
 import { useSeoMeta } from "@/hooks/useSeoMeta";
-import { getGsap } from "@/lib/gsap-loader";
+import { getGsap } from "@/lib/gsap";
 import useEmblaCarousel from "embla-carousel-react";
 import {
   Target, Gem, Monitor, TrendingUp, PenTool,
@@ -210,7 +210,12 @@ export default function Home() {
       serviceType: ["Brand Strategy", "Brand Identity", "Web Design", "Growth Marketing", "Content & Creative"],
       knowsAbout: ["Brand Strategy", "Visual Identity", "Web Design", "Motion Design", "3D & WebGL", "Growth Marketing"],
       award: ["29x Awwwards", "19x FWA", "34x CSS Design Awards", "2x Webby Awards"],
-      sameAs: ["https://www.linkedin.com/company/beyondbasics"],
+      sameAs: [
+        "https://www.linkedin.com/company/beyond-basic-studio/",
+        "https://www.instagram.com/beyondbasics.studio",
+        "https://twitter.com/beyond_b_studio",
+        "https://x.com/beyond_b_studio",
+      ],
     },
   });
   const pageRef = useRef<HTMLDivElement>(null);
