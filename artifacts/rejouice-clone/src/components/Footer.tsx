@@ -151,9 +151,9 @@ export default function Footer() {
             <p className="font-sans text-[11px] uppercase tracking-[0.18em] text-white/55 mb-5">Connect</p>
             <div className="flex flex-col gap-3">
               {[
-                { label: "Instagram", href: "https://instagram.com/beyondbasicsstudio" },
-                { label: "LinkedIn", href: "https://linkedin.com/company/beyondbasicsstudio" },
-                { label: "Twitter / X", href: "https://x.com/beyondbasics" },
+                { label: "Instagram", href: "https://www.instagram.com/beyondbasics.studio" },
+                { label: "LinkedIn", href: "https://www.linkedin.com/company/beyond-basic-studio/" },
+                { label: "Twitter / X", href: "https://x.com/beyond_b_studio" },
               ].map(({ label, href }) => (
                 <a
                   key={label}
